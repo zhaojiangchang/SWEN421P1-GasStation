@@ -1,3 +1,4 @@
+with PUMP;
 package body PUMP is
 
    --------------------------
@@ -6,10 +7,10 @@ package body PUMP is
 
    procedure ADD_PETROL_RESERVOIR
      (A: in out PUMP_PTR;
-      AMOUNT: in TOTAL_PER_RESERVOIR)
+      AMOUNT: in TANK_SIZE)
    is
    begin
-
+      A.RESERVOIR.TOTAL := A.RESERVOIR.TOTAL + AMOUNT;
 
    end ADD_PETROL_RESERVOIR;
 
@@ -18,14 +19,57 @@ package body PUMP is
    -----------------------------
 
    procedure REMOVE_PETROL_RESERVOIR
-     (A: in out RESERVOIR_PTR;
-      AMOUNT: in TOTAL_PER_RESERVOIR)
+     (A: in out PUMP_PTR;
+      AMOUNT: in TANK_SIZE)
    is
    begin
-      --  Generated stub: replace with real body!
-      pragma Compile_Time_Warning (Standard.True, "REMOVE_PETROL_RESERVOIR unimplemented");
-      raise Program_Error with "Unimplemented procedure REMOVE_PETROL_RESERVOIR";
+      A.RESERVOIR.TOTAL := A.RESERVOIR.TOTAL - AMOUNT;
    end REMOVE_PETROL_RESERVOIR;
+
+    -----------------------------
+   -- APPEND RESERVOIR TO PUMP --
+   -----------------------------
+   procedure APPEND_RESERVOIR
+     (A: in out PUMP_PTR; POSITION: in RESERVOIR_NUM)
+   is
+      R : RESERVOIR_PTR;
+   begin
+      R := new RESERVOIR;
+      R.RESERVOIR_POSITION := POSITION;
+      A.RESERVOIR := R;
+
+   end APPEND_RESERVOIR;
+
+  -----------------------------
+   -- APPEND RESERVOIR TO PUMP --
+  -----------------------------
+
+   function GET_CURRENT_RESERVOIR_SIZE
+     (A: in PUMP_PTR) return TANK_SIZE
+   is
+   begin
+       return A.RESERVOIR.TOTAL;
+   end GET_CURRENT_RESERVOIR_SIZE;
+   -----------------------------
+   -- APPEND RESERVOIR TO PUMP --
+  -----------------------------
+
+   procedure SET_FUEL_PRICE
+     (A: in out PUMP_PTR; PRICE: in PRICE_TYPE)
+   is
+   begin
+       A.UNIT_PRICE := PRICE;
+   end SET_FUEL_PRICE;
+
+   -----------------------------
+   -- APPEND RESERVOIR TO PUMP --
+   -----------------------------
+   procedure SET_FUEL_NAME
+     (A: in out PUMP_PTR; Name: in fuel)
+   is
+   begin
+      A.FUEL := Name;
+   end SET_FUEL_NAME;
 
    ------------------
    -- CHANGE_STATE --
@@ -33,13 +77,11 @@ package body PUMP is
 
    procedure CHANGE_STATE
      (A: in out PUMP_PTR;
-      FIRST:STATE_TPYE;
-      SECOND:STATE_TPYE)
+      STATE :STATE_TPYE)
    is
    begin
-      --  Generated stub: replace with real body!
-      pragma Compile_Time_Warning (Standard.True, "CHANGE_STATE unimplemented");
-      raise Program_Error with "Unimplemented procedure CHANGE_STATE";
+     A.PUMP_STATE := STATE;
+
    end CHANGE_STATE;
 
    -------------------------
@@ -54,9 +96,10 @@ package body PUMP is
    is
    begin
       --  Generated stub: replace with real body!
-      pragma Compile_Time_Warning (Standard.True, "IS_STATE_CHANGEABLE unimplemented");
-      raise Program_Error with "Unimplemented function IS_STATE_CHANGEABLE";
-      return IS_STATE_CHANGEABLE (A => A, FIRST => FIRST, SECOND => SECOND);
+
+      return False;
    end IS_STATE_CHANGEABLE;
+
+
 
 end PUMP;

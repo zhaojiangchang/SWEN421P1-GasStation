@@ -1,6 +1,13 @@
+with Ada.Text_IO; use Ada.Text_IO;
+with PUMP_UNIT; use PUMP_UNIT;
 procedure Main is
 
 begin
    --  Insert code here.
+   PUMP_UNIT.ADD_PUMPS;
+   --PUMP_UNIT.PUMP91.CHANGE_STATE(PUMP_UNIT., STATE_TPYE'(Ready));
+   --PUMP91.GET_CURRENT_RESERVOIR_SIZE(PUMP91.PUMP_PTR);
+   t:= PUMP_UNIT.PUMP91.PUMP_PTR;
+   PUMP_UNIT.PUMP91.SET_FUEL_PRICE(PUMP_UNIT.PUMP91.PUMP_PTR, 3.00);
    null;
 end Main;

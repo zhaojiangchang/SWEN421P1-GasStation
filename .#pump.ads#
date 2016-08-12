@@ -6,7 +6,6 @@ with SPARK_Mode is
 
    --type PUMP is private;
    -- type RESERVOIR is private;
-   type PUMP_PTR is new PUMP;
    type PUMP_TYPE is private;
    type RESERVOIR is private;
    type RESERVOIR_NUM is range 1..3;

@@ -1,16 +1,25 @@
 with Ada.Text_IO; use Ada.Text_IO;
-with PUMP_UNIT; use PUMP_UNIT;
+with PUMP;
+with PUMP_UNIT;
+with sPrint; use sPrint;
 procedure Main is
-   unit : PUMP_UNIT.PUMP_UNIT_R;
-   --pump91: PUMP_UNIT.PUMP91.PUMP_PTR;
-  -- punit: PUMP_UNIT.PUMP_UNIT_PTR;
-begin
-   --  Insert code here.
-   ADD_PUMPS(unit);
+   package UNIT is new PUMP_UNIT;
 
---     PUMP_UNIT.;
-   --PUMP_UNIT.PUMP91.CHANGE_STATE(PUMP_UNIT., STATE_TPYE'(Ready));
-   --PUMP91.GET_CURRENT_RESERVOIR_SIZE(PUMP91.PUMP_PTR);
-   --PUMP_UNIT.PUMP91.SET_FUEL_PRICE(PUMP91.PUMP_PTR,2.00);
-   null;
+   UNIT_R : UNIT.PUMP_UNIT_R;
+   U91 : UNIT.FUEL_TYPE := 1;
+   U95 : UNIT.FUEL_TYPE := 2;
+   Diesel : UNIT.FUEL_TYPE := 3;
+   tankSize : UNIT.P.TANK_SIZE;
+begin
+   -- add pumps
+   UNIT.ADD_PUMP(UNIT_R, U91);
+   UNIT.ADD_PUMP(UNIT_R, U95);
+   UNIT.ADD_PUMP(UNIT_R, Diesel);
+   UNIT.SET_IS_USING(UNIT_R);
+   UNIT.SET_IS_PAID(UNIT_R);
+
+   tankSize := UNIT.GET_TANKS_SIZE(UNIT_R,U91);
+   print(tankSize'Image);
+
+
 end Main;

@@ -1,8 +1,35 @@
 with PUMP;
-with Ada.Text_IO; use Ada.Text_IO;
+with sPrint; use sPrint;
 package body PUMP
 with SPARK_Mode is
 
+     --------------------------
+   -- ADD_PETROL_RESERVOIR --
+   --------------------------
+
+   procedure SET_PUMP_STATE(
+     A: in out PUMP_TYPE;
+     STATE: in STATE_TPYE)
+   is
+   begin
+      A.PUMP_STATE := STATE;
+      print("Set Initial pump state to BASE");
+
+   end SET_PUMP_STATE;
+
+   --------------------------
+   -- ADD_PETROL_RESERVOIR --
+   --------------------------
+
+   procedure SET_RESERVOIR_SIZE(
+     A: in out PUMP_TYPE;
+     SIZE: in TANK_SIZE)
+   is
+   begin
+      A.RESERVOIR_INFO.TOTAL := SIZE;
+      print("Set Initial pump RESERVOIR SIZE: "& SIZE'Image);
+
+   end SET_RESERVOIR_SIZE;
    --------------------------
    -- ADD_PETROL_RESERVOIR --
    --------------------------
@@ -32,26 +59,18 @@ with SPARK_Mode is
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR
-     (A: in out PUMP_TYPE; POSITION: in RESERVOIR_NUM)
+     (A: in out PUMP_TYPE; POSITION: in Integer)
    is
-      R : RESERVOIR;
+      R : PUMP.RESERVOIR(POSITION);
    begin
---        R := new RESERVOIR;
+--        R := PUMP.RESERVOIR;
+
       R.RESERVOIR_POSITION := POSITION;
       A.RESERVOIR_INFO := R;
-
+      print("Add Reservoir: "& POSITION'Image);
    end APPEND_RESERVOIR;
 
-  -----------------------------
-   -- APPEND RESERVOIR TO PUMP --
-  -----------------------------
 
-   function GET_CURRENT_RESERVOIR_SIZE
-     (A: in PUMP_TYPE) return TANK_SIZE
-   is
-   begin
-       return A.RESERVOIR_INFO.TOTAL;
-   end GET_CURRENT_RESERVOIR_SIZE;
    -----------------------------
    -- APPEND RESERVOIR TO PUMP --
   -----------------------------
@@ -61,18 +80,19 @@ with SPARK_Mode is
    is
    begin
       A.UNIT_PRICE := PRICE;
+      print("fuel unit price: "& A.UNIT_PRICE'Image);
       --Put_Line(PRICE'Image);
    end SET_FUEL_PRICE;
 
-   -----------------------------
-   -- APPEND RESERVOIR TO PUMP --
-   -----------------------------
-   procedure SET_FUEL_NAME
-     (A: in out PUMP_TYPE; Name: in fuel)
-   is
-   begin
-      A.FUEL := Name;
-   end SET_FUEL_NAME;
+--     -----------------------------
+--     -- APPEND RESERVOIR TO PUMP --
+--     -----------------------------
+--     procedure SET_FUEL_NAME
+--       (A: in out PUMP_TYPE; Name: in fuel)
+--     is
+--     begin
+--        A.FUEL := Name;
+--     end SET_FUEL_NAME;
 
    ------------------
    -- CHANGE_STATE --
@@ -102,7 +122,26 @@ with SPARK_Mode is
 --
 --        return False;
 --     end IS_STATE_CHANGEABLE;
+ -----------------------------
+   -- APPEND RESERVOIR TO PUMP --
+  -----------------------------
 
+   function GET_CURRENT_RESERVOIR_SIZE
+     (A: in PUMP_TYPE) return TANK_SIZE
+   is
+   begin
+     -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
+       return A.RESERVOIR_INFO.TOTAL;
+   end GET_CURRENT_RESERVOIR_SIZE;
+
+  -----------------------------
+  -- GET STATE ----------------
+  -----------------------------
+   function GET_STATE(A: in out PUMP_TYPE) return STATE_TPYE
+   is
+   begin
+      return A.PUMP_STATE;
+   end GET_STATE;
 
 
 end PUMP;

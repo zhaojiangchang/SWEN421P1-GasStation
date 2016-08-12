@@ -3,6 +3,11 @@ package body sPrint
 is
    procedure print(s: in String) is
    begin
-      Put_Line(s);
+      if s = "" then
+         New_Line;
+      else
+         Put_Line(s);
+      end if;
    end print;
+
 end sPrint;

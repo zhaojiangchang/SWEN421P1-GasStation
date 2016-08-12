@@ -1,6 +1,5 @@
-with Ada.Text_IO; use Ada.Text_IO;
-with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with sPrint; use sPrint;
+with PUMP;
 package body PUMP_UNIT
 with SPARK_Mode is
 
@@ -8,42 +7,102 @@ with SPARK_Mode is
    -- ADD_PUMP --
    --------------
 
-   procedure ADD_PUMPS(A: in out PUMP_UNIT_R) is
-      p91 : PUMP_INS.PUMP_TYPE;
-      p95 : PUMP_INS.PUMP_TYPE;
-      pDiesel : PUMP_INS.PUMP_TYPE;
-
-
-
+   procedure ADD_PUMP(A: in out PUMP_UNIT_R; B: in FUEL_TYPE) is
+      p91 : P.PUMP_TYPE(1);
+      p95 : P.PUMP_TYPE(2);
+      pDiesel : P.PUMP_TYPE(3);
+      stateType : P.STATE_TPYE;
    begin
-      p91 := new PUMP_INS.PUMP;
-      PUMP_INS.SET_FUEL_PRICE(p91,1.80);
-      PUMP_INS.SET_FUEL_NAME(p91,"U91");
-      PUMP_INS.APPEND_RESERVOIR(p91, 1);
-      A.PUMP_91 := p91;
+   stateType := "BASE     ";
 
-      PUMP_INS.SET_FUEL_PRICE(p95,2.00);
-      PUMP_INS.SET_FUEL_NAME(p95,"U95");
-      PUMP_INS.APPEND_RESERVOIR(p95,2);
-      A.PUMP_95 := p95;
+      case B is
+         when 1 =>
+            print("add pump: 91");
+            P.SET_FUEL_PRICE(p91,1.80);
+            p.SET_PUMP_STATE(p91,stateType);
+            P.APPEND_RESERVOIR(p91, 1);
+            p.SET_RESERVOIR_SIZE(p91, 10000);
+            A.PUMP_91 := p91;
+         when 2 =>
+            print("add pump: 95");
+            P.SET_FUEL_PRICE(p95,2.10);
+            p.SET_PUMP_STATE(p95,stateType);
+            P.APPEND_RESERVOIR(p95, 2);
+            p.SET_RESERVOIR_SIZE(p95, 10000);
+            A.PUMP_95 := p95;
+         when 3 =>
+            print("add pump: Diesel");
+            P.SET_FUEL_PRICE(pDiesel,1.10);
+            p.SET_PUMP_STATE(pDiesel,stateType);
+            P.APPEND_RESERVOIR(pDiesel, 3);
+            p.SET_RESERVOIR_SIZE(pDiesel, 10000);
+            A.PUMP_Diesel := pDiesel;
+         when others => null;
+      end case;
+      print("");
 
-      PUMP_INS.SET_FUEL_PRICE(pDiesel,1.00);
-      PUMP_INS.SET_FUEL_NAME(pDiesel,"Dsl");
-      PUMP_INS.APPEND_RESERVOIR(pDiesel,3);
-      A.PUMP_Diesel := pDiesel;
-      print("add three pumps to a pump unit");
-     -- Put_Line("add three pumps to a pump unit");
 
-   end ADD_PUMPS;
+   end ADD_PUMP;
+
+   function GET_PUMP(A: in out PUMP_UNIT_R; B: in FUEL_TYPE) return P.PUMP_TYPE
+   is
+   begin
+      case B is
+         when 1 => return A.PUMP_91;
+         when others => return A.PUMP_91;
+      end case;
+   end GET_PUMP;
 
    --------------------
-   -- PUMP_UNIT_PAID --
+   -- GET TANK SIZE --
    --------------------
 
---     function PUMP_UNIT_PAID (A: in PUMP_UNIT_R) return Boolean is
---     begin
---
---        return False;
---     end PUMP_UNIT_PAID;
+   function GET_TANKS_SIZE(A: in PUMP_UNIT_R; B: in FUEL_TYPE) return P.TANK_SIZE
+   is
+   begin
+      case B is
+         when 1 => return P.GET_CURRENT_RESERVOIR_SIZE(A.PUMP_91);
+         when others => return P.GET_CURRENT_RESERVOIR_SIZE(A.PUMP_91);
+      end case;
+   end GET_TANKS_SIZE;
+   -----------------------
+   -- SET_IS_USING False--
+   -----------------------
+   procedure SET_IS_USING(A: in out PUMP_UNIT_R)
+   is
+   begin
+      if P.GET_STATE(A.PUMP_91) = "BASE     " and P.GET_STATE(A.PUMP_95) = "BASE     " and P.GET_STATE(A.PUMP_Diesel) =  "BASE     "  then
+         A.IS_USING := False;
+         print("set pump unit initial is used to false ");
+      end if;
+   end SET_IS_USING;
+   -----------------------
+   -- SET_IS_Paid true  --
+   -----------------------
+   procedure SET_IS_PAID(A: in out PUMP_UNIT_R)
+   is
+   begin
+      if P.GET_STATE(A.PUMP_91) = "BASE     " and P.GET_STATE(A.PUMP_95) = "BASE     " and P.GET_STATE(A.PUMP_Diesel) =  "BASE     "  then
+         A.IS_PAID := True;
+         print("set pump unit initial is paid to true ");
+      end if;
+   end SET_IS_PAID;
 
+   -----------------------
+   -- UNIT_IS_USING     --
+   -----------------------
+   function UNIT_IS_USING(A: in PUMP_UNIT_R) return Boolean
+   is
+   begin
+      return A.IS_USING;
+   end UNIT_IS_USING;
+
+   -----------------------
+   -- UNIT_IS_PAID      --
+   -----------------------
+   function UNIT_IS_PAID(A: in PUMP_UNIT_R) return Boolean
+   is
+   begin
+      return A.IS_PAID;
+   end UNIT_IS_PAID;
 end PUMP_UNIT;

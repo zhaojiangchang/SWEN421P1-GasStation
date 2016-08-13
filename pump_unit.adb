@@ -24,7 +24,7 @@ with SPARK_Mode is
             P.SET_FUEL_PRICE(p91,1.80);
             p.SET_PUMP_STATE(p91,baseStateType);
             P.APPEND_RESERVOIR(p91,fuelType);
-            p.SET_RESERVOIR_SIZE(p91, 10000.00);
+            p.SET_RESERVOIR_SIZE(p91, 1000.00);
             pumpUnit.PUMP_91 := p91;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
@@ -37,7 +37,7 @@ with SPARK_Mode is
             P.SET_FUEL_PRICE(p95,2.10);
             p.SET_PUMP_STATE(p95,baseStateType);
             P.APPEND_RESERVOIR(p95, fuelType);
-            p.SET_RESERVOIR_SIZE(p95, 10000.00);
+            p.SET_RESERVOIR_SIZE(p95, 1000.00);
             pumpUnit.PUMP_95 := p95;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
@@ -50,7 +50,7 @@ with SPARK_Mode is
             P.SET_FUEL_PRICE(pDiesel,1.10);
             p.SET_PUMP_STATE(pDiesel,baseStateType);
             P.APPEND_RESERVOIR(pDiesel, fuelType);
-            p.SET_RESERVOIR_SIZE(pDiesel, 10000.00);
+            p.SET_RESERVOIR_SIZE(pDiesel, 1000.00);
             pumpUnit.PUMP_Diesel := pDiesel;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
@@ -249,6 +249,9 @@ with SPARK_Mode is
          if tankSize <= 0.00 then
             print("tank empty");
          end if;
+         if CAR_TANK_SPACE = 0.00 then
+            print("car tank full can not pumping");
+         end if;
          if AMOUNT >0.00 and SENSOR = False and tankSize > temp then
             pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(2);
             pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(3);
@@ -273,7 +276,7 @@ with SPARK_Mode is
                   P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
                   pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
                   P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
-                  print("tankSize empty");
+                  print("tank empty stop pumping");
                elsif pumped>= AMOUNT then
                   print("pumped given amount");
                   pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
@@ -289,6 +292,12 @@ with SPARK_Mode is
             pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(2);
             P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(3));
             P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(2));
+            if tankSize <= 0.00 then
+               print("tank empty");
+            end if;
+            if CAR_TANK_SPACE = 0.00 then
+               print("car tank full can not pumping");
+            end if;
             while SENSOR = False and tankSize > 0.00 loop
 
                pumped:= pumped +0.01;
@@ -309,7 +318,7 @@ with SPARK_Mode is
                   P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
                   pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
                   P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
-                  print("tankSize empty");
+                  print("tank empty stop pumping");
                end if;
             end loop;
          end if;

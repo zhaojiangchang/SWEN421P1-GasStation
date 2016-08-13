@@ -7,12 +7,12 @@ with SPARK_Mode is
    -- ADD_PUMP --
    --------------
 
-   procedure ADD_PUMP(A: in out PUMP_UNIT_R; B: in P.FUEL_TYPES) is
-      p91 : P.PUMP_TYPE;
-      p95 : P.PUMP_TYPE;
-      pDiesel : P.PUMP_TYPE;
+   procedure ADD_PUMP(A: in out PUMP_UNIT; B: in P.FUEL_TYPES) is
+      p91 : P.PUMP;
+      p95 : P.PUMP;
+      pDiesel : P.PUMP;
 
-      use all type P.PUMP_TYPE;
+      use all type P.PUMP;
       nozzleStateType: P.NOZZLE_TYPE;
       baseStateType: P.STATE_TPYE;
    begin
@@ -60,7 +60,7 @@ with SPARK_Mode is
 
    end ADD_PUMP;
 
-   function GET_PUMP(A: in out PUMP_UNIT_R; B: in P.FUEL_TYPES) return P.PUMP_TYPE
+   function GET_PUMP(A: in out PUMP_UNIT; B: in P.FUEL_TYPES) return P.PUMP
    is
    begin
       case P.FUEL_TYPES'Pos(B) is
@@ -75,7 +75,7 @@ with SPARK_Mode is
    -- GET TANK SIZE --
    --------------------
 
-   function GET_TANKS_SIZE(A: in PUMP_UNIT_R; B: in P.FUEL_TYPES) return P.TANK_SIZE
+   function GET_TANKS_SIZE(A: in PUMP_UNIT; B: in P.FUEL_TYPES) return P.TANK_SIZE
    is
    begin
       case P.FUEL_TYPES'Pos(B) is
@@ -88,7 +88,7 @@ with SPARK_Mode is
    -----------------------
    -- SET_IS_USING False--
    -----------------------
-   procedure SET_IS_USING(A: in out PUMP_UNIT_R)
+   procedure SET_IS_USING(A: in out PUMP_UNIT)
    is
       use all type P.STATE_TPYE;
       baseStateType: P.STATE_TPYE;
@@ -103,7 +103,7 @@ with SPARK_Mode is
    -----------------------
    -- SET_IS_Paid true  --
    -----------------------
-   procedure SET_IS_PAID(A: in out PUMP_UNIT_R)
+   procedure SET_IS_PAID(A: in out PUMP_UNIT)
    is
       use all type P.STATE_TPYE;
       baseStateType: P.STATE_TPYE;
@@ -120,7 +120,7 @@ with SPARK_Mode is
    -----------------------
    -- SET_PUMP_ACTIVE  --
    -----------------------
-   procedure SET_PUMP_ACTIVE(A: in out PUMP_UNIT_R; B: in P.FUEL_TYPES; C: in out P.STATE_TPYE)
+   procedure SET_PUMP_ACTIVE(A: in out PUMP_UNIT; B: in P.FUEL_TYPES; C: in out P.STATE_TPYE)
    is
    begin
       if P.FUEL_TYPES'Pos(B) =0 then
@@ -140,7 +140,7 @@ with SPARK_Mode is
    -----------------------
    -- SET_PUMP_NOZZLE_STATE_ACTIVE  --
    -----------------------
-   procedure SET_PUMP_NOZZLE_STATE(A: in out PUMP_UNIT_R; B: in P.FUEL_TYPES; C: in out P.NOZZLE_TYPE)
+   procedure SET_PUMP_NOZZLE_STATE(A: in out PUMP_UNIT; B: in P.FUEL_TYPES; C: in out P.NOZZLE_TYPE)
    is
    begin
       if P.FUEL_TYPES'Pos(B) =0 then
@@ -161,7 +161,7 @@ with SPARK_Mode is
    -----------------------
    -- UNIT_IS_USING     --
    -----------------------
-   function UNIT_IS_USING(A: in PUMP_UNIT_R) return Boolean
+   function UNIT_IS_USING(A: in PUMP_UNIT) return Boolean
    is
    begin
       return A.IS_USING;
@@ -170,7 +170,7 @@ with SPARK_Mode is
    -----------------------
    -- UNIT_IS_PAID      --
    -----------------------
-   function UNIT_IS_PAID(A: in PUMP_UNIT_R) return Boolean
+   function UNIT_IS_PAID(A: in PUMP_UNIT) return Boolean
    is
    begin
       return A.IS_PAID;

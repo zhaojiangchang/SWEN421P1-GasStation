@@ -8,7 +8,7 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_PUMP_STATE(
-     A: in out PUMP_TYPE;
+     A: in out PUMP;
      STATE: in STATE_TPYE)
    is
    begin
@@ -22,7 +22,7 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_PUMP_NOZZLE_STATE(
-     A: in out PUMP_TYPE;
+     A: in out PUMP;
      NOZZLE_STATE: in NOZZLE_TYPE)
    is
    begin
@@ -36,7 +36,7 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_RESERVOIR_SIZE(
-     A: in out PUMP_TYPE;
+     A: in out PUMP;
      SIZE: in TANK_SIZE)
    is
    begin
@@ -49,7 +49,7 @@ with SPARK_Mode is
    --------------------------
 
    procedure ADD_PETROL_RESERVOIR
-     (A: in out PUMP_TYPE;
+     (A: in out PUMP;
       AMOUNT: in TANK_SIZE)
    is
    begin
@@ -62,7 +62,7 @@ with SPARK_Mode is
    -----------------------------
 
    procedure REMOVE_PETROL_RESERVOIR
-     (A: in out PUMP_TYPE;
+     (A: in out PUMP;
       AMOUNT: in TANK_SIZE)
    is
    begin
@@ -73,9 +73,9 @@ with SPARK_Mode is
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR
-     (A: in out PUMP_TYPE; F_CATEGORY: in FUEL_TYPES)
+     (A: in out PUMP; F_CATEGORY: in FUEL_TYPES)
    is
-      R : PUMP.RESERVOIR;
+      R : RESERVOIR;
    begin
 --        R := PUMP.RESERVOIR;
 
@@ -90,7 +90,7 @@ with SPARK_Mode is
   -----------------------------
 
    procedure SET_FUEL_PRICE
-     (A: in out PUMP_TYPE; PRICE: in PRICE_TYPE)
+     (A: in out PUMP; PRICE: in PRICE_TYPE)
    is
    begin
       A.UNIT_PRICE := PRICE;
@@ -113,7 +113,7 @@ with SPARK_Mode is
    ------------------
 
    procedure CHANGE_STATE
-     (A: in out PUMP_TYPE;
+     (A: in out PUMP;
       STATE : in STATE_TPYE)
    is
    begin
@@ -141,7 +141,7 @@ with SPARK_Mode is
   -----------------------------
 
    function GET_CURRENT_RESERVOIR_SIZE
-     (A: in PUMP_TYPE) return TANK_SIZE
+     (A: in PUMP) return TANK_SIZE
    is
    begin
      -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
@@ -153,7 +153,7 @@ with SPARK_Mode is
   -----------------------------
 
    function GET_CURRENT_NOZZLE_STATE
-     (A: in PUMP_TYPE) return NOZZLE_TYPE
+     (A: in PUMP) return NOZZLE_TYPE
    is
    begin
      -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
@@ -164,7 +164,7 @@ with SPARK_Mode is
   -----------------------------
   -- GET STATE ----------------
   -----------------------------
-   function GET_STATE(A: in PUMP_TYPE) return STATE_TPYE
+   function GET_STATE(A: in PUMP) return STATE_TPYE
    is
    begin
       return A.PUMP_STATE;

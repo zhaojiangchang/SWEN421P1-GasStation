@@ -1,4 +1,3 @@
-with Ada.Text_IO; use Ada.Text_IO;
 with PUMP;
 with PUMP_UNIT;
 with sPrint; use sPrint;
@@ -10,7 +9,7 @@ procedure Main is
    pumpStateType: UNIT.P.STATE_TPYE;
   -- nozzleStateType: UNIT.P.NOZZLE_TYPE;
    --records
-   UNIT_1_R : UNIT.PUMP_UNIT_R;
+   UNIT_1 : UNIT.PUMP_UNIT;
 
    U91: UNIT.P.FUEL_TYPES;
    U95: UNIT.P.FUEL_TYPES;
@@ -39,16 +38,16 @@ begin
    U95 :=UNIT.P.FUEL_TYPES'Val(F_U95);
    Diesel :=UNIT.P.FUEL_TYPES'Val(F_Diesel);
    -- add pumps
-   UNIT.ADD_PUMP(UNIT_1_R, U91);
-   UNIT.ADD_PUMP(UNIT_1_R, U95);
-   UNIT.ADD_PUMP(UNIT_1_R, Diesel);
+   UNIT.ADD_PUMP(UNIT_1, U91);
+   UNIT.ADD_PUMP(UNIT_1, U95);
+   UNIT.ADD_PUMP(UNIT_1, Diesel);
 
    --TEST GET TANK 91 SIZE
-   tankSize := UNIT.GET_TANKS_SIZE(UNIT_1_R,U91);
+   tankSize := UNIT.GET_TANKS_SIZE(UNIT_1,U91);
    print("Test current tank size: "&tankSize'Image);
    --TEST SET PUMP SATE TO BASE
    pumpStateType := UNIT.P.STATE_TPYE'val(Base);
-   UNIT.SET_PUMP_ACTIVE(UNIT_1_R, U91, pumpStateType);
+   UNIT.SET_PUMP_ACTIVE(UNIT_1, U91, pumpStateType);
 
 
 

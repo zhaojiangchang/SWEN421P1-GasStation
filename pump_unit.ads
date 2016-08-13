@@ -13,6 +13,8 @@ with SPARK_Mode is
    type PRICE_TYPE is delta 0.01 digits 10;
 
    package P is new PUMP;
+
+
    --function
    function GET_PUMP(A: in out PUMP_UNIT_R; B: in FUEL_TYPE) return P.PUMP_TYPE;
    function GET_TANKS_SIZE(A: in PUMP_UNIT_R; B: in FUEL_TYPE) return P.TANK_SIZE;
@@ -22,6 +24,7 @@ with SPARK_Mode is
    procedure ADD_PUMP(A: in out PUMP_UNIT_R;B: in FUEL_TYPE);
    procedure SET_IS_USING(A: in out PUMP_UNIT_R);
    procedure SET_IS_PAID(A: in out PUMP_UNIT_R);
+   procedure SET_PUMP_ACTIVE(A: in out PUMP_UNIT_R; B: in FUEL_TYPE; C: in out P.STATE_TPYE);
 
   -- function PUMP_UNIT_PAID (A: in PUMP_UNIT_R)return Boolean;
 
@@ -30,10 +33,11 @@ private
       record
          IS_USING: Boolean;
          IS_PAID: Boolean;
-
+         PUMP_ACTIVE: FUEL_TYPE;
          PUMP_91: P.PUMP_TYPE(1);
          PUMP_95: P.PUMP_TYPE(2);
          PUMP_Diesel: P.PUMP_TYPE(3);
+         PUMP_NULL: P.PUMP_TYPE(4);
       end record;
 
 end PUMP_UNIT;

@@ -8,12 +8,12 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_PUMP_STATE(
-     A: in out PUMP_TYPE;
-     STATE: in STATE_TPYE)
+     pump_r: in out PUMP;
+     stateType: in STATE_TYPE)
    is
    begin
-      A.PUMP_STATE := STATE;
-      print("Chage State: " & STATE'Image);
+      pump_r.PUMP_STATE := stateType;
+      print("Chage State: " & stateType'Image);
 
    end SET_PUMP_STATE;
 
@@ -22,12 +22,12 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_PUMP_NOZZLE_STATE(
-     A: in out PUMP_TYPE;
-     NOZZLE_STATE: in NOZZLE_TYPE)
+     pump_r: in out PUMP;
+     nozzleType: in NOZZLE_TYPE)
    is
    begin
-      A.NOZZLE_STATE := NOZZLE_STATE;
-      print("Chage Nozzle State: "& NOZZLE_STATE'Image);
+      pump_r.NOZZLE_STATE := nozzleType;
+      print("Chage Nozzle State: "& nozzleType'Image);
 
    end SET_PUMP_NOZZLE_STATE;
 
@@ -36,24 +36,41 @@ with SPARK_Mode is
    --------------------------
 
    procedure SET_RESERVOIR_SIZE(
-     A: in out PUMP_TYPE;
-     SIZE: in TANK_SIZE)
+     pump_r: in out PUMP;
+     SIZE: in FLOAT_NUMBER)
    is
    begin
-      A.RESERVOIR_INFO.TOTAL := SIZE;
+      pump_r.RESERVOIR_INFO.TOTAL := SIZE;
       print("RESERVOIR SIZE: "& SIZE'Image);
 
    end SET_RESERVOIR_SIZE;
    --------------------------
-   -- ADD_PETROL_RESERVOIR --
+   -- GET_UNIT_PRICE --------
    --------------------------
-
-   procedure ADD_PETROL_RESERVOIR
-     (A: in out PUMP_TYPE;
-      AMOUNT: in TANK_SIZE)
+   function GET_UNIT_PRICE(pump_r: in PUMP) return FLOAT_NUMBER
    is
    begin
-      A.RESERVOIR_INFO.TOTAL := A.RESERVOIR_INFO.TOTAL + AMOUNT;
+      return pump_r.UNIT_PRICE;
+   end GET_UNIT_PRICE;
+
+    --------------------------
+   -- GET_TANKS_SIZE --------
+   --------------------------
+   function GET_TANKS_SIZE(pump_r: in PUMP) return FLOAT_NUMBER
+   is
+   begin
+      return pump_r.RESERVOIR_INFO.TOTAL;
+   end GET_TANKS_SIZE;
+
+   --------------------------
+   -- ADD_PETROL_RESERVOIR --
+   --------------------------
+   procedure ADD_PETROL_RESERVOIR
+     (pump_r: in out PUMP;
+      AMOUNT: in FLOAT_NUMBER)
+   is
+   begin
+      pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL + AMOUNT;
 
    end ADD_PETROL_RESERVOIR;
 
@@ -62,26 +79,26 @@ with SPARK_Mode is
    -----------------------------
 
    procedure REMOVE_PETROL_RESERVOIR
-     (A: in out PUMP_TYPE;
-      AMOUNT: in TANK_SIZE)
+     (pump_r: in out PUMP;
+      AMOUNT: in FLOAT_NUMBER)
    is
    begin
-      A.RESERVOIR_INFO.TOTAL := A.RESERVOIR_INFO.TOTAL - AMOUNT;
+      pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
    end REMOVE_PETROL_RESERVOIR;
 
     -----------------------------
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR
-     (A: in out PUMP_TYPE; F_CATEGORY: in FUEL_TYPES)
+     (pump_r: in out PUMP; fuelType: in FUEL_TYPES)
    is
-      R : PUMP.RESERVOIR;
+      R : RESERVOIR;
    begin
 --        R := PUMP.RESERVOIR;
 
-      R.RESERVOIR_CATEGORY := F_CATEGORY;
-      A.RESERVOIR_INFO := R;
-      print("Add Reservoir: "& F_CATEGORY'Image);
+      R.RESERVOIR_CATEGORY := fuelType;
+      pump_r.RESERVOIR_INFO := R;
+      print("Add Reservoir: "& fuelType'Image);
    end APPEND_RESERVOIR;
 
 
@@ -90,11 +107,11 @@ with SPARK_Mode is
   -----------------------------
 
    procedure SET_FUEL_PRICE
-     (A: in out PUMP_TYPE; PRICE: in PRICE_TYPE)
+     (pump_r: in out PUMP; PRICE: in FLOAT_NUMBER)
    is
    begin
-      A.UNIT_PRICE := PRICE;
-      print("fuel unit price: "& A.UNIT_PRICE'Image);
+      pump_r.UNIT_PRICE := PRICE;
+      print("fuel unit price: "& pump_r.UNIT_PRICE'Image);
       --Put_Line(PRICE'Image);
    end SET_FUEL_PRICE;
 
@@ -102,10 +119,10 @@ with SPARK_Mode is
 --     -- APPEND RESERVOIR TO PUMP --
 --     -----------------------------
 --     procedure SET_FUEL_NAME
---       (A: in out PUMP_TYPE; Name: in fuel)
+--       (pump_r: in out PUMP_TYPE; Name: in fuel)
 --     is
 --     begin
---        A.FUEL := Name;
+--        pump_r.FUEL := Name;
 --     end SET_FUEL_NAME;
 
    ------------------
@@ -113,11 +130,11 @@ with SPARK_Mode is
    ------------------
 
    procedure CHANGE_STATE
-     (A: in out PUMP_TYPE;
-      STATE : in STATE_TPYE)
+     (pump_r: in out PUMP;
+      stateType : in STATE_TYPE)
    is
    begin
-     A.PUMP_STATE := STATE;
+     pump_r.PUMP_STATE := stateType;
 
    end CHANGE_STATE;
 
@@ -126,7 +143,7 @@ with SPARK_Mode is
    -------------------------
 
 --     function IS_STATE_CHANGEABLE
---       (A: in PUMP_TYPE;
+--       (pump_r: in PUMP_TYPE;
 --        FIRST:STATE_TPYE;
 --        SECOND:STATE_TPYE)
 --        return Boolean
@@ -136,38 +153,27 @@ with SPARK_Mode is
 --
 --        return False;
 --     end IS_STATE_CHANGEABLE;
- -----------------------------
-   -- APPEND RESERVOIR TO PUMP --
-  -----------------------------
-
-   function GET_CURRENT_RESERVOIR_SIZE
-     (A: in PUMP_TYPE) return TANK_SIZE
-   is
-   begin
-     -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
-       return A.RESERVOIR_INFO.TOTAL;
-   end GET_CURRENT_RESERVOIR_SIZE;
 
   -----------------------------
   --GET_CURRENT_NOZZLE_STATE --
   -----------------------------
 
    function GET_CURRENT_NOZZLE_STATE
-     (A: in PUMP_TYPE) return NOZZLE_TYPE
+     (pump_r: in PUMP) return NOZZLE_TYPE
    is
    begin
-     -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
-       return A.NOZZLE_STATE;
+     -- print( "tank size: "&pump_r.RESERVOIR_INFO.TOTAL'Image);
+       return pump_r.NOZZLE_STATE;
    end GET_CURRENT_NOZZLE_STATE;
 
 
   -----------------------------
   -- GET STATE ----------------
   -----------------------------
-   function GET_STATE(A: in PUMP_TYPE) return STATE_TPYE
+   function GET_STATE(pump_r: in PUMP) return STATE_TYPE
    is
    begin
-      return A.PUMP_STATE;
+      return pump_r.PUMP_STATE;
    end GET_STATE;
 
 

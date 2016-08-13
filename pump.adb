@@ -13,7 +13,7 @@ with SPARK_Mode is
    is
    begin
       A.PUMP_STATE := STATE;
-      print("Set Initial pump state to BASE");
+      print("State: " & STATE'Image);
 
    end SET_PUMP_STATE;
 
@@ -27,7 +27,7 @@ with SPARK_Mode is
    is
    begin
       A.RESERVOIR_INFO.TOTAL := SIZE;
-      print("Set Initial pump RESERVOIR SIZE: "& SIZE'Image);
+      print("RESERVOIR SIZE: "& SIZE'Image);
 
    end SET_RESERVOIR_SIZE;
    --------------------------
@@ -59,7 +59,7 @@ with SPARK_Mode is
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR
-     (A: in out PUMP_TYPE; POSITION: in Integer)
+     (A: in out PUMP_TYPE; POSITION: in FUEL_TYPES)
    is
       R : PUMP.RESERVOIR(POSITION);
    begin
@@ -137,7 +137,7 @@ with SPARK_Mode is
   -----------------------------
   -- GET STATE ----------------
   -----------------------------
-   function GET_STATE(A: in out PUMP_TYPE) return STATE_TPYE
+   function GET_STATE(A: in PUMP_TYPE) return STATE_TPYE
    is
    begin
       return A.PUMP_STATE;

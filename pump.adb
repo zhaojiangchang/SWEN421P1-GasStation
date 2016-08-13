@@ -3,8 +3,8 @@ with sPrint; use sPrint;
 package body PUMP
 with SPARK_Mode is
 
-     --------------------------
-   -- ADD_PETROL_RESERVOIR --
+   --------------------------
+   -- SET_PUMP_STATE --
    --------------------------
 
    procedure SET_PUMP_STATE(
@@ -13,9 +13,23 @@ with SPARK_Mode is
    is
    begin
       A.PUMP_STATE := STATE;
-      print("State: " & STATE'Image);
+      print("Chage State: " & STATE'Image);
 
    end SET_PUMP_STATE;
+
+   --------------------------
+   -- SET_PUMP_STATE --
+   --------------------------
+
+   procedure SET_PUMP_NOZZLE_STATE(
+     A: in out PUMP_TYPE;
+     NOZZLE_STATE: in NOZZLE_TYPE)
+   is
+   begin
+      A.NOZZLE_STATE := NOZZLE_STATE;
+      print("Chage Nozzle State: "& NOZZLE_STATE'Image);
+
+   end SET_PUMP_NOZZLE_STATE;
 
    --------------------------
    -- ADD_PETROL_RESERVOIR --
@@ -59,15 +73,15 @@ with SPARK_Mode is
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR
-     (A: in out PUMP_TYPE; POSITION: in FUEL_TYPES)
+     (A: in out PUMP_TYPE; F_CATEGORY: in FUEL_TYPES)
    is
-      R : PUMP.RESERVOIR(POSITION);
+      R : PUMP.RESERVOIR;
    begin
 --        R := PUMP.RESERVOIR;
 
-      R.RESERVOIR_POSITION := POSITION;
+      R.RESERVOIR_CATEGORY := F_CATEGORY;
       A.RESERVOIR_INFO := R;
-      print("Add Reservoir: "& POSITION'Image);
+      print("Add Reservoir: "& F_CATEGORY'Image);
    end APPEND_RESERVOIR;
 
 
@@ -133,6 +147,19 @@ with SPARK_Mode is
      -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
        return A.RESERVOIR_INFO.TOTAL;
    end GET_CURRENT_RESERVOIR_SIZE;
+
+  -----------------------------
+  --GET_CURRENT_NOZZLE_STATE --
+  -----------------------------
+
+   function GET_CURRENT_NOZZLE_STATE
+     (A: in PUMP_TYPE) return NOZZLE_TYPE
+   is
+   begin
+     -- print( "tank size: "&A.RESERVOIR_INFO.TOTAL'Image);
+       return A.NOZZLE_STATE;
+   end GET_CURRENT_NOZZLE_STATE;
+
 
   -----------------------------
   -- GET STATE ----------------

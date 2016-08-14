@@ -1,5 +1,6 @@
 with PUMP;
 with PUMP_UNIT;
+with CASH_REGISTER;
 with sPrint; use sPrint;
 with Ada.Text_IO; use Ada.Text_IO;
 procedure Main is
@@ -13,7 +14,6 @@ procedure Main is
    UNIT_1_91: PUMP.PUMP;
    UNIT_1_95: PUMP.PUMP;
    UNIT_1_Diesel: PUMP.PUMP;
-
 
    U91: PUMP.FUEL_TYPES;
    U95: PUMP.FUEL_TYPES;
@@ -39,85 +39,7 @@ procedure Main is
    type FLOAT_NUMBER is delta 0.01 digits 10;
 
    --tankSize : PUMP.FLOAT_NUMBER;
-   ---------------------------------------
-   -- PUMP_UNIT_ID  ----------------------
-   ---------------------------------------
-   type PUMP_UNIT_ID is
-      record
-         ID:PUMP_UNIT.UNIT_ID_TYPE;
-         TO_PAY : PUMP.FLOAT_NUMBER;
-         PUMPED :PUMP.FLOAT_NUMBER;
-         FUEL: PUMP.FUEL_TYPES;
-      end record;
-   ---------------------------------------
-   -- CASH_REGISTER  ---------------------
-   ---------------------------------------
-   type CASH_REGISTER is
-      record
 
-         UNIT_1: PUMP_UNIT_ID;
-      end record;
-   cashRegister: CASH_REGISTER;
-   ---------------------------------------
-   -- payFuel  ----------------------------
-   ---------------------------------------
-   procedure payFuel (pumpUnit: in out PUMP_UNIT.PUMP_UNIT; pump_r: in out PUMP.PUMP; AMOUNT: in  PUMP.FLOAT_NUMBER)is
-      id: PUMP_UNIT.UNIT_ID_TYPE;
-      topay: PUMP.FLOAT_NUMBER;
-      use all type PUMP.FLOAT_NUMBER;
-
-   begin
-
-      id := PUMP_UNIT.GET_ID(pumpUnit);
-      topay:= PUMP_UNIT.GET_TO_PAY(pumpUnit);
-      if PUMP.STATE_TYPE'Pos(PUMP_UNIT.GET_PUMP_UNIT_STATE(pumpUnit)) /= PUMP.STATE_TYPE'Pos(PUMP.STATE_TYPE'Val(3))
-        and PUMP.NOZZLE_TYPE'Pos(PUMP_UNIT.GET_PUMP_NOZZLE_STATE(pumpUnit)) /=  PUMP.NOZZLE_TYPE'Pos(PUMP.NOZZLE_TYPE'Val(5)) then
-         print("you need return nozzle or pumping first");
-      else
-
-
-         print("Pay for: "&cashRegister.UNIT_1.ID);
-         print("Amount to pay: "&topay'Image&"   Actual amount given: "&AMOUNT'Image);
-         if id = cashRegister.UNIT_1.ID  and PUMP_UNIT.GET_TO_PAY(pumpUnit) /= 0.00 then
-            if AMOUNT = topay then
-               print("paid for UNIT_1:  " & AMOUNT'Image);
-               cashRegister.UNIT_1.TO_PAY:= 0.00;
-               cashRegister.UNIT_1.PUMPED:=0.00;
-               PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(0));
-               PUMP.SET_PUMPED(pump_r,0.00);
-               PUMP_UNIT.SET_IS_PAID(pumpUnit);
-               PUMP_UNIT.SET_PUMPED(pumpUnit, 0.00);
-               PUMP_UNIT.SET_TO_PAY(pumpUnit,0.00);
-
-               --              PUMP_UNIT.PUMP_UNIT
-
-            else
-               print("amount not equal");
-
-            end if;
-         elsif PUMP_UNIT.GET_TO_PAY(pumpUnit) = 0.00 then
-            print("already paid");
-         end if;
-      end if;
-
-   end payFuel;
-   ---------------------------------------
-   -- SET_PUMPED_INFO_TO_CASH_REGISTER  --
-   ---------------------------------------
-   procedure SET_PUMPED_INFO_TO_CASH_REGISTER
-     (pumpUnit: in out PUMP_UNIT.PUMP_UNIT)
-   is
-      topay: PUMP.FLOAT_NUMBER;
-      pumpUnitId: PUMP_UNIT_ID;
-   begin
-      topay:= PUMP_UNIT.GET_TO_PAY(pumpUnit);
-      pumpUnitId.ID :=PUMP_UNIT.GET_ID(pumpUnit);
-      pumpUnitId.TO_PAY := topay;
-      pumpUnitId.PUMPED := PUMP_UNIT.GET_PUMPED(pumpUnit);
-      pumpUnitId.FUEL := PUMP_UNIT.GET_FUEL(pumpUnit);
-      cashRegister.UNIT_1 := pumpUnitId;
-      print("set pumpunit value to cash regesiter");
-   end SET_PUMPED_INFO_TO_CASH_REGISTER;
    ---------------------------------------
    -- variable----------------------------
    ---------------------------------------
@@ -155,22 +77,23 @@ begin
       --set customer input not money
       AMOUNT_TO_FILL := 2.50;
       --test left nozzle and return nozzle
-      PUMP_UNIT.LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
-      PUMP_UNIT.LEFT_NOZZLE(UNIT_1,UNIT_1_95,U95);
-      PUMP_UNIT.RETURN_NOZZLE(UNIT_1, UNIT_1_91);
+--        PUMP_UNIT.LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+--        PUMP_UNIT.LEFT_NOZZLE(UNIT_1,UNIT_1_95,U95);
+--        PUMP_UNIT.RETURN_NOZZLE(UNIT_1, UNIT_1_91);
       PUMP_UNIT.LEFT_NOZZLE(UNIT_1,UNIT_1_95,U95);
       --test pumping
       PUMP_UNIT.START_PUMPING(UNIT_1,UNIT_1_95,AMOUNT_TO_FILL, CAR_TANK_SPACE);
       --test sensor
-      PUMP_UNIT.START_PUMPING(UNIT_1,UNIT_1_91, 0.00, CAR_TANK_SPACE);
+--        PUMP_UNIT.START_PUMPING(UNIT_1,UNIT_1_91, 0.00, CAR_TANK_SPACE);
       --test if car tank full
       PUMP_UNIT.START_PUMPING(UNIT_1,UNIT_1_95, 0.00, CAR_TANK_SPACE);
-      PUMP_UNIT.STOP_PUMPING(UNIT_1,UNIT_1_95);
+      PUMP_UNIT.RETURN_NOZZLE(UNIT_1,UNIT_1_95);
+      --        PUMP_UNIT.STOP_PUMPING(UNIT_1,UNIT_1_95);
       --send info to cash register
-      SET_PUMPED_INFO_TO_CASH_REGISTER(UNIT_1);
+      CASH_REGISTER.SET_PUMPED_INFO_TO_CASH_REGISTER(UNIT_1);
       --pay
-      payFuel(UNIT_1,UNIT_1_95,PUMP_UNIT.GET_TO_PAY(UNIT_1));
-      payFuel(UNIT_1,UNIT_1_95,50.00);
+      CASH_REGISTER.payFuel(UNIT_1,UNIT_1_95,PUMP_UNIT.GET_TO_PAY(UNIT_1));
+      CASH_REGISTER.payFuel(UNIT_1,UNIT_1_95,50.00);
       print("");
       print("TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST ");
       print("");

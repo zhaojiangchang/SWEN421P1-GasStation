@@ -18,8 +18,8 @@ with SPARK_Mode is
       baseStateType:= PUMP.STATE_TYPE'val(0);
       nozzleStateType := PUMP.NOZZLE_TYPE'val(0);
 
-      case PUMP.FUEL_TYPES'Pos(fuelType) is
-         when 0 =>
+      case fuelType is
+         when PUMP.U91 =>
             print("add pump: 91");
             PUMP.SET_FUEL_PRICE(pump_r,1.80);
             PUMP.SET_PUMP_STATE(pump_r,baseStateType);
@@ -33,7 +33,7 @@ with SPARK_Mode is
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
-         when 1 =>
+         when PUMP.U95 =>
             print("add pump: 95");
             PUMP.SET_FUEL_PRICE(pump_r,2.10);
             PUMP.SET_PUMP_STATE(pump_r,baseStateType);
@@ -47,7 +47,7 @@ with SPARK_Mode is
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
-         when 2 =>
+         when PUMP.Diesel =>
             print("add pump: Diesel");
             PUMP.SET_FUEL_PRICE(pump_r,1.10);
             PUMP.SET_PUMP_STATE(pump_r,baseStateType);
@@ -61,7 +61,7 @@ with SPARK_Mode is
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
-         when others => null;
+
       end case;
       print("");
    end ADD_PUMP;
@@ -89,11 +89,10 @@ with SPARK_Mode is
    function GET_PUMP(pumpUnit: in PUMP_UNIT; fuelType: in PUMP.FUEL_TYPES) return PUMP.PUMP
    is
    begin
-      case PUMP.FUEL_TYPES'Pos(fuelType) is
-         when 0 => return pumpUnit.PUMP_91;
-         when 1 => return pumpUnit.PUMP_95;
-         when 2 => return pumpUnit.PUMP_Diesel;
-         when others => return pumpUnit.PUMP_91;
+      case fuelType is
+         when PUMP.U91 => return pumpUnit.PUMP_91;
+         when PUMP.U95 => return pumpUnit.PUMP_95;
+         when PUMP.Diesel => return pumpUnit.PUMP_Diesel;
       end case;
    end GET_PUMP;
 
@@ -104,11 +103,10 @@ with SPARK_Mode is
    function GET_TANKS_SIZE(pumpUnit: in PUMP_UNIT; fuelType: in PUMP.FUEL_TYPES) return PUMP.FLOAT_NUMBER
    is
    begin
-      case PUMP.FUEL_TYPES'Pos(fuelType) is
-         when 0 => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_91);
-         when 1 => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_95);
-         when 2 => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_Diesel);
-         when others => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_91);
+      case fuelType is
+         when PUMP.U91 => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_91);
+         when PUMP.U95 => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_95);
+         when PUMP.Diesel => return PUMP.GET_TANKS_SIZE(pumpUnit.PUMP_Diesel);
       end case;
    end GET_TANKS_SIZE;
 
@@ -175,7 +173,8 @@ with SPARK_Mode is
             pumpUnit.IS_PAID := True;
             print("set pump unit initial is paid to true ");
          end if;
-
+      else
+         pumpUnit.IS_PAID := False;
       end if;
    end SET_IS_PAID;
    -----------------------
@@ -201,8 +200,6 @@ with SPARK_Mode is
       elsif PUMP.FUEL_TYPES'Pos(fuelType) = 2 then
          pumpUnit.PUMP_ACTIVE_FUEL := fuelType;
          PUMP.SET_PUMP_STATE(pumpUnit.PUMP_Diesel, stateType);
-      else
-         print("FUEL_TYPE range 1..3");
       end if;
 
    end SET_PUMP_ACTIVE_STATE;
@@ -221,8 +218,6 @@ with SPARK_Mode is
       elsif PUMP.FUEL_TYPES'Pos(fuelType) = 2 then
          PUMP.SET_PUMP_NOZZLE_STATE(pumpUnit.PUMP_Diesel, nozzleType);
          pumpUnit.PUMP_NOZZLE_STATE := nozzleType;
-      else
-         print("FUEL_TYPE range 1..3");
       end if;
 
    end SET_PUMP_NOZZLE_STATE;
@@ -335,6 +330,7 @@ with SPARK_Mode is
       SENSOR := False;
       if pumpUnit.PUMP_ACTIVE_STATE = PUMP.ready  and pump_r.PUMP_STATE = PUMP.Ready then
          tankSize :=  PUMP.GET_TANKS_SIZE(pump_r);
+         print_float_type("tank size: ", tankSize);
          if tankSize <= 0.00 then
             print("tank empty");
             Raise startPumpingException;
@@ -352,17 +348,18 @@ with SPARK_Mode is
                pumped:= pumped +0.01;
                pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
                pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
-               CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+               if CAR_TANK_SPACE -0.01 >0.00 then
+                  CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+               else
+                  SENSOR := True;
+                  STOP_PUMPING(pumpUnit, pump_r);
+               end if;
                --                 print_float_type("pumping: " , pumped);
                --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
                --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);
                PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-               if CAR_TANK_SPACE <=0.00 then
-                  SENSOR := True;
-                  STOP_PUMPING(pumpUnit, pump_r);
-                  print("car tank space = 0.00 sensor = true");
-               elsif tankSize <= 0.00 then
+               if tankSize <= 0.00 then
                   STOP_PUMPING(pumpUnit, pump_r);
                   print("tank empty stop pumping");
                elsif pumped>= AMOUNT then
@@ -381,7 +378,7 @@ with SPARK_Mode is
                print("tank empty");
                Raise startPumpingException;
             end if;
-            if CAR_TANK_SPACE = 0.00 then
+            if CAR_TANK_SPACE <= 0.00 then
                print("car tank full can not pumping");
                Raise startPumpingException;
             end if;
@@ -390,17 +387,17 @@ with SPARK_Mode is
                --                 pumped:= pumped +0.01;
                pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
                pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
-               CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+               if CAR_TANK_SPACE -0.01 >0.00 then
+                  CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+               else
+                  SENSOR := True;
+                  STOP_PUMPING(pumpUnit, pump_r);
+               end if;
                --                 print_float_type("pumping: " , pumped);
                --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
                --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-               if CAR_TANK_SPACE <=0.00 then
-                  SENSOR := True;
-                  STOP_PUMPING(pumpUnit, pump_r);
-
-                  print("car tank space = 0.00 sensor = true");
-               elsif tankSize <= 0.00 then
+               if tankSize <= 0.00 then
                   STOP_PUMPING(pumpUnit, pump_r);
                   print("tank empty stop pumping");
                end if;

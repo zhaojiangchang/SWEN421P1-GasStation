@@ -4,7 +4,7 @@ with SPARK_Mode is
 
    type RESERVOIR_NUM is new Integer;
    type FLOAT_NUMBER is digits 3 range 0.0 .. 1.0E35;
-   type FUEL_TYPES is (U91, U95, Diesel, NO);
+   type FUEL_TYPES is (U91, U95, Diesel);
 --     type PUMP is private;
 --     type RESERVOIVOIR is private;
    type STATE_TYPE is (Base, Ready, Pumping, Waiting);
@@ -20,13 +20,13 @@ with SPARK_Mode is
    type PUMP is
       record
          RESERVOIR_INFO: RESERVOIR:=(
-                                     TOTAL=>1000.00,
+                                     TOTAL=>10.00,
                                      RESERVOIR_CATEGORY=>FUEL_TYPES'Val(0));
          PUMP_STATE: STATE_TYPE:=STATE_TYPE'Val(0);
          PUMPED: FLOAT_NUMBER:=0.00;
          NOZZLE_STATE: NOZZLE_TYPE:=NOZZLE_TYPE'Val(0);
          UNIT_PRICE: FLOAT_NUMBER:=0.00;
-         FUEL_TYPE: FUEL_TYPES:= FUEL_TYPES'Val(3);
+         FUEL_TYPE: FUEL_TYPES:= FUEL_TYPES'Val(0);
       end record;
 
    --procedures

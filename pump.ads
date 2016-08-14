@@ -14,28 +14,31 @@ with SPARK_Mode is
    type NOZZLE_TYPE is (NozzleBase, Lift, Replace,Start, Stop, Pay);
 
    --procedures
-   procedure ADD_PETROL_RESERVOIR (pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER)
-     with pre => (AMOUNT >0.00 and AMOUNT <100000.00);
-   procedure REMOVE_PETROL_RESERVOIR (pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER);
-   procedure CHANGE_STATE(pump_r: in out PUMP; stateType : in STATE_TYPE);
-   procedure APPEND_RESERVOIR(pump_r: in out PUMP; fuelType: in FUEL_TYPES);
    procedure SET_FUEL_PRICE(pump_r: in out PUMP; PRICE: in FLOAT_NUMBER);
    procedure SET_PUMP_STATE(pump_r: in out PUMP; stateType: in STATE_TYPE);
    procedure SET_PUMPED(pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER);
    procedure SET_PUMP_NOZZLE_STATE(pump_r: in out PUMP; nozzleType: in NOZZLE_TYPE);
-   --       with
-   --         pre =>(PUMP.);
-   --       post =>();
+
+   procedure APPEND_RESERVOIR(pump_r: in out PUMP; fuelType: in FUEL_TYPES)
+     with
+       pre=>(FUEL_TYPES'Pos(fuelType)>=0),
+         post=>(GET_RESEVOIR_CATEGORY(pump_r) = fuelType);
+
    procedure SET_RESERVOIR_SIZE(pump_r: in out PUMP; SIZE: in FLOAT_NUMBER)
      with
-       pre =>(SIZE > 0.00 and SIZE <10_000.00);
-
+       pre =>(SIZE > 10.00 and SIZE <10000.00) ,
+     post=>(GET_TANKS_SIZE(pump_r) = SIZE);
+   procedure REMOVE_PETROL_RESERVOIR (pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER)
+     with
+       pre=>(AMOUNT <= GET_TANKS_SIZE(pump_r)),
+     post=>(GET_TANKS_SIZE(pump_r)>=0.00);
 
    --functions
    function GET_STATE(pump_r: in PUMP) return STATE_TYPE;
    function GET_CURRENT_NOZZLE_STATE(pump_r: in PUMP) return NOZZLE_TYPE;
    function GET_UNIT_PRICE(pump_r: in PUMP) return FLOAT_NUMBER;
    function GET_TANKS_SIZE(pump_r: in PUMP) return FLOAT_NUMBER;
+   function GET_RESEVOIR_CATEGORY(pump_r: in PUMP) return FUEL_TYPES;
 
 private
 

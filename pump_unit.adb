@@ -7,10 +7,10 @@ with SPARK_Mode is
    -- ADD_PUMP --
    --------------
 
-   procedure ADD_PUMP(pumpUnit: in out PUMP_UNIT; fuelType: in P.FUEL_TYPES) is
-      p91 : P.PUMP;
-      p95 : P.PUMP;
-      pDiesel : P.PUMP;
+   procedure ADD_PUMP(pumpUnit: in out PUMP_UNIT; pump_r : in out P.PUMP; fuelType: in P.FUEL_TYPES) is
+--        p91 : P.PUMP;
+--        p95 : P.PUMP;
+--        pDiesel : P.PUMP;
 
       use all type P.PUMP;
       nozzleStateType: P.NOZZLE_TYPE;
@@ -22,46 +22,46 @@ with SPARK_Mode is
       case P.FUEL_TYPES'Pos(fuelType) is
          when 0 =>
             print("add pump: 91");
-            P.SET_FUEL_PRICE(p91,1.80);
-            p.SET_PUMP_STATE(p91,baseStateType);
-            P.APPEND_RESERVOIR(p91,fuelType);
-            p.SET_RESERVOIR_SIZE(p91, 1000.00);
-            pumpUnit.PUMP_91 := p91;
+            P.SET_FUEL_PRICE(pump_r,1.80);
+            p.SET_PUMP_STATE(pump_r,baseStateType);
+            P.APPEND_RESERVOIR(pump_r,fuelType);
+            p.SET_RESERVOIR_SIZE(pump_r, 1000.00);
+            pumpUnit.PUMP_91 := pump_r;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
             pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
-            P.SET_PUMP_NOZZLE_STATE(p91, nozzleStateType);
+            P.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
          when 1 =>
             print("add pump: 95");
-            P.SET_FUEL_PRICE(p95,2.10);
-            p.SET_PUMP_STATE(p95,baseStateType);
-            P.APPEND_RESERVOIR(p95, fuelType);
-            p.SET_RESERVOIR_SIZE(p95, 1000.00);
-            pumpUnit.PUMP_95 := p95;
+            P.SET_FUEL_PRICE(pump_r,2.10);
+            p.SET_PUMP_STATE(pump_r,baseStateType);
+            P.APPEND_RESERVOIR(pump_r, fuelType);
+            p.SET_RESERVOIR_SIZE(pump_r, 1000.00);
+            pumpUnit.PUMP_95 := pump_r;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
             pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
-            P.SET_PUMP_NOZZLE_STATE(p95, nozzleStateType);
+            P.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
          when 2 =>
             print("add pump: Diesel");
-            P.SET_FUEL_PRICE(pDiesel,1.10);
-            p.SET_PUMP_STATE(pDiesel,baseStateType);
-            P.APPEND_RESERVOIR(pDiesel, fuelType);
-            p.SET_RESERVOIR_SIZE(pDiesel, 1000.00);
-            pumpUnit.PUMP_Diesel := pDiesel;
+            P.SET_FUEL_PRICE(pump_r,1.10);
+            p.SET_PUMP_STATE(pump_r,baseStateType);
+            P.APPEND_RESERVOIR(pump_r, fuelType);
+            p.SET_RESERVOIR_SIZE(pump_r, 1000.00);
+            pumpUnit.PUMP_Diesel := pump_r;
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
             pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
-            P.SET_PUMP_NOZZLE_STATE(pDiesel, nozzleStateType);
+            P.SET_PUMP_NOZZLE_STATE(pump_r, nozzleStateType);
          when others => null;
       end case;
       print("");
@@ -69,16 +69,16 @@ with SPARK_Mode is
    --------------------
    -- SET_PUMPED --
    --------------------
-  procedure SET_PUMPED(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
+   procedure SET_PUMPED(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
    is
    begin
       pumpUnit.PUMPED := AMOUNT;
    end SET_PUMPED;
 
-      --------------------
+   --------------------
    -- SET_PUMPED --
    --------------------
-  procedure SET_TO_PAY(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
+   procedure SET_TO_PAY(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
    is
    begin
       pumpUnit.TO_PAY := AMOUNT;
@@ -179,7 +179,7 @@ with SPARK_Mode is
 
       end if;
    end SET_IS_PAID;
-    -----------------------
+   -----------------------
    -- SET_UNIT_ID  --
    -----------------------
    procedure SET_UNIT_ID(pumpUnit: in out PUMP_UNIT; ID: in UNIT_ID_TYPE)
@@ -247,6 +247,24 @@ with SPARK_Mode is
    end UNIT_IS_PAID;
 
    -----------------------
+   -- GET_PUMP_UNIT_STATE      --
+   -----------------------
+   function GET_PUMP_UNIT_STATE(pumpUnit: in PUMP_UNIT) return P.STATE_TYPE
+   is
+   begin
+      return pumpUnit.PUMP_ACTIVE_STATE;
+   end GET_PUMP_UNIT_STATE;
+
+   -----------------------
+   -- GET_PUMP_NOZZLE_STATE      --
+   -----------------------
+   function GET_PUMP_NOZZLE_STATE(pumpUnit: in PUMP_UNIT) return P.NOZZLE_TYPE
+   is
+   begin
+      return pumpUnit.PUMP_NOZZLE_STATE;
+   end GET_PUMP_NOZZLE_STATE;
+
+   -----------------------
    --   LEFT_NOZZLE     --
    -----------------------
    procedure LEFT_NOZZLE (pumpUnit: in out PUMP_UNIT; pump_r : in out P.PUMP; fuelType: in P.FUEL_TYPES) is
@@ -280,9 +298,9 @@ with SPARK_Mode is
       if P.STATE_TYPE'Image(pumpUnit.PUMP_ACTIVE_STATE) = "READY" and P.STATE_TYPE'Image(P.GET_STATE(pump_r)) = "READY" then
          if pumpUnit.TO_PAY > due then
             pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(3);
-            pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(5);
+            pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(2);
             P.SET_PUMP_STATE(pump_r, P.STATE_TYPE'Val(3));
-            P.SET_PUMP_NOZZLE_STATE(pump_r,  P.NOZZLE_TYPE'Val(5));
+            P.SET_PUMP_NOZZLE_STATE(pump_r,  P.NOZZLE_TYPE'Val(2));
             print("return nozzle to waiting state TO_PAY: " & pumpUnit.TO_PAY'Image);
          else
             pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(0);
@@ -333,23 +351,14 @@ with SPARK_Mode is
                tankSize := P.GET_TANKS_SIZE(pump_r);
                if CAR_TANK_SPACE <=0.00 then
                   SENSOR := True;
-                  pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
-                  P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
-                  pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
-                  P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
+                  STOP_PUMPING(pumpUnit, pump_r);
                   print("car tank space = 0.00 sensor = true");
                elsif tankSize <= 0.00 then
-                  pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
-                  P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
-                  pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
-                  P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
+                  STOP_PUMPING(pumpUnit, pump_r);
                   print("tank empty stop pumping");
                elsif pumped>= AMOUNT then
                   print("pumped given amount");
-                  pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
-                  P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
-                  pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
-                  P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
+                  STOP_PUMPING(pumpUnit, pump_r);
                end if;
             end loop;
 
@@ -376,16 +385,10 @@ with SPARK_Mode is
                tankSize := P.GET_TANKS_SIZE(pump_r);
                if CAR_TANK_SPACE <=0.00 then
                   SENSOR := True;
-                  pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
-                  P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
-                  pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
-                  P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
+                  STOP_PUMPING(pumpUnit, pump_r);
                   print("car tank space = 0.00 sensor = true");
                elsif tankSize <= 0.00 then
-                  pumpUnit.PUMP_NOZZLE_STATE:= P.NOZZLE_TYPE'Val(4);
-                  P.SET_PUMP_NOZZLE_STATE(pump_r, P.NOZZLE_TYPE'Val(4));
-                  pumpUnit.PUMP_ACTIVE_STATE := P.STATE_TYPE'Val(1);
-                  P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(1));
+                  STOP_PUMPING(pumpUnit, pump_r);
                   print("tank empty stop pumping");
                end if;
             end loop;

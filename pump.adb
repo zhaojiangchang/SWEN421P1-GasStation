@@ -61,19 +61,14 @@ with SPARK_Mode is
    begin
       return pump_r.RESERVOIR_INFO.TOTAL;
    end GET_TANKS_SIZE;
-
+  --------------------------
+   -- GET_RESEVOIR_CATEGORY --------
    --------------------------
-   -- ADD_PETROL_RESERVOIR --
-   --------------------------
-   procedure ADD_PETROL_RESERVOIR
-     (pump_r: in out PUMP;
-      AMOUNT: in FLOAT_NUMBER)
+   function GET_RESEVOIR_CATEGORY(pump_r: in PUMP) return FUEL_TYPES
    is
    begin
-      pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL + AMOUNT;
-
-   end ADD_PETROL_RESERVOIR;
-
+      return pump_r.RESERVOIR_INFO.RESERVOIR_CATEGORY;
+   end GET_RESEVOIR_CATEGORY;
    -----------------------------
    -- REMOVE_PETROL_RESERVOIR --
    -----------------------------
@@ -125,45 +120,6 @@ with SPARK_Mode is
       print("fuel unit price: "& pump_r.UNIT_PRICE'Image);
       --Put_Line(PRICE'Image);
    end SET_FUEL_PRICE;
-
---     -----------------------------
---     -- APPEND RESERVOIR TO PUMP --
---     -----------------------------
---     procedure SET_FUEL_NAME
---       (pump_r: in out PUMP_TYPE; Name: in fuel)
---     is
---     begin
---        pump_r.FUEL := Name;
---     end SET_FUEL_NAME;
-
-   ------------------
-   -- CHANGE_STATE --
-   ------------------
-
-   procedure CHANGE_STATE
-     (pump_r: in out PUMP;
-      stateType : in STATE_TYPE)
-   is
-   begin
-     pump_r.PUMP_STATE := stateType;
-
-   end CHANGE_STATE;
-
-   -------------------------
-   -- IS_STATE_CHANGEABLE --
-   -------------------------
-
---     function IS_STATE_CHANGEABLE
---       (pump_r: in PUMP_TYPE;
---        FIRST:STATE_TPYE;
---        SECOND:STATE_TPYE)
---        return Boolean
---     is
---     begin
---        --  Generated stub: replace with real body!
---
---        return False;
---     end IS_STATE_CHANGEABLE;
 
   -----------------------------
   --GET_CURRENT_NOZZLE_STATE --

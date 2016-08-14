@@ -1,0 +1,116 @@
+V "GNAT Lib v2016"
+A -gnatA
+A -ftest-coverage
+A -fprofile-arcs
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U aunit.test_filters%b	aunit-test_filters.adb	e9d6512d NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W aunit%s		aunit.adb		aunit.ali
+W aunit.simple_test_cases%s  aunit-simple_test_cases.adb  aunit-simple_test_cases.ali
+W system%s		system.ads		system.ali
+W system.concat_3%s	s-conca3.adb		s-conca3.ali
+
+U aunit.test_filters%s	aunit-test_filters.ads	9a67cba8 EE OO PF PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W aunit%s		aunit.adb		aunit.ali
+W aunit.tests%s		aunit-tests.ads		aunit-tests.ali
+W system%s		system.ads		system.ali
+W system.finalization_masters%s  s-finmas.adb	s-finmas.ali
+W system.pool_global%s	s-pooglo.adb		s-pooglo.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-calend.ads		20160516092930 2d5f01d4 ada.calendar%s
+D a-except.ads		20160516092928 291912d5 ada.exceptions%s
+D a-finali.ads		20160516092930 bf4f806b ada.finalization%s
+D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
+D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
+D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D ada_containers.ads	20160516092006 11329e00 ada_containers%s
+D ada_containers-aunit_lists.ads  20160516092006 d9ebc89a ada_containers.aunit_lists%s
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-assertions.ads	20160516092006 b7f9ecd6 aunit.assertions%s
+D aunit-options.ads	20160516092006 6e5a02a6 aunit.options%s
+D aunit-simple_test_cases.ads  20160516092006 4111c32f aunit.simple_test_cases%s
+D aunit-test_filters.ads  20160516092006 f10b2127 aunit.test_filters%s
+D aunit-test_filters.adb  20160516092006 59ccb325 aunit.test_filters%b
+D aunit-test_results.ads  20160516092006 171847c9 aunit.test_results%s
+D aunit-tests.ads	20160516092006 1da11d49 aunit.tests%s
+D aunit-time_measure.ads  20160516092006 a8b9fbfb aunit.time_measure%s
+D gnat.ads		20160516092932 fd2ad2f1 gnat%s
+D g-souinf.ads		20160516092932 291df751 gnat.source_info%s
+D system.ads		20160516092930 2da59038 system%s
+D s-conca3.ads		20160516092932 0b705ca5 system.concat_3%s
+D s-exctab.ads		20160516092930 54135002 system.exception_table%s
+D s-finmas.ads		20160516092930 7811a767 system.finalization_masters%s
+D s-finroo.ads		20160516092930 4ff27390 system.finalization_root%s
+D s-memory.ads		20160516092930 597d6634 system.memory%s
+D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20160516092926 ede33ef8 system.pool_global%s
+D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
+D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
+D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
+D s-stalib.adb		20160516092926 f2fe2716 system.standard_library%b
+D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20160516092930 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20160516092928 b16154c2 system.storage_pools%s
+D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
+X 10 aunit.ads
+34K9*AUnit 48e10 14|36r6 38r9 44r16 66r16 76r5 15|31r6 31r36 33r14 67r16
+. 75r19 76r23 82r24 84r19 88r19 90r29 95r5
+36P9*Message_String(string) 14|73r14
+44V13*Format{36P9} 15|58s22
+46U14*Message_Free 15|57s7
+X 13 aunit-simple_test_cases.ads
+42K15*Simple_Test_Cases 77e28 15|31w12 31r42 75r25 76r29 82r30 84r25 88r25
+. 90r35
+44H9*Test_Case<11|96R9> 75e73 15|75r43 76r47 82r48 84r43 88r43 90r53
+47y13*Name{10|36P9} 15|76R17 84R13 88R13
+50V13*Routine_Name{10|36P9} 15|82R10 90R15
+X 14 aunit-test_filters.ads
+38K15*Test_Filters 10|34k9 14|70E9 76l11 76e23 15|33b20 95l11 95t23
+40H9*Test_Filter 41r42 42p13 43r16 48r28 70c9 70e59 72r28
+41P9*Test_Filter_Access(40R9)
+42y13*Is_Active{boolean} 43>7 44>7
+43r7 Filter{40R9}
+44c7 T<17|38R9>
+48R9*Name_Filter<40R9> 51p14 52r23 64P13 65r16 72c9 74e14 15|55r40 66r16
+51U14*Set_Name 52=7 52>36 15|55b14 59l8 59t16
+52r7 Filter{48R9} 15|55b24 57m21 57r21 58m7
+52a36 Name{string} 15|55b53 58r30
+64V13*Is_Active{boolean}<42p13> 65>7 66>7 15|65b13 93l8 93t17
+65r7 Filter{48R9} 15|66b7 69r10 70r17 85r13 91r13
+66c7 T<17|38R9> 15|67b7 75r10 76r64 82r65 84r60 88r60 90r70
+73p7 Name{10|36P9} 15|57m28 58m14 69r17 70r24 85r20 91r20
+X 15 aunit-test_filters.adb
+35V13 Starts_With{boolean} 35>26 35>40 42b13 49l8 49t19 83s17 87s17
+35a26 Str{string} 42b26 44r10 48r14 48r19 48r32
+35a40 Prefix{string} 42b40 44r23 48r44 48r65
+X 17 aunit-tests.ads
+36K15*Tests 14|36w12 44r22 66r22 15|67r22 17|45e16
+38H9*Test 14|44r28 66r28 15|67r28 17|43e52
+X 21 system.ads
+67M9*Address
+X 26 s-memory.ads
+53V13*Alloc{21|67M9} 103i<c,__gnat_malloc>22
+68U14*Free 104i<c,__gnat_free>22
+76V13*Realloc{21|67M9} 105i<c,__gnat_realloc>22
+X 32 s-stalib.adb
+93U14 Break_Start 94i<c,__gnat_break_start>22
+

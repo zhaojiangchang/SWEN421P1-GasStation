@@ -1,0 +1,15 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/_test/harness/pump_unit_suite.adb
+        -:    0:Programs:35
+        -:    1:with AUnit.Test_Suites; use AUnit.Test_Suites;
+        -:    2:with PUMP_UNIT.Test;
+        -:    3:
+        2:    4:function PUMP_UNIT_Suite return Access_Test_Suite is
+        2:    5:     TS_Ptr : constant Access_Test_Suite := new Test_Suite;
+        -:    6:
+        -:    7:begin
+        -:    8:
+        2:    9:   TS_Ptr.Add_Test (new PUMP_UNIT.Test.TC);
+        -:   10:
+        2:   11:   return TS_Ptr;
+        -:   12:
+        1:   13:end PUMP_UNIT_Suite;

@@ -1,0 +1,60 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_ALLOCATORS
+RV NO_LOCAL_ALLOCATORS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U aunit.memory.utils%b	aunit-memory-utils.adb	9b1c7ff2 OO PK
+W aunit.memory%s	aunit-memory.adb	aunit-memory.ali
+W system%s		system.ads		system.ali
+
+U aunit.memory.utils%s	aunit-memory-utils.ads	fb2f6c57 BN EE OO PK
+W aunit.memory%s	aunit-memory.adb	aunit-memory.ali
+
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-memory.ads	20160516092006 a0315146 aunit.memory%s
+D aunit-memory-utils.ads  20160516092006 5b1e3d11 aunit.memory.utils%s
+D aunit-memory-utils.adb  20160516092006 c00242e3 aunit.memory.utils%b
+D system.ads		20160516092930 2da59038 system%s
+X 1 aunit.ads
+34K9*AUnit 48e10 3|34r9 42r5 4|32r14 43r5
+X 2 aunit-memory.ads
+40K15*Memory 1|34k9 2|53e17 3|34r15 42r11 4|32r20 43r11
+X 3 aunit-memory-utils.ads
+34K22*Utils 2|40k15 3|42l18 42e23 4|32b27 43l18 43t23
+37+12 Object 38r27 4|40r18
+38P12 Name(37+12) 39r34 40r30 4|38r30
+40v13*Gen_Alloc 4|38b13 41l8 41t17
+FD 1 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 2 aunit-memory.ads
+FS .1 40K15 aunit__memory
+FS .2 44V13 aunit__memory__aunit_alloc
+FS .3 46U14 aunit__memory__aunit_free
+FD 3 aunit-memory-utils.ads
+FS .1 34K22 aunit__memory__utils
+FD 4 aunit-memory-utils.adb
+FS .1 32K27 aunit__memory__utils -> 3.1
+FS .2 38v13 aunit__memory__utils__gen_alloc
+FD 5 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+
+GG EK_REMOTE_STATES
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

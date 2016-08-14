@@ -1,0 +1,33 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U ada_containers%s	ada_containers.ads	11329e00 EE OO PU PK
+W system%s		system.ads		system.ali
+
+D ada_containers.ads	20160516092006 11329e00 ada_containers%s
+D system.ads		20160516092930 2da59038 system%s
+X 1 ada_containers.ads
+16K9*Ada_Containers 22l5 22e19
+19M9*Hash_Type
+20I9*Count_Type<integer>
+FD 1 ada_containers.ads
+FS .1 16K9 ada_containers
+FD 2 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+
+GG EK_REMOTE_STATES
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

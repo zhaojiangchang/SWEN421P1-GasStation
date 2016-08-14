@@ -1,0 +1,147 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_UNCHECKED_CONVERSION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U aunit%b		aunit.adb		fa79b673 OO PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_conversion%s  a-unccon.ads	a-unccon.ali
+W aunit%s		aunit.adb		aunit.ali
+W aunit.memory%s	aunit-memory.adb	aunit-memory.ali
+W system%s		system.ads		system.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+
+U aunit%s		aunit.ads		76cdf7c6 EE OO PK
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit.adb		20160516092006 f8add5f1 aunit%b
+D aunit-memory.ads	20160516092006 a0315146 aunit.memory%s
+D system.ads		20160516092930 2da59038 system%s
+D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
+X 1 ada.ads
+16K9*Ada 19e8 4|32r6 55r34 57r40 59r34
+X 2 a-unccon.ads
+20v14*Unchecked_Conversion 4|32w10 55r38 57r44 59r38
+X 3 aunit.ads
+34K9*AUnit 48l5 48e10 4|34r6 34r36 36b14 64r10 79r10 98l5 98t10
+36P9*Message_String(string) 38r27 44r40 45r53 46r41 4|54r53 56r23 76r41 88r40
+. 89r22
+38P12*Test_String{36P9}
+40E9*Status 40e37
+40n20*Success{40E9}
+40n29*Failure{40E9}
+44V13*Format{36P9} 44>21 4|88b13 96l8 96t14
+44a21 S{string} 4|88b21 89r55 91r16 92r19 92r35
+45V13*Message_Alloc{36P9} 45>28 4|54b13 70l8 70t21 89s40
+45i28 Length{natural} 4|54b28 65r21 67r33
+46U14*Message_Free 46=28 4|76b14 82l8 82t20
+46p28 Msg{36P9} 4|76b28 78r10 79r35 80m10
+X 4 aunit.adb
+38R9 Bounds 41e14 42r37 65r31 68r56
+39i7*First{natural} 66m25
+40i7*Last{natural} 67m25
+42P9 Bounds_Access(38R9) 46r23 58r26 60r10
+44R9 Fat_Pointer 47e14 48r17 56r10 61r13
+45m7*Address{6|67M9} 68m11
+46p7*Bound_Address{42P9} 63m11 66r10 66r11 67r10 67r11 68r38
+55V16 To_Message[2|20]{3|36P9} 69s14
+57V16 To_Bounds_Access[2|20]{42P9} 63s28
+59V16 To_Address[2|20]{6|67M9} 68s22
+61r7 Ret{44R9} 63m7 66r7 67r7 68m7 68r34 69r26
+89p7 Ptr{3|36P9} 92r10 95r14
+91i11 J{integer} 92r15 92r38
+17R9 Source{44R9} 20r40[55] 20r40[57] 20r40[59]
+18P9 Target{3|36P9} 20r55[55] 20r55[57] 20r55[59]
+X 5 aunit-memory.ads
+40K15*Memory 4|34w12 34r42 64r16 79r16 5|53e17
+42M9*size_t 4|65r13
+44V13*AUnit_Alloc{6|67M9} 4|64s23
+46U14*AUnit_Free 4|79s23
+X 6 system.ads
+37K9*System 4|33r6 33r36 45r23 58r10 60r25 6|200e11
+67M9*Address 4|45r30 58r17 60r32
+X 7 s-stoele.ads
+42K16*Storage_Elements 4|33w13 33r43 7|117e28
+76V14*"+"{6|67M9} 4|68s53
+FD 1 ada.ads
+FS .1 16K9 ada
+FD 2 a-unccon.ads
+FD 3 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 4 aunit.adb
+FS .1 36K14 standard__aunit -> 3.1
+FS .2 54V13 aunit__message_alloc -> 3.3
+FS .3 55K7 aunit__message_alloc__to_messageGP2972
+FS .4 55V16 aunit__message_alloc__to_messageGP2972__to_messageR
+FS .5 57K7 aunit__message_alloc__to_bounds_accessGP3069
+FS .6 57V16 aunit__message_alloc__to_bounds_accessGP3069__to_bounds_accessR
+FS .7 59K7 aunit__message_alloc__to_addressGP3174
+FS .8 59V16 aunit__message_alloc__to_addressGP3174__to_addressR
+FS .9 76U14 aunit__message_free -> 3.4
+FS .10 88V13 aunit__format -> 3.2
+FD 5 aunit-memory.ads
+FS .1 40K15 aunit__memory
+FS .2 44V13 aunit__memory__aunit_alloc
+FS .3 46U14 aunit__memory__aunit_free
+FD 6 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+FD 7 s-stoele.ads
+FS .1 42K16 system__storage_elements
+FS .2 76V13 system__storage_elements__Oadd
+FS .3 81V13 system__storage_elements__Oadd__2
+FS .4 86V13 system__storage_elements__Osubtract
+FS .5 91V13 system__storage_elements__Osubtract__2
+FS .6 96V13 system__storage_elements__Omod
+FS .7 107V13 system__storage_elements__to_address
+FS .8 112V13 system__storage_elements__to_integer
+FX 3 aunit.ads .1 aunit
+F 45*13 aunit__message_alloc 4|.10:89s40
+FX 3 aunit.ads .2 aunit__format
+F 44>21 aunit__format__s 4|.10:89c55 91c16 92c19 92c35
+FX 3 aunit.ads .3 aunit__message_alloc
+F 45>28 aunit__message_alloc__length 4|.2:65c21 67c33
+FX 3 aunit.ads .4 aunit__message_free
+F 46=28 aunit__message_free__msg 4|.9:78r10 79r35 80m10
+FX 4 aunit.adb .1 standard__aunit
+F 0*0 __HEAP .9:79m39 79r39
+FX 4 aunit.adb .2 aunit__message_alloc
+F 55*16 aunit__message_alloc__to_message 69s14
+F 57*16 aunit__message_alloc__to_bounds_access 63s28
+F 59*16 aunit__message_alloc__to_address 68s22
+F 61*7 aunit__message_alloc__ret 63m7 66r7 67r7 68m7 68r34 69r26
+FX 4 aunit.adb .10 aunit__format
+F 89*7 aunit__format__ptr 92r10 95r14
+F 91*11 aunit__format__L_1__j 92c15 92c38
+FX 5 aunit-memory.ads .1 aunit__memory
+F 44*13 aunit__memory__aunit_alloc 4|.2:64s23
+F 46*14 aunit__memory__aunit_free 4|.9:79s23
+FX 7 s-stoele.ads .1 system__storage_elements
+F 76*13 system__storage_elements__Oadd 4|.2:68s53
+
+GG EK_REMOTE_STATES
+GG EK_GLOBALS aunit__format KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__message_alloc ]
+GG EK_GLOBALS aunit__message_alloc KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__message_alloc__to_bounds_access aunit__message_alloc__to_address system__storage_elements__Oadd aunit__memory__aunit_alloc aunit__message_alloc__to_message ]
+GG EK_GLOBALS aunit__message_free KIND_SUBPROGRAM ORIGIN_FRONTEND c:var_in [ __HEAP ] c:var_out [ __HEAP ] c:calls_conditional [ aunit__memory__aunit_free ]
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

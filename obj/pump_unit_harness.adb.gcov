@@ -1,0 +1,15 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/_test/harness/pump_unit_harness.adb
+        -:    0:Programs:35
+        -:    1:with AUnit.Reporter.Text;
+        -:    2:with AUnit.Run;
+        -:    3:with PUMP_UNIT_Suite;
+        -:    4:
+        1:    5:procedure PUMP_UNIT_Harness is
+        -:    6:
+        -:    7:   procedure Runner is new AUnit.Run.Test_Runner (PUMP_UNIT_Suite);
+        -:    8:
+        1:    9:   Reporter : AUnit.Reporter.Text.Text_Reporter;
+        -:   10:
+        -:   11:begin
+        1:   12:   Runner (Reporter);
+        1:   13:end PUMP_UNIT_Harness;

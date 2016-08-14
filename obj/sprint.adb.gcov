@@ -1,0 +1,34 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/sprint.adb
+        -:    0:Programs:35
+        -:    1:with Ada.Text_IO; use Ada.Text_IO;
+        -:    2:with PUMP;
+        -:    3:package body sPrint is
+       12:    4:   procedure print(s: in String) is
+        -:    5:   begin
+       12:    6:      if s = "" then
+        6:    7:         New_Line;
+        -:    8:      else
+        6:    9:         Put_Line(s);
+        -:   10:      end if;
+       12:   11:   end print;
+        -:   12:
+       12:   13:   procedure print_float_type(s1: in String; s2: in PUMP.FLOAT_NUMBER) is
+        -:   14:   begin
+       12:   15:      Put_Line(s1 & s2'Image);
+       12:   16:   end print_float_type;
+        -:   17:
+        6:   18:   procedure print_state_type(s1: in String; s2: in PUMP.STATE_TYPE) is
+        -:   19:   begin
+        6:   20:      Put_Line(s1 &"  "& s2'Image);
+        6:   21:   end print_state_type;
+        -:   22:
+        6:   23:   procedure print_nozzle_type(s1: in String; s2: in PUMP.NOZZLE_TYPE) is
+        -:   24:   begin
+        6:   25:      Put_Line(s1 &"   "& s2'Image);
+        6:   26:   end print_nozzle_type;
+        -:   27:
+        6:   28:   procedure print_fuel_type(s1: in String; s2: in PUMP.FUEL_TYPES) is
+        -:   29:   begin
+        6:   30:      Put_Line(s1 & s2'Image);
+        6:   31:   end print_fuel_type;
+        -:   32:end sPrint;

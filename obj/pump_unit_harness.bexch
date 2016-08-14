@@ -1,0 +1,41 @@
+[GENERATED OBJECT FILE]
+b__pump_unit_harness.o
+[PROJECT FILES]
+C:\Users\JackyChang\Documents\421A1\modellingpump.gpr
+20160814113906
+[BOUND OBJECT FILES]
+C:\Users\JackyChang\Documents\421A1\obj\ada_containers.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-memory.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-memory-utils.o
+C:\Users\JackyChang\Documents\421A1\obj\ada_containers-aunit_lists.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-tests.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-options.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-time_measure.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-test_results.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-assertions.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-reporter.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-reporter-text.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-simple_test_cases.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-test_filters.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-test_cases.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-test_suites.o
+C:\Users\JackyChang\Documents\421A1\obj\aunit-run.o
+C:\Users\JackyChang\Documents\421A1\obj\pump_unit_suite.o
+C:\Users\JackyChang\Documents\421A1\obj\pump_unit_harness.o
+C:\Users\JackyChang\Documents\421A1\obj\sPrint.o
+C:\Users\JackyChang\Documents\421A1\obj\pump_unit-test.o
+C:\Users\JackyChang\Documents\421A1\obj\pump_unit.o
+C:\Users\JackyChang\Documents\421A1\obj\pump.o
+[GENERATED SOURCE FILES]
+b__pump_unit_harness.ads
+b__pump_unit_harness.adb
+b__pump_unit_harness.ali
+[RESULTING OPTIONS]
+-LC:\Users\JackyChang\Documents\421A1\obj\
+-LC:\Users\JackyChang\Documents\421A1\obj\
+-LC:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/
+-static
+-static-libgcc
+C:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/libgnat.a
+-Wl,--stack=0x2000000

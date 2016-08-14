@@ -1,0 +1,201 @@
+V "GNAT Lib v2016"
+A -gnatA
+A -ftest-coverage
+A -fprofile-arcs
+A -mtune=generic
+A -march=pentium4
+P SS ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_FIXED_POINT
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_SECONDARY_STACK
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U aunit.reporter.text%b	aunit-reporter-text.adb	9a578b55 NE OO PK
+W ada.tags%s		a-tags.adb		a-tags.ali
+W aunit%s		aunit.adb		aunit.ali
+W aunit.reporter%s	aunit-reporter.ads	aunit-reporter.ali
+W aunit.time_measure%s	aunit-time_measure.adb	aunit-time_measure.ali  ED
+W gnat%s		gnat.ads		gnat.ali
+W gnat.io%s		g-io.adb		g-io.ali
+W system.exp_int%s	s-expint.adb		s-expint.ali
+
+U aunit.reporter.text%s	aunit-reporter-text.ads	28ca7b1a EE OO PF PK
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.streams%s		a-stream.adb		a-stream.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W aunit.reporter%s	aunit-reporter.ads	aunit-reporter.ali
+W system%s		system.ads		system.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.storage_elements%s  s-stoele.adb	s-stoele.ali
+W system.stream_attributes%s  s-stratt.adb	s-stratt.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-calend.ads		20160516092930 2d5f01d4 ada.calendar%s
+D a-except.ads		20160516092928 291912d5 ada.exceptions%s
+D a-finali.ads		20160516092930 bf4f806b ada.finalization%s
+D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
+D a-tags.ads		20160516092932 01f5e3ef ada.tags%s
+D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
+D ada_containers.ads	20160516092006 11329e00 ada_containers%s
+D ada_containers-aunit_lists.ads  20160516092006 d9ebc89a ada_containers.aunit_lists%s
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-options.ads	20160516092006 6e5a02a6 aunit.options%s
+D aunit-reporter.ads	20160516092006 1856e702 aunit.reporter%s
+D aunit-reporter-text.ads  20160516092006 309c9c18 aunit.reporter.text%s
+D aunit-reporter-text.adb  20160516092006 9d7fd604 aunit.reporter.text%b
+D aunit-test_filters.ads  20160516092006 f10b2127 aunit.test_filters%s
+D aunit-test_results.ads  20160516092006 171847c9 aunit.test_results%s
+D aunit-tests.ads	20160516092006 1da11d49 aunit.tests%s
+D aunit-time_measure.ads  20160516092006 a8b9fbfb aunit.time_measure%s
+D aunit-time_measure.adb  20160516092006 354c1634 aunit.time_measure%b
+D gnat.ads		20160516092932 fd2ad2f1 gnat%s
+D g-io.ads		20160516092926 9f0d3ab2 gnat.io%s
+D system.ads		20160516092930 2da59038 system%s
+D s-exctab.ads		20160516092930 54135002 system.exception_table%s
+D s-expint.ads		20160516092930 192336fc system.exp_int%s
+D s-finmas.ads		20160516092930 7811a767 system.finalization_masters%s
+D s-finroo.ads		20160516092930 4ff27390 system.finalization_root%s
+D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
+D s-pooglo.ads		20160516092926 ede33ef8 system.pool_global%s
+D s-secsta.ads		20160516092930 86a2856d system.secondary_stack%s
+D s-soflin.ads		20160516092928 14e1eb6c system.soft_links%s
+D s-stache.ads		20160516092932 a37c21ec system.stack_checking%s
+D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
+D s-stoele.ads		20160516092932 2dc34a04 system.storage_elements%s
+D s-stoele.adb		20160516092930 ed88f8fb system.storage_elements%b
+D s-stopoo.ads		20160516092928 b16154c2 system.storage_pools%s
+D s-stratt.ads		20160516092926 aedef97e system.stream_attributes%s
+D s-traent.ads		20160516092928 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20160516092930 34867c83 system.unsigned_types%s
+X 8 ada_containers.ads
+20I9*Count_Type<integer>
+X 9 ada_containers-aunit_lists.ads
+51R9*List 14|41r49[16|73] 51r70[16|73] 90r49[16|73] 117r24[16|73]
+53R9*Cursor 14|94r11[16|73]
+67V13*Element{16|62R9} 14|104s23[16|73]
+155V13*First{53R9[16|73]} 14|94s21[16|73]
+165U14*Next 14|105s10[16|73]
+185V13*Has_Element{boolean} 14|96s10[16|73] 103s13[16|73]
+X 10 aunit.ads
+34K9*AUnit 48e10 13|33r9 66r5 14|33r6 33r30 36r14 278r5
+36P9*Message_String(string)
+X 11 aunit-options.ads
+36R9*AUnit_Options 41e14 13|46r32 14|169r17
+39b7*Report_Successes{boolean} 14|177r18
+44r4*Default_Options{36R9} 13|46r49 14|169r34
+X 12 aunit-reporter.ads
+35K15*Reporter 10|34k9 12|46e19 13|33r15 66r11 14|36r20 278r11
+37H9*Reporter 37e48 13|35r30 62r30
+X 13 aunit-reporter-text.ads
+33K24*Text 12|35k15 13|62E9 66l20 66e24 14|36b29 278l20 278t24
+35R9*Text_Reporter<12|37R9> 37p14 38r23 44P14 44r32 48p14 48r40 50p14 50r42
+. 52p14 52r43 62c9 64e14 14|55r17 69r23 114r17 136r17 145r17 154r17 167r17
+. 178r30 181r27 182r27
+37U14*Set_Use_ANSI_Colors 38=7 39>7 14|68b14 73l8 73t27
+38r7 Engine{35R9} 14|69b7 72m7
+39b7 Value{boolean} 14|70b7 72r26
+44U14*Report<12|39p14> 44>22 45=22 46>22 14|166b14 205l8 205t14
+44r22 Engine{35R9} 14|167b7 178r51 181r48 182r48
+45c22 R<16|40R9> 14|168b7 171r61 172r61 173r59 178m60 181m57 182m57 186r33
+. 198r19 199r37
+46r22 Options{11|36R9} 14|169b7 177r10
+48U14*Report_OK_Tests 48>31 49=31 14|135b14 142l8 142t23 178R10
+48r31 Engine{35R9} 14|136b8 141r17
+49c31 R<16|40R9> 14|137b8 141m25
+50U14*Report_Fail_Tests 50>33 51=33 14|144b14 151l8 151t25 181R7
+50r33 Engine{35R9} 14|145b8 150r17
+51c33 R<16|40R9> 14|146b8 150m25
+52U14*Report_Error_Tests 52>34 53=34 14|153b14 160l8 160t26 182R7
+52r34 Engine{35R9} 14|154b8 159r17
+53c34 R<16|40R9> 14|155b8 159m25
+63b7 Use_ANSI{boolean} 14|72m14 120r17 126r17
+X 14 aunit-reporter-text.adb
+38U14 Indent 38>22 79b14 84l8 84t14 233s10 235s10 243s10 247s13 253s13 267s19
+38i22 N{natural} 79b22 81r21
+41U14 Dump_Result_List 41>32 41>55 90b14 107l8 107t24 124s7
+41r32 L{9|51R9[16|73]} 90b32 94r28
+41a55 Prefix{string} 90b55 104r36
+44U14 Put_Measure[18|58] 202s10 226s10 19|66b14
+47U14 Report_Test 47>27 47>47 104s10 211b14 276l8 276t19
+47r27 Test{16|62R9} 211b27 216r12 218r10 220r15 223r10 225r28 232r10 234r20
+. 237r15 239r15 242r13 244r20 246r13 249r23 252r13 257r38 259r30 261r31 262r30
+. 268r29
+47a47 Prefix{string} 211b47 214r12
+51U22 Get 51=27 51=46 119s7
+51r27 R{16|40R9}
+51r46 L{9|51R9[16|73]}
+52a7 Label{string} 124r28
+53a7 Color{string} 121r15
+54u14 Report_Tests 55>8 56=8 113b14 129l8 129t20 139r33 148r33 157r33
+55r8 Engine{13|35R9} 114b8 120r10 126r10
+56c8 R<16|40R9> 115b8 119m20 119r20
+59a4 ANSI_Def{string} 127r15
+60a4 ANSI_Green{string} 139r64
+61a4 ANSI_Purple{string} 148r65
+62a4 ANSI_Red{string} 157r64
+81i11 J{integer}
+94r7 C{9|53R9[16|73]} 96r23 103r26 104r32 105m16 105r16
+117r7 S{9|51R9[16|73]} 119m24 119r24 124r25
+139U17 Internal[54] 113b14 141s7
+148U17 Internal[54] 113b14 150s7
+157U17 Internal[54] 113b14 159s7
+171i7 S_Count{integer} 189r12
+172i7 F_Count{integer} 192r12
+173i7 E_Count{integer} 195r12
+174o7 T{18|41O9} 199m10 202r23
+212o7 T{18|41O9} 225m10 226r23
+257i16 From{natural} 259r22 260r25 268r51 269m19
+257i22 To{natural} 260m19 261r25 262r52 264m22 264r28 268r59 269r27
+X 16 aunit-test_results.ads
+40R9*Result 13|45r39 49r47 51r49 53r50 14|51r38 56r24 115r24 119r12 137r24
+. 146r24 155r24 168r24 16|144e14
+45p7*Message{10|36P9} 14|234r33
+46p7*Source_Name{10|36P9} 14|237r28
+47i7*Line{natural} 14|239r28
+49P9*Test_Failure_Access(44R9)
+54p7*Exception_Name{10|36P9} 14|244r31
+55p7*Exception_Message{10|36P9} 14|246r24 249r34
+56p7*Traceback{10|36P9} 14|252r24 257r49 259r41 261r42 262r41 268r40
+58P9*Test_Error_Access(53R9)
+62R9*Test_Result 14|47r34 211r34 16|68e14
+63p7*Test_Name{10|36P9} 14|216r17
+64p7*Routine_Name{10|36P9} 14|218r15 220r20
+65p7*Failure{49P9} 14|232r15 234r25 237r20 239r20
+66p7*Error{58P9} 14|242r18 244r25 246r18 249r28 252r18 257r43 259r35 261r36
+. 262r35 268r34
+67r7*Elapsed{18|36R9} 14|223r15 225r33
+73K12*Result_Lists[9|49] 14|41r36 51r57 90r36 92r11 117r11
+102V13*Error_Count{8|20I9} 14|173R46
+105U14*Errors 14|157r47
+109V13*Failure_Count{8|20I9} 14|172R46
+112U14*Failures 14|148r47
+115V13*Elapsed{18|36R9} 14|198R10 199R28
+121V13*Success_Count{8|20I9} 14|171R46
+124U14*Successes 14|139r47
+130V13*Test_Count{8|20I9} 14|186R21
+X 18 aunit-time_measure.ads
+34K15*Time_Measure 14|33w12 33r36 198r25 223r26 18|72e23
+41O9*AUnit_Duration<duration> 14|174r11 212r11
+43r4*Null_Time{36R9} 14|198r38 223r39
+52V13*Get_Measure{41O9} 14|199s15 225s15
+58u14*Gen_Put_Measure 14|44r33
+X 20 gnat.ads
+34K9*GNAT 14|32r6 32r30 20|37e9
+X 21 g-io.ads
+41K14*IO 14|32w11 32r35 21|91e12
+59U14*Put 14|186s7 189s7 192s7 195s7 239s10 18|56i22
+68U14*Put 14|82s10 121s10 127s10 185s7 188s7 191s7 194s7 201s10 214s7 215s7
+. 216s7 219s10 220s10 224s10 227s10 236s10 237s10 238s10 248s13 18|57i22
+72U14*Put_Line 14|203s10 234s10 244s10 249s13 254s13 268s19
+77U14*New_Line 14|97s10 184s7 187s7 190s7 193s7 196s7 230s7 240s10 274s10
+

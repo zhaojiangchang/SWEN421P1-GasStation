@@ -1,0 +1,45 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_DISPATCH
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U aunit.tests%s		aunit-tests.ads		6b6cea8f EE OO PK
+W aunit%s		aunit.adb		aunit.ali
+W system%s		system.ads		system.ali
+
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-tests.ads	20160516092006 1da11d49 aunit.tests%s
+D system.ads		20160516092930 2da59038 system%s
+X 1 aunit.ads
+34K9*AUnit 48e10 2|36r9 45r5
+X 2 aunit-tests.ads
+36K15*Tests 1|34k9 2|45l11 45e16
+38H9*Test 39r35 43c9 43e52
+39P9*Test_Access(38R9)
+FD 1 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 2 aunit-tests.ads
+FS .1 36K15 aunit__tests
+FD 3 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+
+GG EK_REMOTE_STATES
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

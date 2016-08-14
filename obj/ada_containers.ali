@@ -1,0 +1,20 @@
+V "GNAT Lib v2016"
+A -gnatA
+A -ftest-coverage
+A -fprofile-arcs
+A -mtune=generic
+A -march=pentium4
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U ada_containers%s	ada_containers.ads	11329e00 NE OO PU PK
+
+D ada_containers.ads	20160516092006 11329e00 ada_containers%s
+D system.ads		20160516092930 2da59038 system%s
+X 1 ada_containers.ads
+16K9*Ada_Containers 22l5 22e19
+19M9*Hash_Type
+20I9*Count_Type<integer>
+

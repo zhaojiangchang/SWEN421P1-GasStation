@@ -1,5 +1,6 @@
 with sPrint; use sPrint;
 with PUMP;
+with CASH_REGISTER;
 package body PUMP_UNIT
 with SPARK_Mode is
    --------------
@@ -29,6 +30,7 @@ with SPARK_Mode is
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
+            pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             P.SET_PUMP_NOZZLE_STATE(p91, nozzleStateType);
@@ -42,6 +44,7 @@ with SPARK_Mode is
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
+            pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             P.SET_PUMP_NOZZLE_STATE(p95, nozzleStateType);
@@ -55,16 +58,35 @@ with SPARK_Mode is
             pumpUnit.IS_USING := False;
             pumpUnit.IS_PAID := True;
             pumpUnit.TO_PAY:= 0.00;
+            pumpUnit.PUMPED:=0.00;
             pumpUnit.PUMP_ACTIVE_STATE :=baseStateType;
             pumpUnit.PUMP_NOZZLE_STATE := nozzleStateType;
             P.SET_PUMP_NOZZLE_STATE(pDiesel, nozzleStateType);
          when others => null;
       end case;
       print("");
-
-
    end ADD_PUMP;
+   --------------------
+   -- SET_PUMPED --
+   --------------------
+  procedure SET_PUMPED(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
+   is
+   begin
+      pumpUnit.PUMPED := AMOUNT;
+   end SET_PUMPED;
 
+      --------------------
+   -- SET_PUMPED --
+   --------------------
+  procedure SET_TO_PAY(pumpUnit: in out PUMP_UNIT;  AMOUNT: in P.FLOAT_NUMBER)
+   is
+   begin
+      pumpUnit.TO_PAY := AMOUNT;
+   end SET_TO_PAY;
+
+   --------------------
+   -- GET_PUMP --
+   --------------------
    function GET_PUMP(pumpUnit: in out PUMP_UNIT; fuelType: in P.FUEL_TYPES) return P.PUMP
    is
    begin
@@ -90,7 +112,42 @@ with SPARK_Mode is
          when others => return P.GET_TANKS_SIZE(pumpUnit.PUMP_91);
       end case;
    end GET_TANKS_SIZE;
-   -----------------------
+
+   --------------------
+   -- GET ID ----------
+   --------------------
+   function GET_ID(pumpUnit: in PUMP_UNIT) return UNIT_ID_TYPE
+   is
+   begin
+      return pumpUnit.ID;
+   end GET_ID;
+
+   --------------------
+   -- GET TO PAY ------
+   --------------------
+   function GET_TO_PAY(pumpUnit: in PUMP_UNIT) return P.FLOAT_NUMBER
+   is
+   begin
+      return pumpUnit.TO_PAY;
+   end GET_TO_PAY;
+
+   --------------------
+   -- GET PUMPED ------
+   --------------------
+   function GET_PUMPED(pumpUnit: in PUMP_UNIT) return P.FLOAT_NUMBER
+   is
+   begin
+      return pumpUnit.PUMPED;
+   end GET_PUMPED;
+
+   --------------------
+   -- GET FUEL   ------
+   --------------------
+   function GET_FUEL(pumpUnit: in PUMP_UNIT) return P.FUEL_TYPES
+   is
+   begin
+      return pumpUnit.PUMP_ACTIVE_FUEL;
+   end GET_FUEL;-----------------------
    -- SET_IS_USING False--
    -----------------------
    procedure SET_IS_USING(pumpUnit: in out PUMP_UNIT)
@@ -122,6 +179,14 @@ with SPARK_Mode is
 
       end if;
    end SET_IS_PAID;
+    -----------------------
+   -- SET_UNIT_ID  --
+   -----------------------
+   procedure SET_UNIT_ID(pumpUnit: in out PUMP_UNIT; ID: in UNIT_ID_TYPE)
+   is
+   begin
+      pumpUnit.ID := ID;
+   end SET_UNIT_ID;
    -----------------------
    -- SET_PUMP_ACTIVE  --
    -----------------------
@@ -208,7 +273,8 @@ with SPARK_Mode is
    --   RETURN_NOZZLE   --
    -----------------------
    procedure RETURN_NOZZLE (pumpUnit: in out PUMP_UNIT; pump_r: in out P.PUMP) is
-      due: FLOAT_NUMBER;
+      due: P.FLOAT_NUMBER;
+      use all type P.FLOAT_NUMBER;
    begin
       due:=0.00;
       if P.STATE_TYPE'Image(pumpUnit.PUMP_ACTIVE_STATE) = "READY" and P.STATE_TYPE'Image(P.GET_STATE(pump_r)) = "READY" then
@@ -259,6 +325,7 @@ with SPARK_Mode is
             P.SET_PUMP_STATE(pump_r,P.STATE_TYPE'Val(2));
             while CAR_TANK_SPACE>0.00 and tankSize >temp and SENSOR = False and pumped <= AMOUNT loop
                pumped:= pumped +0.01;
+               pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
                pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * P.GET_UNIT_PRICE(pump_r));
                CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                print("pumping: " & pumped'Image & "  car tank space left: " & CAR_TANK_SPACE'Image &"  Amount To Pay: "& pumpUnit.TO_PAY'Image);
@@ -301,6 +368,7 @@ with SPARK_Mode is
             while SENSOR = False and tankSize > 0.00 loop
 
                pumped:= pumped +0.01;
+               pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
                pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * P.GET_UNIT_PRICE(pump_r));
                CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                print("pumping: " & pumped'Image & "    car tank space left: " & CAR_TANK_SPACE'Image &"  Amount To Pay: "& pumpUnit.TO_PAY'Image);
@@ -340,4 +408,5 @@ with SPARK_Mode is
       end if;
 
    end STOP_PUMPING;
+
 end PUMP_UNIT;

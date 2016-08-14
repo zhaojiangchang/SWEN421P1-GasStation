@@ -7,7 +7,7 @@ with SPARK_Mode is
 
    type RESERVOIR_NUM is new Integer;
    type FLOAT_NUMBER is delta 0.01 digits 10;
-   type FUEL_TYPES is (U91, U95, Diesel);
+   type FUEL_TYPES is (U91, U95, Diesel, NO);
    type PUMP is private;
    type RESERVOIR is private;
    type STATE_TYPE is (Base, Ready, Pumping, Waiting);
@@ -21,6 +21,7 @@ with SPARK_Mode is
    procedure APPEND_RESERVOIR(pump_r: in out PUMP; fuelType: in FUEL_TYPES);
    procedure SET_FUEL_PRICE(pump_r: in out PUMP; PRICE: in FLOAT_NUMBER);
    procedure SET_PUMP_STATE(pump_r: in out PUMP; stateType: in STATE_TYPE);
+   procedure SET_PUMPED(pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER);
    procedure SET_PUMP_NOZZLE_STATE(pump_r: in out PUMP; nozzleType: in NOZZLE_TYPE);
    --       with
    --         pre =>(PUMP.);

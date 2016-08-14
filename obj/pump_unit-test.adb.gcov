@@ -1,0 +1,116 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/_test/scenarios/pump_unit-test.adb
+        -:    0:Programs:35
+        -:    1:with Ada.Text_IO; use Ada.Text_IO;
+        -:    2:with AUnit.Assertions; use AUnit.Assertions;
+        -:    3:with sPrint;
+        2:    4:package body PUMP_UNIT.Test is
+        -:    5:
+        2:    6:   UNIT_1 : PUMP_UNIT;
+        2:    7:   UNIT_1_91: PUMP.PUMP;
+        -:    8:--     UNIT_1_95: PUMP.PUMP;
+        -:    9:--     UNIT_1_Diesel: PUMP.PUMP;
+        -:   10:
+        -:   11:
+        -:   12:   U91: PUMP.FUEL_TYPES;
+        -:   13:   U95: PUMP.FUEL_TYPES;
+        -:   14:   Diesel: PUMP.FUEL_TYPES;
+        -:   15:   --fuel
+        -:   16:   F_U91: Integer :=0;
+        -:   17:   F_U95: Integer :=1;
+        -:   18:   F_Diesel: Integer :=2;
+        -:   19:
+        -:   20:   --pump state
+        -:   21:   Base: Integer := 0;
+        -:   22:   Ready: Integer := 1;
+        -:   23:   Pumping: Integer := 2;
+        -:   24:   Waiting: Integer := 3;
+        -:   25:   --nozzle state
+        -:   26:   NozzleBase: Integer := 0;
+        -:   27:   Left: Integer := 1;
+        -:   28:   Replace: Integer := 2;
+        -:   29:   Start: Integer := 3;
+        -:   30:   Stop : Integer := 4;
+        -:   31:   Pay: Integer:=5;
+        -:   32:
+        -:   33:   type FLOAT_NUMBER is delta 0.01 digits 10;
+        -:   34:
+        2:   35:   procedure Set_Up_Case (T: in out TC) is
+        -:   36:      pragma Unreferenced (T);
+        -:   37:   begin
+        2:   38:      New_Line;
+        2:   39:      Put_Line ("Set up case ..");
+        2:   40:      U91 :=PUMP.FUEL_TYPES'Val(F_U91);
+        2:   41:      U95 :=PUMP.FUEL_TYPES'Val(F_U95);
+        2:   42:      Diesel :=PUMP.FUEL_TYPES'Val(F_Diesel);
+        2:   43:      SET_UNIT_ID(UNIT_1,"UNIT_1");
+        -:   44:--        ADD_PUMP(UNIT_1,UNIT_1_91, U91);
+        -:   45:--        ADD_PUMP(UNIT_1,UNIT_1_95, U95);
+        -:   46:--        ADD_PUMP(UNIT_1, UNIT_1_Diesel,Diesel);
+        -:   47:--        --pumps
+        -:   48:--        UNIT_1_91:= GET_PUMP(UNIT_1,U91);
+        -:   49:--        UNIT_1_95:= GET_PUMP(UNIT_1,U95);
+        -:   50:--        UNIT_1_Diesel:= GET_PUMP(UNIT_1,Diesel);
+        2:   51:   end Set_Up_Case;
+        -:   52:
+        -:   53:
+        2:   54:   procedure Set_Up (T : in out TC) is
+        -:   55:   begin
+        2:   56:      New_Line;
+        2:   57:      Put_Line("Set Up ..");
+        -:   58:
+        2:   59:   end;
+        -:   60:
+        2:   61:   procedure Tear_Down (T : in out TC) is
+        -:   62:   begin
+        2:   63:      Put_Line("Tear Down ...");
+        -:   64:
+        2:   65:   end;
+        -:   66:
+        2:   67:   procedure Tear_Down_Case (T : in out TC) is
+        -:   68:   begin
+        2:   69:      Put_Line ("Tear Down Case ..");
+        2:   70:      UNIT_1.ID :="      ";
+        2:   71:      UNIT_1.IS_USING:=False;
+        2:   72:      UNIT_1.IS_PAID:=True;
+        2:   73:      UNIT_1.TO_PAY:= 0.00;
+        2:   74:      UNIT_1.PUMPED:=0.00;
+        2:   75:      UNIT_1.PUMP_ACTIVE_FUEL:= PUMP.FUEL_TYPES'Val(0);
+        2:   76:      UNIT_1.PUMP_ACTIVE_STATE:= PUMP.STATE_TYPE'Val(0);
+        2:   77:      UNIT_1.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(0);
+        2:   78:   end;
+        -:   79:
+        -:   80:
+        -:   81:   -- ===========================================================
+        -:   82:   --                 TEST CASES/SCENARIOS
+        -:   83:   -- ===========================================================
+        -:   84:
+        2:   85:   procedure Test_AddPump (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:   86:   begin
+        2:   87:      ADD_PUMP(UNIT_1,UNIT_1_91, U91);
+        2:   88:      ADD_PUMP(UNIT_1,UNIT_1_91, U95);
+        2:   89:      ADD_PUMP(UNIT_1,UNIT_1_91, Diesel);
+        -:   90:
+        2:   91:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1.PUMP_91) = 1000.00),
+        -:   92:              Message => "Did not add pump to pump unit");
+        2:   93:   end Test_AddPump;
+        -:   94:
+        -:   95:--     --==========================================================
+        -:   96:--     --               REGISTRATION/NAMING
+        -:   97:--     --==========================================================
+        -:   98:--
+        2:   99:   procedure Register_Tests (T: in out TC) is
+        -:  100:      use AUnit.Test_Cases.Registration;
+        -:  101:   begin
+        2:  102:      Register_Routine (Test => T,
+        -:  103:                        Routine => Test_AddPump'Access,
+        -:  104:                        Name => "Test_AddPump");
+        -:  105:
+        2:  106:   end Register_Tests;
+        -:  107:
+        2:  108:   function Name (T: TC) return AUnit.Message_String is
+        -:  109:      pragma Unreferenced (T);
+        -:  110:   begin
+        2:  111:      return AUnit.Format ("Tests: Standard Tests");
+        -:  112:   end Name;
+        -:  113:
+        2:  114:end PUMP_UNIT.Test;

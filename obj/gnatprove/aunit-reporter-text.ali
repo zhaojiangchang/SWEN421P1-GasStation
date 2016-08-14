@@ -1,0 +1,528 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_DISPATCH
+RV NO_DISPATCHING_CALLS
+RV NO_FIXED_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV NO_OBSOLESCENT_FEATURES
+RV SPARK_05
+
+U aunit.reporter.text%b	aunit-reporter-text.adb	9a578b55 OO PK
+W aunit%s		aunit.adb		aunit.ali
+W aunit.reporter%s	aunit-reporter.ads	aunit-reporter.ali
+W aunit.time_measure%s	aunit-time_measure.adb	aunit-time_measure.ali
+W gnat%s		gnat.ads		gnat.ali
+W gnat.io%s		g-io.adb		g-io.ali
+W system%s		system.ads		system.ali
+
+U aunit.reporter.text%s	aunit-reporter-text.ads	28ca7b1a EE OO PK
+W aunit.reporter%s	aunit-reporter.ads	aunit-reporter.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-calend.ads		20160516092930 2d5f01d4 ada.calendar%s
+D ada_containers.ads	20160516092006 11329e00 ada_containers%s
+D ada_containers-aunit_lists.ads  20160516092006 d9ebc89a ada_containers.aunit_lists%s
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-options.ads	20160516092006 6e5a02a6 aunit.options%s
+D aunit-reporter.ads	20160516092006 1856e702 aunit.reporter%s
+D aunit-reporter-text.ads  20160516092006 309c9c18 aunit.reporter.text%s
+D aunit-reporter-text.adb  20160516092006 9d7fd604 aunit.reporter.text%b
+D aunit-test_filters.ads  20160516092006 f10b2127 aunit.test_filters%s
+D aunit-test_results.ads  20160516092006 171847c9 aunit.test_results%s
+D aunit-tests.ads	20160516092006 1da11d49 aunit.tests%s
+D aunit-time_measure.ads  20160516092006 a8b9fbfb aunit.time_measure%s
+D aunit-time_measure.adb  20160516092006 354c1634 aunit.time_measure%b
+D gnat.ads		20160516092932 fd2ad2f1 gnat%s
+D g-io.ads		20160516092926 9f0d3ab2 gnat.io%s
+D system.ads		20160516092930 2da59038 system%s
+X 3 ada_containers.ads
+20I9*Count_Type<integer>
+X 5 aunit.ads
+34K9*AUnit 48e10 8|33r9 66r5 9|33r6 33r30 36r14 278r5
+36P9*Message_String(string)
+X 6 aunit-options.ads
+36R9*AUnit_Options 41e14 8|46r32 9|169r17
+39b7*Report_Successes{boolean} 9|177r18
+44r4*Default_Options{36R9} 8|46r49 9|169r34
+X 7 aunit-reporter.ads
+35K15*Reporter 5|34k9 7|46e19 8|33r15 66r11 9|36r20 278r11
+37H9*Reporter 37e48 8|35r30 62r30
+X 8 aunit-reporter-text.ads
+33K24*Text 7|35k15 8|66l20 66e24 9|36b29 278l20 278t24
+35R9*Text_Reporter<7|37R9> 37p14 38r23 44P14 44r32 48p14 48r40 50p14 50r42
+. 52p14 52r43 62c9 64e14 9|55r17 69r23 114r17 136r17 145r17 154r17 167r17
+. 178r30 181r27 182r27
+37U14*Set_Use_ANSI_Colors 38=7 39>7 9|68b14 73l8 73t27
+38r7 Engine{35R9} 9|69b7 72m7
+39b7 Value{boolean} 9|70b7 72r26
+44U14*Report<7|39p14> 44>22 45=22 46>22 9|166b14 205l8 205t14
+44r22 Engine{35R9} 9|167b7 178r51 181r48 182r48
+45c22 R<11|40R9> 9|168b7 171r61 172r61 173r59 178m60 181m57 182m57 186r33
+. 198r19 199r37
+46r22 Options{6|36R9} 9|169b7 177r10
+48U14*Report_OK_Tests 48>31 49=31 9|135b14 142l8 142t23 178R10
+48r31 Engine{35R9} 9|136b8 141r17
+49c31 R<11|40R9> 9|137b8 141m25
+50U14*Report_Fail_Tests 50>33 51=33 9|144b14 151l8 151t25 181R7
+50r33 Engine{35R9} 9|145b8 150r17
+51c33 R<11|40R9> 9|146b8 150m25
+52U14*Report_Error_Tests 52>34 53=34 9|153b14 160l8 160t26 182R7
+52r34 Engine{35R9} 9|154b8 159r17
+53c34 R<11|40R9> 9|155b8 159m25
+63b7 Use_ANSI{boolean} 9|72m14 120r17 126r17 120r17 126r17 120r17 126r17
+. 120r17 126r17
+X 9 aunit-reporter-text.adb
+38U14 Indent 38>22 79b14 84l8 84t14 233s10 235s10 243s10 247s13 253s13 267s19
+38i22 N{natural} 79b22 81r21
+41U14 Dump_Result_List 41>32 41>55 90b14 107l8 107t24 124s7 124s7 124s7 124s7
+41r32 L{4|51R9[11|73]} 90b32 94r28
+41a55 Prefix{string} 90b55 104r36
+44U14 Put_Measure[13|58] 202s10 226s10 14|66b14
+47U14 Report_Test 47>27 47>47 104s10 211b14 276l8 276t19
+47r27 Test{11|62R9} 211b27 216r12 218r10 220r15 223r10 225r28 232r10 234r20
+. 237r15 239r15 242r13 244r20 246r13 249r23 252r13 257r38 259r30 261r31 262r30
+. 268r29
+47a47 Prefix{string} 211b47 214r12
+51U22 Get 51=27 51=46 119s7
+51r27 R{11|40R9}
+51r46 L{4|51R9[11|73]}
+52a7 Label{string} 124r28 124r28[139] 124r28[148] 124r28[157]
+53a7 Color{string} 121r15 121r15[139] 121r15[148] 121r15[157]
+54u14 Report_Tests 55>8 56=8 113b14 129l8 129t20 139r33 148r33 157r33
+55r8 Engine{8|35R9} 114b8 120r10 126r10 114b8[139] 120r10[139] 126r10[139]
+. 114b8[148] 120r10[148] 126r10[148] 114b8[157] 120r10[157] 126r10[157]
+56c8 R<11|40R9> 115b8 119m20 119r20 115b8[139] 119m20[139] 119r20[139] 115b8[148]
+. 119m20[148] 119r20[148] 115b8[157] 119m20[157] 119r20[157]
+59a4 ANSI_Def{string} 127r15 127r15 127r15 127r15
+60a4 ANSI_Green{string} 139r64
+61a4 ANSI_Purple{string} 148r65
+62a4 ANSI_Red{string} 157r64
+81i11 J{integer}
+94r7 C{4|53R9[11|73]} 96r23 103r26 104r32 105m16 105r16
+117r7 S{4|51R9[11|73]} 119m24 119r24 124r25 119m24[139] 119r24[139] 124r25[139]
+. 119m24[148] 119r24[148] 124r25[148] 119m24[157] 119r24[157] 124r25[157]
+139U17 Internal[54] 113b14 141s7
+148U17 Internal[54] 113b14 150s7
+157U17 Internal[54] 113b14 159s7
+171i7 S_Count{integer} 189r12
+172i7 F_Count{integer} 192r12
+173i7 E_Count{integer} 195r12
+174o7 T{13|41O9} 199m10 202r23
+212o7 T{13|41O9} 225m10 226r23
+257i16 From{natural} 259r22 260r25 268r51 269m19
+257i22 To{natural} 260m19 261r25 262r52 264m22 264r28 268r59 269r27
+58o31 Measure{13|41O9} 68r40[44]
+67i7 H{integer} 90m10[44] 90r15[44] 107r10[44] 108r15[44]
+67i10 M{integer} 95m10[44] 95r15[44] 113r10[44] 115r18[44] 119r18[44]
+67i13 S{integer} 100m10[44] 100r15[44] 127r15[44] 129r15[44]
+68o7 T{duration} 89r13[44] 91m10[44] 91r15[44] 94r13[44] 96m10[44] 96r15[44]
+. 99r13[44] 101m10[44] 101r15[44] 133r21[44]
+69b7 Force{boolean} 105m7[44] 110m10[44] 113r24[44] 114r17[44] 123m10[44]
+. 126r14[44]
+71U17 Put 119s13[44] 129s10[44] 133s7[44]
+71i22 N{integer} 77r16[44] 84r15[44]
+71i35 Length{integer} 76r34[44]
+76i14 Dig{integer} 77r24[44]
+X 11 aunit-test_results.ads
+40R9*Result 8|45r39 49r47 51r49 53r50 9|51r38 56r24 115r24 119r12 137r24
+. 146r24 155r24 168r24 11|144e14
+45p7*Message{5|36P9} 9|234r33
+46p7*Source_Name{5|36P9} 9|237r28
+47i7*Line{natural} 9|239r28
+49P9*Test_Failure_Access(44R9)
+54p7*Exception_Name{5|36P9} 9|244r31
+55p7*Exception_Message{5|36P9} 9|246r24 249r34
+56p7*Traceback{5|36P9} 9|252r24 257r49 259r41 261r42 262r40 262r41 268r40
+58P9*Test_Error_Access(53R9)
+62R9*Test_Result 9|47r34 211r34 11|68e14
+63p7*Test_Name{5|36P9} 9|216r17
+64p7*Routine_Name{5|36P9} 9|218r15 220r20
+65p7*Failure{49P9} 9|232r15 234r24 234r25 237r19 237r20 239r19 239r20
+66p7*Error{58P9} 9|242r18 244r24 244r25 246r17 246r18 249r27 249r28 252r17
+. 252r18 257r42 257r43 259r34 259r35 261r35 261r36 262r34 262r35 268r33 268r34
+67r7*Elapsed{13|36R9} 9|223r15 225r33
+73K12*Result_Lists[4|49] 9|41r36 51r57 90r36 92r11 117r11
+102V13*Error_Count{3|20I9} 9|173R46
+105U14*Errors 9|157r47 119s7
+109V13*Failure_Count{3|20I9} 9|172R46
+112U14*Failures 9|148r47 119s7
+115V13*Elapsed{13|36R9} 9|198R10 199R28
+121V13*Success_Count{3|20I9} 9|171R46
+124U14*Successes 9|139r47 119s7
+130V13*Test_Count{3|20I9} 9|186R21
+51R9*List 9|41r49[11|73] 51r70[11|73] 90r49[11|73] 117r24[11|73] 11|230e14[73]
+53R9*Cursor 9|94r11[11|73] 11|237e14[73]
+67V13*Element{62R9} 9|104s23[11|73]
+155V13*First{4|53R9[73]} 9|94s21[11|73]
+165U14*Next 9|105s10[11|73]
+185V13*Has_Element{boolean} 9|96s10[11|73] 103s13[11|73]
+X 13 aunit-time_measure.ads
+34K15*Time_Measure 9|33w12 33r36 198r25 223r26 13|72e23
+41O9*AUnit_Duration<duration> 9|174r11 212r11
+43r4*Null_Time{36R9} 9|198r38 223r39
+52V13*Get_Measure{41O9} 9|199s15 225s15
+58u14*Gen_Put_Measure 9|44r33
+X 15 gnat.ads
+34K9*GNAT 9|32r6 32r30 15|37e9
+X 16 g-io.ads
+41K14*IO 9|32w11 32r35 16|91e12
+59U14*Put 9|186s7 189s7 192s7 195s7 239s10 56i22 84s10 108s10 115s13 127s10
+68U14*Put 9|82s10 121s10 127s10 185s7 188s7 191s7 194s7 201s10 214s7 215s7
+. 216s7 219s10 220s10 224s10 227s10 236s10 237s10 238s10 248s13 57i22 78s16
+. 109s10 122s10 132s7 134s7 121s10 127s10 121s10 127s10 121s10 127s10
+72U14*Put_Line 9|203s10 234s10 244s10 249s13 254s13 268s19
+77U14*New_Line 9|97s10 184s7 187s7 190s7 193s7 196s7 230s7 240s10 274s10
+FD 1 ada.ads
+FS .1 16K9 ada
+FD 2 a-calend.ads
+FS .1 36K13 ada__calendar
+FS .2 58V13 ada__calendar__clock
+FS .3 66V13 ada__calendar__year
+FS .4 67V13 ada__calendar__month
+FS .5 68V13 ada__calendar__day
+FS .6 69V13 ada__calendar__seconds
+FS .7 71U14 ada__calendar__split
+FS .8 82V13 ada__calendar__time_of
+FS .9 102V13 ada__calendar__Oadd
+FS .10 103V13 ada__calendar__Oadd__2
+FS .11 104V13 ada__calendar__Osubtract
+FS .12 105V13 ada__calendar__Osubtract__2
+FS .13 111V13 ada__calendar__Olt
+FS .14 112V13 ada__calendar__Ole
+FS .15 113V13 ada__calendar__Ogt
+FS .16 114V13 ada__calendar__Oge
+FS .17 233V13 ada__calendar__is_leap
+FS .18 248K12 ada__calendar__arithmetic_operations
+FS .19 250V16 ada__calendar__arithmetic_operations__add
+FS .20 253U17 ada__calendar__arithmetic_operations__difference
+FS .21 264V16 ada__calendar__arithmetic_operations__subtract
+FS .22 273K12 ada__calendar__conversion_operations
+FS .23 275V16 ada__calendar__conversion_operations__to_ada_time
+FS .24 278V16 ada__calendar__conversion_operations__to_ada_time__2
+FS .25 288V16 ada__calendar__conversion_operations__to_duration
+FS .26 293U17 ada__calendar__conversion_operations__to_struct_timespec
+FS .27 299U17 ada__calendar__conversion_operations__to_struct_tm
+FS .28 309V16 ada__calendar__conversion_operations__to_unix_time
+FS .29 318K12 ada__calendar__delay_operations
+FS .30 320V16 ada__calendar__delay_operations__to_duration
+FS .31 330K12 ada__calendar__formatting_operations
+FS .32 332V16 ada__calendar__formatting_operations__day_of_week
+FS .33 336U17 ada__calendar__formatting_operations__split
+FS .34 357V16 ada__calendar__formatting_operations__time_of
+FS .35 387K12 ada__calendar__time_zones_operations
+FS .36 389V16 ada__calendar__time_zones_operations__utc_time_offset
+FD 3 ada_containers.ads
+FS .1 16K9 ada_containers
+FD 4 ada_containers-aunit_lists.ads
+FD 5 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 6 aunit-options.ads
+FS .1 34K15 aunit__options
+FD 7 aunit-reporter.ads
+FS .1 35K15 aunit__reporter
+FD 8 aunit-reporter-text.ads
+FS .1 33K24 aunit__reporter__text
+FS .2 37U14 aunit__reporter__text__set_use_ansi_colors
+FS .3 44U14 aunit__reporter__text__report
+FS .4 48U14 aunit__reporter__text__report_ok_tests
+FS .5 50U14 aunit__reporter__text__report_fail_tests
+FS .6 52U14 aunit__reporter__text__report_error_tests
+FD 9 aunit-reporter-text.adb
+FS .1 36K29 aunit__reporter__text -> 8.1
+FS .2 38U14 aunit__reporter__text__indent
+FS .3 41U14 aunit__reporter__text__dump_result_list
+FS .4 44K4 aunit__reporter__text__put_measureGP2718
+FS .5 44U14 aunit__reporter__text__put_measureGP2718__put_measureR
+FS .6 44K4 aunit__reporter__text__put_measureGP2718 -> 9.4
+FS .7 44U14 aunit__reporter__text__put_measureGP2718__put_measureR -> 9.5
+FS .8 71U17 aunit__reporter__text__put_measureGP2718__put_measureR__put
+FS .9 74U17 aunit__reporter__text__put_measureGP2718__put_measureR__put -> 9.8
+FS .10 47U14 aunit__reporter__text__report_test
+FS .11 68U14 aunit__reporter__text__set_use_ansi_colors -> 8.2
+FS .12 79U14 aunit__reporter__text__indent -> 9.2
+FS .13 90U14 aunit__reporter__text__dump_result_list -> 9.3
+FS .14 113u14 aunit__reporter__text__report_tests
+FS .15 135U14 aunit__reporter__text__report_ok_tests -> 8.4
+FS .16 139K7 aunit__reporter__text__report_ok_tests__internalGP4944
+FS .17 139U17 aunit__reporter__text__report_ok_tests__internalGP4944__internalR
+FS .18 139K7 aunit__reporter__text__report_ok_tests__internalGP4944 -> 9.16
+FS .19 139U17 aunit__reporter__text__report_ok_tests__internalGP4944__internalR -> 9.17
+FS .20 144U14 aunit__reporter__text__report_fail_tests -> 8.5
+FS .21 148K7 aunit__reporter__text__report_fail_tests__internalGP5187
+FS .22 148U17 aunit__reporter__text__report_fail_tests__internalGP5187__internalR
+FS .23 148K7 aunit__reporter__text__report_fail_tests__internalGP5187 -> 9.21
+FS .24 148U17 aunit__reporter__text__report_fail_tests__internalGP5187__internalR -> 9.22
+FS .25 153U14 aunit__reporter__text__report_error_tests -> 8.6
+FS .26 157K7 aunit__reporter__text__report_error_tests__internalGP5435
+FS .27 157U17 aunit__reporter__text__report_error_tests__internalGP5435__internalR
+FS .28 157K7 aunit__reporter__text__report_error_tests__internalGP5435 -> 9.26
+FS .29 157U17 aunit__reporter__text__report_error_tests__internalGP5435__internalR -> 9.27
+FS .30 166U14 aunit__reporter__text__report -> 8.3
+FS .31 211U14 aunit__reporter__text__report_test -> 9.10
+FD 10 aunit-test_filters.ads
+FS .1 38K15 aunit__test_filters
+FS .2 51U14 aunit__test_filters__set_name
+FS .3 64V13 aunit__test_filters__is_active__2
+FD 11 aunit-test_results.ads
+FS .1 38K15 aunit__test_results
+FS .2 73K12 aunit__test_results__result_lists
+FS .3 59V13 aunit__test_results__result_lists__Oeq__2
+FS .4 61V13 aunit__test_results__result_lists__length
+FS .5 63V13 aunit__test_results__result_lists__is_empty
+FS .6 65U14 aunit__test_results__result_lists__clear
+FS .7 67V13 aunit__test_results__result_lists__element
+FS .8 69U14 aunit__test_results__result_lists__replace_element
+FS .9 83U14 aunit__test_results__result_lists__move
+FS .10 87U14 aunit__test_results__result_lists__insert
+FS .11 93U14 aunit__test_results__result_lists__insert__2
+FS .12 100U14 aunit__test_results__result_lists__insert__3
+FS .13 106U14 aunit__test_results__result_lists__prepend
+FS .14 111U14 aunit__test_results__result_lists__append
+FS .15 116U14 aunit__test_results__result_lists__delete
+FS .16 121U14 aunit__test_results__result_lists__delete_first
+FS .17 125U14 aunit__test_results__result_lists__delete_last
+FS .18 129U14 aunit__test_results__result_lists__reverse_elements
+FS .19 131U14 aunit__test_results__result_lists__swap
+FS .20 135U14 aunit__test_results__result_lists__swap_links
+FS .21 139U14 aunit__test_results__result_lists__splice
+FS .22 144U14 aunit__test_results__result_lists__splice__2
+FS .23 150U14 aunit__test_results__result_lists__splice__3
+FS .24 155V13 aunit__test_results__result_lists__first
+FS .25 157V13 aunit__test_results__result_lists__first_element
+FS .26 159V13 aunit__test_results__result_lists__last
+FS .27 161V13 aunit__test_results__result_lists__last_element
+FS .28 163V13 aunit__test_results__result_lists__next
+FS .29 165U14 aunit__test_results__result_lists__next__2
+FS .30 167V13 aunit__test_results__result_lists__previous
+FS .31 169U14 aunit__test_results__result_lists__previous__2
+FS .32 171V13 aunit__test_results__result_lists__find
+FS .33 176V13 aunit__test_results__result_lists__reverse_find
+FS .34 181V13 aunit__test_results__result_lists__contains
+FS .35 185V13 aunit__test_results__result_lists__has_element
+FS .36 189U14 aunit__test_results__result_lists__iterate
+FS .37 76U14 aunit__test_results__add_error
+FS .38 84U14 aunit__test_results__add_failure
+FS .39 92U14 aunit__test_results__add_success
+FS .40 99U14 aunit__test_results__set_elapsed
+FS .41 102V13 aunit__test_results__error_count
+FS .42 105U14 aunit__test_results__errors
+FS .43 109V13 aunit__test_results__failure_count
+FS .44 112U14 aunit__test_results__failures
+FS .45 115V13 aunit__test_results__elapsed
+FS .46 118U14 aunit__test_results__start_test
+FS .47 121V13 aunit__test_results__success_count
+FS .48 124U14 aunit__test_results__successes
+FS .49 127V13 aunit__test_results__successful
+FS .50 130V13 aunit__test_results__test_count
+FS .51 133U14 aunit__test_results__clear
+FD 12 aunit-tests.ads
+FS .1 36K15 aunit__tests
+FD 13 aunit-time_measure.ads
+FS .1 34K15 aunit__time_measure
+FS .2 46U14 aunit__time_measure__start_measure
+FS .3 49U14 aunit__time_measure__stop_measure
+FS .4 52V13 aunit__time_measure__get_measure
+FD 14 aunit-time_measure.adb
+FS .1 32K20 aunit__time_measure -> 13.1
+FS .2 38U14 aunit__time_measure__start_measure -> 13.2
+FS .3 47U14 aunit__time_measure__stop_measure -> 13.3
+FS .4 56V13 aunit__time_measure__get_measure -> 13.4
+FS .5 66u14 aunit__time_measure__gen_put_measure
+FS .6 71U17 aunit__time_measure__gen_put_measure__put
+FS .7 74U17 aunit__time_measure__gen_put_measure__put -> 14.6
+FS .8 141u14 aunit__time_measure__gen_put_measure_in_seconds
+FS .9 145U17 aunit__time_measure__gen_put_measure_in_seconds__put
+FS .10 148U17 aunit__time_measure__gen_put_measure_in_seconds__put -> 14.9
+FD 15 gnat.ads
+FS .1 34K9 gnat
+FD 16 g-io.ads
+FS .1 41K14 gnat__io
+FS .2 49V13 gnat__io__standard_output
+FS .3 50V13 gnat__io__standard_error
+FS .4 53U14 gnat__io__get
+FS .5 54U14 gnat__io__get__2
+FS .6 55U14 gnat__io__get_line
+FS .7 58U14 gnat__io__put
+FS .8 59U14 gnat__io__put__2
+FS .9 63U14 gnat__io__put__3
+FS .10 64U14 gnat__io__put__4
+FS .11 67U14 gnat__io__put__5
+FS .12 68U14 gnat__io__put__6
+FS .13 71U14 gnat__io__put_line
+FS .14 72U14 gnat__io__put_line__2
+FS .15 76U14 gnat__io__new_line
+FS .16 77U14 gnat__io__new_line__2
+FS .17 80U14 gnat__io__set_output
+FD 17 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+FX 6 aunit-options.ads .1 aunit__options
+F 44*4 aunit__options__default_options 8|.3:46r49 9|.30:169r34
+FX 8 aunit-reporter-text.ads .2 aunit__reporter__text__set_use_ansi_colors
+F 38=7 aunit__reporter__text__set_use_ansi_colors__engine 9|.11:72m7
+F 39>7 aunit__reporter__text__set_use_ansi_colors__value 9|.11:72c26
+FX 8 aunit-reporter-text.ads .3 aunit__reporter__text__report
+F 44>22 aunit__reporter__text__report__engine 9|.30:178c51 181c48 182c48
+F 45=22 aunit__reporter__text__report__r 9|.30:171r61 172r61 173r59 178m60
+. 181m57 182m57 186r33 198r19 199r37
+F 46>22 aunit__reporter__text__report__options 9|.30:177c10
+FX 8 aunit-reporter-text.ads .4 aunit__reporter__text__report_ok_tests
+F 48>31 aunit__reporter__text__report_ok_tests__engine 9|.15:141c17
+F 49=31 aunit__reporter__text__report_ok_tests__r 9|.15:141m25
+FX 8 aunit-reporter-text.ads .5 aunit__reporter__text__report_fail_tests
+F 50>33 aunit__reporter__text__report_fail_tests__engine 9|.20:150c17
+F 51=33 aunit__reporter__text__report_fail_tests__r 9|.20:150m25
+FX 8 aunit-reporter-text.ads .6 aunit__reporter__text__report_error_tests
+F 52>34 aunit__reporter__text__report_error_tests__engine 9|.25:159c17
+F 53=34 aunit__reporter__text__report_error_tests__r 9|.25:159m25
+FX 9 aunit-reporter-text.adb .1 aunit__reporter__text
+F 0*0 __HEAP .31:216r27 220r33 234r41 237r40 244r46 249r52 257r48 259r40
+. 261r41 268r39
+F 38*14 aunit__reporter__text__indent .31:233s10 235s10 243s10 247s13 253s13
+. 267s19
+F 41*14 aunit__reporter__text__dump_result_list .14:124s7 .19:124s7 .24:124s7
+. .29:124s7
+F 47*14 aunit__reporter__text__report_test .13:104s10
+F 51*22 aunit__reporter__text__report_tests__get .14:119s7
+F 59*4 aunit__reporter__text__ansi_def .14:127c15 .19:127c15 .24:127c15 .29:127c15
+F 60*4 aunit__reporter__text__ansi_green .15:139c64
+F 61*4 aunit__reporter__text__ansi_purple .20:148c65
+F 62*4 aunit__reporter__text__ansi_red .25:157c64
+FX 9 aunit-reporter-text.adb .2 aunit__reporter__text__indent
+F 38>22 aunit__reporter__text__indent__n .12:81c21
+FX 9 aunit-reporter-text.adb .3 aunit__reporter__text__dump_result_list
+F 41>32 aunit__reporter__text__dump_result_list__l .13:94c28
+F 41>55 aunit__reporter__text__dump_result_list__prefix .13:104c36
+FX 9 aunit-reporter-text.adb .4 aunit__reporter__text__put_measureGP2718
+F 44*14 aunit__reporter__text__put_measure .30:202s10 .31:226s10
+FX 9 aunit-reporter-text.adb .5 aunit__reporter__text__put_measureGP2718__put_measureR
+F 58>31 aunit__reporter__text__put_measureGP2718__put_measureR__measure .7:68c40
+FX 9 aunit-reporter-text.adb .7 aunit__reporter__text__put_measureGP2718__put_measureR
+F 67*7 aunit__reporter__text__put_measureGP2718__put_measureR__h 90m10 90r15
+. 107r10 108r15
+F 67*10 aunit__reporter__text__put_measureGP2718__put_measureR__m 95m10 95r15
+. 113r10 115r18 119r18
+F 67*13 aunit__reporter__text__put_measureGP2718__put_measureR__s 100m10
+. 100r15 127r15 129r15
+F 68*7 aunit__reporter__text__put_measureGP2718__put_measureR__t 89r13 91m10
+. 91r15 94r13 96m10 96r15 99r13 101m10 101r15 133r21
+F 69*7 aunit__reporter__text__put_measureGP2718__put_measureR__force 105m7
+. 110m10 113r24 114r17 123m10 126r14
+F 71*17 aunit__reporter__text__put_measureGP2718__put_measureR__put 119s13
+. 129s10 133s7
+FX 9 aunit-reporter-text.adb .8 aunit__reporter__text__put_measureGP2718__put_measureR__put
+F 71>22 aunit__reporter__text__put_measureGP2718__put_measureR__put__n .9:77c16
+. 84c15
+F 71>35 aunit__reporter__text__put_measureGP2718__put_measureR__put__length
+. .9:76c34
+FX 9 aunit-reporter-text.adb .9 aunit__reporter__text__put_measureGP2718__put_measureR__put
+F 76*14 aunit__reporter__text__put_measureGP2718__put_measureR__put__L_1__dig
+. 77c24
+FX 9 aunit-reporter-text.adb .10 aunit__reporter__text__report_test
+F 47>27 aunit__reporter__text__report_test__test .31:216c12 218c10 220c15
+. 223c10 225c28 232c10 234c20 237c15 239c15 242c13 244c20 246c13 249c23 252c13
+. 257c38 259c30 261c31 262c30 268c29
+F 47>47 aunit__reporter__text__report_test__prefix .31:214c12
+FX 9 aunit-reporter-text.adb .13 aunit__reporter__text__dump_result_list
+F 94*7 aunit__reporter__text__dump_result_list__c 96r23 103r26 104r32 105m16
+. 105r16
+FX 9 aunit-reporter-text.adb .14 aunit__reporter__text__report_tests
+F 117*7 aunit__reporter__text__report_tests__s 119m24 119r24 124r25
+FX 9 aunit-reporter-text.adb .15 aunit__reporter__text__report_ok_tests
+F 139*17 aunit__reporter__text__report_ok_tests__internal 141s7
+F 52*7 aunit__reporter__text__report_ok_tests__internalGP4944__label .19:124c28
+F 53*7 aunit__reporter__text__report_ok_tests__internalGP4944__color .19:121c15
+FX 9 aunit-reporter-text.adb .17 aunit__reporter__text__report_ok_tests__internalGP4944__internalR
+F 55>8 aunit__reporter__text__report_ok_tests__internalGP4944__internalR__engine
+. .19:120c10 126c10
+F 56=8 aunit__reporter__text__report_ok_tests__internalGP4944__internalR__r
+. .19:119m20 119r20
+FX 9 aunit-reporter-text.adb .19 aunit__reporter__text__report_ok_tests__internalGP4944__internalR
+F 117*7 aunit__reporter__text__report_ok_tests__internalGP4944__internalR__s
+. 119m24 119r24 124r25
+FX 9 aunit-reporter-text.adb .20 aunit__reporter__text__report_fail_tests
+F 148*17 aunit__reporter__text__report_fail_tests__internal 150s7
+F 52*7 aunit__reporter__text__report_fail_tests__internalGP5187__label .24:124c28
+F 53*7 aunit__reporter__text__report_fail_tests__internalGP5187__color .24:121c15
+FX 9 aunit-reporter-text.adb .22 aunit__reporter__text__report_fail_tests__internalGP5187__internalR
+F 55>8 aunit__reporter__text__report_fail_tests__internalGP5187__internalR__engine
+. .24:120c10 126c10
+F 56=8 aunit__reporter__text__report_fail_tests__internalGP5187__internalR__r
+. .24:119m20 119r20
+FX 9 aunit-reporter-text.adb .24 aunit__reporter__text__report_fail_tests__internalGP5187__internalR
+F 117*7 aunit__reporter__text__report_fail_tests__internalGP5187__internalR__s
+. 119m24 119r24 124r25
+FX 9 aunit-reporter-text.adb .25 aunit__reporter__text__report_error_tests
+F 157*17 aunit__reporter__text__report_error_tests__internal 159s7
+F 52*7 aunit__reporter__text__report_error_tests__internalGP5435__label .29:124c28
+F 53*7 aunit__reporter__text__report_error_tests__internalGP5435__color .29:121c15
+FX 9 aunit-reporter-text.adb .27 aunit__reporter__text__report_error_tests__internalGP5435__internalR
+F 55>8 aunit__reporter__text__report_error_tests__internalGP5435__internalR__engine
+. .29:120c10 126c10
+F 56=8 aunit__reporter__text__report_error_tests__internalGP5435__internalR__r
+. .29:119m20 119r20
+FX 9 aunit-reporter-text.adb .29 aunit__reporter__text__report_error_tests__internalGP5435__internalR
+F 117*7 aunit__reporter__text__report_error_tests__internalGP5435__internalR__s
+. 119m24 119r24 124r25
+FX 9 aunit-reporter-text.adb .30 aunit__reporter__text__report
+F 171*7 aunit__reporter__text__report__s_count 189r12
+F 172*7 aunit__reporter__text__report__f_count 192r12
+F 173*7 aunit__reporter__text__report__e_count 195r12
+F 174*7 aunit__reporter__text__report__t 199m10 202r23
+FX 9 aunit-reporter-text.adb .31 aunit__reporter__text__report_test
+F 212*7 aunit__reporter__text__report_test__t 225m10 226r23
+F 257*16 aunit__reporter__text__report_test__B_3__from 259r22 260r25 268r51
+. 269m19
+F 257*22 aunit__reporter__text__report_test__B_3__to 260m19 261r25 262r52
+. 264m22 264r28 268r59 269r27
+FX 11 aunit-test_results.ads .1 aunit__test_results
+F 105*14 aunit__test_results__errors 9|.29:119s7
+F 112*14 aunit__test_results__failures 9|.24:119s7
+F 124*14 aunit__test_results__successes 9|.19:119s7
+FX 11 aunit-test_results.ads .2 aunit__test_results__result_lists
+F 67*13 aunit__test_results__result_lists__element 9|.13:104s23
+F 155*13 aunit__test_results__result_lists__first 9|.13:94s21
+F 165*14 aunit__test_results__result_lists__next__2 9|.13:105s10
+F 185*13 aunit__test_results__result_lists__has_element 9|.13:96s10 103s13
+FX 13 aunit-time_measure.ads .1 aunit__time_measure
+F 43*4 aunit__time_measure__null_time 9|.30:198r38 .31:223r39
+F 52*13 aunit__time_measure__get_measure 9|.30:199s15 .31:225s15
+FX 16 g-io.ads .1 gnat__io
+F 59*14 gnat__io__put__2 9|.7:108s10 115s13 127s10 .9:84s10 .30:186s7 189s7
+. 192s7 195s7 .31:239s10
+F 68*14 gnat__io__put__6 9|.7:109s10 122s10 132s7 134s7 .9:78s16 .12:82s10
+. .14:121s10 127s10 .19:121s10 127s10 .24:121s10 127s10 .29:121s10 127s10
+. .30:185s7 188s7 191s7 194s7 201s10 .31:214s7 215s7 216s7 219s10 220s10
+. 224s10 227s10 236s10 237s10 238s10 248s13
+F 72*14 gnat__io__put_line__2 9|.30:203s10 .31:234s10 244s10 249s13 254s13
+. 268s19
+F 77*14 gnat__io__new_line__2 9|.13:97s10 .30:184s7 187s7 190s7 193s7 196s7
+. .31:230s7 240s10 274s10
+
+GG EK_REMOTE_STATES
+GG EK_GLOBALS aunit__reporter__text__put_measureGP2718__put_measureR KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ gnat__io__put__2 gnat__io__put__6 aunit__reporter__text__put_measureGP2718__put_measureR__put ]
+GG EK_GLOBALS aunit__reporter__text__set_use_ansi_colors KIND_SUBPROGRAM ORIGIN_FRONTEND
+GG EK_GLOBALS aunit__reporter__text__report KIND_SUBPROGRAM ORIGIN_FRONTEND c:var_in [ aunit__options__default_options aunit__time_measure__null_time ] c:calls_conditional [ gnat__io__put_line__2 gnat__io__put__2 gnat__io__put__6 aunit__time_measure__get_measure gnat__io__new_line__2 aunit__reporter__text__put_measure ]
+GG EK_GLOBALS aunit__reporter__text__report_ok_tests KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__reporter__text__report_ok_tests__internal ]
+GG EK_GLOBALS aunit__reporter__text__report_fail_tests KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__reporter__text__report_fail_tests__internal ]
+GG EK_GLOBALS aunit__reporter__text__report_error_tests KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__reporter__text__report_error_tests__internal ]
+GG EK_GLOBALS aunit__reporter__text__indent KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ gnat__io__put__6 ]
+GG EK_GLOBALS aunit__reporter__text__dump_result_list KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__test_results__result_lists__element aunit__reporter__text__report_test aunit__test_results__result_lists__next__2 aunit__test_results__result_lists__first aunit__test_results__result_lists__has_element gnat__io__new_line__2 ]
+GG EK_GLOBALS aunit__reporter__text__report_test KIND_SUBPROGRAM ORIGIN_FRONTEND c:var_in [ __HEAP aunit__time_measure__null_time ] c:calls_conditional [ gnat__io__put_line__2 aunit__reporter__text__indent gnat__io__put__2 gnat__io__put__6 aunit__time_measure__get_measure gnat__io__new_line__2 aunit__reporter__text__put_measure ]
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

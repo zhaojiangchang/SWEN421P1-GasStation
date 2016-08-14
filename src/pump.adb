@@ -13,7 +13,7 @@ with SPARK_Mode is
    is
    begin
       pump_r.PUMP_STATE := stateType;
-      print("Chage State: " & stateType'Image);
+      print_state_type("Chage State: " , stateType);
 
    end SET_PUMP_STATE;
 
@@ -27,7 +27,7 @@ with SPARK_Mode is
    is
    begin
       pump_r.NOZZLE_STATE := nozzleType;
-      print("Chage Nozzle State: "& nozzleType'Image);
+      print_nozzle_type("Chage Nozzle State: ", nozzleType);
 
    end SET_PUMP_NOZZLE_STATE;
 
@@ -41,7 +41,7 @@ with SPARK_Mode is
    is
    begin
       pump_r.RESERVOIR_INFO.TOTAL := SIZE;
-      print("RESERVOIR SIZE: "& SIZE'Image);
+      print_float_type("RESERVOIR SIZE: ", SIZE);
 
    end SET_RESERVOIR_SIZE;
    --------------------------
@@ -78,7 +78,9 @@ with SPARK_Mode is
       AMOUNT: in FLOAT_NUMBER)
    is
    begin
-      pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
+      if pump_r.RESERVOIR_INFO.TOTAL > AMOUNT then
+         pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
+      end if;
    end REMOVE_PETROL_RESERVOIR;
 
    -----------------------------
@@ -100,11 +102,12 @@ with SPARK_Mode is
    is
       R : RESERVOIR;
    begin
---        R := PUMP.RESERVOIR;
+--        R := RESERVOIR;
 
       R.RESERVOIR_CATEGORY := fuelType;
+      R.TOTAL:= 1000.00;
       pump_r.RESERVOIR_INFO := R;
-      print("Add Reservoir: "& fuelType'Image);
+      print_fuel_type("Add Reservoir: ", fuelType);
    end APPEND_RESERVOIR;
 
 
@@ -117,7 +120,7 @@ with SPARK_Mode is
    is
    begin
       pump_r.UNIT_PRICE := PRICE;
-      print("fuel unit price: "& pump_r.UNIT_PRICE'Image);
+      print_float_type("fuel unit price: ", pump_r.UNIT_PRICE);
       --Put_Line(PRICE'Image);
    end SET_FUEL_PRICE;
 

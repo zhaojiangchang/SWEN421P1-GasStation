@@ -1,0 +1,152 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/pump.adb
+        -:    0:Programs:35
+        -:    1:with PUMP;
+        -:    2:with sPrint; use sPrint;
+        -:    3:package body PUMP
+        -:    4:with SPARK_Mode is
+        -:    5:
+        -:    6:   --------------------------
+        -:    7:   -- SET_PUMP_STATE --
+        -:    8:   --------------------------
+        -:    9:
+        6:   10:   procedure SET_PUMP_STATE(
+        -:   11:     pump_r: in out PUMP;
+        -:   12:     stateType: in STATE_TYPE)
+        -:   13:   is
+        -:   14:   begin
+        6:   15:      pump_r.PUMP_STATE := stateType;
+        6:   16:      print_state_type("Chage State: " , stateType);
+        -:   17:
+        6:   18:   end SET_PUMP_STATE;
+        -:   19:
+        -:   20:   --------------------------
+        -:   21:   -- SET_PUMP_STATE --
+        -:   22:   --------------------------
+        -:   23:
+        6:   24:   procedure SET_PUMP_NOZZLE_STATE(
+        -:   25:     pump_r: in out PUMP;
+        -:   26:     nozzleType: in NOZZLE_TYPE)
+        -:   27:   is
+        -:   28:   begin
+        6:   29:      pump_r.NOZZLE_STATE := nozzleType;
+        6:   30:      print_nozzle_type("Chage Nozzle State: ", nozzleType);
+        -:   31:
+        6:   32:   end SET_PUMP_NOZZLE_STATE;
+        -:   33:
+        -:   34:   --------------------------
+        -:   35:   -- ADD_PETROL_RESERVOIR --
+        -:   36:   --------------------------
+        -:   37:
+        6:   38:   procedure SET_RESERVOIR_SIZE(
+        -:   39:     pump_r: in out PUMP;
+        -:   40:     SIZE: in FLOAT_NUMBER)
+        -:   41:   is
+        -:   42:   begin
+        6:   43:      pump_r.RESERVOIR_INFO.TOTAL := SIZE;
+        6:   44:      print_float_type("RESERVOIR SIZE: ", SIZE);
+        -:   45:
+        6:   46:   end SET_RESERVOIR_SIZE;
+        -:   47:   --------------------------
+        -:   48:   -- GET_UNIT_PRICE --------
+        -:   49:   --------------------------
+    #####:   50:   function GET_UNIT_PRICE(pump_r: in PUMP) return FLOAT_NUMBER
+        -:   51:   is
+        -:   52:   begin
+    #####:   53:      return pump_r.UNIT_PRICE;
+        -:   54:   end GET_UNIT_PRICE;
+        -:   55:
+        -:   56:    --------------------------
+        -:   57:   -- GET_TANKS_SIZE --------
+        -:   58:   --------------------------
+        2:   59:   function GET_TANKS_SIZE(pump_r: in PUMP) return FLOAT_NUMBER
+        -:   60:   is
+        -:   61:   begin
+        2:   62:      return pump_r.RESERVOIR_INFO.TOTAL;
+        -:   63:   end GET_TANKS_SIZE;
+        -:   64:  --------------------------
+        -:   65:   -- GET_RESEVOIR_CATEGORY --------
+        -:   66:   --------------------------
+    #####:   67:   function GET_RESEVOIR_CATEGORY(pump_r: in PUMP) return FUEL_TYPES
+        -:   68:   is
+        -:   69:   begin
+    #####:   70:      return pump_r.RESERVOIR_INFO.RESERVOIR_CATEGORY;
+        -:   71:   end GET_RESEVOIR_CATEGORY;
+        -:   72:   -----------------------------
+        -:   73:   -- REMOVE_PETROL_RESERVOIR --
+        -:   74:   -----------------------------
+        -:   75:
+    #####:   76:   procedure REMOVE_PETROL_RESERVOIR
+        -:   77:     (pump_r: in out PUMP;
+        -:   78:      AMOUNT: in FLOAT_NUMBER)
+        -:   79:   is
+        -:   80:   begin
+    #####:   81:      if pump_r.RESERVOIR_INFO.TOTAL > AMOUNT then
+    #####:   82:         pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
+        -:   83:      end if;
+    #####:   84:   end REMOVE_PETROL_RESERVOIR;
+        -:   85:
+        -:   86:   -----------------------------
+        -:   87:   -- SET_PUMPED ---------------
+        -:   88:   -----------------------------
+        -:   89:
+    #####:   90:   procedure SET_PUMPED
+        -:   91:     (pump_r: in out PUMP;
+        -:   92:      AMOUNT: in FLOAT_NUMBER)
+        -:   93:   is
+        -:   94:   begin
+    #####:   95:      pump_r.PUMPED := AMOUNT;
+    #####:   96:   end SET_PUMPED;
+        -:   97:   -----------------------------
+        -:   98:   -- APPEND RESERVOIR TO PUMP --
+        -:   99:   -----------------------------
+        6:  100:   procedure APPEND_RESERVOIR
+        -:  101:     (pump_r: in out PUMP; fuelType: in FUEL_TYPES)
+        -:  102:   is
+        -:  103:      R : RESERVOIR;
+        -:  104:   begin
+        -:  105:--        R := RESERVOIR;
+        -:  106:
+        6:  107:      R.RESERVOIR_CATEGORY := fuelType;
+        6:  108:      R.TOTAL:= 1000.00;
+        6:  109:      pump_r.RESERVOIR_INFO := R;
+        6:  110:      print_fuel_type("Add Reservoir: ", fuelType);
+        6:  111:   end APPEND_RESERVOIR;
+        -:  112:
+        -:  113:
+        -:  114:   -----------------------------
+        -:  115:   -- APPEND RESERVOIR TO PUMP --
+        -:  116:  -----------------------------
+        -:  117:
+        6:  118:   procedure SET_FUEL_PRICE
+        -:  119:     (pump_r: in out PUMP; PRICE: in FLOAT_NUMBER)
+        -:  120:   is
+        -:  121:   begin
+        6:  122:      pump_r.UNIT_PRICE := PRICE;
+        6:  123:      print_float_type("fuel unit price: ", pump_r.UNIT_PRICE);
+        -:  124:      --Put_Line(PRICE'Image);
+        6:  125:   end SET_FUEL_PRICE;
+        -:  126:
+        -:  127:  -----------------------------
+        -:  128:  --GET_CURRENT_NOZZLE_STATE --
+        -:  129:  -----------------------------
+        -:  130:
+    #####:  131:   function GET_CURRENT_NOZZLE_STATE
+        -:  132:     (pump_r: in PUMP) return NOZZLE_TYPE
+        -:  133:   is
+        -:  134:   begin
+        -:  135:     -- print( "tank size: "&pump_r.RESERVOIR_INFO.TOTAL'Image);
+    #####:  136:       return pump_r.NOZZLE_STATE;
+        -:  137:   end GET_CURRENT_NOZZLE_STATE;
+        -:  138:
+        -:  139:
+        -:  140:  -----------------------------
+        -:  141:  -- GET STATE ----------------
+        -:  142:  -----------------------------
+    #####:  143:   function GET_STATE(pump_r: in PUMP) return STATE_TYPE
+        -:  144:   is
+        -:  145:   begin
+    #####:  146:      return pump_r.PUMP_STATE;
+        -:  147:   end GET_STATE;
+        -:  148:
+        -:  149:
+        -:  150:end PUMP;

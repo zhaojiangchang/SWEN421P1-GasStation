@@ -1,0 +1,77 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_IMPLEMENTATION_ATTRIBUTES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+
+U aunit.memory%b	aunit-memory.adb	b6c145a2 OO PK
+W aunit%s		aunit.adb		aunit.ali
+W system%s		system.ads		system.ali
+
+U aunit.memory%s	aunit-memory.ads	fb5936b8 EE OO PK
+W aunit%s		aunit.adb		aunit.ali
+W system%s		system.ads		system.ali
+
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-memory.ads	20160516092006 a0315146 aunit.memory%s
+D aunit-memory.adb	20160516092006 16f014e4 aunit.memory%b
+D system.ads		20160516092930 2da59038 system%s
+X 1 aunit.ads
+34K9*AUnit 48e10 2|40r9 53r5 3|34r14 58r5
+X 2 aunit-memory.ads
+40K15*Memory 1|34k9 2|53l11 53e17 3|34b20 58l11 58t17
+42M9*size_t 44r33 3|40r33 41r34
+44V13*AUnit_Alloc{4|67M9} 44>26 3|40b13 45l8 45t19
+44m26 Size{42M9} 3|40b26 44r25
+46U14*AUnit_Free 46>26 3|51b14 56l8 56t18
+46m26 Obj{4|67M9} 3|51b26 55r16
+X 3 aunit-memory.adb
+41V16*RT_Malloc{4|67M9} 41>27 42b<c,__gnat_malloc>25 44s14
+41m27 Size{2|42M9}
+52U17*RT_Free 52>26 53b<c,__gnat_free>25 55s7
+52m26 Obj{4|67M9}
+X 4 system.ads
+37K9*System 2|38w6 44r48 46r32 3|40r48 41r49 51r32 52r32 4|200e11
+67M9*Address 2|44r55 46r39 3|40r55 41r56 51r39 52r39
+FD 1 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 2 aunit-memory.ads
+FS .1 40K15 aunit__memory
+FS .2 44V13 aunit__memory__aunit_alloc
+FS .3 46U14 aunit__memory__aunit_free
+FD 3 aunit-memory.adb
+FS .1 34K20 aunit__memory -> 2.1
+FS .2 40V13 aunit__memory__aunit_alloc -> 2.2
+FS .3 41V16 aunit__memory__aunit_alloc__rt_malloc
+FS .4 51U14 aunit__memory__aunit_free -> 2.3
+FS .5 52U17 aunit__memory__aunit_free__rt_free
+FD 4 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+FX 2 aunit-memory.ads .2 aunit__memory__aunit_alloc
+F 44>26 aunit__memory__aunit_alloc__size 3|.2:44c25
+FX 2 aunit-memory.ads .3 aunit__memory__aunit_free
+F 46>26 aunit__memory__aunit_free__obj 3|.4:55c16
+FX 3 aunit-memory.adb .2 aunit__memory__aunit_alloc
+F 41*16 aunit__memory__aunit_alloc__rt_malloc 44s14
+FX 3 aunit-memory.adb .4 aunit__memory__aunit_free
+F 52*17 aunit__memory__aunit_free__rt_free 55s7
+
+GG EK_REMOTE_STATES
+GG EK_GLOBALS aunit__memory__aunit_alloc KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__memory__aunit_alloc__rt_malloc ]
+GG EK_GLOBALS aunit__memory__aunit_free KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__memory__aunit_free__rt_free ]
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

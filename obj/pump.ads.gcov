@@ -1,0 +1,60 @@
+        -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/pump.ads
+        -:    0:Programs:35
+        -:    1:package PUMP
+        -:    2:
+        -:    3:with SPARK_Mode is
+        -:    4:
+        -:    5:   type RESERVOIR_NUM is new Integer;
+        -:    6:   type FLOAT_NUMBER is digits 3 range 0.0 .. 1.0E35;
+        -:    7:   type FUEL_TYPES is (U91, U95, Diesel, NO);
+        -:    8:   type PUMP is private;
+        -:    9:   type RESERVOIR is private;
+        -:   10:   type STATE_TYPE is (Base, Ready, Pumping, Waiting);
+        -:   11:   type NOZZLE_TYPE is (NozzleBase, Lift, Replace,Start, Stop, Pay);
+        -:   12:
+        -:   13:   --procedures
+        -:   14:   procedure SET_FUEL_PRICE(pump_r: in out PUMP; PRICE: in FLOAT_NUMBER);
+        -:   15:   procedure SET_PUMP_STATE(pump_r: in out PUMP; stateType: in STATE_TYPE);
+        -:   16:   procedure SET_PUMPED(pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER);
+        -:   17:   procedure SET_PUMP_NOZZLE_STATE(pump_r: in out PUMP; nozzleType: in NOZZLE_TYPE);
+        -:   18:
+        -:   19:   procedure APPEND_RESERVOIR(pump_r: in out PUMP; fuelType: in FUEL_TYPES);
+        -:   20:
+        -:   21:   procedure SET_RESERVOIR_SIZE(pump_r: in out PUMP; SIZE: in FLOAT_NUMBER);
+        -:   22:
+        -:   23:   procedure REMOVE_PETROL_RESERVOIR (pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER)
+        -:   24:     with
+        -:   25:       pre=>(AMOUNT <= GET_TANKS_SIZE(pump_r)),
+        -:   26:     post=>(GET_TANKS_SIZE(pump_r)>=0.00);
+        -:   27:
+        -:   28:   --functions
+        -:   29:   function GET_STATE(pump_r: in PUMP) return STATE_TYPE;
+        -:   30:   function GET_CURRENT_NOZZLE_STATE(pump_r: in PUMP) return NOZZLE_TYPE;
+        -:   31:   function GET_UNIT_PRICE(pump_r: in PUMP) return FLOAT_NUMBER;
+        -:   32:   function GET_TANKS_SIZE(pump_r: in PUMP) return FLOAT_NUMBER;
+        -:   33:   function GET_RESEVOIR_CATEGORY(pump_r: in PUMP) return FUEL_TYPES;
+        -:   34:
+        -:   35:private
+        -:   36:
+    #####:   37:   type RESERVOIR is
+        -:   38:      record
+        -:   39:         TOTAL: FLOAT_NUMBER;
+        -:   40:         RESERVOIR_CATEGORY: FUEL_TYPES ;
+        -:   41:      end record;
+        -:   42:
+        -:   43:
+        8:   44:   type PUMP is
+        -:   45:      record
+        -:   46:         RESERVOIR_INFO: RESERVOIR:=(
+        -:   47:                                     TOTAL=>1000.00,
+        -:   48:                                     RESERVOIR_CATEGORY=>FUEL_TYPES'Val(0));
+        -:   49:         PUMP_STATE: STATE_TYPE:=STATE_TYPE'Val(0);
+        -:   50:         PUMPED: FLOAT_NUMBER:=0.00;
+        -:   51:         NOZZLE_STATE: NOZZLE_TYPE:=NOZZLE_TYPE'Val(0);
+        -:   52:         UNIT_PRICE: FLOAT_NUMBER:=0.00;
+        -:   53:         FUEL_TYPE: FUEL_TYPES:= FUEL_TYPES'Val(3);
+        -:   54:      end record;
+        -:   55:
+        -:   56:
+        -:   57:
+        -:   58:end PUMP;

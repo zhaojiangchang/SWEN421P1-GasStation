@@ -1,0 +1,203 @@
+V "GNAT Lib v2016"
+A -ftest-coverage
+A -fprofile-arcs
+A -gnatc
+P GP ZX
+
+RN
+RV NO_CALENDAR
+RV NO_DELAY
+RV NO_FIXED_POINT
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U aunit.time_measure%b	aunit-time_measure.adb	9df5edcf OO PK
+W aunit%s		aunit.adb		aunit.ali
+W system%s		system.ads		system.ali
+
+U aunit.time_measure%s	aunit-time_measure.ads	f32b0de9 BN EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.calendar%s	a-calend.adb		a-calend.ali
+W aunit%s		aunit.adb		aunit.ali
+
+D ada.ads		20160516092928 3ffc8e18 ada%s
+D a-calend.ads		20160516092930 2d5f01d4 ada.calendar%s
+D aunit.ads		20160516092006 76cdf7c6 aunit%s
+D aunit-time_measure.ads  20160516092006 a8b9fbfb aunit.time_measure%s
+D aunit-time_measure.adb  20160516092006 354c1634 aunit.time_measure%b
+D system.ads		20160516092930 2da59038 system%s
+X 1 ada.ads
+16K9*Ada 19e8 4|32r6 37r15 38r15 43r43 44r43 5|40r18 49r17 57r16
+X 2 a-calend.ads
+36K13*Calendar 395e17 4|32w10 37r19 38r19 43r47 44r47 5|40r22 49r21 57r20
+44I9*Time<213I9> 4|37r28 38r28 5|57r29
+58V13*Clock{44I9} 5|40s31 49s30
+82V13*Time_Of{44I9} 4|43s56 44s56
+105V14*"-"{duration} 5|59s37
+213I9 Time_Rep<long_long_integer>
+X 3 aunit.ads
+34K9*AUnit 48e10 4|34r9 72r5 5|32r14 175r5
+X 4 aunit-time_measure.ads
+34K15*Time_Measure 3|34k9 4|72l11 72e23 5|32b20 175l11 175t23
+36R9*Time 39e14 43r25 46r40 49r39 52r30 5|38r40 47r39 56r30
+37i7*Start{2|44I9} 43m34 5|40m9 59r41
+38i7*Stop{2|44I9} 44m34 5|49m9 59r32
+41O9*AUnit_Duration<duration> 52r43 58r41 64r52 70c9 5|56r43 59r14 66r41
+. 141r52
+43r4*Null_Time{36R9}
+46U14*Start_Measure 46=29 5|38b14 41l8 41t21
+46r29 T{36R9} 5|38b29 40m7
+49U14*Stop_Measure 49=28 5|47b14 50l8 50t20
+49r28 T{36R9} 5|47b28 49m7
+52V13*Get_Measure{41O9} 52>26 5|56b13 60l8 60t19
+52r26 T{36R9} 5|56b26 59r30 59r39
+56U22 Put 56>27 5|84s10 108s10 115s13 127s10
+56i27 I{integer}
+57U22 Put 57>27 5|78s16 109s10 122s10 132s7 134s7
+57a27 S{string}
+58u14*Gen_Put_Measure 58>31 5|66b14 135l8 135t23
+58o31 Measure{41O9} 5|66b31 68r40
+62U22 Put 62>27 5|158s10 168s7
+62i27 I{integer}
+63U22 Put 63>27 5|152s16 170s7 172s7
+63a27 S{string}
+64u14*Gen_Put_Measure_In_Seconds 64>42 5|141b14 173l8 173t34
+64o42 Measure{41O9} 5|141b42 143r34
+X 5 aunit-time_measure.adb
+67i7 H{integer} 90m10 90r15 107r10 108r15
+67i10 M{integer} 95m10 95r15 113r10 115r18 119r18
+67i13 S{integer} 100m10 100r15 127r15 129r15
+68o7 T{duration} 89r13 91m10 91r15 94r13 96m10 96r15 99r13 101m10 101r15
+. 133r21
+69b7 Force{boolean} 105m7 110m10 113r24 114r17 123m10 126r14
+71U17 Put 71>22 71>35 74b17 85l11 85t14 119s13 129s10 133s7
+71i22 N{integer} 74b22 77r16 84r15
+71i35 Length{integer} 74b35 76r34
+76i14 Dig{integer} 77r24
+142i7 S{integer} 164m10 164r15 168r12
+143o7 T{duration} 163r13 165m10 165r15 171r21
+145U17 Put 145>22 145>35 148b17 159l11 159t14 171s7
+145i22 N{integer} 148b22 151r16 158r15
+145i35 Length{integer} 148b35 150r34
+150i14 Dig{integer} 151r24
+FD 1 ada.ads
+FS .1 16K9 ada
+FD 2 a-calend.ads
+FS .1 36K13 ada__calendar
+FS .2 58V13 ada__calendar__clock
+FS .3 66V13 ada__calendar__year
+FS .4 67V13 ada__calendar__month
+FS .5 68V13 ada__calendar__day
+FS .6 69V13 ada__calendar__seconds
+FS .7 71U14 ada__calendar__split
+FS .8 82V13 ada__calendar__time_of
+FS .9 102V13 ada__calendar__Oadd
+FS .10 103V13 ada__calendar__Oadd__2
+FS .11 104V13 ada__calendar__Osubtract
+FS .12 105V13 ada__calendar__Osubtract__2
+FS .13 111V13 ada__calendar__Olt
+FS .14 112V13 ada__calendar__Ole
+FS .15 113V13 ada__calendar__Ogt
+FS .16 114V13 ada__calendar__Oge
+FS .17 233V13 ada__calendar__is_leap
+FS .18 248K12 ada__calendar__arithmetic_operations
+FS .19 250V16 ada__calendar__arithmetic_operations__add
+FS .20 253U17 ada__calendar__arithmetic_operations__difference
+FS .21 264V16 ada__calendar__arithmetic_operations__subtract
+FS .22 273K12 ada__calendar__conversion_operations
+FS .23 275V16 ada__calendar__conversion_operations__to_ada_time
+FS .24 278V16 ada__calendar__conversion_operations__to_ada_time__2
+FS .25 288V16 ada__calendar__conversion_operations__to_duration
+FS .26 293U17 ada__calendar__conversion_operations__to_struct_timespec
+FS .27 299U17 ada__calendar__conversion_operations__to_struct_tm
+FS .28 309V16 ada__calendar__conversion_operations__to_unix_time
+FS .29 318K12 ada__calendar__delay_operations
+FS .30 320V16 ada__calendar__delay_operations__to_duration
+FS .31 330K12 ada__calendar__formatting_operations
+FS .32 332V16 ada__calendar__formatting_operations__day_of_week
+FS .33 336U17 ada__calendar__formatting_operations__split
+FS .34 357V16 ada__calendar__formatting_operations__time_of
+FS .35 387K12 ada__calendar__time_zones_operations
+FS .36 389V16 ada__calendar__time_zones_operations__utc_time_offset
+FD 3 aunit.ads
+FS .1 34K9 aunit
+FS .2 44V13 aunit__format
+FS .3 45V13 aunit__message_alloc
+FS .4 46U14 aunit__message_free
+FD 4 aunit-time_measure.ads
+FS .1 34K15 aunit__time_measure
+FS .2 46U14 aunit__time_measure__start_measure
+FS .3 49U14 aunit__time_measure__stop_measure
+FS .4 52V13 aunit__time_measure__get_measure
+FD 5 aunit-time_measure.adb
+FS .1 32K20 aunit__time_measure -> 4.1
+FS .2 38U14 aunit__time_measure__start_measure -> 4.2
+FS .3 47U14 aunit__time_measure__stop_measure -> 4.3
+FS .4 56V13 aunit__time_measure__get_measure -> 4.4
+FS .5 66u14 aunit__time_measure__gen_put_measure
+FS .6 71U17 aunit__time_measure__gen_put_measure__put
+FS .7 74U17 aunit__time_measure__gen_put_measure__put -> 5.6
+FS .8 141u14 aunit__time_measure__gen_put_measure_in_seconds
+FS .9 145U17 aunit__time_measure__gen_put_measure_in_seconds__put
+FS .10 148U17 aunit__time_measure__gen_put_measure_in_seconds__put -> 5.9
+FD 6 system.ads
+FS .1 37K9 system
+FS .2 77V13 system__Olt
+FS .3 78V13 system__Ole
+FS .4 79V13 system__Ogt
+FS .5 80V13 system__Oge
+FS .6 81V13 system__Oeq
+FX 2 a-calend.ads .1 ada__calendar
+F 58*13 ada__calendar__clock 5|.2:40s31 .3:49s30
+F 82*13 ada__calendar__time_of 4|.1:43s56 44s56
+F 105*13 ada__calendar__Osubtract__2 5|.4:59s37
+FX 4 aunit-time_measure.ads .1 aunit__time_measure
+F 56*22 aunit__time_measure__gen_put_measure__put 5|.5:108s10 115s13 127s10
+. .7:84s10
+F 57*22 aunit__time_measure__gen_put_measure__put 5|.5:109s10 122s10 132s7
+. 134s7 .7:78s16
+F 62*22 aunit__time_measure__gen_put_measure_in_seconds__put 5|.8:168s7 .10:158s10
+F 63*22 aunit__time_measure__gen_put_measure_in_seconds__put 5|.8:170s7 172s7
+. .10:152s16
+FX 4 aunit-time_measure.ads .2 aunit__time_measure__start_measure
+F 46=29 aunit__time_measure__start_measure__t 5|.2:40m7
+FX 4 aunit-time_measure.ads .3 aunit__time_measure__stop_measure
+F 49=28 aunit__time_measure__stop_measure__t 5|.3:49m7
+FX 4 aunit-time_measure.ads .4 aunit__time_measure__get_measure
+F 52>26 aunit__time_measure__get_measure__t 5|.4:59c30 59c39
+FX 5 aunit-time_measure.adb .5 aunit__time_measure__gen_put_measure
+F 67*7 aunit__time_measure__gen_put_measure__h 90m10 90r15 107r10 108r15
+F 67*10 aunit__time_measure__gen_put_measure__m 95m10 95r15 113r10 115r18
+. 119r18
+F 67*13 aunit__time_measure__gen_put_measure__s 100m10 100r15 127r15 129r15
+F 68*7 aunit__time_measure__gen_put_measure__t 89r13 91m10 91r15 94r13 96m10
+. 96r15 99r13 101m10 101r15 133r21
+F 69*7 aunit__time_measure__gen_put_measure__force 105m7 110m10 113r24 114r17
+. 123m10 126r14
+F 71*17 aunit__time_measure__gen_put_measure__put 119s13 129s10 133s7
+FX 5 aunit-time_measure.adb .6 aunit__time_measure__gen_put_measure__put
+F 71>22 aunit__time_measure__gen_put_measure__put__n .7:77c16 84c15
+F 71>35 aunit__time_measure__gen_put_measure__put__length .7:76c34
+FX 5 aunit-time_measure.adb .7 aunit__time_measure__gen_put_measure__put
+F 76*14 aunit__time_measure__gen_put_measure__put__L_1__dig 77c24
+FX 5 aunit-time_measure.adb .8 aunit__time_measure__gen_put_measure_in_seconds
+F 142*7 aunit__time_measure__gen_put_measure_in_seconds__s 164m10 164r15
+. 168r12
+F 143*7 aunit__time_measure__gen_put_measure_in_seconds__t 163r13 165m10
+. 165r15 171r21
+F 145*17 aunit__time_measure__gen_put_measure_in_seconds__put 171s7
+FX 5 aunit-time_measure.adb .9 aunit__time_measure__gen_put_measure_in_seconds__put
+F 145>22 aunit__time_measure__gen_put_measure_in_seconds__put__n .10:151c16
+. 158c15
+F 145>35 aunit__time_measure__gen_put_measure_in_seconds__put__length .10:150c34
+FX 5 aunit-time_measure.adb .10 aunit__time_measure__gen_put_measure_in_seconds__put
+F 150*14 aunit__time_measure__gen_put_measure_in_seconds__put__L_5__dig 151c24
+
+GG EK_REMOTE_STATES
+GG EK_GLOBALS aunit__time_measure__start_measure KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ ada__calendar__clock ]
+GG EK_GLOBALS aunit__time_measure__stop_measure KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ ada__calendar__clock ]
+GG EK_GLOBALS aunit__time_measure__get_measure KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ ada__calendar__Osubtract__2 ]
+GG EK_VOLATILES
+GG EK_TASKING_NONBLOCKING [ ]
+GG EK_END_MARKER

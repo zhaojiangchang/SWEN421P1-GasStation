@@ -86,7 +86,18 @@ with SPARK_Mode is
       pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
    end REMOVE_PETROL_RESERVOIR;
 
-    -----------------------------
+   -----------------------------
+   -- SET_PUMPED ---------------
+   -----------------------------
+
+   procedure SET_PUMPED
+     (pump_r: in out PUMP;
+      AMOUNT: in FLOAT_NUMBER)
+   is
+   begin
+      pump_r.PUMPED := AMOUNT;
+   end SET_PUMPED;
+   -----------------------------
    -- APPEND RESERVOIR TO PUMP --
    -----------------------------
    procedure APPEND_RESERVOIR

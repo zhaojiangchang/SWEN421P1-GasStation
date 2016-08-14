@@ -1,6 +1,5 @@
 with sPrint; use sPrint;
 with PUMP;
-with CASH_REGISTER;
 package body PUMP_UNIT
 with SPARK_Mode is
    --------------

@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\JackyChang\Documents\421A1\modellingpump.gpr
+20160814064458
+[BOUND OBJECT FILES]
+C:\Users\JackyChang\Documents\421A1\obj\sPrint.o
+C:\Users\JackyChang\Documents\421A1\obj\pump.o
+C:\Users\JackyChang\Documents\421A1\obj\pump_unit.o
+C:\Users\JackyChang\Documents\421A1\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\JackyChang\Documents\421A1\obj\
+-LC:\Users\JackyChang\Documents\421A1\obj\
+-LC:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/
+-static
+-static-libgcc
+C:/gnat/2016/lib/gcc/i686-pc-mingw32/4.9.4/adalib/libgnat.a
+-Wl,--stack=0x2000000

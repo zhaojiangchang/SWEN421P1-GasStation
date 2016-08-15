@@ -22,6 +22,7 @@ with SPARK_Mode is
    -- CASH_REGISTER  ---------------------
    ---------------------------------------
    type CASH_REGISTER is
+
       record
          UNIT_1: PUMP_UNIT_ID;
       end record;

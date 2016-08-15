@@ -3,7 +3,7 @@ package PUMP
 with SPARK_Mode is
 
    type RESERVOIR_NUM is new Integer;
-   type FLOAT_NUMBER is digits 3 range 0.0 .. 1.0E35;
+   type FLOAT_NUMBER is digits 3 range -0.01 .. 1.0E35;
    type FUEL_TYPES is (U91, U95, Diesel);
 --     type PUMP is private;
 --     type RESERVOIVOIR is private;

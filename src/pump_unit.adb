@@ -264,6 +264,7 @@ with SPARK_Mode is
    procedure LEFT_NOZZLE (pumpUnit: in out PUMP_UNIT; pump_r : in out PUMP.PUMP; fuelType: in PUMP.FUEL_TYPES) is
       liftNozzleException : Exception;
    begin
+      pumpUnit.IS_USING:= True;
       if PUMP.STATE_TYPE'Image(pumpUnit.PUMP_ACTIVE_STATE) = "BASE" then
          pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
          pumpUnit.PUMP_ACTIVE_FUEL:= fuelType;
@@ -300,6 +301,7 @@ with SPARK_Mode is
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r,  PUMP.NOZZLE_TYPE'Val(2));
             print_float_type("return nozzle to waiting state TO_PAY: ", pumpUnit.TO_PAY);
          else
+            pumpUnit.IS_USING:= False;
             pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(0);
             pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(0);
             PUMP.SET_PUMP_STATE(pump_r, PUMP.STATE_TYPE'Val(0));
@@ -389,7 +391,6 @@ with SPARK_Mode is
                   pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
                   PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                   if CAR_TANK_SPACE -0.01 >0.00 then
-                     print_float_type("1:    ",tankSize);
                      CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                   else
                      SENSOR := True;
@@ -400,11 +401,10 @@ with SPARK_Mode is
                   --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
                   --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                   tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-                  print_float_type("2:    ",tankSize);
                   if tankSize <= 1.00E-02 then
                      STOP_PUMPING(pumpUnit, pump_r);
                      print("tank empty stop pumping");
-                     exit when tankSize <= 0.00;
+                     exit when tankSize <= 1.00E-02;
                   end if;
                end if;
             end loop;

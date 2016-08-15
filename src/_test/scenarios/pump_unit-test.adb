@@ -292,6 +292,21 @@ package body PUMP_UNIT.Test is
 
    end Test_START_PUMPING_C2;
 
+   procedure Test_START_PUMPING_C2_tank_empty (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+   begin
+      Put_Line("");
+      Put_Line("Test_START_PUMPING_C2");
+      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+      UNIT_1_91.RESERVOIR_INFO.TOTAL:= 0.10;
+      CAR_TANK_SPACE := 0.50;
+      AMOUNT_TO_FILL := 0.00;
+      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+
+      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+              Message => "support tank full");
+
+   end Test_START_PUMPING_C2_tank_empty;
+
    procedure Test_STOP_PUMPING (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
    begin
       LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
@@ -318,14 +333,19 @@ package body PUMP_UNIT.Test is
       temp_State: PUMP.STATE_TYPE;
       temp_Pump: PUMP.PUMP;
    begin
+
       SET_PUMPED(UNIT_1, 100.00);
+      Assert (Condition => (  UNIT_1.PUMPED) = 100.00,
+              Message => "get ");
+
       SET_TO_PAY(UNIT_1,3.00);
+      Assert (Condition => (  UNIT_1.TO_PAY) = 3.00,
+              Message => "get ");
+
       UNIT_1_91.RESERVOIR_INFO.TOTAL:=1000.00;
       UNIT_1_95.RESERVOIR_INFO.TOTAL:=1000.00;
       UNIT_1_Diesel.RESERVOIR_INFO.TOTAL:=1000.00;
-      temp_Pump:=GET_PUMP(UNIT_1,U91);
-      temp_Pump:=GET_PUMP(UNIT_1,U95);
-      temp_Pump:=GET_PUMP(UNIT_1,Diesel);
+
       Assert (Condition => (  GET_TANKS_SIZE(UNIT_1,U91)) = 1000.00,
               Message => "get ");
       Assert (Condition => (  GET_TANKS_SIZE(UNIT_1,U95)) = 1000.00,
@@ -342,14 +362,27 @@ package body PUMP_UNIT.Test is
               Message => "get ");
       Assert (Condition => (  GET_PUMP_NOZZLE_STATE(UNIT_1)) = PUMP.NozzleBase,
               Message => "get ");
+
+      UNIT_1.IS_PAID := False;
+      SET_IS_PAID(UNIT_1);
+      Assert (Condition => (  UNIT_1.IS_PAID) = True,
+              Message => "get ");
+      UNIT_1.IS_PAID := True;
+      SET_IS_PAID(UNIT_1);
+      Assert (Condition => (  UNIT_1.IS_PAID) = False,
+              Message => "get ");
+
+
       SET_IS_USING(UNIT_1);
+       Assert (Condition => (  UNIT_1.IS_USING) = False,
+              Message => "get ");
       LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
       UNIT_1_91.PUMP_STATE:= PUMP.Ready;
       SET_IS_USING(UNIT_1);
-      UNIT_1.IS_PAID := False;
-      SET_IS_PAID(UNIT_1);
-      UNIT_1.IS_PAID := True;
-      SET_IS_PAID(UNIT_1);
+
+
+
+
       SET_PUMP_ACTIVE_STATE(UNIT_1,U91,PUMP.Base);
       SET_PUMP_ACTIVE_STATE(UNIT_1,U95,PUMP.Base);
       SET_PUMP_ACTIVE_STATE(UNIT_1,Diesel,PUMP.Base);
@@ -362,6 +395,9 @@ package body PUMP_UNIT.Test is
       temp := UNIT_IS_PAID(UNIT_1);
       temp_State := GET_PUMP_UNIT_STATE(UNIT_1);
 
+      temp_Pump:=GET_PUMP(UNIT_1,U91);
+      temp_Pump:=GET_PUMP(UNIT_1,U95);
+      temp_Pump:=GET_PUMP(UNIT_1,Diesel);
    end Test_SET_GET;
 
    --     --==========================================================
@@ -418,7 +454,9 @@ package body PUMP_UNIT.Test is
       Register_Routine (Test => T,
                         Routine => Test_StartPumpingException_pump_not_ready'Access,
                         Name => "Test_StartPumpingException_pump_not_ready");
-
+      Register_Routine (Test => T,
+                        Routine => Test_START_PUMPING_C2_tank_empty'Access,
+                        Name => "Test_START_PUMPING_C2_tank_empty");
 
 
 

@@ -27,6 +27,7 @@ with SPARK_Mode is
          print_float_type("Amount to pay: ",topay);
          print_float_type("Actual amount given: ",AMOUNT);
          if id = cashRegister.UNIT_1.ID  and PUMP_UNIT.GET_TO_PAY(pumpUnit) /= 0.00 then
+
             if AMOUNT = topay then
                cashRegister.UNIT_1.TO_PAY:= 0.00;
                cashRegister.UNIT_1.PUMPED:=0.00;
@@ -44,6 +45,7 @@ with SPARK_Mode is
             end if;
          elsif PUMP_UNIT.GET_TO_PAY(pumpUnit) = 0.00 then
             print("already paid");
+            Raise payFuelException;
 
          end if;
       end if;

@@ -122,6 +122,21 @@ package body CASH_REGISTER.Test is
 
    end payFuel;
 
+   procedure createRecords(CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+      createRecord: CASH_REGISTER;
+      create_pump_Id_record: PUMP_UNIT_ID;
+   begin
+
+      create_pump_Id_record.ID := "UNIT_1";
+      create_pump_Id_record.TO_PAY:= 0.00;
+      create_pump_Id_record.PUMPED:= 0.00;
+      create_pump_Id_record.FUEL:=U91;
+      createRecord.UNIT_1 := create_pump_Id_record;
+ Assert (Condition => (createRecord.UNIT_1.ID) = "UNIT_1",
+              Message => "suppose  UNIT_1 " );
+
+   end createRecords;
+
    --     --==========================================================
    --     --               REGISTRATION/NAMING
    --     --==========================================================
@@ -135,6 +150,10 @@ package body CASH_REGISTER.Test is
       Register_Routine (Test => T,
                         Routine => payFuel'Access,
                         Name => "payFuel");
+       Register_Routine (Test => T,
+                        Routine => createRecords'Access,
+                        Name => "createRecords");
+
    end Register_Tests;
 
    function Name (T: TC) return AUnit.Message_String is

@@ -40,7 +40,10 @@ with SPARK_Mode is
 
    --procedure
 
-   procedure SET_IS_USING(pumpUnit: in out PUMP_UNIT);
+   procedure SET_IS_USING(pumpUnit: in out PUMP_UNIT)
+     with
+       pre=>(pumpUnit.IS_USING = True or pumpUnit.IS_USING = False),
+     post=>(pumpUnit.IS_USING = False or pumpUnit.IS_USING = True);
    procedure SET_IS_PAID(pumpUnit: in out PUMP_UNIT);
    procedure SET_TO_PAY(pumpUnit: in out PUMP_UNIT; AMOUNT: in PUMP.FLOAT_NUMBER);
    procedure SET_UNIT_ID(pumpUnit: in out PUMP_UNIT; ID: in UNIT_ID_TYPE);

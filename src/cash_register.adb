@@ -24,10 +24,10 @@ with SPARK_Mode is
       else
 
          print("Pay for: "&cashRegister.UNIT_1.ID);
-         print("Amount to pay: "&topay'Image&"   Actual amount given: "&AMOUNT'Image);
+         print_float_type("Amount to pay: ",topay);
+         print_float_type("Actual amount given: ",AMOUNT);
          if id = cashRegister.UNIT_1.ID  and PUMP_UNIT.GET_TO_PAY(pumpUnit) /= 0.00 then
             if AMOUNT = topay then
-               print("paid for UNIT_1:  " & AMOUNT'Image);
                cashRegister.UNIT_1.TO_PAY:= 0.00;
                cashRegister.UNIT_1.PUMPED:=0.00;
                PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(0));

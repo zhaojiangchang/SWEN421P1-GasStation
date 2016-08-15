@@ -264,6 +264,7 @@ with SPARK_Mode is
    procedure LEFT_NOZZLE (pumpUnit: in out PUMP_UNIT; pump_r : in out PUMP.PUMP; fuelType: in PUMP.FUEL_TYPES) is
       liftNozzleException : Exception;
    begin
+      pumpUnit.IS_USING:= True;
       if PUMP.STATE_TYPE'Image(pumpUnit.PUMP_ACTIVE_STATE) = "BASE" then
          pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
          pumpUnit.PUMP_ACTIVE_FUEL:= fuelType;
@@ -300,6 +301,7 @@ with SPARK_Mode is
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r,  PUMP.NOZZLE_TYPE'Val(2));
             print_float_type("return nozzle to waiting state TO_PAY: ", pumpUnit.TO_PAY);
          else
+            pumpUnit.IS_USING:= False;
             pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(0);
             pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(0);
             PUMP.SET_PUMP_STATE(pump_r, PUMP.STATE_TYPE'Val(0));
@@ -335,7 +337,7 @@ with SPARK_Mode is
             print("tank empty");
             Raise startPumpingException;
          end if;
-         if CAR_TANK_SPACE = 0.00 then
+         if CAR_TANK_SPACE <= 0.00 then
             print("car tank full can not pumping");
             Raise startPumpingException;
          end if;
@@ -344,67 +346,73 @@ with SPARK_Mode is
             pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(3);
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(3));
             PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(2));
-            while CAR_TANK_SPACE>0.00 and tankSize >temp and SENSOR = False and pumped <= AMOUNT loop
-               pumped:= pumped +0.01;
-               pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
-               pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
-               if CAR_TANK_SPACE -0.01 >0.00 then
-                  CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
-               else
-                  SENSOR := True;
-                  STOP_PUMPING(pumpUnit, pump_r);
-               end if;
-               --                 print_float_type("pumping: " , pumped);
-               --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
-               --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);
-               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
-               tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-               if tankSize <= 0.00 then
-                  STOP_PUMPING(pumpUnit, pump_r);
-                  print("tank empty stop pumping");
-               elsif pumped>= AMOUNT then
-                  print("pumped given amount");
-                  STOP_PUMPING(pumpUnit, pump_r);
+            --              while CAR_TANK_SPACE>0.00 and tankSize >temp and SENSOR = False and pumped <= AMOUNT loop
+            loop
+               if CAR_TANK_SPACE>0.00 and tankSize >temp and SENSOR = False and pumped <= AMOUNT then
+
+                  pumped:= pumped +0.01;
+                  pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
+                  pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
+                  if CAR_TANK_SPACE -0.01 >0.00 then
+                     CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+                  else
+                     SENSOR := True;
+                     STOP_PUMPING(pumpUnit, pump_r);
+                     exit when SENSOR = True;
+
+                  end if;
+                  --                 print_float_type("pumping: " , pumped);
+                  --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
+                  --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);
+                  PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
+                  tankSize := PUMP.GET_TANKS_SIZE(pump_r);
+                  if tankSize <= 1.00E-02 then
+                     STOP_PUMPING(pumpUnit, pump_r);
+                     print("tank empty stop pumping");
+                     exit when tankSize <= 1.00E-02;
+                  elsif pumped>= AMOUNT then
+                     print("pumped given amount");
+                     STOP_PUMPING(pumpUnit, pump_r);
+                     exit when pumped>= AMOUNT;
+                  end if;
                end if;
             end loop;
 
-         end if;
-         if AMOUNT =0.00 and SENSOR = False and tankSize > temp then
+            end if;
+            if AMOUNT =0.00 and SENSOR = False and tankSize > temp then
             pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(3);
             pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(2);
             PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(3));
             PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(2));
-            if tankSize <= 0.00 then
-               print("tank empty");
-               Raise startPumpingException;
-            end if;
-            if CAR_TANK_SPACE <= 0.00 then
-               print("car tank full can not pumping");
-               Raise startPumpingException;
-            end if;
-            while SENSOR = False and tankSize > 0.00 loop
 
-               --                 pumped:= pumped +0.01;
-               pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
-               pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
-               if CAR_TANK_SPACE -0.01 >0.00 then
-                  CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
-               else
-                  SENSOR := True;
-                  STOP_PUMPING(pumpUnit, pump_r);
-               end if;
-               --                 print_float_type("pumping: " , pumped);
-               --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
-               --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
-               tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-               if tankSize <= 0.00 then
-                  STOP_PUMPING(pumpUnit, pump_r);
-                  print("tank empty stop pumping");
+            loop
+               if SENSOR = False and tankSize > 0.00 then
+                  pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
+                  pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
+                  PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
+                  if CAR_TANK_SPACE -0.01 >0.00 then
+                     print_float_type("1:    ",tankSize);
+                     CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
+                  else
+                     SENSOR := True;
+                     STOP_PUMPING(pumpUnit, pump_r);
+                     exit when CAR_TANK_SPACE -0.01 <=0.00;
+                  end if;
+                  --                 print_float_type("pumping: " , pumped);
+                  --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
+                  --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
+                  tankSize := PUMP.GET_TANKS_SIZE(pump_r);
+                  print_float_type("2:    ",tankSize);
+                  if tankSize <= 1.00E-02 then
+                     STOP_PUMPING(pumpUnit, pump_r);
+                     print("tank empty stop pumping");
+                     exit when tankSize <= 1.00E-02;
+                  end if;
                end if;
             end loop;
          end if;
       else
-         print("you can not pumping - only ready state -> pumping");
+         print("you can not pumping - only read+y state -> pumping");
 
          Raise startPumpingException;
 

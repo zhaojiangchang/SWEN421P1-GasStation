@@ -69,11 +69,11 @@
 </theory>
 <theory name="Pump__fuel_types" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__reservoir" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__state_type" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__nozzle_type" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__reservoir" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__pump" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -105,12 +105,6 @@
 </theory>
 <theory name="Pump__remove_petrol_reservoir__amount__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__get_tanks_size__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump__get_tanks_size__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump__get_tanks_size" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__get_state__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_state__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
@@ -128,6 +122,12 @@
 <theory name="Pump__get_unit_price__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_unit_price" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_resevoir_category__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -459,11 +459,11 @@
 </theory>
 <theory name="Pump__fuel_types__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__reservoir__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__state_type__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__nozzle_type__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__reservoir__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__pump__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -609,8 +609,6 @@
 </theory>
 <theory name="Pump__set_reservoir_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__get_tanks_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__remove_petrol_reservoir__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_state__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
@@ -618,6 +616,8 @@
 <theory name="Pump__get_current_nozzle_state__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_unit_price__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_resevoir_category__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -647,81 +647,81 @@
  </transf>
  </goal>
 </theory>
-<theory name="Pump__set_fuel_price__subprogram_def" sum="7ba841d3dc1962b9873ccb9ed82f80d8" expanded="true">
+<theory name="Pump__set_fuel_price__subprogram_def" sum="59783a3761d7271fcf0ca8a999a258ff" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__set_pump_state__subprogram_def" sum="c18efcd979e161118043c479bf9c7eb6" expanded="true">
+<theory name="Pump__set_pump_state__subprogram_def" sum="15bf020fbb49b9c211c68ea61ecaaada" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__set_pumped__subprogram_def" sum="c4574bd568af4a022675b21618b11470" expanded="true">
+<theory name="Pump__set_pumped__subprogram_def" sum="f0a24cad628f5747c8069e673583582c" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__set_pump_nozzle_state__subprogram_def" sum="fa2bcc4d70615278c115ab8f93e552a6" expanded="true">
+<theory name="Pump__set_pump_nozzle_state__subprogram_def" sum="a0a11fed717965c5f043ad27b6518970" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__append_reservoir__subprogram_def" sum="f956e5841ff1d8f643efcbf57e846044" expanded="true">
+<theory name="Pump__append_reservoir__subprogram_def" sum="cebc79223b69923426d78d5f7ede5369" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__set_reservoir_size__subprogram_def" sum="7ba841d3dc1962b9873ccb9ed82f80d8" expanded="true">
+<theory name="Pump__set_reservoir_size__subprogram_def" sum="40e737cc051791fc47e25b8e90698d37" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__get_tanks_size__subprogram_def" sum="bc6e49acaf80ba441d0784710896dffe" expanded="true">
- <goal name="WP_parameter def" expl="VC for def" expanded="true">
- <transf name="split_goal_wp" expanded="true">
- </transf>
- </goal>
-</theory>
-<theory name="Pump__remove_petrol_reservoir__subprogram_def" sum="cd83e770464217d206a2b25cc4726be2" expanded="true">
+<theory name="Pump__remove_petrol_reservoir__subprogram_def" sum="20ece366ff0cf9d85d4d4b9b854506bf" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
   <goal name="WP_parameter def.1" expl="1. precondition">
-  <proof prover="0" obsolete="true"><result status="unknown" time="0.17" steps="24870"/></proof>
-  <proof prover="1"><result status="valid" time="0.06" steps="890"/></proof>
+  <proof prover="0"><result status="unknown" time="0.20" steps="30810"/></proof>
+  <proof prover="1"><result status="unknown" time="0.25" steps="43650"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="2. postcondition">
-  <proof prover="0" obsolete="true"><result status="unknown" time="0.13" steps="9980"/></proof>
-  <proof prover="1"><result status="valid" time="0.11" steps="3200"/></proof>
+  <proof prover="0"><result status="unknown" time="0.25" steps="31850"/></proof>
+  <proof prover="1"><result status="unknown" time="0.34" steps="42080"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Pump__get_state__subprogram_def" sum="40b89f20a3290755deb5913ad785e46f" expanded="true">
+<theory name="Pump__get_state__subprogram_def" sum="af3c8c2a4893c07fc426936114f5470c" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__get_current_nozzle_state__subprogram_def" sum="12945b3d6b62b79d71b8e1dad940ffdb" expanded="true">
+<theory name="Pump__get_current_nozzle_state__subprogram_def" sum="6fc477d5002fc2b5aecaab2d6fcdc01a" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__get_unit_price__subprogram_def" sum="bc6e49acaf80ba441d0784710896dffe" expanded="true">
+<theory name="Pump__get_unit_price__subprogram_def" sum="5ffa230352de415d81d7109b9482f806" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump__get_resevoir_category__subprogram_def" sum="d7d313f9e0c60454c0f524109a711c7b" expanded="true">
+<theory name="Pump__get_tanks_size__subprogram_def" sum="f0091dd6c1d6515aaf19b2c27059a574" expanded="true">
+ <goal name="WP_parameter def" expl="VC for def" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+ </transf>
+ </goal>
+</theory>
+<theory name="Pump__get_resevoir_category__subprogram_def" sum="a5ac23fc1593c36cf84379a5dbd00917" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>

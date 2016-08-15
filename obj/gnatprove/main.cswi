@@ -1,3 +1,5 @@
-20160814112604
+20160815104102
+-ftest-coverage
+-fprofile-arcs
 -gnatc
 -gnates=C:\Users\JackyChang\Documents\421A1\obj\gnatprove\845668e5.tmp

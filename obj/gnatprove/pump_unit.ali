@@ -14,23 +14,23 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pump_unit%b		pump_unit.adb		c914b974 OO PK IU
+U pump_unit%b		pump_unit.adb		751eff71 OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W pump%s		pump.adb		pump.ali
 W sprint%s		sprint.adb		sprint.ali
 W system%s		system.ads		system.ali
 
-U pump_unit%s		pump_unit.ads		7daaeb02 EE OO PK IU
+U pump_unit%s		pump_unit.ads		84dce8b5 EE OO PK IU
 W pump%s		pump.adb		pump.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-except.ads		20160516092928 291912d5 ada.exceptions%s
 D a-unccon.ads		20160516092930 f9eb8f06 ada.unchecked_conversion%s
-D pump.ads		20160814121532 99ea1c67 pump%s
-D pump_unit.ads		20160814125646 e440f765 pump_unit%s
-D pump_unit.adb		20160814125940 ae52f135 pump_unit%b
-D sprint.ads		20160814103738 33f5b196 sprint%s
+D pump.ads		20160815103630 b2cc990b pump%s
+D pump_unit.ads		20160815102840 361071be pump_unit%s
+D pump_unit.adb		20160815104044 eb2eb487 pump_unit%b
+D sprint.ads		20160815083148 33f5b196 sprint%s
 D system.ads		20160516092930 2da59038 system%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-stalib.ads		20160516092930 09bd3940 system.standard_library%s
@@ -42,180 +42,190 @@ X 2 a-except.ads
 X 4 pump.ads
 1K9*PUMP 59e9 5|1w6 10r17 11r17 12r17 19r18 20r18 21r28 21r45 22r29 22r46
 . 23r29 23r47 24r19 25r19 26r23 30r59 30r83 31r65 31r89 33r55 34r55 35r53
-. 38r63 39r66 45r64 47r65 48r77 48r108 49r77 49r109 51r66 51r90 53r71 53r95
-. 55r16 55r36 55r67 55r87 56r44 58r73 60r17 60r37 61r19 61r39 62r20 62r41
-. 64r44 64r89 67r72 67r94 67r136 69r16 69r36 69r68 69r89 70r44 72r72 74r16
-. 74r36 74r68 74r89 75r44 75r87 6|2w6 10r67 10r91 15r24 16r22 18r23 19r26
-. 21r12 24r13 25r13 26r13 27r13 35r13 38r13 39r13 40r13 41r13 49r13 52r13
-. 53r13 54r13 55r13 63r13 71r65 80r65 89r59 89r83 92r12 104r65 104r89 107r12
-. 108r27 109r27 110r27 111r32 127r55 136r55 145r53 154r20 155r22 158r23 159r10
-. 159r63 159r115 169r20 170r22 173r26 174r13 174r66 174r119 192r77 192r108
-. 195r10 197r10 198r13 200r10 201r13 203r10 212r77 212r109 215r10 216r10
-. 218r13 219r10 221r13 222r10 251r64 260r66 269r71 269r95 272r10 273r40 275r39
-. 276r10 276r38 277r10 277r46 279r13 279r79 279r101 280r40 282r39 283r10
-. 283r38 284r10 284r46 294r72 295r12 296r20 300r10 300r74 300r96 302r43 303r42
-. 304r13 304r41 305r13 305r49 308r43 309r42 310r13 310r41 311r13 311r49 323r72
-. 323r94 323r136 325r20 326r17 327r15 329r13 336r39 336r75 337r23 347r43
-. 348r42 349r13 349r48 350r13 350r40 354r61 359r16 360r28 376r42 377r43 378r13
-. 378r48 379r13 379r40 392r61 397r28 419r70 422r10 422r77 422r99 423r40 424r39
-. 425r10 425r37 426r10 426r45
-6F9*FLOAT_NUMBER<short_float> 5|11r22 19r23 20r23 31r94 33r60 34r60 45r69
-. 47r70 67r99 67r141 6|71r70 80r70 104r94 127r60 136r60 295r17 296r25 323r99
-. 323r141 325r25 326r22 327r20 329r18
-7E9*FUEL_TYPES 7e45 5|21r33 30r64 31r70 35r58 48r82 49r82 51r95 53r100 6|10r96
-. 21r17 89r64 92r17 104r70 107r17 145r58 192r82 195r15 198r18 201r18 212r82
-. 215r15 218r18 221r18 269r100
-7n42*NO{7E9} 5|21r50
-10E9*STATE_TYPE 10e54 5|12r22 22r34 38r68 48r113 55r21 55r72 60r22 61r24
-. 69r21 74r21 6|16r27 18r28 154r25 155r27 158r28 169r25 170r27 173r31 192r113
-. 251r69 272r15 273r45 276r43 279r18 279r84 280r45 283r43 300r15 300r79 302r48
-. 304r46 308r48 310r46 347r48 350r45 377r48 379r45 422r15 422r82 423r45 425r42
-10n24*Base{10E9} 5|22r51 64r94
-10n30*Ready{10E9} 5|56r49 70r49 75r92 6|336r44 336r80
-10n46*Waiting{10E9} 5|64r49
-11E9*NOZZLE_TYPE 11e68 5|10r22 23r34 39r71 49r114 62r25 69r73 74r73 6|15r29
-. 19r31 212r114 260r71 275r44 277r51 282r44 284r51 303r47 305r54 309r47 311r54
-. 348r47 349r53 376r47 378r53 424r44 426r50
+. 38r63 39r66 48r64 50r65 51r77 51r108 52r77 52r109 54r66 54r90 56r71 56r95
+. 58r16 58r36 58r67 58r87 59r44 61r73 63r17 63r37 64r19 64r39 65r20 65r41
+. 67r44 67r89 70r72 70r94 70r136 72r16 72r36 72r68 72r89 73r44 75r72 77r45
+. 78r44 78r87 6|2w6 10r67 10r91 15r24 16r22 18r23 19r26 22r15 24r13 25r13
+. 26r13 27r13 35r13 36r15 38r13 39r13 40r13 41r13 49r13 50r15 52r13 53r13
+. 54r13 55r13 63r13 71r65 80r65 89r59 89r83 93r15 94r15 95r15 103r65 103r89
+. 107r15 107r34 108r15 108r34 109r15 109r37 125r55 134r55 143r53 152r20 153r22
+. 156r23 157r10 157r63 157r115 167r20 168r22 171r26 172r13 172r66 172r119
+. 191r77 191r108 194r10 196r10 197r13 199r10 200r13 202r10 209r77 209r109
+. 212r10 213r10 215r13 216r10 218r13 219r10 246r64 255r66 264r71 264r95 268r10
+. 269r40 271r39 272r10 272r38 273r10 273r46 275r13 275r79 275r101 276r40
+. 278r39 279r10 279r38 280r10 280r46 290r72 291r12 292r20 296r10 296r74 296r96
+. 298r43 299r42 300r13 300r41 301r13 301r49 305r43 306r42 307r13 307r41 308r13
+. 308r49 320r72 320r94 320r136 322r20 323r17 324r15 326r13 333r39 333r75
+. 334r23 345r43 346r42 347r13 347r48 348r13 348r40 355r64 360r52 361r51 362r22
+. 362r49 363r22 363r57 374r31 376r52 377r51 378r22 378r49 379r22 379r57 384r52
+. 385r51 386r22 386r49 387r22 387r57 395r42 396r43 397r13 397r48 398r13 398r40
+. 403r64 411r52 412r51 413r22 413r49 414r22 414r57 420r31 422r52 423r51 424r22
+. 424r49 425r22 425r57 442r70 445r10 445r77 445r99 446r40 447r39 448r10 448r37
+. 449r10 449r45
+6F9*FLOAT_NUMBER<short_float> 5|11r22 19r23 20r23 31r94 33r60 34r60 48r69
+. 50r70 70r99 70r141 6|71r70 80r70 103r94 125r60 134r60 291r17 292r25 320r99
+. 320r141 322r25 323r22 324r20 326r18
+7E9*FUEL_TYPES 7e41 5|21r33 30r64 31r70 35r58 51r82 52r82 54r95 56r100 6|10r96
+. 89r64 103r70 143r58 191r82 194r15 197r18 200r18 209r82 212r15 215r18 218r18
+. 264r100
+7n24*U91{7E9} 5|21r50 6|22r20 93r20 107r20
+7n29*U95{7E9} 6|36r20 94r20 108r20
+7n34*Diesel{7E9} 6|50r20 95r20 109r20
+10E9*STATE_TYPE 10e54 5|12r22 22r34 38r68 51r113 58r21 58r72 63r22 64r24
+. 72r21 6|16r27 18r28 152r25 153r27 156r28 167r25 168r27 171r31 191r113 246r69
+. 268r15 269r45 272r43 275r18 275r84 276r45 279r43 296r15 296r79 298r48 300r46
+. 305r48 307r46 345r48 348r45 360r57 362r54 376r57 378r54 384r57 386r54 396r48
+. 398r45 411r57 413r54 422r57 424r54 445r15 445r82 446r45 448r42
+10n24*Base{10E9} 5|22r51 67r94
+10n30*Ready{10E9} 5|59r49 73r49 78r92 6|333r44 333r80
+10n37*Pumping{10E9} 5|77r50
+10n46*Waiting{10E9} 5|67r49
+11E9*NOZZLE_TYPE 11e68 5|10r22 23r34 39r71 52r114 65r25 72r73 6|15r29 19r31
+. 209r114 255r71 271r44 273r51 278r44 280r51 299r47 301r54 306r47 308r54
+. 346r47 347r53 361r56 363r62 377r56 379r62 385r56 387r62 395r47 397r53 412r56
+. 414r62 423r56 425r62 447r44 449r50
 11n25*NozzleBase{11E9} 5|23r52
-11n58*Stop{11E9} 5|75r49
-20R9*PUMP 30e17 5|24r24 25r24 26r28 30r88 51r71 53r76 58r78 67r77 72r77 6|10r72
-. 89r88 269r76 294r77 323r77 419r75
-25e10*PUMP_STATE{10E9} 6|336r62
+11n58*Stop{11E9} 5|78r49
+15f10*TOTAL{6F9} 6|370r44 371m44 371r75 405r46 406m44 406r75
+20R9*PUMP 30e17 5|24r24 25r24 26r28 30r88 54r71 56r76 61r78 70r77 75r77 6|10r72
+. 89r88 264r76 290r77 320r77 442r75
+22r10*RESERVOIR_INFO{13R9} 6|370r29 371m29 371r60 405r31 406m29 406r60
+25e10*PUMP_STATE{10E9} 6|333r62
 33U14*SET_FUEL_PRICE 6|24s18 38s18 52s18
-34U14*SET_PUMP_STATE 6|25s18 39s18 53s18 197s15 200s15 203s15 276s15 283s15
-. 304s18 310s18 350s18 379s18 425s15
-36U14*SET_PUMP_NOZZLE_STATE 6|35s18 49s18 63s18 216s15 219s15 222s15 277s15
-. 284s15 305s18 311s18 349s18 378s18 426s15
+34U14*SET_PUMP_STATE 6|25s18 39s18 53s18 196s15 199s15 202s15 272s15 279s15
+. 300s18 307s18 348s18 362s27 378s27 386s27 398s18 413s27 424s27 448s15
+36U14*SET_PUMP_NOZZLE_STATE 6|35s18 49s18 63s18 213s15 216s15 219s15 273s15
+. 280s15 301s18 308s18 347s18 363s27 379s27 387s27 397s18 414s27 425s27 449s15
 38U14*APPEND_RESERVOIR 6|26s18 40s18 54s18
 40U14*SET_RESERVOIR_SIZE 6|27s18 41s18 55s18
-42U14*REMOVE_PETROL_RESERVOIR 6|359s21
-48V13*GET_STATE{10E9} 5|55s41 55s92 60s42 61s44 69s41 74s41 6|159s15 159s68
-. 159s120 174s18 174s71 174s124 279s106 300s101 422s104
-49V13*GET_CURRENT_NOZZLE_STATE{11E9} 5|62s46 69s94 74s94
-50V13*GET_UNIT_PRICE{6F9} 6|354s66 392s66
-51V13*GET_TANKS_SIZE{6F9} 6|108s32 109s32 110s32 111s37 337s28 360s33 397s33
+48V13*GET_STATE{10E9} 5|58s41 58s92 63s42 64s44 72s41 6|157s15 157s68 157s120
+. 172s18 172s71 172s124 275s106 296s101 445s104
+49V13*GET_CURRENT_NOZZLE_STATE{11E9} 5|65s46 72s94
+50V13*GET_UNIT_PRICE{6F9} 6|355s69 403s69
+51V13*GET_TANKS_SIZE{6F9} 6|107s39 108s39 109s42 334s28 374s36 420s36
 X 5 pump_unit.ads
-3K9*PUMP_UNIT 80l5 80e14 6|4b14 435l5 435t14
+3K9*PUMP_UNIT 83l5 83e14 6|4b14 458l5 458t14
 7D9*FLOAT_NUMBER
-8A12*UNIT_ID_TYPE{string}<integer> 16r14 32r51 46r61 6|118r51 184r61
+8A12*UNIT_ID_TYPE{string}<integer> 16r14 32r51 49r61 6|116r51 183r61
 14R9*PUMP_UNIT 27e17 30r35 31r41 32r33 33r37 34r37 35r35 36r40 37r39 38r46
-. 39r48 43r44 44r43 45r42 46r43 47r42 48r53 49r53 51r40 53r44 58r46 67r46
-. 72r45 6|10r40 71r42 80r42 89r35 104r41 118r33 127r37 136r37 145r35 152r44
-. 167r43 184r43 192r53 212r53 233r40 242r39 251r46 260r48 269r44 294r46 323r46
-. 419r44
-16a10*ID{8A12} 6|121r23 187m16
-17b10*IS_USING{boolean} 6|29m22 43m22 57m22 160m19 236r23
-18b10*IS_PAID{boolean} 6|30m22 44m22 58m22 172r19 175m22 245r23
-19f10*TO_PAY{4|6F9} 6|31m22 45m22 59m22 83m16 130r23 301r22 306r82 354m25
-. 354r44 392m25 392r44
-20f10*PUMPED{4|6F9} 6|32m22 46m22 60m22 74m16 139r23 353m25 353r43 391m25
-. 391r43
-21e10*PUMP_ACTIVE_FUEL{4|7E9} 6|148r23 196m19 199m19 202m19 274m19 281m19
-22e10*PUMP_ACTIVE_STATE{4|10E9} 56r24 64r24 64r69 70r24 75r67 6|33m22 47m22
-. 61m22 254r23 272r41 273m19 279r44 280m19 300r41 302m22 308m22 336r19 347m22
-. 377m22 422r41 423m19
-23e10*PUMP_NOZZLE_STATE{4|11E9} 75r24 6|34m22 48m22 62m22 217m19 220m19 223m19
-. 263r23 275m19 282m19 303m22 309m22 348m22 376m22 424m19
-24r10*PUMP_91{4|20R9} 6|28m22 93r36 96r41 108r56 111r61 159r34 174r37 197m39
-. 216m46
-25r10*PUMP_95{4|20R9} 6|42m22 94r36 109r56 159r87 174r90 200m39 219m46
-26r10*PUMP_Diesel{4|20R9} 6|56m22 95r36 110r56 159r139 174r143 203m39 222m46
-30V13*GET_PUMP{4|20R9} 30>22 30>46 6|89b13 98l8 98t16
-30r22 pumpUnit{14R9} 6|89b22 93r27 94r27 95r27 96r32
-30e46 fuelType{4|7E9} 6|89b46 92r32
-31V13*GET_TANKS_SIZE{4|6F9} 31>28 31>52 6|104b13 113l8 113t22
-31r28 pumpUnit{14R9} 6|104b28 108r47 109r47 110r47 111r52
-31e52 fuelType{4|7E9} 6|104b52 107r32
-32V13*GET_ID{8A12} 32>20 6|118b13 122l8 122t14
-32r20 pumpUnit{14R9} 6|118b20 121r14
-33V13*GET_TO_PAY{4|6F9} 33>24 6|127b13 131l8 131t18
-33r24 pumpUnit{14R9} 6|127b24 130r14
-34V13*GET_PUMPED{4|6F9} 34>24 6|136b13 140l8 140t18
-34r24 pumpUnit{14R9} 6|136b24 139r14
-35V13*GET_FUEL{4|7E9} 35>22 6|145b13 149l8 149t16
-35r22 pumpUnit{14R9} 6|145b22 148r14
-36V13*UNIT_IS_USING{boolean} 36>27 6|233b13 237l8 237t21
-36r27 pumpUnit{14R9} 6|233b27 236r14
-37V13*UNIT_IS_PAID{boolean} 37>26 6|242b13 246l8 246t20
-37r26 pumpUnit{14R9} 6|242b26 245r14
-38V13*GET_PUMP_UNIT_STATE{4|10E9} 38>33 6|251b13 255l8 255t27
-38r33 pumpUnit{14R9} 6|251b33 254r14
-39V13*GET_PUMP_NOZZLE_STATE{4|11E9} 39>35 6|260b13 264l8 264t29
-39r35 pumpUnit{14R9} 6|260b35 263r14
-43U14*SET_IS_USING 43=27 6|152b14 163l8 163t20
-43r27 pumpUnit{14R9} 6|152b27 159r25 159r78 159r130 160m10
-44U14*SET_IS_PAID 44=26 6|167b14 180l8 180t19
-44r26 pumpUnit{14R9} 6|167b26 172r10 174r28 174r81 174r134 175m13
-45U14*SET_TO_PAY 45=25 45>53 6|80b14 84l8 84t18
-45r25 pumpUnit{14R9} 6|80b25 83m7
-45f53 AMOUNT{4|6F9} 6|80b54 83r26
-46U14*SET_UNIT_ID 46=26 46>54 6|184b14 188l8 188t19
-46r26 pumpUnit{14R9} 6|184b26 187m7
-46a54 ID{8A12} 6|184b54 187r22
-47U14*SET_PUMPED 47=25 47>54 6|71b14 75l8 75t18
-47r25 pumpUnit{14R9} 6|71b25 74m7
-47f54 AMOUNT{4|6F9} 6|71b54 74r26
-48U14*SET_PUMP_ACTIVE_STATE 48=36 48>64 48>94 6|192b14 208l8 208t29
-48r36 pumpUnit{14R9} 6|192b36 196m10 197m30 197r30 199m10 200m30 200r30 202m10
-. 203m30 203r30
-48e64 fuelType{4|7E9} 6|192b64 195r30 196r39 198r33 199r38 201r33 202r39
-48e94 stateType{4|10E9} 6|192b94 197r47 200r47 203r52
-49U14*SET_PUMP_NOZZLE_STATE 49=36 49>64 49>94 6|212b14 228l8 228t29
-49r36 pumpUnit{14R9} 6|212b36 216m37 216r37 217m10 219m37 219r37 220m10 222m37
-. 222r37 223m10
-49e64 fuelType{4|7E9} 6|212b64 215r30 218r33 221r33
-49e94 nozzleType{4|11E9} 6|212b94 216r55 217r40 219r55 220r40 222r59 223r40
-51U14*ADD_PUMP 51=23 51=50 51>77 6|10b14 67l8 67t16
-51r23 pumpUnit{14R9} 6|10b23 28m13 29m13 30m13 31m13 32m13 33m13 34m13 42m13
+. 39r48 43r44 47r43 48r42 49r43 50r42 51r53 52r53 54r40 56r44 61r46 70r46
+. 75r45 6|10r40 71r42 80r42 89r35 103r41 116r33 125r37 134r37 143r35 150r44
+. 165r43 183r43 191r53 209r53 228r40 237r39 246r46 255r48 264r44 290r46 320r46
+. 442r44
+16a10*ID{8A12} 6|119r23 186m16
+17b10*IS_USING{boolean} 45r23 45r51 46r22 46r51 6|29m22 43m22 57m22 158m19
+. 231r23 267m16 304m22
+18b10*IS_PAID{boolean} 6|30m22 44m22 58m22 170r19 173m22 177m19 240r23
+19f10*TO_PAY{4|6F9} 6|31m22 45m22 59m22 83m16 128r23 297r22 302r82 355m28
+. 355r47 403m28 403r47
+20f10*PUMPED{4|6F9} 6|32m22 46m22 60m22 74m16 137r23 354m28 354r46 402m28
+. 402r46
+21e10*PUMP_ACTIVE_FUEL{4|7E9} 6|146r23 195m19 198m19 201m19 270m19 277m19
+22e10*PUMP_ACTIVE_STATE{4|10E9} 59r24 67r24 67r69 73r24 77r25 78r67 6|33m22
+. 47m22 61m22 249r23 268r41 269m19 275r44 276m19 296r41 298m22 305m22 333r19
+. 345m22 360m31 376m31 384m31 396m22 411m31 422m31 445r41 446m19
+23e10*PUMP_NOZZLE_STATE{4|11E9} 78r24 6|34m22 48m22 62m22 214m19 217m19 220m19
+. 258r23 271m19 278m19 299m22 306m22 346m22 361m31 377m31 385m31 395m22 412m31
+. 423m31 447m19
+24r10*PUMP_91{4|20R9} 6|28m22 93r43 107r63 157r34 172r37 196m39 213m46
+25r10*PUMP_95{4|20R9} 6|42m22 94r43 108r63 157r87 172r90 199m39 216m46
+26r10*PUMP_Diesel{4|20R9} 6|56m22 95r46 109r66 157r139 172r143 202m39 219m46
+30V13*GET_PUMP{4|20R9} 30>22 30>46 6|89b13 97l8 97t16
+30r22 pumpUnit{14R9} 6|89b22 93r34 94r34 95r37
+30e46 fuelType{4|7E9} 6|89b46 92r12
+31V13*GET_TANKS_SIZE{4|6F9} 31>28 31>52 6|103b13 111l8 111t22
+31r28 pumpUnit{14R9} 6|103b28 107r54 108r54 109r57
+31e52 fuelType{4|7E9} 6|103b52 106r12
+32V13*GET_ID{8A12} 32>20 6|116b13 120l8 120t14
+32r20 pumpUnit{14R9} 6|116b20 119r14
+33V13*GET_TO_PAY{4|6F9} 33>24 6|125b13 129l8 129t18
+33r24 pumpUnit{14R9} 6|125b24 128r14
+34V13*GET_PUMPED{4|6F9} 34>24 6|134b13 138l8 138t18
+34r24 pumpUnit{14R9} 6|134b24 137r14
+35V13*GET_FUEL{4|7E9} 35>22 6|143b13 147l8 147t16
+35r22 pumpUnit{14R9} 6|143b22 146r14
+36V13*UNIT_IS_USING{boolean} 36>27 6|228b13 232l8 232t21
+36r27 pumpUnit{14R9} 6|228b27 231r14
+37V13*UNIT_IS_PAID{boolean} 37>26 6|237b13 241l8 241t20
+37r26 pumpUnit{14R9} 6|237b26 240r14
+38V13*GET_PUMP_UNIT_STATE{4|10E9} 38>33 6|246b13 250l8 250t27
+38r33 pumpUnit{14R9} 6|246b33 249r14
+39V13*GET_PUMP_NOZZLE_STATE{4|11E9} 39>35 6|255b13 259l8 259t29
+39r35 pumpUnit{14R9} 6|255b35 258r14
+43U14*SET_IS_USING 43=27 6|150b14 161l8 161t20
+43r27 pumpUnit{14R9} 45r14 45r42 46r13 46r42 6|150b27 157r25 157r78 157r130
+. 158m10
+47U14*SET_IS_PAID 47=26 6|165b14 179l8 179t19
+47r26 pumpUnit{14R9} 6|165b26 170r10 172r28 172r81 172r134 173m13 177m10
+48U14*SET_TO_PAY 48=25 48>53 6|80b14 84l8 84t18
+48r25 pumpUnit{14R9} 6|80b25 83m7
+48f53 AMOUNT{4|6F9} 6|80b54 83r26
+49U14*SET_UNIT_ID 49=26 49>54 6|183b14 187l8 187t19
+49r26 pumpUnit{14R9} 6|183b26 186m7
+49a54 ID{8A12} 6|183b54 186r22
+50U14*SET_PUMPED 50=25 50>54 6|71b14 75l8 75t18
+50r25 pumpUnit{14R9} 6|71b25 74m7
+50f54 AMOUNT{4|6F9} 6|71b54 74r26
+51U14*SET_PUMP_ACTIVE_STATE 51=36 51>64 51>94 6|191b14 205l8 205t29
+51r36 pumpUnit{14R9} 6|191b36 195m10 196m30 196r30 198m10 199m30 199r30 201m10
+. 202m30 202r30
+51e64 fuelType{4|7E9} 6|191b64 194r30 195r39 197r33 198r38 200r33 201r39
+51e94 stateType{4|10E9} 6|191b94 196r47 199r47 202r52
+52U14*SET_PUMP_NOZZLE_STATE 52=36 52>64 52>94 6|209b14 223l8 223t29
+52r36 pumpUnit{14R9} 6|209b36 213m37 213r37 214m10 216m37 216r37 217m10 219m37
+. 219r37 220m10
+52e64 fuelType{4|7E9} 6|209b64 212r30 215r33 218r33
+52e94 nozzleType{4|11E9} 6|209b94 213r55 214r40 216r55 217r40 219r59 220r40
+54U14*ADD_PUMP 54=23 54=50 54>77 6|10b14 67l8 67t16
+54r23 pumpUnit{14R9} 6|10b23 28m13 29m13 30m13 31m13 32m13 33m13 34m13 42m13
 . 43m13 44m13 45m13 46m13 47m13 48m13 56m13 57m13 58m13 59m13 60m13 61m13
 . 62m13
-51r50 pump_r{4|20R9} 6|10b51 24m33 25m33 26m35 27m37 28r33 35m40 38m33 39m33
+54r50 pump_r{4|20R9} 6|10b51 24m33 25m33 26m35 27m37 28r33 35m40 38m33 39m33
 . 40m35 41m37 42r33 49m40 52m33 53m33 54m35 55m37 56r37 63m40
-51e77 fuelType{4|7E9} 6|10b78 21r32 26r42 40r43 54r43
-53U14*LEFT_NOZZLE 53=27 53=55 53>82 6|269b14 290l8 290t19
-53r27 pumpUnit{14R9} 56r15 6|269b27 272r32 273m10 274m10 275m10 279r35 280m10
-. 281m10 282m10
-53r55 pump_r{4|20R9} 55r51 55r102 6|269b55 276m30 277m37 279r116 283m30 284m37
-53e82 fuelType{4|7E9} 6|269b82 274r38 281r39
-58U14*RETURN_NOZZLE 58=29 58=57 6|294b14 319l8 319t21
-58r29 pumpUnit{14R9} 64r15 64r60 6|294b29 300r32 301r13 302m13 303m13 306r73
-. 308m13 309m13
-58r57 pump_r{4|20R9} 60r52 61r54 62r71 6|294b57 300r111 304m33 305m40 310m33
-. 311m40
-67U14*START_PUMPING 67=29 67=57 67>83 67=113 6|323b14 415l8 415t21
-67r29 pumpUnit{14R9} 70r15 6|323b29 336r10 347m13 348m13 353m16 353r34 354m16
-. 354r35 363m32 366m32 370m32 376m13 377m13 391m16 391r34 392m16 392r35 400m32
-. 404m32
-67r57 pump_r{4|20R9} 69r51 69r119 6|323b57 336r55 337r43 349m40 350m33 354r81
-. 359m45 360r48 363m42 366m42 370m42 378m40 379m33 392r81 397r48 400m42 404m42
-67f83 AMOUNT{4|6F9} 6|323b83 346r13 351r91 368r31 375r13
-67f113 CAR_TANK_SPACE{4|6F9} 6|323b113 342r13 351r19 355m16 355r33 361r19
-. 384r16 393m16 393r33 398r19
-72U14*STOP_PUMPING 72=28 72=56 6|363s19 366s19 370s19 400s19 404s19 419b14
-. 433l8 433t20
-72r28 pumpUnit{14R9} 75r15 75r58 6|419b27 422r32 423m10 424m10
-72r56 pump_r{4|20R9} 74r51 74r119 6|419b55 422r114 425m30 426m37
+54e77 fuelType{4|7E9} 6|10b78 21r12 26r42 40r43 54r43
+56U14*LEFT_NOZZLE 56=27 56=55 56>82 6|264b14 286l8 286t19
+56r27 pumpUnit{14R9} 59r15 6|264b27 267m7 268r32 269m10 270m10 271m10 275r35
+. 276m10 277m10 278m10
+56r55 pump_r{4|20R9} 58r51 58r102 6|264b55 272m30 273m37 275r116 279m30 280m37
+56e82 fuelType{4|7E9} 6|264b82 270r38 277r39
+61U14*RETURN_NOZZLE 61=29 61=57 6|290b14 316l8 316t21
+61r29 pumpUnit{14R9} 67r15 67r60 6|290b29 296r32 297r13 298m13 299m13 302r73
+. 304m13 305m13 306m13
+61r57 pump_r{4|20R9} 63r52 64r54 65r71 6|290b57 296r111 300m33 301m40 307m33
+. 308m40
+70U14*START_PUMPING 70=29 70=57 70>83 70=113 6|320b14 438l8 438t21
+70r29 pumpUnit{14R9} 73r15 6|320b29 333r10 345m13 346m13 354m19 354r37 355m19
+. 355r38 360m22 361m22 376m22 377m22 384m22 385m22 395m13 396m13 402m19 402r37
+. 403m19 403r38 411m22 412m22 422m22 423m22
+70r57 pump_r{4|20R9} 72r51 72r119 6|320b57 333r55 334r43 347m40 348m33 355r84
+. 362m42 363m49 370r22 371m22 371r53 374r51 378m42 379m49 386m42 387m49 397m40
+. 398m33 403r84 405r24 406m22 406r53 413m42 414m49 420r51 424m42 425m49
+70f83 AMOUNT{4|6F9} 6|320b83 344r13 351r91 382r34 388r41 394r16
+70f113 CAR_TANK_SPACE{4|6F9} 6|320b113 340r13 351r19 356r22 357m22 357r39
+. 408r22 409m22 409r39 415r32
+75U14*STOP_PUMPING 75=28 75=56 6|442b14 456l8 456t20
+75r28 pumpUnit{14R9} 77r16 78r15 78r58 6|442b27 445r32 446m10 447m10
+75r56 pump_r{4|20R9} 6|442b55 445r114 448m30 449m37
 X 6 pump_unit.adb
 15e7 nozzleStateType{4|11E9} 19m7 34r43 35r48 48r43 49r48 62r43 63r48
 16e7 baseStateType{4|10E9} 18m7 25r40 33r42 39r40 47r42 53r40 61r42
-155e7 baseStateType{4|10E9} 158m7 159r45 159r97 159r154
-170e7 baseStateType{4|10E9} 173m10 174r48 174r101 174r159
-270X7 liftNozzleException 288r16
-295f7 due{4|6F9} 299m7 301r31
-297X7 returnNozzleException 317r16
-326f7 tankSize{4|6F9} 337m10 338r13 346r49 351r43 360m16 365r22 375r49 380r16
-. 388r38 397m16 403r22
-327f7 pumped{4|6F9} 334m7 351r81 352m16 352r25 368r22
-328b7 SENSOR{boolean} 335m7 346r30 351r62 362m19 375r30 388r19 399m19
-329f7 temp{4|6F9} 333m7 346r60 351r53 375r60
-330X7 startPumpingException 340r19 344r19 382r22 386r22 412r16
-420X7 stopPumpingException 429r16
+153e7 baseStateType{4|10E9} 156m7 157r45 157r97 157r154
+168e7 baseStateType{4|10E9} 171m10 172r48 172r101 172r159
+265X7 liftNozzleException 284r16
+291f7 due{4|6F9} 295m7 297r31
+293X7 returnNozzleException 314r16
+323f7 tankSize{4|6F9} 334m10 335r42 336r13 344r49 351r43 374m19 375r22 381r32
+. 394r52 401r38 420m19 421r22 427r32
+324f7 pumped{4|6F9} 331m7 351r81 353m19 353r28 382r25 388r32
+325b7 SENSOR{boolean} 332m7 344r30 351r62 359m22 364r32 394r33 401r19
+326f7 temp{4|6F9} 330m7 344r60 351r53 394r63
+327X7 startPumpingException 338r19 342r19 435r16
+443X7 stopPumpingException 452r16
 X 7 sprint.ads
-2K10*sPrint 6|1w6 1r18 7|13e11
-3U14*print 6|23s13 37s13 51s13 66s7 161s10 176s13 205s10 225s10 278s10 285s10
-. 287s10 312s13 315s10 339s13 343s13 364s19 367s19 369s19 381s16 385s16 402s19
-. 405s19 410s10 427s10
-4U14*print_float_type 6|306s13
+2K10*sPrint 6|1w6 1r18 7|14e11
+4U14*print 6|23s13 37s13 51s13 66s7 159s10 174s13 274s10 281s10 283s10 309s13
+. 312s10 337s13 341s13 380s22 383s22 426s22 433s10 450s10
+5U14*print_float_type 6|302s13 335s10
 FD 1 ada.ads
 FS .1 16K9 ada
 FD 2 a-except.ads
@@ -275,48 +285,48 @@ FS .9 37V13 pump_unit__unit_is_paid
 FS .10 38V13 pump_unit__get_pump_unit_state
 FS .11 39V13 pump_unit__get_pump_nozzle_state
 FS .12 43U14 pump_unit__set_is_using
-FS .13 44U14 pump_unit__set_is_paid
-FS .14 45U14 pump_unit__set_to_pay
-FS .15 46U14 pump_unit__set_unit_id
-FS .16 47U14 pump_unit__set_pumped
-FS .17 48U14 pump_unit__set_pump_active_state
-FS .18 49U14 pump_unit__set_pump_nozzle_state
-FS .19 51U14 pump_unit__add_pump
-FS .20 53U14 pump_unit__left_nozzle
-FS .21 58U14 pump_unit__return_nozzle
-FS .22 67U14 pump_unit__start_pumping
-FS .23 72U14 pump_unit__stop_pumping
+FS .13 47U14 pump_unit__set_is_paid
+FS .14 48U14 pump_unit__set_to_pay
+FS .15 49U14 pump_unit__set_unit_id
+FS .16 50U14 pump_unit__set_pumped
+FS .17 51U14 pump_unit__set_pump_active_state
+FS .18 52U14 pump_unit__set_pump_nozzle_state
+FS .19 54U14 pump_unit__add_pump
+FS .20 56U14 pump_unit__left_nozzle
+FS .21 61U14 pump_unit__return_nozzle
+FS .22 70U14 pump_unit__start_pumping
+FS .23 75U14 pump_unit__stop_pumping
 FD 6 pump_unit.adb
 FS .1 4K14 standard__pump_unit -> 5.1
 FS .2 10U14 pump_unit__add_pump -> 5.19
 FS .3 71U14 pump_unit__set_pumped -> 5.16
 FS .4 80U14 pump_unit__set_to_pay -> 5.14
 FS .5 89V13 pump_unit__get_pump -> 5.2
-FS .6 104V13 pump_unit__get_tanks_size -> 5.3
-FS .7 118V13 pump_unit__get_id -> 5.4
-FS .8 127V13 pump_unit__get_to_pay -> 5.5
-FS .9 136V13 pump_unit__get_pumped -> 5.6
-FS .10 145V13 pump_unit__get_fuel -> 5.7
-FS .11 152U14 pump_unit__set_is_using -> 5.12
-FS .12 167U14 pump_unit__set_is_paid -> 5.13
-FS .13 184U14 pump_unit__set_unit_id -> 5.15
-FS .14 192U14 pump_unit__set_pump_active_state -> 5.17
-FS .15 212U14 pump_unit__set_pump_nozzle_state -> 5.18
-FS .16 233V13 pump_unit__unit_is_using -> 5.8
-FS .17 242V13 pump_unit__unit_is_paid -> 5.9
-FS .18 251V13 pump_unit__get_pump_unit_state -> 5.10
-FS .19 260V13 pump_unit__get_pump_nozzle_state -> 5.11
-FS .20 269U14 pump_unit__left_nozzle -> 5.20
-FS .21 294U14 pump_unit__return_nozzle -> 5.21
-FS .22 323U14 pump_unit__start_pumping -> 5.22
-FS .23 419U14 pump_unit__stop_pumping -> 5.23
+FS .6 103V13 pump_unit__get_tanks_size -> 5.3
+FS .7 116V13 pump_unit__get_id -> 5.4
+FS .8 125V13 pump_unit__get_to_pay -> 5.5
+FS .9 134V13 pump_unit__get_pumped -> 5.6
+FS .10 143V13 pump_unit__get_fuel -> 5.7
+FS .11 150U14 pump_unit__set_is_using -> 5.12
+FS .12 165U14 pump_unit__set_is_paid -> 5.13
+FS .13 183U14 pump_unit__set_unit_id -> 5.15
+FS .14 191U14 pump_unit__set_pump_active_state -> 5.17
+FS .15 209U14 pump_unit__set_pump_nozzle_state -> 5.18
+FS .16 228V13 pump_unit__unit_is_using -> 5.8
+FS .17 237V13 pump_unit__unit_is_paid -> 5.9
+FS .18 246V13 pump_unit__get_pump_unit_state -> 5.10
+FS .19 255V13 pump_unit__get_pump_nozzle_state -> 5.11
+FS .20 264U14 pump_unit__left_nozzle -> 5.20
+FS .21 290U14 pump_unit__return_nozzle -> 5.21
+FS .22 320U14 pump_unit__start_pumping -> 5.22
+FS .23 442U14 pump_unit__stop_pumping -> 5.23
 FD 7 sprint.ads
 FS .1 2K10 sprint
-FS .2 3U14 sprint__print
-FS .3 4U14 sprint__print_float_type
-FS .4 5U14 sprint__print_state_type
-FS .5 6U14 sprint__print_nozzle_type
-FS .6 7U14 sprint__print_fuel_type
+FS .2 4U14 sprint__print
+FS .3 5U14 sprint__print_float_type
+FS .4 6U14 sprint__print_state_type
+FS .5 7U14 sprint__print_nozzle_type
+FS .6 8U14 sprint__print_fuel_type
 FD 8 system.ads
 FS .1 37K9 system
 FS .2 77V13 system__Olt
@@ -341,154 +351,154 @@ FS .2 58V13 system__traceback_entries__pc_for
 FS .3 63V13 system__traceback_entries__tb_entry_for
 FX 4 pump.ads .1 pump
 F 33*14 pump__set_fuel_price 6|.2:24s18 38s18 52s18
-F 34*14 pump__set_pump_state 6|.2:25s18 39s18 53s18 .14:197s15 200s15 203s15
-. .20:276s15 283s15 .21:304s18 310s18 .22:350s18 379s18 .23:425s15
-F 36*14 pump__set_pump_nozzle_state 6|.2:35s18 49s18 63s18 .15:216s15 219s15
-. 222s15 .20:277s15 284s15 .21:305s18 311s18 .22:349s18 378s18 .23:426s15
+F 34*14 pump__set_pump_state 6|.2:25s18 39s18 53s18 .14:196s15 199s15 202s15
+. .20:272s15 279s15 .21:300s18 307s18 .22:348s18 362s27 378s27 386s27 398s18
+. 413s27 424s27 .23:448s15
+F 36*14 pump__set_pump_nozzle_state 6|.2:35s18 49s18 63s18 .15:213s15 216s15
+. 219s15 .20:273s15 280s15 .21:301s18 308s18 .22:347s18 363s27 379s27 387s27
+. 397s18 414s27 425s27 .23:449s15
 F 38*14 pump__append_reservoir 6|.2:26s18 40s18 54s18
 F 40*14 pump__set_reservoir_size 6|.2:27s18 41s18 55s18
-F 42*14 pump__remove_petrol_reservoir 6|.22:359s21
-F 48*13 pump__get_state 5|.20:55s41 55s92 .21:60s42 61s44 .22:69s41 .23:74s41
-. 6|.11:159s15 159s68 159s120 .12:174s18 174s71 174s124 .20:279s106 .21:300s101
-. .23:422s104
-F 49*13 pump__get_current_nozzle_state 5|.21:62s46 .22:69s94 .23:74s94
-F 50*13 pump__get_unit_price 6|.22:354s66 392s66
-F 51*13 pump__get_tanks_size 6|.6:108s32 109s32 110s32 111s37 .22:337s28
-. 360s33 397s33
-FX 5 pump_unit.ads .1 pump_unit
-F 72*14 pump_unit__stop_pumping 6|.22:363s19 366s19 370s19 400s19 404s19
+F 48*13 pump__get_state 5|.20:58s41 58s92 .21:63s42 64s44 .22:72s41 6|.11:157s15
+. 157s68 157s120 .12:172s18 172s71 172s124 .20:275s106 .21:296s101 .23:445s104
+F 49*13 pump__get_current_nozzle_state 5|.21:65s46 .22:72s94
+F 50*13 pump__get_unit_price 6|.22:355s69 403s69
+F 51*13 pump__get_tanks_size 6|.6:107s39 108s39 109s42 .22:334s28 374s36
+. 420s36
 FX 5 pump_unit.ads .2 pump_unit__get_pump
-F 30>22 pump_unit__get_pump__pumpunit 6|.5:93c27 94c27 95c27 96c32
-F 30>46 pump_unit__get_pump__fueltype 6|.5:92c32
+F 30>22 pump_unit__get_pump__pumpunit 6|.5:93c34 94c34 95c37
+F 30>46 pump_unit__get_pump__fueltype 6|.5:92c12
 FX 5 pump_unit.ads .3 pump_unit__get_tanks_size
-F 31>28 pump_unit__get_tanks_size__pumpunit 6|.6:108c47 109c47 110c47 111c52
-F 31>52 pump_unit__get_tanks_size__fueltype 6|.6:107c32
+F 31>28 pump_unit__get_tanks_size__pumpunit 6|.6:107c54 108c54 109c57
+F 31>52 pump_unit__get_tanks_size__fueltype 6|.6:106c12
 FX 5 pump_unit.ads .4 pump_unit__get_id
-F 32>20 pump_unit__get_id__pumpunit 6|.7:121c14
+F 32>20 pump_unit__get_id__pumpunit 6|.7:119c14
 FX 5 pump_unit.ads .5 pump_unit__get_to_pay
-F 33>24 pump_unit__get_to_pay__pumpunit 6|.8:130c14
+F 33>24 pump_unit__get_to_pay__pumpunit 6|.8:128c14
 FX 5 pump_unit.ads .6 pump_unit__get_pumped
-F 34>24 pump_unit__get_pumped__pumpunit 6|.9:139c14
+F 34>24 pump_unit__get_pumped__pumpunit 6|.9:137c14
 FX 5 pump_unit.ads .7 pump_unit__get_fuel
-F 35>22 pump_unit__get_fuel__pumpunit 6|.10:148c14
+F 35>22 pump_unit__get_fuel__pumpunit 6|.10:146c14
 FX 5 pump_unit.ads .8 pump_unit__unit_is_using
-F 36>27 pump_unit__unit_is_using__pumpunit 6|.16:236c14
+F 36>27 pump_unit__unit_is_using__pumpunit 6|.16:231c14
 FX 5 pump_unit.ads .9 pump_unit__unit_is_paid
-F 37>26 pump_unit__unit_is_paid__pumpunit 6|.17:245c14
+F 37>26 pump_unit__unit_is_paid__pumpunit 6|.17:240c14
 FX 5 pump_unit.ads .10 pump_unit__get_pump_unit_state
-F 38>33 pump_unit__get_pump_unit_state__pumpunit 6|.18:254c14
+F 38>33 pump_unit__get_pump_unit_state__pumpunit 6|.18:249c14
 FX 5 pump_unit.ads .11 pump_unit__get_pump_nozzle_state
-F 39>35 pump_unit__get_pump_nozzle_state__pumpunit 6|.19:263c14
+F 39>35 pump_unit__get_pump_nozzle_state__pumpunit 6|.19:258c14
 FX 5 pump_unit.ads .12 pump_unit__set_is_using
-F 43=27 pump_unit__set_is_using__pumpunit 6|.11:159r25 159r78 159r130 160m10
+F 43=27 pump_unit__set_is_using__pumpunit 45r14 45r42 46r13 46r42 6|.11:157r25
+. 157r78 157r130 158m10
 FX 5 pump_unit.ads .13 pump_unit__set_is_paid
-F 44=26 pump_unit__set_is_paid__pumpunit 6|.12:172r10 174r28 174r81 174r134
-. 175m13
+F 47=26 pump_unit__set_is_paid__pumpunit 6|.12:170r10 172r28 172r81 172r134
+. 173m13 177m10
 FX 5 pump_unit.ads .14 pump_unit__set_to_pay
-F 45=25 pump_unit__set_to_pay__pumpunit 6|.4:83m7
-F 45>53 pump_unit__set_to_pay__amount 6|.4:83c26
+F 48=25 pump_unit__set_to_pay__pumpunit 6|.4:83m7
+F 48>53 pump_unit__set_to_pay__amount 6|.4:83c26
 FX 5 pump_unit.ads .15 pump_unit__set_unit_id
-F 46=26 pump_unit__set_unit_id__pumpunit 6|.13:187m7
-F 46>54 pump_unit__set_unit_id__id 6|.13:187c22
+F 49=26 pump_unit__set_unit_id__pumpunit 6|.13:186m7
+F 49>54 pump_unit__set_unit_id__id 6|.13:186c22
 FX 5 pump_unit.ads .16 pump_unit__set_pumped
-F 47=25 pump_unit__set_pumped__pumpunit 6|.3:74m7
-F 47>54 pump_unit__set_pumped__amount 6|.3:74c26
+F 50=25 pump_unit__set_pumped__pumpunit 6|.3:74m7
+F 50>54 pump_unit__set_pumped__amount 6|.3:74c26
 FX 5 pump_unit.ads .17 pump_unit__set_pump_active_state
-F 48=36 pump_unit__set_pump_active_state__pumpunit 6|.14:196m10 197m30 197r30
-. 199m10 200m30 200r30 202m10 203m30 203r30
-F 48>64 pump_unit__set_pump_active_state__fueltype 6|.14:195c30 196c39 198c33
-. 199c38 201c33 202c39
-F 48>94 pump_unit__set_pump_active_state__statetype 6|.14:197c47 200c47 203c52
+F 51=36 pump_unit__set_pump_active_state__pumpunit 6|.14:195m10 196m30 196r30
+. 198m10 199m30 199r30 201m10 202m30 202r30
+F 51>64 pump_unit__set_pump_active_state__fueltype 6|.14:194c30 195c39 197c33
+. 198c38 200c33 201c39
+F 51>94 pump_unit__set_pump_active_state__statetype 6|.14:196c47 199c47 202c52
 FX 5 pump_unit.ads .18 pump_unit__set_pump_nozzle_state
-F 49=36 pump_unit__set_pump_nozzle_state__pumpunit 6|.15:216m37 216r37 217m10
-. 219m37 219r37 220m10 222m37 222r37 223m10
-F 49>64 pump_unit__set_pump_nozzle_state__fueltype 6|.15:215c30 218c33 221c33
-F 49>94 pump_unit__set_pump_nozzle_state__nozzletype 6|.15:216c55 217c40
-. 219c55 220c40 222c59 223c40
+F 52=36 pump_unit__set_pump_nozzle_state__pumpunit 6|.15:213m37 213r37 214m10
+. 216m37 216r37 217m10 219m37 219r37 220m10
+F 52>64 pump_unit__set_pump_nozzle_state__fueltype 6|.15:212c30 215c33 218c33
+F 52>94 pump_unit__set_pump_nozzle_state__nozzletype 6|.15:213c55 214c40
+. 216c55 217c40 219c59 220c40
 FX 5 pump_unit.ads .19 pump_unit__add_pump
-F 51=23 pump_unit__add_pump__pumpunit 6|.2:28m13 29m13 30m13 31m13 32m13
+F 54=23 pump_unit__add_pump__pumpunit 6|.2:28m13 29m13 30m13 31m13 32m13
 . 33m13 34m13 42m13 43m13 44m13 45m13 46m13 47m13 48m13 56m13 57m13 58m13
 . 59m13 60m13 61m13 62m13
-F 51=50 pump_unit__add_pump__pump_r 6|.2:24m33 25m33 26m35 27m37 28r33 35m40
+F 54=50 pump_unit__add_pump__pump_r 6|.2:24m33 25m33 26m35 27m37 28r33 35m40
 . 38m33 39m33 40m35 41m37 42r33 49m40 52m33 53m33 54m35 55m37 56r37 63m40
-F 51>77 pump_unit__add_pump__fueltype 6|.2:21c32 26c42 40c43 54c43
+F 54>77 pump_unit__add_pump__fueltype 6|.2:21c12 26c42 40c43 54c43
 FX 5 pump_unit.ads .20 pump_unit__left_nozzle
-F 53=27 pump_unit__left_nozzle__pumpunit 56r15 6|.20:272r32 273m10 274m10
-. 275m10 279r35 280m10 281m10 282m10
-F 53=55 pump_unit__left_nozzle__pump_r 55r51 55r102 6|.20:276m30 277m37 279r116
-. 283m30 284m37
-F 53>82 pump_unit__left_nozzle__fueltype 6|.20:274c38 281c39
+F 56=27 pump_unit__left_nozzle__pumpunit 59r15 6|.20:267m7 268r32 269m10
+. 270m10 271m10 275r35 276m10 277m10 278m10
+F 56=55 pump_unit__left_nozzle__pump_r 58r51 58r102 6|.20:272m30 273m37 275r116
+. 279m30 280m37
+F 56>82 pump_unit__left_nozzle__fueltype 6|.20:270c38 277c39
 FX 5 pump_unit.ads .21 pump_unit__return_nozzle
-F 58=29 pump_unit__return_nozzle__pumpunit 64r15 64r60 6|.21:300r32 301r13
-. 302m13 303m13 306r73 308m13 309m13
-F 58=57 pump_unit__return_nozzle__pump_r 60r52 61r54 62r71 6|.21:300r111
-. 304m33 305m40 310m33 311m40
+F 61=29 pump_unit__return_nozzle__pumpunit 67r15 67r60 6|.21:296r32 297r13
+. 298m13 299m13 302r73 304m13 305m13 306m13
+F 61=57 pump_unit__return_nozzle__pump_r 63r52 64r54 65r71 6|.21:296r111
+. 300m33 301m40 307m33 308m40
 FX 5 pump_unit.ads .22 pump_unit__start_pumping
-F 67=29 pump_unit__start_pumping__pumpunit 70r15 6|.22:336r10 347m13 348m13
-. 353m16 353r34 354m16 354r35 363m32 366m32 370m32 376m13 377m13 391m16 391r34
-. 392m16 392r35 400m32 404m32
-F 67=57 pump_unit__start_pumping__pump_r 69r51 69r119 6|.22:336r55 337r43
-. 349m40 350m33 354r81 359m45 360r48 363m42 366m42 370m42 378m40 379m33 392r81
-. 397r48 400m42 404m42
-F 67>83 pump_unit__start_pumping__amount 6|.22:346c13 351c91 368c31 375c13
-F 67=113 pump_unit__start_pumping__car_tank_space 6|.22:342r13 351r19 355m16
-. 355r33 361r19 384r16 393m16 393r33 398r19
+F 70=29 pump_unit__start_pumping__pumpunit 73r15 6|.22:333r10 345m13 346m13
+. 354m19 354r37 355m19 355r38 360m22 361m22 376m22 377m22 384m22 385m22 395m13
+. 396m13 402m19 402r37 403m19 403r38 411m22 412m22 422m22 423m22
+F 70=57 pump_unit__start_pumping__pump_r 72r51 72r119 6|.22:333r55 334r43
+. 347m40 348m33 355r84 362m42 363m49 370r22 371m22 371r53 374r51 378m42 379m49
+. 386m42 387m49 397m40 398m33 403r84 405r24 406m22 406r53 413m42 414m49 420r51
+. 424m42 425m49
+F 70>83 pump_unit__start_pumping__amount 6|.22:344c13 351c91 382c34 388c41
+. 394c16
+F 70=113 pump_unit__start_pumping__car_tank_space 6|.22:340r13 351r19 356r22
+. 357m22 357r39 408r22 409m22 409r39 415r32
 FX 5 pump_unit.ads .23 pump_unit__stop_pumping
-F 72=28 pump_unit__stop_pumping__pumpunit 75r15 75r58 6|.23:422r32 423m10
-. 424m10
-F 72=56 pump_unit__stop_pumping__pump_r 74r51 74r119 6|.23:422r114 425m30
-. 426m37
+F 75=28 pump_unit__stop_pumping__pumpunit 77r16 78r15 78r58 6|.23:445r32
+. 446m10 447m10
+F 75=56 pump_unit__stop_pumping__pump_r 6|.23:445r114 448m30 449m37
 FX 6 pump_unit.adb .2 pump_unit__add_pump
 F 15*7 pump_unit__add_pump__nozzlestatetype 19m7 34r43 35r48 48r43 49r48
 . 62r43 63r48
 F 16*7 pump_unit__add_pump__basestatetype 18m7 25r40 33r42 39r40 47r42 53r40
 . 61r42
 FX 6 pump_unit.adb .11 pump_unit__set_is_using
-F 155*7 pump_unit__set_is_using__basestatetype 158m7 159r45 159r97 159r154
+F 153*7 pump_unit__set_is_using__basestatetype 156m7 157r45 157r97 157r154
 FX 6 pump_unit.adb .12 pump_unit__set_is_paid
-F 170*7 pump_unit__set_is_paid__basestatetype 173m10 174r48 174r101 174r159
+F 168*7 pump_unit__set_is_paid__basestatetype 171m10 172r48 172r101 172r159
 FX 6 pump_unit.adb .21 pump_unit__return_nozzle
-F 295*7 pump_unit__return_nozzle__due 299m7 301r31
+F 291*7 pump_unit__return_nozzle__due 295m7 297r31
 FX 6 pump_unit.adb .22 pump_unit__start_pumping
-F 326*7 pump_unit__start_pumping__tanksize 337m10 338r13 346r49 351r43 360m16
-. 365r22 375r49 380r16 388r38 397m16 403r22
-F 327*7 pump_unit__start_pumping__pumped 334m7 351r81 352m16 352r25 368r22
-F 328*7 pump_unit__start_pumping__sensor 335m7 346r30 351r62 362m19 375r30
-. 388r19 399m19
-F 329*7 pump_unit__start_pumping__temp 333m7 346r60 351r53 375r60
+F 323*7 pump_unit__start_pumping__tanksize 334m10 335r42 336r13 344r49 351r43
+. 374m19 375r22 381r32 394r52 401r38 420m19 421r22 427r32
+F 324*7 pump_unit__start_pumping__pumped 331m7 351r81 353m19 353r28 382r25
+. 388r32
+F 325*7 pump_unit__start_pumping__sensor 332m7 344r30 351r62 359m22 364r32
+. 394r33 401r19
+F 326*7 pump_unit__start_pumping__temp 330m7 344r60 351r53 394r63
 FX 7 sprint.ads .1 sprint
-F 3*14 sprint__print 6|.2:23s13 37s13 51s13 66s7 .11:161s10 .12:176s13 .14:205s10
-. .15:225s10 .20:278s10 285s10 287s10 .21:312s13 315s10 .22:339s13 343s13
-. 364s19 367s19 369s19 381s16 385s16 402s19 405s19 410s10 .23:427s10
-F 4*14 sprint__print_float_type 6|.21:306s13
+F 4*14 sprint__print 6|.2:23s13 37s13 51s13 66s7 .11:159s10 .12:174s13 .20:274s10
+. 281s10 283s10 .21:309s13 312s10 .22:337s13 341s13 380s22 383s22 426s22
+. 433s10 .23:450s10
+F 5*14 sprint__print_float_type 6|.21:302s13 .22:335s10
 
 GG EK_REMOTE_STATES
-GG EK_GLOBALS pump_unit KIND_PACKAGE_BODY ORIGIN_FLOW c:local_sub [ pump_unit__get_pump pump_unit__get_tanks_size pump_unit__get_id pump_unit__get_to_pay pump_unit__get_pumped pump_unit__get_fuel pump_unit__unit_is_using pump_unit__unit_is_paid pump_unit__get_pump_unit_state pump_unit__get_pump_nozzle_state pump_unit__set_is_using pump_unit__set_is_paid pump_unit__set_to_pay pump_unit__set_unit_id pump_unit__set_pumped pump_unit__set_pump_active_state pump_unit__set_pump_nozzle_state pump_unit__add_pump pump_unit__left_nozzle pump_unit__return_nozzle pump_unit__start_pumping pump_unit__stop_pumping ]
-GG EK_GLOBALS pump_unit__set_is_using KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_state ] c:calls_conditional [ sprint__print ] c:local_var [ pump_unit__set_is_using__basestatetype pump_unit__set_is_using__pumpunit ] c:local_init [ pump_unit__set_is_using__basestatetype ]
-GG EK_GLOBALS pump_unit__return_nozzle KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_current_nozzle_state ] c:calls [ pump__get_state pump__set_pump_state pump__set_pump_nozzle_state ] c:calls_conditional [ sprint__print_float_type sprint__print ] c:local_var [ pump_unit__return_nozzle__due pump_unit__return_nozzle__pumpunit pump_unit__return_nozzle__pump_r ] c:local_init [ pump_unit__return_nozzle__due ]
-GG EK_GLOBALS pump_unit__set_pump_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ sprint__print pump__set_pump_nozzle_state ] c:local_var [ pump_unit__set_pump_nozzle_state__fueltype pump_unit__set_pump_nozzle_state__pumpunit pump_unit__set_pump_nozzle_state__nozzletype ]
-GG EK_GLOBALS pump_unit__get_fuel KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_fuel__pumpunit ]
-GG EK_GLOBALS pump_unit__get_pump_unit_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pump_unit_state__pumpunit ]
-GG EK_GLOBALS pump_unit__set_unit_id KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_unit_id__id pump_unit__set_unit_id__pumpunit ]
-GG EK_GLOBALS pump_unit__set_pump_active_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ sprint__print pump__set_pump_state ] c:local_var [ pump_unit__set_pump_active_state__fueltype pump_unit__set_pump_active_state__pumpunit pump_unit__set_pump_active_state__statetype ]
-GG EK_GLOBALS pump_unit__get_to_pay KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_to_pay__pumpunit ]
-GG EK_GLOBALS pump_unit__set_is_paid KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ pump__get_state sprint__print ] c:local_var [ pump_unit__set_is_paid__pumpunit pump_unit__set_is_paid__basestatetype ]
-GG EK_GLOBALS pump_unit__get_tanks_size KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_tanks_size ] c:local_var [ pump_unit__get_tanks_size__fueltype pump_unit__get_tanks_size__pumpunit ]
-GG EK_GLOBALS pump_unit__stop_pumping KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_current_nozzle_state ] c:calls [ pump__get_state sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__stop_pumping__pumpunit pump_unit__stop_pumping__pump_r ]
-GG EK_GLOBALS pump_unit__unit_is_using KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__unit_is_using__pumpunit ]
-GG EK_GLOBALS pump_unit__left_nozzle KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_state sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__left_nozzle__fueltype pump_unit__left_nozzle__pumpunit pump_unit__left_nozzle__pump_r ]
-GG EK_GLOBALS pump_unit__get_pump_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pump_nozzle_state__pumpunit ]
-GG EK_GLOBALS pump_unit__start_pumping KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_state pump__get_current_nozzle_state ] c:calls [ pump__get_tanks_size ] c:calls_conditional [ pump__get_unit_price pump__remove_petrol_reservoir pump_unit__stop_pumping sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__start_pumping__temp pump_unit__start_pumping__pumped pump_unit__start_pumping__sensor pump_unit__start_pumping__tanksize pump_unit__start_pumping__car_tank_space pump_unit__start_pumping__amount pump_unit__start_pumping__pumpunit pump_unit__start_pumping__pump_r ] c:local_init [ pump_unit__start_pumping__temp pump_unit__start_pumping__pumped pump_unit__start_pumping__sensor pump_unit__start_pumping__tanksize ]
-GG EK_GLOBALS pump_unit__set_to_pay KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_to_pay__amount pump_unit__set_to_pay__pumpunit ]
-GG EK_GLOBALS pump_unit__get_pumped KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pumped__pumpunit ]
-GG EK_GLOBALS pump_unit__set_pumped KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_pumped__amount pump_unit__set_pumped__pumpunit ]
+GG EK_GLOBALS pump_unit KIND_PACKAGE_BODY ORIGIN_FLOW c:local_sub [ pump_unit__get_tanks_size pump_unit__get_id pump_unit__get_to_pay pump_unit__get_pumped pump_unit__get_fuel pump_unit__unit_is_using pump_unit__unit_is_paid pump_unit__get_pump_unit_state pump_unit__get_pump_nozzle_state pump_unit__set_is_using pump_unit__set_is_paid pump_unit__set_to_pay pump_unit__set_unit_id pump_unit__set_pumped pump_unit__set_pump_active_state pump_unit__set_pump_nozzle_state pump_unit__add_pump pump_unit__left_nozzle pump_unit__return_nozzle pump_unit__start_pumping pump_unit__stop_pumping pump_unit__get_pump ]
 GG EK_GLOBALS pump_unit__get_pump KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pump__fueltype pump_unit__get_pump__pumpunit ]
-GG EK_GLOBALS pump_unit__add_pump KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print ] c:calls_conditional [ pump__set_fuel_price pump__set_pump_state pump__append_reservoir pump__set_reservoir_size pump__set_pump_nozzle_state ] c:local_var [ pump_unit__add_pump__basestatetype pump_unit__add_pump__nozzlestatetype pump_unit__add_pump__fueltype pump_unit__add_pump__pump_r pump_unit__add_pump__pumpunit ] c:local_init [ pump_unit__add_pump__basestatetype pump_unit__add_pump__nozzlestatetype ]
+GG EK_GLOBALS pump_unit__set_unit_id KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_unit_id__id pump_unit__set_unit_id__pumpunit ]
+GG EK_GLOBALS pump_unit__set_pump_active_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ pump__set_pump_state ] c:local_var [ pump_unit__set_pump_active_state__fueltype pump_unit__set_pump_active_state__pumpunit pump_unit__set_pump_active_state__statetype ]
 GG EK_GLOBALS pump_unit__unit_is_paid KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__unit_is_paid__pumpunit ]
+GG EK_GLOBALS pump_unit__set_is_paid KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ pump__get_state sprint__print ] c:local_var [ pump_unit__set_is_paid__pumpunit pump_unit__set_is_paid__basestatetype ]
+GG EK_GLOBALS pump_unit__stop_pumping KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_state sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__stop_pumping__pump_r pump_unit__stop_pumping__pumpunit ]
 GG EK_GLOBALS pump_unit__get_id KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_id__pumpunit ]
+GG EK_GLOBALS pump_unit__set_is_using KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_state ] c:calls_conditional [ sprint__print ] c:local_var [ pump_unit__set_is_using__basestatetype pump_unit__set_is_using__pumpunit ] c:local_init [ pump_unit__set_is_using__basestatetype ]
+GG EK_GLOBALS pump_unit__left_nozzle KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_state sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__left_nozzle__fueltype pump_unit__left_nozzle__pumpunit pump_unit__left_nozzle__pump_r ]
+GG EK_GLOBALS pump_unit__get_fuel KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_fuel__pumpunit ]
+GG EK_GLOBALS pump_unit__start_pumping KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_state pump__get_current_nozzle_state ] c:calls [ pump__get_tanks_size sprint__print_float_type ] c:calls_conditional [ pump__get_unit_price sprint__print pump__set_pump_state pump__set_pump_nozzle_state ] c:local_var [ pump_unit__start_pumping__temp pump_unit__start_pumping__pumped pump_unit__start_pumping__sensor pump_unit__start_pumping__tanksize pump_unit__start_pumping__car_tank_space pump_unit__start_pumping__amount pump_unit__start_pumping__pumpunit pump_unit__start_pumping__pump_r ] c:local_init [ pump_unit__start_pumping__temp pump_unit__start_pumping__pumped pump_unit__start_pumping__sensor pump_unit__start_pumping__tanksize ]
+GG EK_GLOBALS pump_unit__set_to_pay KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_to_pay__amount pump_unit__set_to_pay__pumpunit ]
+GG EK_GLOBALS pump_unit__get_pump_unit_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pump_unit_state__pumpunit ]
+GG EK_GLOBALS pump_unit__set_pumped KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__set_pumped__pumpunit pump_unit__set_pumped__amount ]
+GG EK_GLOBALS pump_unit__get_to_pay KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_to_pay__pumpunit ]
+GG EK_GLOBALS pump_unit__add_pump KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print pump__set_fuel_price pump__set_pump_state pump__append_reservoir pump__set_reservoir_size pump__set_pump_nozzle_state ] c:local_var [ pump_unit__add_pump__basestatetype pump_unit__add_pump__nozzlestatetype pump_unit__add_pump__fueltype pump_unit__add_pump__pump_r pump_unit__add_pump__pumpunit ] c:local_init [ pump_unit__add_pump__basestatetype pump_unit__add_pump__nozzlestatetype ]
+GG EK_GLOBALS pump_unit__get_tanks_size KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ pump__get_tanks_size ] c:local_var [ pump_unit__get_tanks_size__fueltype pump_unit__get_tanks_size__pumpunit ]
+GG EK_GLOBALS pump_unit__unit_is_using KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__unit_is_using__pumpunit ]
+GG EK_GLOBALS pump_unit__return_nozzle KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_current_nozzle_state ] c:calls [ pump__get_state pump__set_pump_state pump__set_pump_nozzle_state ] c:calls_conditional [ sprint__print_float_type sprint__print ] c:local_var [ pump_unit__return_nozzle__due pump_unit__return_nozzle__pumpunit pump_unit__return_nozzle__pump_r ] c:local_init [ pump_unit__return_nozzle__due ]
+GG EK_GLOBALS pump_unit__set_pump_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls_conditional [ pump__set_pump_nozzle_state ] c:local_var [ pump_unit__set_pump_nozzle_state__fueltype pump_unit__set_pump_nozzle_state__pumpunit pump_unit__set_pump_nozzle_state__nozzletype ]
+GG EK_GLOBALS pump_unit__get_pump_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pump_nozzle_state__pumpunit ]
+GG EK_GLOBALS pump_unit__get_pumped KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump_unit__get_pumped__pumpunit ]
 GG EK_VOLATILES
-GG EK_TASKING_NONBLOCKING [ pump_unit__get_pump pump_unit__get_tanks_size pump_unit__get_id pump_unit__get_to_pay pump_unit__get_pumped pump_unit__get_fuel pump_unit__unit_is_using pump_unit__unit_is_paid pump_unit__get_pump_unit_state pump_unit__get_pump_nozzle_state pump_unit__set_is_using pump_unit__set_is_paid pump_unit__set_to_pay pump_unit__set_unit_id pump_unit__set_pumped pump_unit__set_pump_active_state pump_unit__set_pump_nozzle_state pump_unit__add_pump pump_unit__left_nozzle pump_unit__return_nozzle pump_unit__start_pumping pump_unit__stop_pumping ]
-GG EK_TASKING_INFO pump_unit__get_pump
+GG EK_TASKING_NONBLOCKING [ pump_unit__get_tanks_size pump_unit__get_id pump_unit__get_to_pay pump_unit__get_pumped pump_unit__get_fuel pump_unit__unit_is_using pump_unit__unit_is_paid pump_unit__get_pump_unit_state pump_unit__get_pump_nozzle_state pump_unit__set_is_using pump_unit__set_is_paid pump_unit__set_to_pay pump_unit__set_unit_id pump_unit__set_pumped pump_unit__set_pump_active_state pump_unit__set_pump_nozzle_state pump_unit__add_pump pump_unit__left_nozzle pump_unit__return_nozzle pump_unit__start_pumping pump_unit__stop_pumping pump_unit__get_pump ]
 GG EK_TASKING_INFO pump_unit__get_tanks_size
 GG EK_TASKING_INFO pump_unit__get_id
 GG EK_TASKING_INFO pump_unit__get_to_pay
@@ -510,4 +520,5 @@ GG EK_TASKING_INFO pump_unit__left_nozzle
 GG EK_TASKING_INFO pump_unit__return_nozzle
 GG EK_TASKING_INFO pump_unit__start_pumping
 GG EK_TASKING_INFO pump_unit__stop_pumping
+GG EK_TASKING_INFO pump_unit__get_pump
 GG EK_END_MARKER

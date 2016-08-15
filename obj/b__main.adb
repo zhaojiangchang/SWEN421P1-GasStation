@@ -27,8 +27,9 @@ package body ada_main is
    E017 : Short_Integer; pragma Import (Ada, E017, "system__secondary_stack_E");
    E036 : Short_Integer; pragma Import (Ada, E036, "system__traceback__symbolic_E");
    E006 : Short_Integer; pragma Import (Ada, E006, "ada__text_io_E");
-   E107 : Short_Integer; pragma Import (Ada, E107, "pump_E");
-   E125 : Short_Integer; pragma Import (Ada, E125, "pump_unit_E");
+   E111 : Short_Integer; pragma Import (Ada, E111, "pump_E");
+   E127 : Short_Integer; pragma Import (Ada, E127, "pump_unit_E");
+   E107 : Short_Integer; pragma Import (Ada, E107, "cash_register_E");
    E109 : Short_Integer; pragma Import (Ada, E109, "sprint_E");
 
    Local_Priority_Specific_Dispatching : constant String := "";
@@ -187,8 +188,9 @@ package body ada_main is
       Ada.Text_Io'Elab_Body;
       E006 := E006 + 1;
       E109 := E109 + 1;
-      E125 := E125 + 1;
       E107 := E107 + 1;
+      E127 := E127 + 1;
+      E111 := E111 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -225,6 +227,7 @@ package body ada_main is
 
 --  BEGIN Object file/option list
    --   C:\Users\JackyChang\Documents\421A1\obj\sPrint.o
+   --   C:\Users\JackyChang\Documents\421A1\obj\cash_register.o
    --   C:\Users\JackyChang\Documents\421A1\obj\pump_unit.o
    --   C:\Users\JackyChang\Documents\421A1\obj\pump.o
    --   C:\Users\JackyChang\Documents\421A1\obj\main.o

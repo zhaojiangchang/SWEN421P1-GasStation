@@ -11,12 +11,12 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pump_unit_harness%b	pump_unit_harness.adb	500049d1 OO SU
+U pump_unit_harness%b	pump_unit_harness.adb	5c1af7fd OO SU
 W aunit%s		aunit.adb		aunit.ali
 W aunit.reporter%s	aunit-reporter.ads	aunit-reporter.ali
 W aunit.reporter.text%s	aunit-reporter-text.adb	aunit-reporter-text.ali
 W aunit.run%s		aunit-run.adb		aunit-run.ali
-W pump_unit_suite%b	pump_unit_suite.adb	pump_unit_suite.ali
+W pump_unit_suite%s	pump_unit_suite.adb	pump_unit_suite.ali
 W system%s		system.ads		system.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
@@ -31,7 +31,6 @@ D aunit-reporter-text.ads  20160516092006 309c9c18 aunit.reporter.text%s
 D aunit-run.ads		20160516092006 34d20999 aunit.run%s
 D aunit-run.adb		20160516092006 1550dc91 aunit.run%b
 D aunit-simple_test_cases.ads  20160516092006 4111c32f aunit.simple_test_cases%s
-D aunit-test_cases.ads	20160516092006 3fb77584 aunit.test_cases%s
 D aunit-test_filters.ads  20160516092006 f10b2127 aunit.test_filters%s
 D aunit-test_results.ads  20160516092006 171847c9 aunit.test_results%s
 D aunit-test_suites.ads	20160516092006 6821dc24 aunit.test_suites%s
@@ -39,38 +38,36 @@ D aunit-tests.ads	20160516092006 1da11d49 aunit.tests%s
 D aunit-time_measure.ads  20160516092006 a8b9fbfb aunit.time_measure%s
 D gnat.ads		20160516092932 fd2ad2f1 gnat%s
 D g-souinf.ads		20160516092932 291df751 gnat.source_info%s
-D pump.ads		20160814121532 99ea1c67 pump%s
-D pump_unit.ads		20160814125646 e440f765 pump_unit%s
-D pump_unit-test.ads	20160814101518 b5bd538f pump_unit.test%s
-D pump_unit_harness.adb	20160814072328 ff9d3d07 pump_unit_harness%b
-D pump_unit_suite.adb	20160814070636 abd3e157 pump_unit_suite%b
+D pump_unit_harness.adb	20160814132024 25551fe6 pump_unit_harness%b
+D pump_unit_suite.ads	20160814132420 7d017d9a pump_unit_suite%s
 D system.ads		20160516092930 2da59038 system%s
 X 5 aunit.ads
-34K9*AUnit 48e10 24|1r6 2r6 7r28 9r15
+34K9*AUnit 48e10 20|1r6 2r6 7r28 9r15
 X 8 aunit-reporter.ads
-35K15*Reporter 46e19 24|1r12 9r21
+35K15*Reporter 46e19 20|1r12 9r21
 X 9 aunit-reporter-text.ads
-33K24*Text 66e24 24|1w21 9r30
-35R9*Text_Reporter<8|37R9> 64e14 24|9r35
+33K24*Text 66e24 20|1w21 9r30
+35R9*Text_Reporter<8|37R9> 64e14 20|9r35
 X 10 aunit-run.ads
-38K15*Run 65e14 24|2w12 7r34
-42u14*Test_Runner 24|7r38
+38K15*Run 65e14 20|2w12 7r34
+42u14*Test_Runner 20|7r38
 X 11 aunit-run.adb
-37U14 Run 24|88s7
-X 15 aunit-test_results.ads
-133U14*Clear 24|87s20
-X 16 aunit-test_suites.ads
+37U14 Run 20|88s7
+X 14 aunit-test_results.ads
+133U14*Clear 20|87s20
+X 15 aunit-test_suites.ads
 44P9*Access_Test_Suite(43R9)
-X 24 pump_unit_harness.adb
+X 20 pump_unit_harness.adb
 5U11*PUMP_UNIT_Harness 5b11 13l5 13t22
-7U14 Runner[10|42] 11|79b14 24|12s4
+7U14 Runner[10|42] 11|79b14 20|12s4
 9r4 Reporter{9|35R9} 12r12
 43c7 Reporter<8|37R9> 88r37[7]
 44r7 Options{7|36R9} 88r28[7]
-83r7 Results{15|40R9} 87m27[7] 87r27[7] 88m19[7] 88r19[7]
+83r7 Results{14|40R9} 87m27[7] 87r27[7] 88m19[7] 88r19[7]
 84e7 Outcome{5|40E9} 85r28[7] 88m47[7]
-X 25 pump_unit_suite.adb
-4V10*PUMP_UNIT_Suite{16|44P9} 24|3w6 7r51 88s12
+X 21 pump_unit_suite.ads
+3K9*PUMP_UNIT_Suite 20|3w6 7r51 21|7e20
+5V13*Suite{15|44P9} 20|7r67 88s12
 FD 1 ada.ads
 FS .1 16K9 ada
 FD 2 a-calend.ads
@@ -195,92 +192,11 @@ FS .2 50V13 aunit__simple_test_cases__routine_name
 FS .3 57U14 aunit__simple_test_cases__set_up
 FS .4 60U14 aunit__simple_test_cases__tear_down
 FS .5 67U14 aunit__simple_test_cases__run
-FD 13 aunit-test_cases.ads
-FS .1 39K15 aunit__test_cases
-FS .2 52U14 aunit__test_cases__add_routine
-FS .3 57U14 aunit__test_cases__set_up_case
-FS .4 60U14 aunit__test_cases__tear_down_case
-FS .5 63K12 aunit__test_cases__registration
-FS .6 65U17 aunit__test_cases__registration__register_routine
-FS .7 71V16 aunit__test_cases__registration__routine_count
-FS .8 91U14 aunit__test_cases__run
-FS .9 98U14 aunit__test_cases__run_test
-FS .10 101V13 aunit__test_cases__routine_name
-FS .11 109K12 aunit__test_cases__routine_lists
-FS .12 59V13 aunit__test_cases__routine_lists__Oeq__2
-FS .13 61V13 aunit__test_cases__routine_lists__length
-FS .14 63V13 aunit__test_cases__routine_lists__is_empty
-FS .15 65U14 aunit__test_cases__routine_lists__clear
-FS .16 67V13 aunit__test_cases__routine_lists__element
-FS .17 69U14 aunit__test_cases__routine_lists__replace_element
-FS .18 83U14 aunit__test_cases__routine_lists__move
-FS .19 87U14 aunit__test_cases__routine_lists__insert
-FS .20 93U14 aunit__test_cases__routine_lists__insert__2
-FS .21 100U14 aunit__test_cases__routine_lists__insert__3
-FS .22 106U14 aunit__test_cases__routine_lists__prepend
-FS .23 111U14 aunit__test_cases__routine_lists__append
-FS .24 116U14 aunit__test_cases__routine_lists__delete
-FS .25 121U14 aunit__test_cases__routine_lists__delete_first
-FS .26 125U14 aunit__test_cases__routine_lists__delete_last
-FS .27 129U14 aunit__test_cases__routine_lists__reverse_elements
-FS .28 131U14 aunit__test_cases__routine_lists__swap
-FS .29 135U14 aunit__test_cases__routine_lists__swap_links
-FS .30 139U14 aunit__test_cases__routine_lists__splice
-FS .31 144U14 aunit__test_cases__routine_lists__splice__2
-FS .32 150U14 aunit__test_cases__routine_lists__splice__3
-FS .33 155V13 aunit__test_cases__routine_lists__first
-FS .34 157V13 aunit__test_cases__routine_lists__first_element
-FS .35 159V13 aunit__test_cases__routine_lists__last
-FS .36 161V13 aunit__test_cases__routine_lists__last_element
-FS .37 163V13 aunit__test_cases__routine_lists__next
-FS .38 165U14 aunit__test_cases__routine_lists__next__2
-FS .39 167V13 aunit__test_cases__routine_lists__previous
-FS .40 169U14 aunit__test_cases__routine_lists__previous__2
-FS .41 171V13 aunit__test_cases__routine_lists__find
-FS .42 176V13 aunit__test_cases__routine_lists__reverse_find
-FS .43 181V13 aunit__test_cases__routine_lists__contains
-FS .44 185V13 aunit__test_cases__routine_lists__has_element
-FS .45 189U14 aunit__test_cases__routine_lists__iterate
-FS .46 112K12 aunit__test_cases__failure_lists
-FS .47 59V13 aunit__test_cases__failure_lists__Oeq__2
-FS .48 61V13 aunit__test_cases__failure_lists__length
-FS .49 63V13 aunit__test_cases__failure_lists__is_empty
-FS .50 65U14 aunit__test_cases__failure_lists__clear
-FS .51 67V13 aunit__test_cases__failure_lists__element
-FS .52 69U14 aunit__test_cases__failure_lists__replace_element
-FS .53 83U14 aunit__test_cases__failure_lists__move
-FS .54 87U14 aunit__test_cases__failure_lists__insert
-FS .55 93U14 aunit__test_cases__failure_lists__insert__2
-FS .56 100U14 aunit__test_cases__failure_lists__insert__3
-FS .57 106U14 aunit__test_cases__failure_lists__prepend
-FS .58 111U14 aunit__test_cases__failure_lists__append
-FS .59 116U14 aunit__test_cases__failure_lists__delete
-FS .60 121U14 aunit__test_cases__failure_lists__delete_first
-FS .61 125U14 aunit__test_cases__failure_lists__delete_last
-FS .62 129U14 aunit__test_cases__failure_lists__reverse_elements
-FS .63 131U14 aunit__test_cases__failure_lists__swap
-FS .64 135U14 aunit__test_cases__failure_lists__swap_links
-FS .65 139U14 aunit__test_cases__failure_lists__splice
-FS .66 144U14 aunit__test_cases__failure_lists__splice__2
-FS .67 150U14 aunit__test_cases__failure_lists__splice__3
-FS .68 155V13 aunit__test_cases__failure_lists__first
-FS .69 157V13 aunit__test_cases__failure_lists__first_element
-FS .70 159V13 aunit__test_cases__failure_lists__last
-FS .71 161V13 aunit__test_cases__failure_lists__last_element
-FS .72 163V13 aunit__test_cases__failure_lists__next
-FS .73 165U14 aunit__test_cases__failure_lists__next__2
-FS .74 167V13 aunit__test_cases__failure_lists__previous
-FS .75 169U14 aunit__test_cases__failure_lists__previous__2
-FS .76 171V13 aunit__test_cases__failure_lists__find
-FS .77 176V13 aunit__test_cases__failure_lists__reverse_find
-FS .78 181V13 aunit__test_cases__failure_lists__contains
-FS .79 185V13 aunit__test_cases__failure_lists__has_element
-FS .80 189U14 aunit__test_cases__failure_lists__iterate
-FD 14 aunit-test_filters.ads
+FD 13 aunit-test_filters.ads
 FS .1 38K15 aunit__test_filters
 FS .2 51U14 aunit__test_filters__set_name
 FS .3 64V13 aunit__test_filters__is_active__2
-FD 15 aunit-test_results.ads
+FD 14 aunit-test_results.ads
 FS .1 38K15 aunit__test_results
 FS .2 73K12 aunit__test_results__result_lists
 FS .3 59V13 aunit__test_results__result_lists__Oeq__2
@@ -332,7 +248,7 @@ FS .48 124U14 aunit__test_results__successes
 FS .49 127V13 aunit__test_results__successful
 FS .50 130V13 aunit__test_results__test_count
 FS .51 133U14 aunit__test_results__clear
-FD 16 aunit-test_suites.ads
+FD 15 aunit-test_suites.ads
 FS .1 41K15 aunit__test_suites
 FS .2 46U14 aunit__test_suites__add_test
 FS .3 48U14 aunit__test_suites__add_test__2
@@ -373,16 +289,16 @@ FS .37 176V13 aunit__test_suites__test_lists__reverse_find
 FS .38 181V13 aunit__test_suites__test_lists__contains
 FS .39 185V13 aunit__test_suites__test_lists__has_element
 FS .40 189U14 aunit__test_suites__test_lists__iterate
-FD 17 aunit-tests.ads
+FD 16 aunit-tests.ads
 FS .1 36K15 aunit__tests
-FD 18 aunit-time_measure.ads
+FD 17 aunit-time_measure.ads
 FS .1 34K15 aunit__time_measure
 FS .2 46U14 aunit__time_measure__start_measure
 FS .3 49U14 aunit__time_measure__stop_measure
 FS .4 52V13 aunit__time_measure__get_measure
-FD 19 gnat.ads
+FD 18 gnat.ads
 FS .1 34K9 gnat
-FD 20 g-souinf.ads
+FD 19 g-souinf.ads
 FS .1 39K14 gnat__source_info
 FS .2 49V13 gnat__source_info__file
 FS .3 54V13 gnat__source_info__line
@@ -391,61 +307,16 @@ FS .5 68V13 gnat__source_info__enclosing_entity
 FS .6 82V13 gnat__source_info__compilation_iso_date
 FS .7 86V13 gnat__source_info__compilation_date
 FS .8 91V13 gnat__source_info__compilation_time
-FD 21 pump.ads
-FS .1 1K9 pump
-FS .2 33U14 pump__set_fuel_price
-FS .3 34U14 pump__set_pump_state
-FS .4 35U14 pump__set_pumped
-FS .5 36U14 pump__set_pump_nozzle_state
-FS .6 38U14 pump__append_reservoir
-FS .7 40U14 pump__set_reservoir_size
-FS .8 42U14 pump__remove_petrol_reservoir
-FS .9 48V13 pump__get_state
-FS .10 49V13 pump__get_current_nozzle_state
-FS .11 50V13 pump__get_unit_price
-FS .12 51V13 pump__get_tanks_size
-FS .13 52V13 pump__get_resevoir_category
-FD 22 pump_unit.ads
-FS .1 3K9 pump_unit
-FS .2 30V13 pump_unit__get_pump
-FS .3 31V13 pump_unit__get_tanks_size
-FS .4 32V13 pump_unit__get_id
-FS .5 33V13 pump_unit__get_to_pay
-FS .6 34V13 pump_unit__get_pumped
-FS .7 35V13 pump_unit__get_fuel
-FS .8 36V13 pump_unit__unit_is_using
-FS .9 37V13 pump_unit__unit_is_paid
-FS .10 38V13 pump_unit__get_pump_unit_state
-FS .11 39V13 pump_unit__get_pump_nozzle_state
-FS .12 43U14 pump_unit__set_is_using
-FS .13 44U14 pump_unit__set_is_paid
-FS .14 45U14 pump_unit__set_to_pay
-FS .15 46U14 pump_unit__set_unit_id
-FS .16 47U14 pump_unit__set_pumped
-FS .17 48U14 pump_unit__set_pump_active_state
-FS .18 49U14 pump_unit__set_pump_nozzle_state
-FS .19 51U14 pump_unit__add_pump
-FS .20 53U14 pump_unit__left_nozzle
-FS .21 58U14 pump_unit__return_nozzle
-FS .22 67U14 pump_unit__start_pumping
-FS .23 72U14 pump_unit__stop_pumping
-FD 23 pump_unit-test.ads
-FS .1 3K19 pump_unit__test
-FS .2 7U25 pump_unit__test__set_up_case
-FS .3 9U25 pump_unit__test__set_up
-FS .4 10U25 pump_unit__test__tear_down
-FS .5 12U25 pump_unit__test__tear_down_case
-FS .6 14U14 pump_unit__test__register_tests__2
-FS .7 15V13 pump_unit__test__name__2
-FD 24 pump_unit_harness.adb
+FD 20 pump_unit_harness.adb
 FS .1 5U11 pump_unit_harness
 FS .2 7K4 pump_unit_harness__runnerGP110
 FS .3 7U14 pump_unit_harness__runnerGP110__runnerR
-FS .4 7K4 pump_unit_harness__runnerGP110 -> 24.2
-FS .5 7U14 pump_unit_harness__runnerGP110__runnerR -> 24.3
-FD 25 pump_unit_suite.adb
-FS .1 4V10 pump_unit_suite
-FD 26 system.ads
+FS .4 7K4 pump_unit_harness__runnerGP110 -> 20.2
+FS .5 7U14 pump_unit_harness__runnerGP110__runnerR -> 20.3
+FD 21 pump_unit_suite.ads
+FS .1 3K9 pump_unit_suite
+FS .2 5V13 pump_unit_suite__suite
+FD 22 system.ads
 FS .1 37K9 system
 FS .2 77V13 system__Olt
 FS .3 78V13 system__Ole
@@ -453,21 +324,21 @@ FS .4 79V13 system__Ogt
 FS .5 80V13 system__Oge
 FS .6 81V13 system__Oeq
 FX 11 aunit-run.adb .1 aunit__run
-F 37*14 aunit__run__run 24|.5:88s7
-FX 15 aunit-test_results.ads .1 aunit__test_results
-F 133*14 aunit__test_results__clear 24|.5:87s20
-FX 24 pump_unit_harness.adb .1 pump_unit_harness
+F 37*14 aunit__run__run 20|.5:88s7
+FX 14 aunit-test_results.ads .1 aunit__test_results
+F 133*14 aunit__test_results__clear 20|.5:87s20
+FX 20 pump_unit_harness.adb .1 pump_unit_harness
 F 7*14 pump_unit_harness__runner 12s4
 F 9*4 pump_unit_harness__reporter 12r12
-FX 24 pump_unit_harness.adb .3 pump_unit_harness__runnerGP110__runnerR
+FX 20 pump_unit_harness.adb .3 pump_unit_harness__runnerGP110__runnerR
 F 43>7 pump_unit_harness__runnerGP110__runnerR__reporter .5:88c37
 F 44>7 pump_unit_harness__runnerGP110__runnerR__options .5:88c28
-FX 24 pump_unit_harness.adb .5 pump_unit_harness__runnerGP110__runnerR
+FX 20 pump_unit_harness.adb .5 pump_unit_harness__runnerGP110__runnerR
 F 83*7 pump_unit_harness__runnerGP110__runnerR__results 87m27 87r27 88m19
 . 88r19
 F 84*7 pump_unit_harness__runnerGP110__runnerR__outcome 85r28 88m47
-FX 25 pump_unit_suite.adb .1 pump_unit_suite
-F 4*10 pump_unit_suite 24|.5:88s12
+FX 21 pump_unit_suite.ads .1 pump_unit_suite
+F 5*13 pump_unit_suite__suite 20|.5:88s12
 
 GG EK_REMOTE_STATES
 GG EK_GLOBALS pump_unit_harness KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ pump_unit_harness__runner ]

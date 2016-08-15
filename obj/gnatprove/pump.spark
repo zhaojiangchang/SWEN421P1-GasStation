@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 15
+          "line": 34
         }
       ],
       "spark": "all"
@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 17
+          "line": 36
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 21
+          "line": 40
         }
       ],
       "spark": "all"
@@ -35,7 +35,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 31
+          "line": 50
         }
       ],
       "spark": "all"
@@ -45,7 +45,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 32
+          "line": 51
         }
       ],
       "spark": "all"
@@ -55,7 +55,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 33
+          "line": 52
         }
       ],
       "spark": "all"
@@ -65,7 +65,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 23
+          "line": 42
         }
       ],
       "spark": "all"
@@ -75,7 +75,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 16
+          "line": 35
         }
       ],
       "spark": "all"
@@ -85,7 +85,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 19
+          "line": 38
         }
       ],
       "spark": "all"
@@ -95,7 +95,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 14
+          "line": 33
         }
       ],
       "spark": "all"
@@ -105,7 +105,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 30
+          "line": 49
         }
       ],
       "spark": "all"
@@ -115,7 +115,7 @@
       "sloc": [
         {
           "file": "pump.ads",
-          "line": 29
+          "line": 48
         }
       ],
       "spark": "all"
@@ -143,11 +143,11 @@
         "sloc": [
           {
             "file": "pump.ads",
-            "line": 19
+            "line": 38
           }
         ]
       },
-      "tracefile": "pump__flow__155.trace",
+      "tracefile": "pump__flow__127.trace",
       "how_proved": "flow"
     },
     {
@@ -161,11 +161,11 @@
         "sloc": [
           {
             "file": "pump.ads",
-            "line": 19
+            "line": 38
           }
         ]
       },
-      "tracefile": "pump__flow__155.trace",
+      "tracefile": "pump__flow__127.trace",
       "how_proved": "flow"
     }
   ],
@@ -181,7 +181,7 @@
         "sloc": [
           {
             "file": "pump.ads",
-            "line": 23
+            "line": 42
           }
         ]
       },
@@ -189,51 +189,76 @@
     },
     {
       "file": "pump.ads",
-      "line": 26,
-      "col": 12,
-      "rule": "VC_POSTCONDITION",
+      "line": 44,
+      "col": 42,
+      "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
         "name": "PUMP.REMOVE_PETROL_RESERVOIR",
         "sloc": [
           {
             "file": "pump.ads",
-            "line": 23
+            "line": 42
           }
         ]
       },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 1.09999999403954E-01
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump.ads",
+      "line": 45,
+      "col": 12,
+      "rule": "VC_POSTCONDITION",
+      "severity": "medium",
+      "entity": {
+        "name": "PUMP.REMOVE_PETROL_RESERVOIR",
+        "sloc": [
+          {
+            "file": "pump.ads",
+            "line": 42
+          }
+        ]
+      },
+      "cntexmp": {
+        "pump.adb": {
+          "82": [
+            {
+              "name": "pump_r",
+              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 0, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "pump.ads": {
+          "42": [
+            {
+              "name": "pump_r",
+              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 0, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
+              "kind": "variable"
+            }
+          ]
         }
-      }
+      },
+      "msg_id": 0,
+      "how_proved": "prover"
     },
     {
       "file": "pump.adb",
       "line": 82,
       "col": 69,
       "rule": "VC_RANGE_CHECK",
-      "severity": "info",
+      "severity": "medium",
       "entity": {
         "name": "PUMP.REMOVE_PETROL_RESERVOIR",
         "sloc": [
           {
             "file": "pump.ads",
-            "line": 23
+            "line": 42
           }
         ]
       },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 5.99999986588955E-02
-        }
-      }
+      "msg_id": 1,
+      "how_proved": "prover"
     }
   ],
   "assumptions": [
@@ -246,7 +271,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 5
+                "line": 6
               }
             ]
           }
@@ -259,7 +284,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 15
+              "line": 34
             }
           ]
         }
@@ -274,7 +299,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 5
+                "line": 6
               }
             ]
           }
@@ -286,7 +311,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 5
+                "line": 6
               }
             ]
           }
@@ -299,7 +324,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 15
+              "line": 34
             }
           ]
         }
@@ -315,7 +340,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 16
+              "line": 35
             }
           ]
         }
@@ -331,7 +356,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 16
+              "line": 35
             }
           ]
         }
@@ -346,7 +371,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 6
+                "line": 7
               }
             ]
           }
@@ -359,7 +384,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 17
+              "line": 36
             }
           ]
         }
@@ -374,7 +399,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 6
+                "line": 7
               }
             ]
           }
@@ -386,7 +411,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 6
+                "line": 7
               }
             ]
           }
@@ -399,7 +424,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 17
+              "line": 36
             }
           ]
         }
@@ -414,7 +439,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 7
+                "line": 8
               }
             ]
           }
@@ -427,7 +452,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 19
+              "line": 38
             }
           ]
         }
@@ -442,7 +467,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 7
+                "line": 8
               }
             ]
           }
@@ -454,7 +479,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 7
+                "line": 8
               }
             ]
           }
@@ -467,7 +492,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 19
+              "line": 38
             }
           ]
         }
@@ -482,7 +507,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -495,47 +520,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 21
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 32
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 32
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_POST",
-        "arg": {
-          "name": "PUMP.REMOVE_PETROL_RESERVOIR",
-          "sloc": [
-            {
-              "file": "pump.ads",
-              "line": 23
+              "line": 40
             }
           ]
         }
@@ -550,7 +535,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -562,7 +547,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -575,7 +560,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 21
+              "line": 40
             }
           ]
         }
@@ -583,50 +568,6 @@
     },
     {
       "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP.GET_RESEVOIR_CATEGORY",
-          "sloc": [
-            {
-              "file": "pump.ads",
-              "line": 33
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP.GET_RESEVOIR_CATEGORY",
-          "sloc": [
-            {
-              "file": "pump.ads",
-              "line": 33
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 32
-              }
-            ]
-          }
-        }
       ],
       "claim": {
         "predicate": "CLAIM_EFFECTS",
@@ -635,47 +576,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 23
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 32
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 32
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP.REMOVE_PETROL_RESERVOIR",
-          "sloc": [
-            {
-              "file": "pump.ads",
-              "line": 23
+              "line": 42
             }
           ]
         }
@@ -687,11 +588,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "PUMP.GET_UNIT_PRICE",
+          "name": "PUMP.GET_TANKS_SIZE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 31
+              "line": 51
             }
           ]
         }
@@ -703,11 +604,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "PUMP.GET_UNIT_PRICE",
+          "name": "PUMP.GET_TANKS_SIZE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 31
+              "line": 51
             }
           ]
         }
@@ -719,11 +620,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "PUMP.GET_STATE",
+          "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 29
+              "line": 49
             }
           ]
         }
@@ -735,11 +636,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "PUMP.GET_STATE",
+          "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 29
+              "line": 49
             }
           ]
         }
@@ -767,11 +668,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "PUMP.GET_TANKS_SIZE",
+          "name": "PUMP.GET_RESEVOIR_CATEGORY",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 32
+              "line": 52
             }
           ]
         }
@@ -783,11 +684,11 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "PUMP.GET_TANKS_SIZE",
+          "name": "PUMP.GET_RESEVOIR_CATEGORY",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 32
+              "line": 52
             }
           ]
         }
@@ -799,11 +700,11 @@
       "claim": {
         "predicate": "CLAIM_EFFECTS",
         "arg": {
-          "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
+          "name": "PUMP.GET_UNIT_PRICE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 30
+              "line": 50
             }
           ]
         }
@@ -815,11 +716,43 @@
       "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
+          "name": "PUMP.GET_UNIT_PRICE",
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 30
+              "line": 50
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP.GET_STATE",
+          "sloc": [
+            {
+              "file": "pump.ads",
+              "line": 48
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP.GET_STATE",
+          "sloc": [
+            {
+              "file": "pump.ads",
+              "line": 48
             }
           ]
         }
@@ -834,7 +767,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -847,7 +780,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 14
+              "line": 33
             }
           ]
         }
@@ -862,7 +795,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -874,7 +807,7 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 4
+                "line": 5
               }
             ]
           }
@@ -887,7 +820,7 @@
           "sloc": [
             {
               "file": "pump.ads",
-              "line": 14
+              "line": 33
             }
           ]
         }

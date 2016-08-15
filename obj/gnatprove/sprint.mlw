@@ -1686,7 +1686,7 @@ module Ada__streams__write__item
  use import "_gnatprove_standard".Main
  use        Ada__streams__stream_element_array
 
- function item #"a-stream.ads" 65 0 0# "model_projected" "model_trace:5819" 
+ function item #"a-stream.ads" 65 0 0# "model_projected" "model_trace:5803" 
    : Ada__streams__stream_element_array.stream_element_array
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 54 0 0# 
@@ -1714,7 +1714,7 @@ module Ada__streams__write_sea__v
  use import "_gnatprove_standard".Main
  use        Ada__streams__stream_element_array
 
- function v #"a-stream.ads" 82 0 0# "model_projected" "model_trace:5889" 
+ function v #"a-stream.ads" 82 0 0# "model_projected" "model_trace:5873" 
    : Ada__streams__stream_element_array.stream_element_array
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 54 0 0# 
@@ -1799,7 +1799,7 @@ end
 module System__system_name
  use import "_gnatprove_standard".Main
 
- function system_name #"system.ads" 47 0 0# "model" "model_trace:5950" 
+ function system_name #"system.ads" 47 0 0# "model" "model_trace:5934" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 46 0 0# 
@@ -2183,7 +2183,7 @@ end
 module System__default_bit_order
  use import "_gnatprove_standard".Main
 
- function default_bit_order #"system.ads" 92 0 0# "model" "model_trace:6299" 
+ function default_bit_order #"system.ads" 92 0 0# "model" "model_trace:6283" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 91 0 0# 
@@ -2195,7 +2195,7 @@ end
 module System__max_priority
  use import "_gnatprove_standard".Main
 
- function max_priority #"system.ads" 97 0 0# "model" "model_trace:6315" 
+ function max_priority #"system.ads" 97 0 0# "model" "model_trace:6299" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2207,7 +2207,7 @@ end
 module System__max_interrupt_priority
  use import "_gnatprove_standard".Main
 
- function max_interrupt_priority #"system.ads" 98 0 0# "model" "model_trace:6325" 
+ function max_interrupt_priority #"system.ads" 98 0 0# "model" "model_trace:6309" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2357,7 +2357,7 @@ end
 module System__default_priority
  use import "_gnatprove_standard".Main
 
- function default_priority #"system.ads" 104 0 0# "model" "model_trace:6377" 
+ function default_priority #"system.ads" 104 0 0# "model" "model_trace:6361" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 101 0 0# 
@@ -2369,7 +2369,7 @@ end
 module System__backend_divide_checks
  use import "_gnatprove_standard".Main
 
- function backend_divide_checks #"system.ads" 121 0 0# "model" "model_trace:6407" 
+ function backend_divide_checks #"system.ads" 121 0 0# "model" "model_trace:6391" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 121 0 0# 
@@ -2381,7 +2381,7 @@ end
 module System__backend_overflow_checks
  use import "_gnatprove_standard".Main
 
- function backend_overflow_checks #"system.ads" 122 0 0# "model" "model_trace:6417" 
+ function backend_overflow_checks #"system.ads" 122 0 0# "model" "model_trace:6401" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 122 0 0# 
@@ -2393,7 +2393,7 @@ end
 module System__command_line_args
  use import "_gnatprove_standard".Main
 
- function command_line_args #"system.ads" 123 0 0# "model" "model_trace:6427" 
+ function command_line_args #"system.ads" 123 0 0# "model" "model_trace:6411" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 123 0 0# 
@@ -2405,7 +2405,7 @@ end
 module System__configurable_run_time
  use import "_gnatprove_standard".Main
 
- function configurable_run_time #"system.ads" 124 0 0# "model" "model_trace:6437" 
+ function configurable_run_time #"system.ads" 124 0 0# "model" "model_trace:6421" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 124 0 0# 
@@ -2417,7 +2417,7 @@ end
 module System__denorm
  use import "_gnatprove_standard".Main
 
- function denorm #"system.ads" 125 0 0# "model" "model_trace:6447" 
+ function denorm #"system.ads" 125 0 0# "model" "model_trace:6431" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 125 0 0# 
@@ -2429,7 +2429,7 @@ end
 module System__duration_32_bits
  use import "_gnatprove_standard".Main
 
- function duration_32_bits #"system.ads" 126 0 0# "model" "model_trace:6457" 
+ function duration_32_bits #"system.ads" 126 0 0# "model" "model_trace:6441" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 126 0 0# 
@@ -2441,7 +2441,7 @@ end
 module System__exit_status_supported
  use import "_gnatprove_standard".Main
 
- function exit_status_supported #"system.ads" 127 0 0# "model" "model_trace:6467" 
+ function exit_status_supported #"system.ads" 127 0 0# "model" "model_trace:6451" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 127 0 0# 
@@ -2453,7 +2453,7 @@ end
 module System__fractional_fixed_ops
  use import "_gnatprove_standard".Main
 
- function fractional_fixed_ops #"system.ads" 128 0 0# "model" "model_trace:6477" 
+ function fractional_fixed_ops #"system.ads" 128 0 0# "model" "model_trace:6461" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 128 0 0# 
@@ -2465,7 +2465,7 @@ end
 module System__frontend_layout
  use import "_gnatprove_standard".Main
 
- function frontend_layout #"system.ads" 129 0 0# "model" "model_trace:6487" 
+ function frontend_layout #"system.ads" 129 0 0# "model" "model_trace:6471" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 129 0 0# 
@@ -2477,7 +2477,7 @@ end
 module System__machine_overflows
  use import "_gnatprove_standard".Main
 
- function machine_overflows #"system.ads" 130 0 0# "model" "model_trace:6497" 
+ function machine_overflows #"system.ads" 130 0 0# "model" "model_trace:6481" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 130 0 0# 
@@ -2489,7 +2489,7 @@ end
 module System__machine_rounds
  use import "_gnatprove_standard".Main
 
- function machine_rounds #"system.ads" 131 0 0# "model" "model_trace:6507" 
+ function machine_rounds #"system.ads" 131 0 0# "model" "model_trace:6491" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 131 0 0# 
@@ -2501,7 +2501,7 @@ end
 module System__preallocated_stacks
  use import "_gnatprove_standard".Main
 
- function preallocated_stacks #"system.ads" 132 0 0# "model" "model_trace:6517" 
+ function preallocated_stacks #"system.ads" 132 0 0# "model" "model_trace:6501" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 132 0 0# 
@@ -2513,7 +2513,7 @@ end
 module System__signed_zeros
  use import "_gnatprove_standard".Main
 
- function signed_zeros #"system.ads" 133 0 0# "model" "model_trace:6527" 
+ function signed_zeros #"system.ads" 133 0 0# "model" "model_trace:6511" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 133 0 0# 
@@ -2525,7 +2525,7 @@ end
 module System__stack_check_default
  use import "_gnatprove_standard".Main
 
- function stack_check_default #"system.ads" 134 0 0# "model" "model_trace:6537" 
+ function stack_check_default #"system.ads" 134 0 0# "model" "model_trace:6521" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 134 0 0# 
@@ -2537,7 +2537,7 @@ end
 module System__stack_check_probes
  use import "_gnatprove_standard".Main
 
- function stack_check_probes #"system.ads" 135 0 0# "model" "model_trace:6547" 
+ function stack_check_probes #"system.ads" 135 0 0# "model" "model_trace:6531" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 135 0 0# 
@@ -2549,7 +2549,7 @@ end
 module System__stack_check_limits
  use import "_gnatprove_standard".Main
 
- function stack_check_limits #"system.ads" 136 0 0# "model" "model_trace:6557" 
+ function stack_check_limits #"system.ads" 136 0 0# "model" "model_trace:6541" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 136 0 0# 
@@ -2561,7 +2561,7 @@ end
 module System__support_aggregates
  use import "_gnatprove_standard".Main
 
- function support_aggregates #"system.ads" 137 0 0# "model" "model_trace:6567" 
+ function support_aggregates #"system.ads" 137 0 0# "model" "model_trace:6551" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 137 0 0# 
@@ -2573,7 +2573,7 @@ end
 module System__support_atomic_primitives
  use import "_gnatprove_standard".Main
 
- function support_atomic_primitives #"system.ads" 138 0 0# "model" "model_trace:6577" 
+ function support_atomic_primitives #"system.ads" 138 0 0# "model" "model_trace:6561" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 138 0 0# 
@@ -2585,7 +2585,7 @@ end
 module System__support_composite_assign
  use import "_gnatprove_standard".Main
 
- function support_composite_assign #"system.ads" 139 0 0# "model" "model_trace:6587" 
+ function support_composite_assign #"system.ads" 139 0 0# "model" "model_trace:6571" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 139 0 0# 
@@ -2597,7 +2597,7 @@ end
 module System__support_composite_compare
  use import "_gnatprove_standard".Main
 
- function support_composite_compare #"system.ads" 140 0 0# "model" "model_trace:6597" 
+ function support_composite_compare #"system.ads" 140 0 0# "model" "model_trace:6581" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 140 0 0# 
@@ -2609,7 +2609,7 @@ end
 module System__support_long_shifts
  use import "_gnatprove_standard".Main
 
- function support_long_shifts #"system.ads" 141 0 0# "model" "model_trace:6607" 
+ function support_long_shifts #"system.ads" 141 0 0# "model" "model_trace:6591" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 141 0 0# 
@@ -2621,7 +2621,7 @@ end
 module System__always_compatible_rep
  use import "_gnatprove_standard".Main
 
- function always_compatible_rep #"system.ads" 142 0 0# "model" "model_trace:6617" 
+ function always_compatible_rep #"system.ads" 142 0 0# "model" "model_trace:6601" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 142 0 0# 
@@ -2633,7 +2633,7 @@ end
 module System__suppress_standard_library
  use import "_gnatprove_standard".Main
 
- function suppress_standard_library #"system.ads" 143 0 0# "model" "model_trace:6627" 
+ function suppress_standard_library #"system.ads" 143 0 0# "model" "model_trace:6611" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 143 0 0# 
@@ -2645,7 +2645,7 @@ end
 module System__use_ada_main_program_name
  use import "_gnatprove_standard".Main
 
- function use_ada_main_program_name #"system.ads" 144 0 0# "model" "model_trace:6637" 
+ function use_ada_main_program_name #"system.ads" 144 0 0# "model" "model_trace:6621" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 144 0 0# 
@@ -2657,7 +2657,7 @@ end
 module System__frontend_exceptions
  use import "_gnatprove_standard".Main
 
- function frontend_exceptions #"system.ads" 145 0 0# "model" "model_trace:6647" 
+ function frontend_exceptions #"system.ads" 145 0 0# "model" "model_trace:6631" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 145 0 0# 
@@ -2669,7 +2669,7 @@ end
 module System__zcx_by_default
  use import "_gnatprove_standard".Main
 
- function zcx_by_default #"system.ads" 146 0 0# "model" "model_trace:6657" 
+ function zcx_by_default #"system.ads" 146 0 0# "model" "model_trace:6641" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 146 0 0# 
@@ -2884,7 +2884,7 @@ module System__underlying_priorities
  use import "_gnatprove_standard".Main
  use        Array__Int__Standard__integer
 
- function underlying_priorities #"system.ads" 165 0 0# "model_projected" "model_trace:6683" 
+ function underlying_priorities #"system.ads" 165 0 0# "model_projected" "model_trace:6667" 
    : Array__Int__Standard__integer.map
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 161 0 0# 
@@ -3080,7 +3080,7 @@ end
 module System__parameters__unspecified_size
  use import "_gnatprove_standard".Main
 
- function unspecified_size #"s-parame.ads" 64 0 0# "model" "model_trace:11394" 
+ function unspecified_size #"s-parame.ads" 64 0 0# "model" "model_trace:11378" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 61 0 0# 
@@ -3138,7 +3138,7 @@ end
 module System__parameters__dynamic
  use import "_gnatprove_standard".Main
 
- function dynamic #"s-parame.ads" 68 0 0# "model" "model_trace:11421" 
+ function dynamic #"s-parame.ads" 68 0 0# "model" "model_trace:11405" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 61 0 0# 
@@ -3150,7 +3150,7 @@ end
 module System__parameters__sec_stack_percentage
  use import "_gnatprove_standard".Main
 
- function sec_stack_percentage #"s-parame.ads" 75 0 0# "model" "model_trace:11432" 
+ function sec_stack_percentage #"s-parame.ads" 75 0 0# "model" "model_trace:11416" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 67 0 0# 
@@ -3162,7 +3162,7 @@ end
 module System__parameters__sec_stack_dynamic
  use import "_gnatprove_standard".Main
 
- function sec_stack_dynamic #"s-parame.ads" 78 0 0# "model" "model_trace:11442" 
+ function sec_stack_dynamic #"s-parame.ads" 78 0 0# "model" "model_trace:11426" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 78 0 0# 
@@ -3192,7 +3192,7 @@ end
 module System__parameters__adjust_storage_size__size
  use import "_gnatprove_standard".Main
 
- function size #"s-parame.ads" 87 0 0# "model" "model_trace:11481" 
+ function size #"s-parame.ads" 87 0 0# "model" "model_trace:11465" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 61 0 0# 
@@ -3220,7 +3220,7 @@ end
 module System__parameters__default_env_stack_size
  use import "_gnatprove_standard".Main
 
- function default_env_stack_size #"s-parame.ads" 96 0 0# "model" "model_trace:11495" 
+ function default_env_stack_size #"s-parame.ads" 96 0 0# "model" "model_trace:11479" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 61 0 0# 
@@ -3232,7 +3232,7 @@ end
 module System__parameters__stack_grows_down
  use import "_gnatprove_standard".Main
 
- function stack_grows_down #"s-parame.ads" 101 0 0# "model" "model_trace:11505" 
+ function stack_grows_down #"s-parame.ads" 101 0 0# "model" "model_trace:11489" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 101 0 0# 
@@ -3337,7 +3337,7 @@ module System__parameters__c_malloc_linkname
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function c_malloc_linkname #"s-parame.ads" 119 0 0# "model_projected" "model_trace:11548" 
+ function c_malloc_linkname #"s-parame.ads" 119 0 0# "model_projected" "model_trace:11532" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -3349,7 +3349,7 @@ end
 module System__parameters__garbage_collected
  use import "_gnatprove_standard".Main
 
- function garbage_collected #"s-parame.ads" 142 0 0# "model" "model_trace:11558" 
+ function garbage_collected #"s-parame.ads" 142 0 0# "model" "model_trace:11542" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 142 0 0# 
@@ -3361,7 +3361,7 @@ end
 module System__parameters__single_lock
  use import "_gnatprove_standard".Main
 
- function single_lock #"s-parame.ads" 157 0 0# "model" "model_trace:11568" 
+ function single_lock #"s-parame.ads" 157 0 0# "model" "model_trace:11552" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 157 0 0# 
@@ -3373,7 +3373,7 @@ end
 module System__parameters__no_abort
  use import "_gnatprove_standard".Main
 
- function no_abort #"s-parame.ads" 170 0 0# "model" "model_trace:11578" 
+ function no_abort #"s-parame.ads" 170 0 0# "model" "model_trace:11562" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 170 0 0# 
@@ -3385,7 +3385,7 @@ end
 module System__parameters__runtime_traces
  use import "_gnatprove_standard".Main
 
- function runtime_traces #"s-parame.ads" 190 0 0# "model" "model_trace:11597" 
+ function runtime_traces #"s-parame.ads" 190 0 0# "model" "model_trace:11581" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"s-parame.ads" 190 0 0# 
@@ -4140,7 +4140,7 @@ module System__crtl__strncpy__n
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function n #"s-crtl.ads" 88 0 0# "model" "model_trace:9877" 
+ function n #"s-crtl.ads" 88 0 0# "model" "model_trace:9861" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -4209,7 +4209,7 @@ end
 module System__crtl__dup__handle
  use import "_gnatprove_standard".Main
 
- function handle #"s-crtl.ads" 101 0 0# "model" "model_trace:9958" 
+ function handle #"s-crtl.ads" 101 0 0# "model" "model_trace:9942" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4237,7 +4237,7 @@ end
 module System__crtl__dup2__from
  use import "_gnatprove_standard".Main
 
- function from #"s-crtl.ads" 104 0 0# "model" "model_trace:9985" 
+ function from #"s-crtl.ads" 104 0 0# "model" "model_trace:9969" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4256,7 +4256,7 @@ end
 module System__crtl__dup2__to
  use import "_gnatprove_standard".Main
 
- function to__ #"s-crtl.ads" 104 0 0# "model" "model_trace:9992" 
+ function to__ #"s-crtl.ads" 104 0 0# "model" "model_trace:9976" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4314,7 +4314,7 @@ end
 module System__crtl__fdopen__handle
  use import "_gnatprove_standard".Main
 
- function handle #"s-crtl.ads" 110 0 0# "model" "model_trace:10047" 
+ function handle #"s-crtl.ads" 110 0 0# "model" "model_trace:10031" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4443,7 +4443,7 @@ end
 module System__crtl__fgets__n
  use import "_gnatprove_standard".Main
 
- function n #"s-crtl.ads" 119 0 0# "model" "model_trace:10146" 
+ function n #"s-crtl.ads" 119 0 0# "model" "model_trace:10130" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4532,7 +4532,7 @@ end
 module System__crtl__fopen__encoding
  use import "_gnatprove_standard".Main
 
- function encoding #"s-crtl.ads" 125 0 0# "model" "model_trace:10200" 
+ function encoding #"s-crtl.ads" 125 0 0# "model" "model_trace:10184" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 72 0 0# 
@@ -4561,7 +4561,7 @@ end
 module System__crtl__fputc__c
  use import "_gnatprove_standard".Main
 
- function c #"s-crtl.ads" 128 0 0# "model" "model_trace:10228" 
+ function c #"s-crtl.ads" 128 0 0# "model" "model_trace:10212" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4610,7 +4610,7 @@ end
 module System__crtl__fputwc__c
  use import "_gnatprove_standard".Main
 
- function c #"s-crtl.ads" 131 0 0# "model" "model_trace:10264" 
+ function c #"s-crtl.ads" 131 0 0# "model" "model_trace:10248" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4789,7 +4789,7 @@ end
 module System__crtl__freopen__encoding
  use import "_gnatprove_standard".Main
 
- function encoding #"s-crtl.ads" 144 0 0# "model" "model_trace:10391" 
+ function encoding #"s-crtl.ads" 144 0 0# "model" "model_trace:10375" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 72 0 0# 
@@ -4838,7 +4838,7 @@ end
 module System__crtl__fseek__offset
  use import "_gnatprove_standard".Main
 
- function offset #"s-crtl.ads" 149 0 0# "model" "model_trace:10428" 
+ function offset #"s-crtl.ads" 149 0 0# "model" "model_trace:10412" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 55 0 0# 
@@ -4857,7 +4857,7 @@ end
 module System__crtl__fseek__origin
  use import "_gnatprove_standard".Main
 
- function origin #"s-crtl.ads" 150 0 0# "model" "model_trace:10437" 
+ function origin #"s-crtl.ads" 150 0 0# "model" "model_trace:10421" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -4906,7 +4906,7 @@ end
 module System__crtl__fseek64__offset
  use import "_gnatprove_standard".Main
 
- function offset #"s-crtl.ads" 155 0 0# "model" "model_trace:10473" 
+ function offset #"s-crtl.ads" 155 0 0# "model" "model_trace:10457" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 65 0 0# 
@@ -4925,7 +4925,7 @@ end
 module System__crtl__fseek64__origin
  use import "_gnatprove_standard".Main
 
- function origin #"s-crtl.ads" 156 0 0# "model" "model_trace:10482" 
+ function origin #"s-crtl.ads" 156 0 0# "model" "model_trace:10466" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5015,7 +5015,7 @@ module System__crtl__getenv__s
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s #"s-crtl.ads" 165 0 0# "model_projected" "model_trace:10563" 
+ function s #"s-crtl.ads" 165 0 0# "model_projected" "model_trace:10547" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -5045,7 +5045,7 @@ end
 module System__crtl__isatty__handle
  use import "_gnatprove_standard".Main
 
- function handle #"s-crtl.ads" 168 0 0# "model" "model_trace:10592" 
+ function handle #"s-crtl.ads" 168 0 0# "model" "model_trace:10576" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5073,7 +5073,7 @@ end
 module System__crtl__lseek__fd
  use import "_gnatprove_standard".Main
 
- function fd #"s-crtl.ads" 171 0 0# "model" "model_trace:10619" 
+ function fd #"s-crtl.ads" 171 0 0# "model" "model_trace:10603" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5092,7 +5092,7 @@ end
 module System__crtl__lseek__offset
  use import "_gnatprove_standard".Main
 
- function offset #"s-crtl.ads" 171 0 0# "model" "model_trace:10628" 
+ function offset #"s-crtl.ads" 171 0 0# "model" "model_trace:10612" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 58 0 0# 
@@ -5111,7 +5111,7 @@ end
 module System__crtl__lseek__direction
  use import "_gnatprove_standard".Main
 
- function direction #"s-crtl.ads" 171 0 0# "model" "model_trace:10637" 
+ function direction #"s-crtl.ads" 171 0 0# "model" "model_trace:10621" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5140,7 +5140,7 @@ module System__crtl__malloc__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"s-crtl.ads" 174 0 0# "model" "model_trace:10664" 
+ function size #"s-crtl.ads" 174 0 0# "model" "model_trace:10648" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5210,7 +5210,7 @@ module System__crtl__memcpy__n
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function n #"s-crtl.ads" 177 0 0# "model" "model_trace:10715" 
+ function n #"s-crtl.ads" 177 0 0# "model" "model_trace:10699" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5270,7 +5270,7 @@ module System__crtl__memmove__n
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function n #"s-crtl.ads" 180 0 0# "model" "model_trace:10763" 
+ function n #"s-crtl.ads" 180 0 0# "model" "model_trace:10747" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5410,7 +5410,7 @@ module System__crtl__realloc__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"s-crtl.ads" 193 0 0# "model" "model_trace:10896" 
+ function size #"s-crtl.ads" 193 0 0# "model" "model_trace:10880" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5460,7 +5460,7 @@ module System__crtl__rmdir__dir_name
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function dir_name #"s-crtl.ads" 199 0 0# "model_projected" "model_trace:10951" 
+ function dir_name #"s-crtl.ads" 199 0 0# "model_projected" "model_trace:10935" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -5490,7 +5490,7 @@ module System__crtl__chdir__dir_name
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function dir_name #"s-crtl.ads" 202 0 0# "model_projected" "model_trace:10978" 
+ function dir_name #"s-crtl.ads" 202 0 0# "model_projected" "model_trace:10962" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -5520,7 +5520,7 @@ module System__crtl__mkdir__dir_name
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function dir_name #"s-crtl.ads" 206 0 0# "model_projected" "model_trace:11005" 
+ function dir_name #"s-crtl.ads" 206 0 0# "model_projected" "model_trace:10989" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -5539,7 +5539,7 @@ end
 module System__crtl__mkdir__encoding
  use import "_gnatprove_standard".Main
 
- function encoding #"s-crtl.ads" 207 0 0# "model" "model_trace:11014" 
+ function encoding #"s-crtl.ads" 207 0 0# "model" "model_trace:10998" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 72 0 0# 
@@ -5608,7 +5608,7 @@ end
 module System__crtl__setvbuf__mode
  use import "_gnatprove_standard".Main
 
- function mode #"s-crtl.ads" 213 0 0# "model" "model_trace:11060" 
+ function mode #"s-crtl.ads" 213 0 0# "model" "model_trace:11044" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5628,7 +5628,7 @@ module System__crtl__setvbuf__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"s-crtl.ads" 214 0 0# "model" "model_trace:11069" 
+ function size #"s-crtl.ads" 214 0 0# "model" "model_trace:11053" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5687,7 +5687,7 @@ end
 module System__crtl__ungetc__c
  use import "_gnatprove_standard".Main
 
- function c #"s-crtl.ads" 223 0 0# "model" "model_trace:11140" 
+ function c #"s-crtl.ads" 223 0 0# "model" "model_trace:11124" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5786,7 +5786,7 @@ end
 module System__crtl__open__oflag
  use import "_gnatprove_standard".Main
 
- function oflag #"s-crtl.ads" 229 0 0# "model" "model_trace:11212" 
+ function oflag #"s-crtl.ads" 229 0 0# "model" "model_trace:11196" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5815,7 +5815,7 @@ end
 module System__crtl__close__fd
  use import "_gnatprove_standard".Main
 
- function fd #"s-crtl.ads" 232 0 0# "model" "model_trace:11239" 
+ function fd #"s-crtl.ads" 232 0 0# "model" "model_trace:11223" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5843,7 +5843,7 @@ end
 module System__crtl__read__fd
  use import "_gnatprove_standard".Main
 
- function fd #"s-crtl.ads" 235 0 0# "model" "model_trace:11266" 
+ function fd #"s-crtl.ads" 235 0 0# "model" "model_trace:11250" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5883,7 +5883,7 @@ module System__crtl__read__count
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function count #"s-crtl.ads" 235 0 0# "model" "model_trace:11284" 
+ function count #"s-crtl.ads" 235 0 0# "model" "model_trace:11268" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -5912,7 +5912,7 @@ end
 module System__crtl__write__fd
  use import "_gnatprove_standard".Main
 
- function fd #"s-crtl.ads" 238 0 0# "model" "model_trace:11311" 
+ function fd #"s-crtl.ads" 238 0 0# "model" "model_trace:11295" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 53 0 0# 
@@ -5952,7 +5952,7 @@ module System__crtl__write__count
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function count #"s-crtl.ads" 238 0 0# "model" "model_trace:11329" 
+ function count #"s-crtl.ads" 238 0 0# "model" "model_trace:11313" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"s-crtl.ads" 60 0 0# 
@@ -6667,7 +6667,7 @@ module Interfaces__shift_left__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV8
 
- function value #"interfac.ads" 82 0 0# "model" "model_trace:7392" 
+ function value #"interfac.ads" 82 0 0# "model" "model_trace:7376" 
    : BV8.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 63 0 0# 
@@ -6686,7 +6686,7 @@ end
 module Interfaces__shift_left__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 83 0 0# "model" "model_trace:7401" 
+ function amount #"interfac.ads" 83 0 0# "model" "model_trace:7385" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6706,7 +6706,7 @@ module Interfaces__shift_right__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV8
 
- function value #"interfac.ads" 86 0 0# "model" "model_trace:7420" 
+ function value #"interfac.ads" 86 0 0# "model" "model_trace:7404" 
    : BV8.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 63 0 0# 
@@ -6725,7 +6725,7 @@ end
 module Interfaces__shift_right__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 87 0 0# "model" "model_trace:7429" 
+ function amount #"interfac.ads" 87 0 0# "model" "model_trace:7413" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6745,7 +6745,7 @@ module Interfaces__shift_right_arithmetic__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV8
 
- function value #"interfac.ads" 90 0 0# "model" "model_trace:7448" 
+ function value #"interfac.ads" 90 0 0# "model" "model_trace:7432" 
    : BV8.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 63 0 0# 
@@ -6764,7 +6764,7 @@ end
 module Interfaces__shift_right_arithmetic__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 91 0 0# "model" "model_trace:7457" 
+ function amount #"interfac.ads" 91 0 0# "model" "model_trace:7441" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6784,7 +6784,7 @@ module Interfaces__rotate_left__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV8
 
- function value #"interfac.ads" 94 0 0# "model" "model_trace:7476" 
+ function value #"interfac.ads" 94 0 0# "model" "model_trace:7460" 
    : BV8.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 63 0 0# 
@@ -6803,7 +6803,7 @@ end
 module Interfaces__rotate_left__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 95 0 0# "model" "model_trace:7485" 
+ function amount #"interfac.ads" 95 0 0# "model" "model_trace:7469" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6823,7 +6823,7 @@ module Interfaces__rotate_right__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV8
 
- function value #"interfac.ads" 98 0 0# "model" "model_trace:7504" 
+ function value #"interfac.ads" 98 0 0# "model" "model_trace:7488" 
    : BV8.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 63 0 0# 
@@ -6842,7 +6842,7 @@ end
 module Interfaces__rotate_right__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 99 0 0# "model" "model_trace:7513" 
+ function amount #"interfac.ads" 99 0 0# "model" "model_trace:7497" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6862,7 +6862,7 @@ module Interfaces__shift_left__2__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV16
 
- function value #"interfac.ads" 102 0 0# "model" "model_trace:7532" 
+ function value #"interfac.ads" 102 0 0# "model" "model_trace:7516" 
    : BV16.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 66 0 0# 
@@ -6881,7 +6881,7 @@ end
 module Interfaces__shift_left__2__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 103 0 0# "model" "model_trace:7541" 
+ function amount #"interfac.ads" 103 0 0# "model" "model_trace:7525" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6901,7 +6901,7 @@ module Interfaces__shift_right__2__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV16
 
- function value #"interfac.ads" 106 0 0# "model" "model_trace:7560" 
+ function value #"interfac.ads" 106 0 0# "model" "model_trace:7544" 
    : BV16.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 66 0 0# 
@@ -6920,7 +6920,7 @@ end
 module Interfaces__shift_right__2__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 107 0 0# "model" "model_trace:7569" 
+ function amount #"interfac.ads" 107 0 0# "model" "model_trace:7553" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6940,7 +6940,7 @@ module Interfaces__shift_right_arithmetic__2__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV16
 
- function value #"interfac.ads" 110 0 0# "model" "model_trace:7588" 
+ function value #"interfac.ads" 110 0 0# "model" "model_trace:7572" 
    : BV16.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 66 0 0# 
@@ -6959,7 +6959,7 @@ end
 module Interfaces__shift_right_arithmetic__2__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 111 0 0# "model" "model_trace:7597" 
+ function amount #"interfac.ads" 111 0 0# "model" "model_trace:7581" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -6979,7 +6979,7 @@ module Interfaces__rotate_left__2__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV16
 
- function value #"interfac.ads" 114 0 0# "model" "model_trace:7616" 
+ function value #"interfac.ads" 114 0 0# "model" "model_trace:7600" 
    : BV16.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 66 0 0# 
@@ -6998,7 +6998,7 @@ end
 module Interfaces__rotate_left__2__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 115 0 0# "model" "model_trace:7625" 
+ function amount #"interfac.ads" 115 0 0# "model" "model_trace:7609" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7018,7 +7018,7 @@ module Interfaces__rotate_right__2__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV16
 
- function value #"interfac.ads" 118 0 0# "model" "model_trace:7644" 
+ function value #"interfac.ads" 118 0 0# "model" "model_trace:7628" 
    : BV16.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 66 0 0# 
@@ -7037,7 +7037,7 @@ end
 module Interfaces__rotate_right__2__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 119 0 0# "model" "model_trace:7653" 
+ function amount #"interfac.ads" 119 0 0# "model" "model_trace:7637" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7057,7 +7057,7 @@ module Interfaces__shift_left__3__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function value #"interfac.ads" 122 0 0# "model" "model_trace:7672" 
+ function value #"interfac.ads" 122 0 0# "model" "model_trace:7656" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 74 0 0# 
@@ -7076,7 +7076,7 @@ end
 module Interfaces__shift_left__3__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 123 0 0# "model" "model_trace:7681" 
+ function amount #"interfac.ads" 123 0 0# "model" "model_trace:7665" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7096,7 +7096,7 @@ module Interfaces__shift_right__3__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function value #"interfac.ads" 126 0 0# "model" "model_trace:7700" 
+ function value #"interfac.ads" 126 0 0# "model" "model_trace:7684" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 74 0 0# 
@@ -7115,7 +7115,7 @@ end
 module Interfaces__shift_right__3__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 127 0 0# "model" "model_trace:7709" 
+ function amount #"interfac.ads" 127 0 0# "model" "model_trace:7693" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7135,7 +7135,7 @@ module Interfaces__shift_right_arithmetic__3__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function value #"interfac.ads" 130 0 0# "model" "model_trace:7728" 
+ function value #"interfac.ads" 130 0 0# "model" "model_trace:7712" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 74 0 0# 
@@ -7154,7 +7154,7 @@ end
 module Interfaces__shift_right_arithmetic__3__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 131 0 0# "model" "model_trace:7737" 
+ function amount #"interfac.ads" 131 0 0# "model" "model_trace:7721" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7174,7 +7174,7 @@ module Interfaces__rotate_left__3__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function value #"interfac.ads" 134 0 0# "model" "model_trace:7756" 
+ function value #"interfac.ads" 134 0 0# "model" "model_trace:7740" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 74 0 0# 
@@ -7193,7 +7193,7 @@ end
 module Interfaces__rotate_left__3__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 135 0 0# "model" "model_trace:7765" 
+ function amount #"interfac.ads" 135 0 0# "model" "model_trace:7749" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7213,7 +7213,7 @@ module Interfaces__rotate_right__3__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function value #"interfac.ads" 138 0 0# "model" "model_trace:7784" 
+ function value #"interfac.ads" 138 0 0# "model" "model_trace:7768" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 74 0 0# 
@@ -7232,7 +7232,7 @@ end
 module Interfaces__rotate_right__3__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 139 0 0# "model" "model_trace:7793" 
+ function amount #"interfac.ads" 139 0 0# "model" "model_trace:7777" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7252,7 +7252,7 @@ module Interfaces__shift_left__4__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV64
 
- function value #"interfac.ads" 142 0 0# "model" "model_trace:7812" 
+ function value #"interfac.ads" 142 0 0# "model" "model_trace:7796" 
    : BV64.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 77 0 0# 
@@ -7271,7 +7271,7 @@ end
 module Interfaces__shift_left__4__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 143 0 0# "model" "model_trace:7821" 
+ function amount #"interfac.ads" 143 0 0# "model" "model_trace:7805" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7291,7 +7291,7 @@ module Interfaces__shift_right__4__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV64
 
- function value #"interfac.ads" 146 0 0# "model" "model_trace:7840" 
+ function value #"interfac.ads" 146 0 0# "model" "model_trace:7824" 
    : BV64.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 77 0 0# 
@@ -7310,7 +7310,7 @@ end
 module Interfaces__shift_right__4__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 147 0 0# "model" "model_trace:7849" 
+ function amount #"interfac.ads" 147 0 0# "model" "model_trace:7833" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7330,7 +7330,7 @@ module Interfaces__shift_right_arithmetic__4__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV64
 
- function value #"interfac.ads" 150 0 0# "model" "model_trace:7868" 
+ function value #"interfac.ads" 150 0 0# "model" "model_trace:7852" 
    : BV64.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 77 0 0# 
@@ -7349,7 +7349,7 @@ end
 module Interfaces__shift_right_arithmetic__4__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 151 0 0# "model" "model_trace:7877" 
+ function amount #"interfac.ads" 151 0 0# "model" "model_trace:7861" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7369,7 +7369,7 @@ module Interfaces__rotate_left__4__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV64
 
- function value #"interfac.ads" 154 0 0# "model" "model_trace:7896" 
+ function value #"interfac.ads" 154 0 0# "model" "model_trace:7880" 
    : BV64.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 77 0 0# 
@@ -7388,7 +7388,7 @@ end
 module Interfaces__rotate_left__4__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 155 0 0# "model" "model_trace:7905" 
+ function amount #"interfac.ads" 155 0 0# "model" "model_trace:7889" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -7408,7 +7408,7 @@ module Interfaces__rotate_right__4__value
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV64
 
- function value #"interfac.ads" 158 0 0# "model" "model_trace:7924" 
+ function value #"interfac.ads" 158 0 0# "model" "model_trace:7908" 
    : BV64.t
  
  function attr__ATTRIBUTE_ADDRESS #"interfac.ads" 77 0 0# 
@@ -7427,7 +7427,7 @@ end
 module Interfaces__rotate_right__4__amount
  use import "_gnatprove_standard".Main
 
- function amount #"interfac.ads" 159 0 0# "model" "model_trace:7933" 
+ function amount #"interfac.ads" 159 0 0# "model" "model_trace:7917" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -8185,7 +8185,7 @@ end
 module Interfaces__c_streams__eof
  use import "_gnatprove_standard".Main
 
- function eof #"i-cstrea.ads" 56 0 0# "model" "model_trace:8151" 
+ function eof #"i-cstrea.ads" 56 0 0# "model" "model_trace:8135" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8197,7 +8197,7 @@ end
 module Interfaces__c_streams__iofbf
  use import "_gnatprove_standard".Main
 
- function iofbf #"i-cstrea.ads" 59 0 0# "model" "model_trace:8160" 
+ function iofbf #"i-cstrea.ads" 59 0 0# "model" "model_trace:8144" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8209,7 +8209,7 @@ end
 module Interfaces__c_streams__iolbf
  use import "_gnatprove_standard".Main
 
- function iolbf #"i-cstrea.ads" 60 0 0# "model" "model_trace:8169" 
+ function iolbf #"i-cstrea.ads" 60 0 0# "model" "model_trace:8153" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8221,7 +8221,7 @@ end
 module Interfaces__c_streams__ionbf
  use import "_gnatprove_standard".Main
 
- function ionbf #"i-cstrea.ads" 61 0 0# "model" "model_trace:8178" 
+ function ionbf #"i-cstrea.ads" 61 0 0# "model" "model_trace:8162" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8233,7 +8233,7 @@ end
 module Interfaces__c_streams__l_tmpnam
  use import "_gnatprove_standard".Main
 
- function l_tmpnam #"i-cstrea.ads" 64 0 0# "model" "model_trace:8187" 
+ function l_tmpnam #"i-cstrea.ads" 64 0 0# "model" "model_trace:8171" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8245,7 +8245,7 @@ end
 module Interfaces__c_streams__seek_cur
  use import "_gnatprove_standard".Main
 
- function seek_cur #"i-cstrea.ads" 67 0 0# "model" "model_trace:8196" 
+ function seek_cur #"i-cstrea.ads" 67 0 0# "model" "model_trace:8180" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8257,7 +8257,7 @@ end
 module Interfaces__c_streams__seek_end
  use import "_gnatprove_standard".Main
 
- function seek_end #"i-cstrea.ads" 68 0 0# "model" "model_trace:8205" 
+ function seek_end #"i-cstrea.ads" 68 0 0# "model" "model_trace:8189" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8269,7 +8269,7 @@ end
 module Interfaces__c_streams__seek_set
  use import "_gnatprove_standard".Main
 
- function seek_set #"i-cstrea.ads" 69 0 0# "model" "model_trace:8214" 
+ function seek_set #"i-cstrea.ads" 69 0 0# "model" "model_trace:8198" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8422,7 +8422,7 @@ module Interfaces__c_streams__fread__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"i-cstrea.ads" 130 0 0# "model" "model_trace:8646" 
+ function size #"i-cstrea.ads" 130 0 0# "model" "model_trace:8630" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8442,7 +8442,7 @@ module Interfaces__c_streams__fread__count
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function count #"i-cstrea.ads" 131 0 0# "model" "model_trace:8655" 
+ function count #"i-cstrea.ads" 131 0 0# "model" "model_trace:8639" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8512,7 +8512,7 @@ module Interfaces__c_streams__fread__2__index
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function index #"i-cstrea.ads" 136 0 0# "model" "model_trace:8692" 
+ function index #"i-cstrea.ads" 136 0 0# "model" "model_trace:8676" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8532,7 +8532,7 @@ module Interfaces__c_streams__fread__2__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"i-cstrea.ads" 137 0 0# "model" "model_trace:8701" 
+ function size #"i-cstrea.ads" 137 0 0# "model" "model_trace:8685" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8552,7 +8552,7 @@ module Interfaces__c_streams__fread__2__count
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function count #"i-cstrea.ads" 138 0 0# "model" "model_trace:8710" 
+ function count #"i-cstrea.ads" 138 0 0# "model" "model_trace:8694" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8622,7 +8622,7 @@ module Interfaces__c_streams__fwrite__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"i-cstrea.ads" 173 0 0# "model" "model_trace:8939" 
+ function size #"i-cstrea.ads" 173 0 0# "model" "model_trace:8923" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8642,7 +8642,7 @@ module Interfaces__c_streams__fwrite__count
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function count #"i-cstrea.ads" 174 0 0# "model" "model_trace:8948" 
+ function count #"i-cstrea.ads" 174 0 0# "model" "model_trace:8932" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8731,7 +8731,7 @@ end
 module Interfaces__c_streams__setvbuf__mode
  use import "_gnatprove_standard".Main
 
- function mode #"i-cstrea.ads" 187 0 0# "model" "model_trace:9064" 
+ function mode #"i-cstrea.ads" 187 0 0# "model" "model_trace:9048" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8751,7 +8751,7 @@ module Interfaces__c_streams__setvbuf__size
  use import "_gnatprove_standard".Main
  use        "_gnatprove_standard".BV32
 
- function size #"i-cstrea.ads" 188 0 0# "model" "model_trace:9073" 
+ function size #"i-cstrea.ads" 188 0 0# "model" "model_trace:9057" 
    : BV32.t
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 44 0 0# 
@@ -8810,7 +8810,7 @@ end
 module Interfaces__c_streams__is_regular_file__handle
  use import "_gnatprove_standard".Main
 
- function handle #"i-cstrea.ads" 215 0 0# "model" "model_trace:9206" 
+ function handle #"i-cstrea.ads" 215 0 0# "model" "model_trace:9190" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8838,7 +8838,7 @@ end
 module Interfaces__c_streams__set_binary_mode__handle
  use import "_gnatprove_standard".Main
 
- function handle #"i-cstrea.ads" 223 0 0# "model" "model_trace:9225" 
+ function handle #"i-cstrea.ads" 223 0 0# "model" "model_trace:9209" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -8857,7 +8857,7 @@ end
 module Interfaces__c_streams__set_text_mode__handle
  use import "_gnatprove_standard".Main
 
- function handle #"i-cstrea.ads" 224 0 0# "model" "model_trace:9243" 
+ function handle #"i-cstrea.ads" 224 0 0# "model" "model_trace:9227" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -9014,7 +9014,7 @@ end
 module Interfaces__c_streams__set_mode__handle
  use import "_gnatprove_standard".Main
 
- function handle #"i-cstrea.ads" 254 0 0# "model" "model_trace:9357" 
+ function handle #"i-cstrea.ads" 254 0 0# "model" "model_trace:9341" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 42 0 0# 
@@ -9033,7 +9033,7 @@ end
 module Interfaces__c_streams__set_mode__mode
  use import "_gnatprove_standard".Main
 
- function mode #"i-cstrea.ads" 254 0 0# "model" "model_trace:9366" 
+ function mode #"i-cstrea.ads" 254 0 0# "model" "model_trace:9350" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"i-cstrea.ads" 230 0 0# 
@@ -9092,7 +9092,7 @@ end
 module Interfaces__c_streams__max_path_len
  use import "_gnatprove_standard".Main
 
- function max_path_len #"i-cstrea.ads" 270 0 0# "model" "model_trace:9407" 
+ function max_path_len #"i-cstrea.ads" 270 0 0# "model" "model_trace:9391" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -9334,7 +9334,7 @@ end
 module System__wch_con__wcem_hex
  use import "_gnatprove_standard".Main
 
- function wcem_hex #"s-wchcon.ads" 100 0 0# "model" "model_trace:11661" 
+ function wcem_hex #"s-wchcon.ads" 100 0 0# "model" "model_trace:11645" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9346,7 +9346,7 @@ end
 module System__wch_con__wcem_upper
  use import "_gnatprove_standard".Main
 
- function wcem_upper #"s-wchcon.ads" 108 0 0# "model" "model_trace:11671" 
+ function wcem_upper #"s-wchcon.ads" 108 0 0# "model" "model_trace:11655" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9358,7 +9358,7 @@ end
 module System__wch_con__wcem_shift_jis
  use import "_gnatprove_standard".Main
 
- function wcem_shift_jis #"s-wchcon.ads" 117 0 0# "model" "model_trace:11681" 
+ function wcem_shift_jis #"s-wchcon.ads" 117 0 0# "model" "model_trace:11665" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9370,7 +9370,7 @@ end
 module System__wch_con__wcem_euc
  use import "_gnatprove_standard".Main
 
- function wcem_euc #"s-wchcon.ads" 126 0 0# "model" "model_trace:11691" 
+ function wcem_euc #"s-wchcon.ads" 126 0 0# "model" "model_trace:11675" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9382,7 +9382,7 @@ end
 module System__wch_con__wcem_utf8
  use import "_gnatprove_standard".Main
 
- function wcem_utf8 #"s-wchcon.ads" 134 0 0# "model" "model_trace:11701" 
+ function wcem_utf8 #"s-wchcon.ads" 134 0 0# "model" "model_trace:11685" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9394,7 +9394,7 @@ end
 module System__wch_con__wcem_brackets
  use import "_gnatprove_standard".Main
 
- function wcem_brackets #"s-wchcon.ads" 156 0 0# "model" "model_trace:11711" 
+ function wcem_brackets #"s-wchcon.ads" 156 0 0# "model" "model_trace:11695" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -9566,7 +9566,7 @@ module System__wch_con__wc_encoding_letters
  use import "_gnatprove_standard".Main
  use        Array__Int__Standard__character
 
- function wc_encoding_letters #"s-wchcon.ads" 169 0 0# "model_projected" "model_trace:11721" 
+ function wc_encoding_letters #"s-wchcon.ads" 169 0 0# "model_projected" "model_trace:11705" 
    : Array__Int__Standard__character.map
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 169 0 0# 
@@ -9873,7 +9873,7 @@ module System__wch_con__wc_longest_sequences
  use import "_gnatprove_standard".Main
  use        Array__Int__Standard__natural
 
- function wc_longest_sequences #"s-wchcon.ads" 193 0 0# "model_projected" "model_trace:11789" 
+ function wc_longest_sequences #"s-wchcon.ads" 193 0 0# "model_projected" "model_trace:11773" 
    : Array__Int__Standard__natural.map
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 193 0 0# 
@@ -9885,7 +9885,7 @@ end
 module System__wch_con__get_wc_encoding_method__c
  use import "_gnatprove_standard".Main
 
- function c #"s-wchcon.ads" 203 0 0# "model" "model_trace:11827" 
+ function c #"s-wchcon.ads" 203 0 0# "model" "model_trace:11811" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -9914,7 +9914,7 @@ module System__wch_con__get_wc_encoding_method__2__s
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s #"s-wchcon.ads" 207 0 0# "model_projected" "model_trace:11846" 
+ function s #"s-wchcon.ads" 207 0 0# "model_projected" "model_trace:11830" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -9943,7 +9943,7 @@ end
 module System__wch_con__is_start_of_encoding__c
  use import "_gnatprove_standard".Main
 
- function c #"s-wchcon.ads" 213 0 0# "model" "model_trace:11865" 
+ function c #"s-wchcon.ads" 213 0 0# "model" "model_trace:11849" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -9962,7 +9962,7 @@ end
 module System__wch_con__is_start_of_encoding__em
  use import "_gnatprove_standard".Main
 
- function em #"s-wchcon.ads" 214 0 0# "model" "model_trace:11874" 
+ function em #"s-wchcon.ads" 214 0 0# "model" "model_trace:11858" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
@@ -10259,7 +10259,7 @@ end
 module Ada__text_io__unbounded
  use import "_gnatprove_standard".Main
 
- function unbounded #"a-textio.ads" 70 0 0# "model" "model_trace:3406" 
+ function unbounded #"a-textio.ads" 70 0 0# "model" "model_trace:3390" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 64 0 0# 
@@ -10409,7 +10409,7 @@ end
 module Ada__text_io__create__mode
  use import "_gnatprove_standard".Main
 
- function mode #"a-textio.ads" 88 0 0# "model" "model_trace:3484" 
+ function mode #"a-textio.ads" 88 0 0# "model" "model_trace:3468" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 53 0 0# 
@@ -10429,7 +10429,7 @@ module Ada__text_io__create__name
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function name #"a-textio.ads" 89 0 0# "model_projected" "model_trace:3494" 
+ function name #"a-textio.ads" 89 0 0# "model_projected" "model_trace:3478" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -10449,7 +10449,7 @@ module Ada__text_io__create__form
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function form #"a-textio.ads" 90 0 0# "model_projected" "model_trace:3504" 
+ function form #"a-textio.ads" 90 0 0# "model_projected" "model_trace:3488" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -10468,7 +10468,7 @@ end
 module Ada__text_io__open__mode
  use import "_gnatprove_standard".Main
 
- function mode #"a-textio.ads" 94 0 0# "model" "model_trace:3532" 
+ function mode #"a-textio.ads" 94 0 0# "model" "model_trace:3516" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 53 0 0# 
@@ -10488,7 +10488,7 @@ module Ada__text_io__open__name
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function name #"a-textio.ads" 95 0 0# "model_projected" "model_trace:3541" 
+ function name #"a-textio.ads" 95 0 0# "model_projected" "model_trace:3525" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -10508,7 +10508,7 @@ module Ada__text_io__open__form
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function form #"a-textio.ads" 96 0 0# "model_projected" "model_trace:3550" 
+ function form #"a-textio.ads" 96 0 0# "model_projected" "model_trace:3534" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -10527,7 +10527,7 @@ end
 module Ada__text_io__reset__mode
  use import "_gnatprove_standard".Main
 
- function mode #"a-textio.ads" 100 0 0# "model" "model_trace:3614" 
+ function mode #"a-textio.ads" 100 0 0# "model" "model_trace:3598" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 53 0 0# 
@@ -10828,7 +10828,7 @@ end
 module Ada__text_io__set_line_length__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 149 0 0# "model" "model_trace:3946" 
+ function to__ #"a-textio.ads" 149 0 0# "model" "model_trace:3930" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 64 0 0# 
@@ -10847,7 +10847,7 @@ end
 module Ada__text_io__set_line_length__2__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 150 0 0# "model" "model_trace:3964" 
+ function to__ #"a-textio.ads" 150 0 0# "model" "model_trace:3948" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 64 0 0# 
@@ -10886,7 +10886,7 @@ end
 module Ada__text_io__set_page_length__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 152 0 0# "model" "model_trace:3991" 
+ function to__ #"a-textio.ads" 152 0 0# "model" "model_trace:3975" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 64 0 0# 
@@ -10905,7 +10905,7 @@ end
 module Ada__text_io__set_page_length__2__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 153 0 0# "model" "model_trace:4009" 
+ function to__ #"a-textio.ads" 153 0 0# "model" "model_trace:3993" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 64 0 0# 
@@ -11022,7 +11022,7 @@ end
 module Ada__text_io__new_line__spacing
  use import "_gnatprove_standard".Main
 
- function spacing #"a-textio.ads" 165 0 0# "model" "model_trace:4094" 
+ function spacing #"a-textio.ads" 165 0 0# "model" "model_trace:4078" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11041,7 +11041,7 @@ end
 module Ada__text_io__new_line__2__spacing
  use import "_gnatprove_standard".Main
 
- function spacing #"a-textio.ads" 166 0 0# "model" "model_trace:4113" 
+ function spacing #"a-textio.ads" 166 0 0# "model" "model_trace:4097" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11080,7 +11080,7 @@ end
 module Ada__text_io__skip_line__spacing
  use import "_gnatprove_standard".Main
 
- function spacing #"a-textio.ads" 168 0 0# "model" "model_trace:4141" 
+ function spacing #"a-textio.ads" 168 0 0# "model" "model_trace:4125" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11099,7 +11099,7 @@ end
 module Ada__text_io__skip_line__2__spacing
  use import "_gnatprove_standard".Main
 
- function spacing #"a-textio.ads" 169 0 0# "model" "model_trace:4160" 
+ function spacing #"a-textio.ads" 169 0 0# "model" "model_trace:4144" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11295,7 +11295,7 @@ end
 module Ada__text_io__set_col__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 186 0 0# "model" "model_trace:4329" 
+ function to__ #"a-textio.ads" 186 0 0# "model" "model_trace:4313" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11314,7 +11314,7 @@ end
 module Ada__text_io__set_col__2__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 187 0 0# "model" "model_trace:4347" 
+ function to__ #"a-textio.ads" 187 0 0# "model" "model_trace:4331" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11353,7 +11353,7 @@ end
 module Ada__text_io__set_line__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 189 0 0# "model" "model_trace:4374" 
+ function to__ #"a-textio.ads" 189 0 0# "model" "model_trace:4358" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11372,7 +11372,7 @@ end
 module Ada__text_io__set_line__2__to
  use import "_gnatprove_standard".Main
 
- function to__ #"a-textio.ads" 190 0 0# "model" "model_trace:4392" 
+ function to__ #"a-textio.ads" 190 0 0# "model" "model_trace:4376" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 68 0 0# 
@@ -11548,7 +11548,7 @@ end
 module Ada__text_io__put__item
  use import "_gnatprove_standard".Main
 
- function item #"a-textio.ads" 207 0 0# "model" "model_trace:4551" 
+ function item #"a-textio.ads" 207 0 0# "model" "model_trace:4535" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11567,7 +11567,7 @@ end
 module Ada__text_io__put__2__item
  use import "_gnatprove_standard".Main
 
- function item #"a-textio.ads" 208 0 0# "model" "model_trace:4569" 
+ function item #"a-textio.ads" 208 0 0# "model" "model_trace:4553" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11687,7 +11687,7 @@ module Ada__text_io__put__3__item
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function item #"a-textio.ads" 241 0 0# "model_projected" "model_trace:4812" 
+ function item #"a-textio.ads" 241 0 0# "model_projected" "model_trace:4796" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11707,7 +11707,7 @@ module Ada__text_io__put__4__item
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function item #"a-textio.ads" 242 0 0# "model_projected" "model_trace:4830" 
+ function item #"a-textio.ads" 242 0 0# "model_projected" "model_trace:4814" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11808,7 +11808,7 @@ module Ada__text_io__put_line__item
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function item #"a-textio.ads" 261 0 0# "model_projected" "model_trace:4957" 
+ function item #"a-textio.ads" 261 0 0# "model_projected" "model_trace:4941" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11828,7 +11828,7 @@ module Ada__text_io__put_line__2__item
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function item #"a-textio.ads" 264 0 0# "model_projected" "model_trace:4975" 
+ function item #"a-textio.ads" 264 0 0# "model_projected" "model_trace:4959" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -11848,7 +11848,7 @@ module Ada__text_io__write__2__item
  use import "_gnatprove_standard".Main
  use        Ada__streams__stream_element_array
 
- function item #"a-textio.ads" 439 0 0# "model_projected" "model_trace:5466" 
+ function item #"a-textio.ads" 439 0 0# "model_projected" "model_trace:5450" 
    : Ada__streams__stream_element_array.stream_element_array
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 54 0 0# 
@@ -12022,7 +12022,7 @@ module Pump__float_number
  
  function first #"pump.ads" 6 0 0# 
    : real =
-  (0.0)
+  (-.0.009999999776482582092285156250)
  
  function last #"pump.ads" 6 0 0# 
    : real =
@@ -12073,7 +12073,7 @@ module Pump__fuel_types
  
  function last #"pump.ads" 7 0 0# 
    : int =
-  3
+  2
  
  predicate in_range #"pump.ads" 7 0 0# 
    (x : int)  =
@@ -12102,110 +12102,6 @@ module Pump__fuel_types
  
  val fuel_types__havoc #"pump.ads" 7 0 0# 
    (x : fuel_types__ref) : unit
-  writes {x}
-
-end
-
-(* Module for axiomatizing type "reservoir" defined at pump.ads:37, created in Gnat2Why.Types.Translate_Type *)
-module Pump__reservoir
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Pump__float_number
- use        Pump__fuel_types
-
- type __split_fields #"pump.ads" 7 0 0# =
-  { rec__total : Pump__float_number.float_number; rec__reservoir_category "model_trace:.3163" : Pump__fuel_types.fuel_types }
- 
- function __split_fields_RESERVOIR_CATEGORY__projection #"pump.ads" 7 0 0# "model_trace:.3163" 
-   (a : __split_fields) : Pump__fuel_types.fuel_types =
-  a.rec__reservoir_category
- 
- meta "model_projection" function __split_fields_RESERVOIR_CATEGORY__projection
- 
- meta "inline : no" function __split_fields_RESERVOIR_CATEGORY__projection
- 
- type __split_fields__ref #"pump.ads" 37 0 0# =
-  { mutable __split_fields__content "model_trace:" : __split_fields }
- 
- function __split_fields__ref_3__projection #"pump.ads" 37 0 0# 
-   (a : __split_fields__ref) : __split_fields =
-  a.__split_fields__content
- 
- meta "model_projection" function __split_fields__ref_3__projection
- 
- meta "inline : no" function __split_fields__ref_3__projection
- 
- val __split_fields__havoc #"pump.ads" 37 0 0# 
-   (x : __split_fields__ref) : unit
-  writes {x}
- 
- type reservoir #"pump.ads" 37 0 0# =
-  { __split_fields "model_trace:" : __split_fields }
- 
- function reservoir___projection #"pump.ads" 37 0 0# 
-   (a : reservoir) : __split_fields =
-  a.__split_fields
- 
- meta "model_projection" function reservoir___projection
- 
- meta "inline : no" function reservoir___projection
- 
- predicate total__pred #"pump.ads" 37 0 0# 
-   (a : reservoir)  =
-  true
- 
- val rec__total_ #"pump.ads" 37 0 0# 
-   (a : reservoir) : Pump__float_number.float_number
-  requires { (total__pred a) }
-  ensures { (result = a.__split_fields.rec__total) }
- 
- predicate reservoir_category__pred #"pump.ads" 37 0 0# 
-   (a : reservoir)  =
-  true
- 
- val rec__reservoir_category_ #"pump.ads" 37 0 0# 
-   (a : reservoir) : Pump__fuel_types.fuel_types
-  requires { (reservoir_category__pred a) }
-  ensures { (result = a.__split_fields.rec__reservoir_category) }
- 
- function bool_eq #"pump.ads" 37 0 0# 
-   (a : reservoir) (b : reservoir) : bool =
-  (if (( ((Pump__float_number.to_real a.__split_fields.rec__total) = (Pump__float_number.to_real b.__split_fields.rec__total)) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__reservoir_category) = (Pump__fuel_types.to_rep b.__split_fields.rec__reservoir_category)) )) then (
-   True) else (
-   False))
- 
- function user_eq #"pump.ads" 37 0 0# 
-   (a : reservoir) (b : reservoir) : bool
- 
- function value__size #"pump.ads" 37 0 0# 
-   : int
- 
- function object__size #"pump.ads" 37 0 0# 
-   (a : reservoir) : int
- 
- axiom value__size_axiom :
-  ((value__size ) >= 0)
- 
- axiom object__size_axiom :
-  (forall a : reservoir.
-   ((object__size a) >= 0))
- 
- function dummy #"pump.ads" 37 0 0# 
-   : reservoir
- 
- type reservoir__ref #"pump.ads" 37 0 0# =
-  { mutable reservoir__content "model_trace:" : reservoir }
- 
- function reservoir__ref___projection #"pump.ads" 37 0 0# 
-   (a : reservoir__ref) : reservoir =
-  a.reservoir__content
- 
- meta "model_projection" function reservoir__ref___projection
- 
- meta "inline : no" function reservoir__ref___projection
- 
- val reservoir__havoc #"pump.ads" 37 0 0# 
-   (x : reservoir__ref) : unit
   writes {x}
 
 end
@@ -12302,20 +12198,124 @@ module Pump__nozzle_type
 
 end
 
-(* Module for axiomatizing type "pump" defined at pump.ads:44, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "reservoir" defined at pump.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Pump__reservoir
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Pump__float_number
+ use        Pump__fuel_types
+
+ type __split_fields #"pump.ads" 11 0 0# =
+  { rec__total : Pump__float_number.float_number; rec__reservoir_category "model_trace:.2841" : Pump__fuel_types.fuel_types }
+ 
+ function __split_fields_RESERVOIR_CATEGORY__projection #"pump.ads" 7 0 0# "model_trace:.2841" 
+   (a : __split_fields) : Pump__fuel_types.fuel_types =
+  a.rec__reservoir_category
+ 
+ meta "model_projection" function __split_fields_RESERVOIR_CATEGORY__projection
+ 
+ meta "inline : no" function __split_fields_RESERVOIR_CATEGORY__projection
+ 
+ type __split_fields__ref #"pump.ads" 13 0 0# =
+  { mutable __split_fields__content "model_trace:" : __split_fields }
+ 
+ function __split_fields__ref_3__projection #"pump.ads" 13 0 0# 
+   (a : __split_fields__ref) : __split_fields =
+  a.__split_fields__content
+ 
+ meta "model_projection" function __split_fields__ref_3__projection
+ 
+ meta "inline : no" function __split_fields__ref_3__projection
+ 
+ val __split_fields__havoc #"pump.ads" 13 0 0# 
+   (x : __split_fields__ref) : unit
+  writes {x}
+ 
+ type reservoir #"pump.ads" 13 0 0# =
+  { __split_fields "model_trace:" : __split_fields }
+ 
+ function reservoir___projection #"pump.ads" 13 0 0# 
+   (a : reservoir) : __split_fields =
+  a.__split_fields
+ 
+ meta "model_projection" function reservoir___projection
+ 
+ meta "inline : no" function reservoir___projection
+ 
+ predicate total__pred #"pump.ads" 13 0 0# 
+   (a : reservoir)  =
+  true
+ 
+ val rec__total_ #"pump.ads" 13 0 0# 
+   (a : reservoir) : Pump__float_number.float_number
+  requires { (total__pred a) }
+  ensures { (result = a.__split_fields.rec__total) }
+ 
+ predicate reservoir_category__pred #"pump.ads" 13 0 0# 
+   (a : reservoir)  =
+  true
+ 
+ val rec__reservoir_category_ #"pump.ads" 13 0 0# 
+   (a : reservoir) : Pump__fuel_types.fuel_types
+  requires { (reservoir_category__pred a) }
+  ensures { (result = a.__split_fields.rec__reservoir_category) }
+ 
+ function bool_eq #"pump.ads" 13 0 0# 
+   (a : reservoir) (b : reservoir) : bool =
+  (if (( ((Pump__float_number.to_real a.__split_fields.rec__total) = (Pump__float_number.to_real b.__split_fields.rec__total)) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__reservoir_category) = (Pump__fuel_types.to_rep b.__split_fields.rec__reservoir_category)) )) then (
+   True) else (
+   False))
+ 
+ function user_eq #"pump.ads" 13 0 0# 
+   (a : reservoir) (b : reservoir) : bool
+ 
+ function value__size #"pump.ads" 13 0 0# 
+   : int
+ 
+ function object__size #"pump.ads" 13 0 0# 
+   (a : reservoir) : int
+ 
+ axiom value__size_axiom :
+  ((value__size ) >= 0)
+ 
+ axiom object__size_axiom :
+  (forall a : reservoir.
+   ((object__size a) >= 0))
+ 
+ function dummy #"pump.ads" 13 0 0# 
+   : reservoir
+ 
+ type reservoir__ref #"pump.ads" 13 0 0# =
+  { mutable reservoir__content "model_trace:" : reservoir }
+ 
+ function reservoir__ref___projection #"pump.ads" 13 0 0# 
+   (a : reservoir__ref) : reservoir =
+  a.reservoir__content
+ 
+ meta "model_projection" function reservoir__ref___projection
+ 
+ meta "inline : no" function reservoir__ref___projection
+ 
+ val reservoir__havoc #"pump.ads" 13 0 0# 
+   (x : reservoir__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "pump" defined at pump.ads:20, created in Gnat2Why.Types.Translate_Type *)
 module Pump__pump
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Pump__float_number
  use        Pump__fuel_types
- use        Pump__reservoir
  use        Pump__state_type
  use        Pump__nozzle_type
+ use        Pump__reservoir
 
- type __split_fields #"pump.ads" 11 0 0# =
-  { rec__reservoir_info "model_trace:.3185" : Pump__reservoir.reservoir; rec__pump_state "model_trace:.3205" : Pump__state_type.state_type; rec__pumped : Pump__float_number.float_number; rec__nozzle_state "model_trace:.3230" : Pump__nozzle_type.nozzle_type; rec__unit_price : Pump__float_number.float_number; rec__fuel_type "model_trace:.3255" : Pump__fuel_types.fuel_types }
+ type __split_fields #"pump.ads" 13 0 0# =
+  { rec__reservoir_info "model_trace:.2863" : Pump__reservoir.reservoir; rec__pump_state "model_trace:.2883" : Pump__state_type.state_type; rec__pumped : Pump__float_number.float_number; rec__nozzle_state "model_trace:.2908" : Pump__nozzle_type.nozzle_type; rec__unit_price : Pump__float_number.float_number; rec__fuel_type "model_trace:.2933" : Pump__fuel_types.fuel_types }
  
- function __split_fields_RESERVOIR_INFO__projection #"pump.ads" 7 0 0# "model_trace:.3185" 
+ function __split_fields_RESERVOIR_INFO__projection #"pump.ads" 7 0 0# "model_trace:.2863" 
    (a : __split_fields) : Pump__reservoir.reservoir =
   a.rec__reservoir_info
  
@@ -12323,7 +12323,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_RESERVOIR_INFO__projection
  
- function __split_fields_PUMP_STATE__projection #"pump.ads" 44 0 0# "model_trace:.3205" 
+ function __split_fields_PUMP_STATE__projection #"pump.ads" 20 0 0# "model_trace:.2883" 
    (a : __split_fields) : Pump__state_type.state_type =
   a.rec__pump_state
  
@@ -12331,7 +12331,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_PUMP_STATE__projection
  
- function __split_fields_NOZZLE_STATE__projection #"pump.ads" 44 0 0# "model_trace:.3230" 
+ function __split_fields_NOZZLE_STATE__projection #"pump.ads" 20 0 0# "model_trace:.2908" 
    (a : __split_fields) : Pump__nozzle_type.nozzle_type =
   a.rec__nozzle_state
  
@@ -12339,7 +12339,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_NOZZLE_STATE__projection
  
- function __split_fields_FUEL_TYPE__projection #"pump.ads" 44 0 0# "model_trace:.3255" 
+ function __split_fields_FUEL_TYPE__projection #"pump.ads" 20 0 0# "model_trace:.2933" 
    (a : __split_fields) : Pump__fuel_types.fuel_types =
   a.rec__fuel_type
  
@@ -12347,10 +12347,10 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_FUEL_TYPE__projection
  
- type __split_fields__ref #"pump.ads" 44 0 0# =
+ type __split_fields__ref #"pump.ads" 20 0 0# =
   { mutable __split_fields__content "model_trace:" : __split_fields }
  
- function __split_fields__ref_4__projection #"pump.ads" 44 0 0# 
+ function __split_fields__ref_4__projection #"pump.ads" 20 0 0# 
    (a : __split_fields__ref) : __split_fields =
   a.__split_fields__content
  
@@ -12358,14 +12358,14 @@ module Pump__pump
  
  meta "inline : no" function __split_fields__ref_4__projection
  
- val __split_fields__havoc #"pump.ads" 44 0 0# 
+ val __split_fields__havoc #"pump.ads" 20 0 0# 
    (x : __split_fields__ref) : unit
   writes {x}
  
- type pump #"pump.ads" 44 0 0# =
+ type pump #"pump.ads" 20 0 0# =
   { __split_fields "model_trace:" : __split_fields }
  
- function pump___projection #"pump.ads" 44 0 0# 
+ function pump___projection #"pump.ads" 20 0 0# 
    (a : pump) : __split_fields =
   a.__split_fields
  
@@ -12373,73 +12373,73 @@ module Pump__pump
  
  meta "inline : no" function pump___projection
  
- predicate reservoir_info__pred #"pump.ads" 44 0 0# 
+ predicate reservoir_info__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__reservoir_info_ #"pump.ads" 44 0 0# 
+ val rec__reservoir_info_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__reservoir.reservoir
   requires { (reservoir_info__pred a) }
   ensures { (result = a.__split_fields.rec__reservoir_info) }
  
- predicate pump_state__pred #"pump.ads" 44 0 0# 
+ predicate pump_state__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__pump_state_ #"pump.ads" 44 0 0# 
+ val rec__pump_state_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__state_type.state_type
   requires { (pump_state__pred a) }
   ensures { (result = a.__split_fields.rec__pump_state) }
  
- predicate pumped__pred #"pump.ads" 44 0 0# 
+ predicate pumped__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__pumped_ #"pump.ads" 44 0 0# 
+ val rec__pumped_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__float_number.float_number
   requires { (pumped__pred a) }
   ensures { (result = a.__split_fields.rec__pumped) }
  
- predicate nozzle_state__pred #"pump.ads" 44 0 0# 
+ predicate nozzle_state__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__nozzle_state_ #"pump.ads" 44 0 0# 
+ val rec__nozzle_state_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__nozzle_type.nozzle_type
   requires { (nozzle_state__pred a) }
   ensures { (result = a.__split_fields.rec__nozzle_state) }
  
- predicate unit_price__pred #"pump.ads" 44 0 0# 
+ predicate unit_price__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__unit_price_ #"pump.ads" 44 0 0# 
+ val rec__unit_price_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__float_number.float_number
   requires { (unit_price__pred a) }
   ensures { (result = a.__split_fields.rec__unit_price) }
  
- predicate fuel_type__pred #"pump.ads" 44 0 0# 
+ predicate fuel_type__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__fuel_type_ #"pump.ads" 44 0 0# 
+ val rec__fuel_type_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__fuel_types.fuel_types
   requires { (fuel_type__pred a) }
   ensures { (result = a.__split_fields.rec__fuel_type) }
  
- function bool_eq #"pump.ads" 44 0 0# 
+ function bool_eq #"pump.ads" 20 0 0# 
    (a : pump) (b : pump) : bool =
   (if (( ( ( ( ( ((Pump__reservoir.bool_eq a.__split_fields.rec__reservoir_info b.__split_fields.rec__reservoir_info) = True) /\ ((Pump__state_type.to_rep a.__split_fields.rec__pump_state) = (Pump__state_type.to_rep b.__split_fields.rec__pump_state)) ) /\ ((Pump__float_number.to_real a.__split_fields.rec__pumped) = (Pump__float_number.to_real b.__split_fields.rec__pumped)) ) /\ ((Pump__nozzle_type.to_rep a.__split_fields.rec__nozzle_state) = (Pump__nozzle_type.to_rep b.__split_fields.rec__nozzle_state)) ) /\ ((Pump__float_number.to_real a.__split_fields.rec__unit_price) = (Pump__float_number.to_real b.__split_fields.rec__unit_price)) ) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__fuel_type) = (Pump__fuel_types.to_rep b.__split_fields.rec__fuel_type)) )) then (
    True) else (
    False))
  
- function user_eq #"pump.ads" 44 0 0# 
+ function user_eq #"pump.ads" 20 0 0# 
    (a : pump) (b : pump) : bool
  
- function value__size #"pump.ads" 44 0 0# 
+ function value__size #"pump.ads" 20 0 0# 
    : int
  
- function object__size #"pump.ads" 44 0 0# 
+ function object__size #"pump.ads" 20 0 0# 
    (a : pump) : int
  
  axiom value__size_axiom :
@@ -12449,13 +12449,13 @@ module Pump__pump
   (forall a : pump.
    ((object__size a) >= 0))
  
- function dummy #"pump.ads" 44 0 0# 
+ function dummy #"pump.ads" 20 0 0# 
    : pump
  
- type pump__ref #"pump.ads" 44 0 0# =
+ type pump__ref #"pump.ads" 20 0 0# =
   { mutable pump__content "model_trace:" : pump }
  
- function pump__ref___projection #"pump.ads" 44 0 0# 
+ function pump__ref___projection #"pump.ads" 20 0 0# 
    (a : pump__ref) : pump =
   a.pump__content
  
@@ -12463,18 +12463,18 @@ module Pump__pump
  
  meta "inline : no" function pump__ref___projection
  
- val pump__havoc #"pump.ads" 44 0 0# 
+ val pump__havoc #"pump.ads" 20 0 0# 
    (x : pump__ref) : unit
   writes {x}
 
 end
 
-(* Module for defining the constant "price" defined at pump.ads:14, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "price" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_fuel_price__price
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function price #"pump.ads" 14 0 0# 
+ function price #"pump.ads" 33 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -12482,18 +12482,18 @@ module Pump__set_fuel_price__price
 
 end
 
-(* Module giving an empty axiom for the entity "price" defined at pump.ads:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "price" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_fuel_price__price__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "statetype" defined at pump.ads:15, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "statetype" defined at pump.ads:34, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pump_state__statetype
  use import "_gnatprove_standard".Main
 
- function statetype #"pump.ads" 15 0 0# "model" "model_trace:2886" 
+ function statetype #"pump.ads" 34 0 0# "model" "model_trace:2992" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
@@ -12501,19 +12501,19 @@ module Pump__set_pump_state__statetype
 
 end
 
-(* Module giving an empty axiom for the entity "statetype" defined at pump.ads:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "statetype" defined at pump.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_state__statetype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "amount" defined at pump.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "amount" defined at pump.ads:35, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pumped__amount
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function amount #"pump.ads" 16 0 0# 
+ function amount #"pump.ads" 35 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -12521,18 +12521,18 @@ module Pump__set_pumped__amount
 
 end
 
-(* Module giving an empty axiom for the entity "amount" defined at pump.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "amount" defined at pump.ads:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pumped__amount__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "nozzletype" defined at pump.ads:17, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "nozzletype" defined at pump.ads:36, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pump_nozzle_state__nozzletype
  use import "_gnatprove_standard".Main
 
- function nozzletype #"pump.ads" 17 0 0# "model" "model_trace:2940" 
+ function nozzletype #"pump.ads" 36 0 0# "model" "model_trace:3046" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
@@ -12540,18 +12540,18 @@ module Pump__set_pump_nozzle_state__nozzletype
 
 end
 
-(* Module giving an empty axiom for the entity "nozzletype" defined at pump.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "nozzletype" defined at pump.ads:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_nozzle_state__nozzletype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "fueltype" defined at pump.ads:19, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "fueltype" defined at pump.ads:38, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__append_reservoir__fueltype
  use import "_gnatprove_standard".Main
 
- function fueltype #"pump.ads" 19 0 0# "model" "model_trace:2967" 
+ function fueltype #"pump.ads" 38 0 0# "model" "model_trace:3073" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 7 0 0# 
@@ -12559,19 +12559,19 @@ module Pump__append_reservoir__fueltype
 
 end
 
-(* Module giving an empty axiom for the entity "fueltype" defined at pump.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "fueltype" defined at pump.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__append_reservoir__fueltype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "size" defined at pump.ads:21, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "size" defined at pump.ads:40, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_reservoir_size__size
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function size #"pump.ads" 21 0 0# 
+ function size #"pump.ads" 40 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -12579,19 +12579,19 @@ module Pump__set_reservoir_size__size
 
 end
 
-(* Module giving an empty axiom for the entity "size" defined at pump.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "size" defined at pump.ads:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_reservoir_size__size__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "amount" defined at pump.ads:23, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "amount" defined at pump.ads:42, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__remove_petrol_reservoir__amount
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function amount #"pump.ads" 23 0 0# 
+ function amount #"pump.ads" 42 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -12599,171 +12599,171 @@ module Pump__remove_petrol_reservoir__amount
 
 end
 
-(* Module giving an empty axiom for the entity "amount" defined at pump.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "amount" defined at pump.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__remove_petrol_reservoir__amount__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:32, created in Gnat2Why.Decls.Translate_Constant *)
-module Pump__get_tanks_size__pump_r
- use import "_gnatprove_standard".Main
- use        Pump__pump
-
- function pump_r #"pump.ads" 32 0 0# 
-   : Pump__pump.pump
- 
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:32, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pump__get_tanks_size__pump_r__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "get_tanks_size" defined at pump.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Pump__get_tanks_size
- use import "_gnatprove_standard".Main
- use        Pump__float_number
- use        Pump__pump
-
- function get_tanks_size #"pump.ads" 32 0 0# 
-   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
-
-end
-
-(* Module for defining the constant "pump_r" defined at pump.ads:29, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 29 0 0# 
+ function pump_r #"pump.ads" 48 0 0# "model_projected" "model_trace:3167" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:29, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_state" defined at pump.ads:29, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_state" defined at pump.ads:48, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_state
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_state #"pump.ads" 29 0 0# 
+ function get_state #"pump.ads" 48 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:49, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_current_nozzle_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 30 0 0# 
+ function pump_r #"pump.ads" 49 0 0# "model_projected" "model_trace:3186" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:49, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_current_nozzle_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_current_nozzle_state" defined at pump.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_current_nozzle_state" defined at pump.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_current_nozzle_state
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_current_nozzle_state #"pump.ads" 30 0 0# 
+ function get_current_nozzle_state #"pump.ads" 49 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:31, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:50, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_unit_price__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 31 0 0# 
+ function pump_r #"pump.ads" 50 0 0# "model_projected" "model_trace:3205" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:50, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_unit_price__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_unit_price" defined at pump.ads:31, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_unit_price" defined at pump.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_unit_price
  use import "_gnatprove_standard".Main
  use        Pump__float_number
  use        Pump__pump
 
- function get_unit_price #"pump.ads" 31 0 0# 
+ function get_unit_price #"pump.ads" 50 0 0# 
    (pump_r : Pump__pump.pump) : Pump__float_number.float_number
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Constant *)
-module Pump__get_resevoir_category__pump_r
+(* Module for defining the constant "pump_r" defined at pump.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+module Pump__get_tanks_size__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 33 0 0# 
+ function pump_r #"pump.ads" 51 0 0# "model_projected" "model_trace:3224" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pump__get_tanks_size__pump_r__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "get_tanks_size" defined at pump.ads:51, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pump__get_tanks_size
+ use import "_gnatprove_standard".Main
+ use        Pump__float_number
+ use        Pump__pump
+
+ function get_tanks_size #"pump.ads" 51 0 0# 
+   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
+
+end
+
+(* Module for defining the constant "pump_r" defined at pump.ads:52, created in Gnat2Why.Decls.Translate_Constant *)
+module Pump__get_resevoir_category__pump_r
+ use import "_gnatprove_standard".Main
+ use        Pump__pump
+
+ function pump_r #"pump.ads" 52 0 0# "model_projected" "model_trace:3243" 
+   : Pump__pump.pump
+ 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:52, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_resevoir_category__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_resevoir_category" defined at pump.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_resevoir_category" defined at pump.ads:52, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_resevoir_category
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_resevoir_category #"pump.ads" 33 0 0# 
+ function get_resevoir_category #"pump.ads" 52 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "s" defined at sprint.ads:3, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "s" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print__s
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s #"sprint.ads" 3 0 0# "model_projected" "model_trace:2530" 
+ function s #"sprint.ads" 4 0 0# "model_projected" "model_trace:2530" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -12771,59 +12771,19 @@ module Sprint__print__s
 
 end
 
-(* Module giving an empty axiom for the entity "s" defined at sprint.ads:3, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "s" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Sprint__print__s__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "s1" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "s1" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print_float_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 4 0 0# "model_projected" "model_trace:2548" 
-   : Standard__string.string
- 
- function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "s1" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_float_type__s1__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining the constant "s2" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_float_type__s2
- use import "_gnatprove_standard".Main
- use        Pump__float_number
-
- function s2 #"sprint.ads" 4 0 0# 
-   : Pump__float_number.float_number
- 
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_float_type__s2__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining the constant "s1" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_state_type__s1
- use import "_gnatprove_standard".Main
- use        Standard__string
-
- function s1 #"sprint.ads" 5 0 0# "model_projected" "model_trace:2577" 
+ function s1 #"sprint.ads" 5 0 0# "model_projected" "model_trace:2548" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -12832,37 +12792,38 @@ module Sprint__print_state_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_state_type__s1__axiom
+module Sprint__print_float_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_state_type__s2
+module Sprint__print_float_type__s2
  use import "_gnatprove_standard".Main
+ use        Pump__float_number
 
- function s2 #"sprint.ads" 5 0 0# "model" "model_trace:2586" 
-   : int
+ function s2 #"sprint.ads" 5 0 0# 
+   : Pump__float_number.float_number
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
    : int
 
 end
 
 (* Module giving an empty axiom for the entity "s2" defined at sprint.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_state_type__s2__axiom
+module Sprint__print_float_type__s2__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s1" defined at sprint.ads:6, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_nozzle_type__s1
+module Sprint__print_state_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 6 0 0# "model_projected" "model_trace:2606" 
+ function s1 #"sprint.ads" 6 0 0# "model_projected" "model_trace:2577" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -12871,37 +12832,37 @@ module Sprint__print_nozzle_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_nozzle_type__s1__axiom
+module Sprint__print_state_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:6, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_nozzle_type__s2
+module Sprint__print_state_type__s2
  use import "_gnatprove_standard".Main
 
- function s2 #"sprint.ads" 6 0 0# "model" "model_trace:2615" 
+ function s2 #"sprint.ads" 6 0 0# "model" "model_trace:2586" 
    : int
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
    : int
 
 end
 
 (* Module giving an empty axiom for the entity "s2" defined at sprint.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_nozzle_type__s2__axiom
+module Sprint__print_state_type__s2__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s1" defined at sprint.ads:7, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_fuel_type__s1
+module Sprint__print_nozzle_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 7 0 0# "model_projected" "model_trace:2635" 
+ function s1 #"sprint.ads" 7 0 0# "model_projected" "model_trace:2606" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -12910,17 +12871,56 @@ module Sprint__print_fuel_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_fuel_type__s1__axiom
+module Sprint__print_nozzle_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:7, created in Gnat2Why.Decls.Translate_Constant *)
+module Sprint__print_nozzle_type__s2
+ use import "_gnatprove_standard".Main
+
+ function s2 #"sprint.ads" 7 0 0# "model" "model_trace:2615" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Sprint__print_nozzle_type__s2__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "s1" defined at sprint.ads:8, created in Gnat2Why.Decls.Translate_Constant *)
+module Sprint__print_fuel_type__s1
+ use import "_gnatprove_standard".Main
+ use        Standard__string
+
+ function s1 #"sprint.ads" 8 0 0# "model_projected" "model_trace:2635" 
+   : Standard__string.string
+ 
+ function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "s1" defined at sprint.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Sprint__print_fuel_type__s1__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "s2" defined at sprint.ads:8, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print_fuel_type__s2
  use import "_gnatprove_standard".Main
 
- function s2 #"sprint.ads" 7 0 0# "model" "model_trace:2644" 
+ function s2 #"sprint.ads" 8 0 0# "model" "model_trace:2644" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 7 0 0# 
@@ -12928,7 +12928,7 @@ module Sprint__print_fuel_type__s2
 
 end
 
-(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Sprint__print_fuel_type__s2__axiom
  use import "_gnatprove_standard".Main
 
@@ -12939,7 +12939,7 @@ module Ada__streams__read__stream
  use import "_gnatprove_standard".Main
  use        Ada__streams__root_stream_type
 
- val stream__split_fields #"a-stream.ads" 58 0 0# "model_projected" "model_trace:5774"  : Ada__streams__root_stream_type.__split_fields__ref 
+ val stream__split_fields #"a-stream.ads" 58 0 0# "model_projected" "model_trace:5758"  : Ada__streams__root_stream_type.__split_fields__ref 
  
  function stream__attr__tag #"a-stream.ads" 58 0 0# 
    : int
@@ -12962,12 +12962,12 @@ module Ada__streams__read__item
  use        Ada__streams__Tstream_element_offsetB
  use        Array__Int__Ada__streams__stream_element
 
- val item #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5783"  : Array__Int__Ada__streams__stream_element.map__ref 
+ val item #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5767"  : Array__Int__Ada__streams__stream_element.map__ref 
  
- function item__first #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5783'First" 
+ function item__first #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5767'First" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
- function item__last #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5783'Last" 
+ function item__last #"a-stream.ads" 59 0 0# "model_projected" "model_trace:5767'Last" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 44 0 0# 
@@ -12986,7 +12986,7 @@ end
 module Ada__streams__read__last
  use import "_gnatprove_standard".Main
 
- val last #"a-stream.ads" 60 0 0# "model" "model_trace:5792"  : int__ref 
+ val last #"a-stream.ads" 60 0 0# "model" "model_trace:5776"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 44 0 0# 
    : int
@@ -13005,7 +13005,7 @@ module Ada__streams__write__stream
  use import "_gnatprove_standard".Main
  use        Ada__streams__root_stream_type
 
- val stream__split_fields #"a-stream.ads" 64 0 0# "model_projected" "model_trace:5810"  : Ada__streams__root_stream_type.__split_fields__ref 
+ val stream__split_fields #"a-stream.ads" 64 0 0# "model_projected" "model_trace:5794"  : Ada__streams__root_stream_type.__split_fields__ref 
  
  function stream__attr__tag #"a-stream.ads" 64 0 0# 
    : int
@@ -13028,12 +13028,12 @@ module Ada__streams__read_sea__v
  use        Ada__streams__Tstream_element_offsetB
  use        Array__Int__Ada__streams__stream_element
 
- val v #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5859"  : Array__Int__Ada__streams__stream_element.map__ref 
+ val v #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5843"  : Array__Int__Ada__streams__stream_element.map__ref 
  
- function v__first #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5859'First" 
+ function v__first #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5843'First" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
- function v__last #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5859'Last" 
+ function v__last #"a-stream.ads" 78 0 0# "model_projected" "model_trace:5843'Last" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 44 0 0# 
@@ -13192,7 +13192,7 @@ end
 module Ada__text_io__get__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 205 0 0# "model" "model_trace:4506"  : int__ref 
+ val item #"a-textio.ads" 205 0 0# "model" "model_trace:4490"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13210,7 +13210,7 @@ end
 module Ada__text_io__get__2__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 206 0 0# "model" "model_trace:4524"  : int__ref 
+ val item #"a-textio.ads" 206 0 0# "model" "model_trace:4508"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13228,7 +13228,7 @@ end
 module Ada__text_io__look_ahead__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 212 0 0# "model" "model_trace:4596"  : int__ref 
+ val item #"a-textio.ads" 212 0 0# "model" "model_trace:4580"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13246,7 +13246,7 @@ end
 module Ada__text_io__look_ahead__end_of_line
  use import "_gnatprove_standard".Main
 
- val end_of_line #"a-textio.ads" 213 0 0# "model" "model_trace:4605"  : bool__ref 
+ val end_of_line #"a-textio.ads" 213 0 0# "model" "model_trace:4589"  : bool__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 213 0 0# 
    : int
@@ -13264,7 +13264,7 @@ end
 module Ada__text_io__look_ahead__2__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 216 0 0# "model" "model_trace:4623"  : int__ref 
+ val item #"a-textio.ads" 216 0 0# "model" "model_trace:4607"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13282,7 +13282,7 @@ end
 module Ada__text_io__look_ahead__2__end_of_line
  use import "_gnatprove_standard".Main
 
- val end_of_line #"a-textio.ads" 217 0 0# "model" "model_trace:4632"  : bool__ref 
+ val end_of_line #"a-textio.ads" 217 0 0# "model" "model_trace:4616"  : bool__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 217 0 0# 
    : int
@@ -13300,7 +13300,7 @@ end
 module Ada__text_io__get_immediate__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 221 0 0# "model" "model_trace:4659"  : int__ref 
+ val item #"a-textio.ads" 221 0 0# "model" "model_trace:4643"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13318,7 +13318,7 @@ end
 module Ada__text_io__get_immediate__2__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 224 0 0# "model" "model_trace:4677"  : int__ref 
+ val item #"a-textio.ads" 224 0 0# "model" "model_trace:4661"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13336,7 +13336,7 @@ end
 module Ada__text_io__get_immediate__3__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 228 0 0# "model" "model_trace:4704"  : int__ref 
+ val item #"a-textio.ads" 228 0 0# "model" "model_trace:4688"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13354,7 +13354,7 @@ end
 module Ada__text_io__get_immediate__3__available
  use import "_gnatprove_standard".Main
 
- val available #"a-textio.ads" 229 0 0# "model" "model_trace:4713"  : bool__ref 
+ val available #"a-textio.ads" 229 0 0# "model" "model_trace:4697"  : bool__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 229 0 0# 
    : int
@@ -13372,7 +13372,7 @@ end
 module Ada__text_io__get_immediate__4__item
  use import "_gnatprove_standard".Main
 
- val item #"a-textio.ads" 232 0 0# "model" "model_trace:4731"  : int__ref 
+ val item #"a-textio.ads" 232 0 0# "model" "model_trace:4715"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13390,7 +13390,7 @@ end
 module Ada__text_io__get_immediate__4__available
  use import "_gnatprove_standard".Main
 
- val available #"a-textio.ads" 233 0 0# "model" "model_trace:4740"  : bool__ref 
+ val available #"a-textio.ads" 233 0 0# "model" "model_trace:4724"  : bool__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-textio.ads" 233 0 0# 
    : int
@@ -13410,12 +13410,12 @@ module Ada__text_io__get__3__item
  use        Standard__integer
  use        Array__Int__Standard__character
 
- val item #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4767"  : Array__Int__Standard__character.map__ref 
+ val item #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4751"  : Array__Int__Standard__character.map__ref 
  
- function item__first #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4767'First" 
+ function item__first #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4751'First" 
    : Standard__integer.integer
  
- function item__last #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4767'Last" 
+ function item__last #"a-textio.ads" 239 0 0# "model_projected" "model_trace:4751'Last" 
    : Standard__integer.integer
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -13436,12 +13436,12 @@ module Ada__text_io__get__4__item
  use        Standard__integer
  use        Array__Int__Standard__character
 
- val item #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4785"  : Array__Int__Standard__character.map__ref 
+ val item #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4769"  : Array__Int__Standard__character.map__ref 
  
- function item__first #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4785'First" 
+ function item__first #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4769'First" 
    : Standard__integer.integer
  
- function item__last #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4785'Last" 
+ function item__last #"a-textio.ads" 240 0 0# "model_projected" "model_trace:4769'Last" 
    : Standard__integer.integer
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -13462,12 +13462,12 @@ module Ada__text_io__get_line__item
  use        Standard__integer
  use        Array__Int__Standard__character
 
- val item #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4857"  : Array__Int__Standard__character.map__ref 
+ val item #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4841"  : Array__Int__Standard__character.map__ref 
  
- function item__first #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4857'First" 
+ function item__first #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4841'First" 
    : Standard__integer.integer
  
- function item__last #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4857'Last" 
+ function item__last #"a-textio.ads" 246 0 0# "model_projected" "model_trace:4841'Last" 
    : Standard__integer.integer
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -13486,7 +13486,7 @@ end
 module Ada__text_io__get_line__last
  use import "_gnatprove_standard".Main
 
- val last #"a-textio.ads" 247 0 0# "model" "model_trace:4866"  : int__ref 
+ val last #"a-textio.ads" 247 0 0# "model" "model_trace:4850"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13506,12 +13506,12 @@ module Ada__text_io__get_line__2__item
  use        Standard__integer
  use        Array__Int__Standard__character
 
- val item #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4884"  : Array__Int__Standard__character.map__ref 
+ val item #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4868"  : Array__Int__Standard__character.map__ref 
  
- function item__first #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4884'First" 
+ function item__first #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4868'First" 
    : Standard__integer.integer
  
- function item__last #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4884'Last" 
+ function item__last #"a-textio.ads" 250 0 0# "model_projected" "model_trace:4868'Last" 
    : Standard__integer.integer
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -13530,7 +13530,7 @@ end
 module Ada__text_io__get_line__2__last
  use import "_gnatprove_standard".Main
 
- val last #"a-textio.ads" 251 0 0# "model" "model_trace:4893"  : int__ref 
+ val last #"a-textio.ads" 251 0 0# "model" "model_trace:4877"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
    : int
@@ -13548,7 +13548,7 @@ end
 module Ada__text_io__default_wcem
  use import "_gnatprove_standard".Main
 
- val default_wcem #"a-textio.ads" 362 0 0# "model" "model_trace:5160"  : int__ref 
+ val default_wcem #"a-textio.ads" 362 0 0# "model" "model_trace:5144"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"s-wchcon.ads" 94 0 0# 
    : int
@@ -13587,12 +13587,12 @@ module Ada__text_io__read__2__item
  use        Ada__streams__Tstream_element_offsetB
  use        Array__Int__Ada__streams__stream_element
 
- val item #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5422"  : Array__Int__Ada__streams__stream_element.map__ref 
+ val item #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5406"  : Array__Int__Ada__streams__stream_element.map__ref 
  
- function item__first #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5422'First" 
+ function item__first #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5406'First" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
- function item__last #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5422'Last" 
+ function item__last #"a-textio.ads" 433 0 0# "model_projected" "model_trace:5406'Last" 
    : Ada__streams__Tstream_element_offsetB.tstream_element_offsetB
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 44 0 0# 
@@ -13611,7 +13611,7 @@ end
 module Ada__text_io__read__2__last
  use import "_gnatprove_standard".Main
 
- val last #"a-textio.ads" 434 0 0# "model" "model_trace:5435"  : int__ref 
+ val last #"a-textio.ads" 434 0 0# "model" "model_trace:5419"  : int__ref 
  
  function attr__ATTRIBUTE_ADDRESS #"a-stream.ads" 44 0 0# 
    : int
@@ -13815,133 +13815,133 @@ module Ada__text_io__current_err__axiom
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:14, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_fuel_price__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 14 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 33 0 0# "model_projected" "model_trace:2956"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_fuel_price__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:15, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:34, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pump_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 15 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 34 0 0# "model_projected" "model_trace:2983"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:16, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:35, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pumped__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 16 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 35 0 0# "model_projected" "model_trace:3010"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pumped__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:36, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pump_nozzle_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 17 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 36 0 0# "model_projected" "model_trace:3037"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_nozzle_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:38, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__append_reservoir__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 19 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 38 0 0# "model_projected" "model_trace:3064"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__append_reservoir__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:40, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_reservoir_size__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 21 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 40 0 0# "model_projected" "model_trace:3091"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_reservoir_size__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:23, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:42, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__remove_petrol_reservoir__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 23 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 42 0 0# "model_projected" "model_trace:3118"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__remove_petrol_reservoir__pump_r__axiom
  use import "_gnatprove_standard".Main
 
@@ -13953,7 +13953,7 @@ module Pump__append_reservoir__r
  use import "ref".Ref
  use import "_gnatprove_standard".Main
 
- val r #"pump.ads" 44 0 0#  : Main.__private__ref 
+ val r #"pump.ads" 20 0 0#  : Main.__private__ref 
 
 end
 
@@ -13969,7 +13969,7 @@ module Standard__short_short_integer__axiom
  use import "int".Int
  use        Standard__short_short_integer
 
- predicate dynamic_invariant #"pump.ads" 44 0 0# "inline" 
+ predicate dynamic_invariant #"pump.ads" 20 0 0# "inline" 
    (temp___expr_3 : int) (temp___is_init_0 : bool) (temp___do_constant_1 : bool) (temp___do_toplevel_2 : bool)  =
   (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
    (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_3)) else true)
@@ -14368,7 +14368,7 @@ end
 module System__min_int
  use import "_gnatprove_standard".Main
 
- function min_int #"system.ads" 51 0 0# "model" "model_trace:5960" 
+ function min_int #"system.ads" 51 0 0# "model" "model_trace:5944" 
    : int
 
 end
@@ -14377,7 +14377,7 @@ end
 module System__max_int
  use import "_gnatprove_standard".Main
 
- function max_int #"system.ads" 52 0 0# "model" "model_trace:5971" 
+ function max_int #"system.ads" 52 0 0# "model" "model_trace:5955" 
    : int
 
 end
@@ -14386,7 +14386,7 @@ end
 module System__max_binary_modulus
  use import "_gnatprove_standard".Main
 
- function max_binary_modulus #"system.ads" 54 0 0# "model" "model_trace:5982" 
+ function max_binary_modulus #"system.ads" 54 0 0# "model" "model_trace:5966" 
    : int
 
 end
@@ -14395,7 +14395,7 @@ end
 module System__max_nonbinary_modulus
  use import "_gnatprove_standard".Main
 
- function max_nonbinary_modulus #"system.ads" 55 0 0# "model" "model_trace:5995" 
+ function max_nonbinary_modulus #"system.ads" 55 0 0# "model" "model_trace:5979" 
    : int
 
 end
@@ -14404,7 +14404,7 @@ end
 module System__max_base_digits
  use import "_gnatprove_standard".Main
 
- function max_base_digits #"system.ads" 57 0 0# "model" "model_trace:6010" 
+ function max_base_digits #"system.ads" 57 0 0# "model" "model_trace:5994" 
    : int
 
 end
@@ -14413,7 +14413,7 @@ end
 module System__max_digits
  use import "_gnatprove_standard".Main
 
- function max_digits #"system.ads" 58 0 0# "model" "model_trace:6020" 
+ function max_digits #"system.ads" 58 0 0# "model" "model_trace:6004" 
    : int
 
 end
@@ -14422,7 +14422,7 @@ end
 module System__max_mantissa
  use import "_gnatprove_standard".Main
 
- function max_mantissa #"system.ads" 60 0 0# "model" "model_trace:6030" 
+ function max_mantissa #"system.ads" 60 0 0# "model" "model_trace:6014" 
    : int
 
 end
@@ -14451,7 +14451,7 @@ end
 module System__storage_unit
  use import "_gnatprove_standard".Main
 
- function storage_unit #"system.ads" 71 0 0# "model" "model_trace:6081" 
+ function storage_unit #"system.ads" 71 0 0# "model" "model_trace:6065" 
    : int
 
 end
@@ -14460,7 +14460,7 @@ end
 module System__word_size
  use import "_gnatprove_standard".Main
 
- function word_size #"system.ads" 72 0 0# "model" "model_trace:6090" 
+ function word_size #"system.ads" 72 0 0# "model" "model_trace:6074" 
    : int
 
 end
@@ -14469,7 +14469,7 @@ end
 module System__memory_size
  use import "_gnatprove_standard".Main
 
- function memory_size #"system.ads" 73 0 0# "model" "model_trace:6099" 
+ function memory_size #"system.ads" 73 0 0# "model" "model_trace:6083" 
    : int
 
 end
@@ -14516,7 +14516,7 @@ end
 module System__parameters__long_bits
  use import "_gnatprove_standard".Main
 
- function long_bits #"s-parame.ads" 110 0 0# "model" "model_trace:11515" 
+ function long_bits #"s-parame.ads" 110 0 0# "model" "model_trace:11499" 
    : int
 
 end
@@ -14535,7 +14535,7 @@ end
 module System__parameters__max_attribute_count
  use import "_gnatprove_standard".Main
 
- function max_attribute_count #"s-parame.ads" 183 0 0# "model" "model_trace:11588" 
+ function max_attribute_count #"s-parame.ads" 183 0 0# "model" "model_trace:11572" 
    : int
 
 end
@@ -14544,7 +14544,7 @@ end
 module System__parameters__max_task_image_length
  use import "_gnatprove_standard".Main
 
- function max_task_image_length #"s-parame.ads" 199 0 0# "model" "model_trace:11607" 
+ function max_task_image_length #"s-parame.ads" 199 0 0# "model" "model_trace:11591" 
    : int
 
 end
@@ -14553,7 +14553,7 @@ end
 module System__parameters__default_exception_msg_max_length
  use import "_gnatprove_standard".Main
 
- function default_exception_msg_max_length #"s-parame.ads" 206 0 0# "model" "model_trace:11616" 
+ function default_exception_msg_max_length #"s-parame.ads" 206 0 0# "model" "model_trace:11600" 
    : int
 
 end
@@ -14666,7 +14666,7 @@ end
 module System__wch_con__wc_longest_sequence
  use import "_gnatprove_standard".Main
 
- function wc_longest_sequence #"s-wchcon.ads" 189 0 0# "model" "model_trace:11780" 
+ function wc_longest_sequence #"s-wchcon.ads" 189 0 0# "model" "model_trace:11764" 
    : int
 
 end
@@ -15010,7 +15010,7 @@ end
 module Ada__text_io__lm
  use import "_gnatprove_standard".Main
 
- function lm #"a-textio.ads" 352 0 0# "model" "model_trace:5132" 
+ function lm #"a-textio.ads" 352 0 0# "model" "model_trace:5116" 
    : int
 
 end
@@ -15019,7 +15019,7 @@ end
 module Ada__text_io__pm
  use import "_gnatprove_standard".Main
 
- function pm #"a-textio.ads" 355 0 0# "model" "model_trace:5146" 
+ function pm #"a-textio.ads" 355 0 0# "model" "model_trace:5130" 
    : int
 
 end
@@ -15031,84 +15031,84 @@ module Ada__text_io__initialize_standard_files
 
 end
 
-(* Module for possibly declaring a logic function for "set_fuel_price" defined at pump.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_fuel_price" defined at pump.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_fuel_price
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pump_state" defined at pump.ads:15, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pump_state" defined at pump.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pump_state
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pumped" defined at pump.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pumped" defined at pump.ads:35, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pumped
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pump_nozzle_state" defined at pump.ads:17, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pump_nozzle_state" defined at pump.ads:36, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pump_nozzle_state
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "append_reservoir" defined at pump.ads:19, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "append_reservoir" defined at pump.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__append_reservoir
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_reservoir_size" defined at pump.ads:21, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_reservoir_size" defined at pump.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_reservoir_size
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "remove_petrol_reservoir" defined at pump.ads:23, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "remove_petrol_reservoir" defined at pump.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__remove_petrol_reservoir
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print" defined at sprint.ads:3, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_float_type" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_float_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_float_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_state_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_state_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_state_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_nozzle_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_nozzle_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_nozzle_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_fuel_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_fuel_type" defined at sprint.ads:8, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_fuel_type
  use import "_gnatprove_standard".Main
 
@@ -16348,34 +16348,19 @@ module Pump__fuel_types__axiom
 
 end
 
-(* Module giving axioms for type "reservoir" defined at pump.ads:37, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Pump__reservoir__axiom
- use import "_gnatprove_standard".Main
- use        Pump__reservoir
-
- predicate dynamic_invariant #"pump.ads" 7 0 0# "inline" 
-   (temp___expr_538 : Pump__reservoir.reservoir) (temp___is_init_535 : bool) (temp___do_constant_536 : bool) (temp___do_toplevel_537 : bool)  =
-  true
- 
- predicate default_initial_assumption #"pump.ads" 37 0 0# "inline" 
-   (temp___539 : Pump__reservoir.reservoir) (temp___540 : bool)  =
-  true
-
-end
-
 (* Module giving axioms for type "state_type" defined at pump.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pump__state_type__axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Pump__state_type
 
- predicate dynamic_invariant #"pump.ads" 37 0 0# "inline" 
-   (temp___expr_546 : int) (temp___is_init_543 : bool) (temp___do_constant_544 : bool) (temp___do_toplevel_545 : bool)  =
-  (if (( temp___is_init_543 \/ (Pump__state_type.first <= Pump__state_type.last) )) then (
-   (Pump__state_type.dynamic_property Pump__state_type.first Pump__state_type.last temp___expr_546)) else true)
+ predicate dynamic_invariant #"pump.ads" 7 0 0# "inline" 
+   (temp___expr_538 : int) (temp___is_init_535 : bool) (temp___do_constant_536 : bool) (temp___do_toplevel_537 : bool)  =
+  (if (( temp___is_init_535 \/ (Pump__state_type.first <= Pump__state_type.last) )) then (
+   (Pump__state_type.dynamic_property Pump__state_type.first Pump__state_type.last temp___expr_538)) else true)
  
  predicate default_initial_assumption #"pump.ads" 10 0 0# "inline" 
-   (temp___547 : int) (temp___548 : bool)  =
+   (temp___539 : int) (temp___540 : bool)  =
   true
 
 end
@@ -16387,41 +16372,56 @@ module Pump__nozzle_type__axiom
  use        Pump__nozzle_type
 
  predicate dynamic_invariant #"pump.ads" 10 0 0# "inline" 
-   (temp___expr_552 : int) (temp___is_init_549 : bool) (temp___do_constant_550 : bool) (temp___do_toplevel_551 : bool)  =
-  (if (( temp___is_init_549 \/ (Pump__nozzle_type.first <= Pump__nozzle_type.last) )) then (
-   (Pump__nozzle_type.dynamic_property Pump__nozzle_type.first Pump__nozzle_type.last temp___expr_552)) else true)
+   (temp___expr_544 : int) (temp___is_init_541 : bool) (temp___do_constant_542 : bool) (temp___do_toplevel_543 : bool)  =
+  (if (( temp___is_init_541 \/ (Pump__nozzle_type.first <= Pump__nozzle_type.last) )) then (
+   (Pump__nozzle_type.dynamic_property Pump__nozzle_type.first Pump__nozzle_type.last temp___expr_544)) else true)
  
  predicate default_initial_assumption #"pump.ads" 11 0 0# "inline" 
-   (temp___553 : int) (temp___554 : bool)  =
+   (temp___545 : int) (temp___546 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "pump" defined at pump.ads:44, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "reservoir" defined at pump.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pump__reservoir__axiom
+ use import "_gnatprove_standard".Main
+ use        Pump__reservoir
+
+ predicate dynamic_invariant #"pump.ads" 11 0 0# "inline" 
+   (temp___expr_550 : Pump__reservoir.reservoir) (temp___is_init_547 : bool) (temp___do_constant_548 : bool) (temp___do_toplevel_549 : bool)  =
+  true
+ 
+ predicate default_initial_assumption #"pump.ads" 13 0 0# "inline" 
+   (temp___551 : Pump__reservoir.reservoir) (temp___552 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "pump" defined at pump.ads:20, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pump__pump__axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use import "real".RealInfix
  use        Pump__float_number
  use        Pump__fuel_types
- use        Pump__reservoir
  use        Pump__state_type
  use        Pump__nozzle_type
+ use        Pump__reservoir
  use        Pump__pump
 
- predicate dynamic_invariant #"pump.ads" 11 0 0# "inline" 
+ predicate dynamic_invariant #"pump.ads" 13 0 0# "inline" 
    (temp___expr_558 : Pump__pump.pump) (temp___is_init_555 : bool) (temp___do_constant_556 : bool) (temp___do_toplevel_557 : bool)  =
   true
  
- predicate default_initial_assumption #"pump.ads" 44 0 0# "inline" 
+ predicate default_initial_assumption #"pump.ads" 20 0 0# "inline" 
    (temp___559 : Pump__pump.pump) (temp___560 : bool)  =
   ( ( ( ( ( (if ((Pump__pump.reservoir_info__pred temp___559)) then (
-   ((Pump__pump.rec__reservoir_info (Pump__pump.__split_fields temp___559)) = { Pump__reservoir.__split_fields = { Pump__reservoir.rec__total = (Pump__float_number.of_real (1000.0)); Pump__reservoir.rec__reservoir_category = (Pump__fuel_types.of_rep 0) } })) else true) /\ (if ((Pump__pump.pump_state__pred temp___559)) then (
+   ((Pump__pump.rec__reservoir_info (Pump__pump.__split_fields temp___559)) = { Pump__reservoir.__split_fields = { Pump__reservoir.rec__total = (Pump__float_number.of_real (10.0)); Pump__reservoir.rec__reservoir_category = (Pump__fuel_types.of_rep 0) } })) else true) /\ (if ((Pump__pump.pump_state__pred temp___559)) then (
    ((Pump__state_type.to_rep (Pump__pump.rec__pump_state (Pump__pump.__split_fields temp___559))) = 0)) else true) ) /\ (if ((Pump__pump.pumped__pred temp___559)) then (
    ((Pump__pump.rec__pumped (Pump__pump.__split_fields temp___559)) = (Pump__float_number.of_real (0.0E-2)))) else true) ) /\ (if ((Pump__pump.nozzle_state__pred temp___559)) then (
    ((Pump__nozzle_type.to_rep (Pump__pump.rec__nozzle_state (Pump__pump.__split_fields temp___559))) = 0)) else true) ) /\ (if ((Pump__pump.unit_price__pred temp___559)) then (
    ((Pump__pump.rec__unit_price (Pump__pump.__split_fields temp___559)) = (Pump__float_number.of_real (0.0E-2)))) else true) ) /\ (if ((Pump__pump.fuel_type__pred temp___559)) then (
-   ((Pump__fuel_types.to_rep (Pump__pump.rec__fuel_type (Pump__pump.__split_fields temp___559))) = 3)) else true) )
+   ((Pump__fuel_types.to_rep (Pump__pump.rec__fuel_type (Pump__pump.__split_fields temp___559))) = 0)) else true) )
 
 end
 (* Module for defining the value of constant "system_name" defined at system.ads:47, created in Gnat2Why.Decls.Translate_Constant_Value *)
@@ -19933,13 +19933,13 @@ module Ada__text_io__initialize_standard_files__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_fuel_price" defined at pump.ads:14, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_fuel_price" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_fuel_price__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_fuel_price #"pump.ads" 14 0 0# 
+ val set_fuel_price #"pump.ads" 33 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (price : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -19947,13 +19947,13 @@ module Pump__set_fuel_price__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pump_state" defined at pump.ads:15, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pump_state" defined at pump.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pump_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pump_state #"pump.ads" 15 0 0# 
+ val set_pump_state #"pump.ads" 34 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (statetype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -19961,13 +19961,13 @@ module Pump__set_pump_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pumped" defined at pump.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pumped" defined at pump.ads:35, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pumped__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pumped #"pump.ads" 16 0 0# 
+ val set_pumped #"pump.ads" 35 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (amount : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -19975,13 +19975,13 @@ module Pump__set_pumped__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pump_nozzle_state" defined at pump.ads:17, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pump_nozzle_state" defined at pump.ads:36, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pump_nozzle_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pump_nozzle_state #"pump.ads" 17 0 0# 
+ val set_pump_nozzle_state #"pump.ads" 36 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (nozzletype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -19989,13 +19989,13 @@ module Pump__set_pump_nozzle_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "append_reservoir" defined at pump.ads:19, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "append_reservoir" defined at pump.ads:38, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__append_reservoir__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val append_reservoir #"pump.ads" 19 0 0# 
+ val append_reservoir #"pump.ads" 38 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (fueltype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -20003,13 +20003,13 @@ module Pump__append_reservoir__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_reservoir_size" defined at pump.ads:21, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_reservoir_size" defined at pump.ads:40, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_reservoir_size__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_reservoir_size #"pump.ads" 21 0 0# 
+ val set_reservoir_size #"pump.ads" 40 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (size : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -20017,46 +20017,25 @@ module Pump__set_reservoir_size__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_tanks_size" defined at pump.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Pump__get_tanks_size__axiom
- use import "_gnatprove_standard".Main
- use        Pump__float_number
- use        Pump__float_number__axiom
- use        Pump__pump
- use        Pump__pump__axiom
- use        Pump__get_tanks_size
-
- val get_tanks_size #"pump.ads" 32 0 0# 
-   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
-  requires { true }
-  ensures { ( (result = (Pump__get_tanks_size.get_tanks_size pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
- 
- axiom get_tanks_size__post_axiom :
-  (forall pump_r : Pump__pump.pump [(Pump__get_tanks_size.get_tanks_size pump_r)].
-   ( (Pump__pump__axiom.dynamic_invariant pump_r True True True) -> (let result = (Pump__get_tanks_size.get_tanks_size pump_r) in (
-    (Pump__float_number__axiom.dynamic_invariant result True False True)))
-    ))
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "remove_petrol_reservoir" defined at pump.ads:23, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "remove_petrol_reservoir" defined at pump.ads:42, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__remove_petrol_reservoir__axiom
  use import "_gnatprove_standard".Main
  use import "real".RealInfix
+ use        Pump__Tfloat_numberB
  use        Pump__float_number
+ use        Pump__reservoir
  use        Pump__pump
  use        Pump__pump__axiom
- use        Pump__get_tanks_size
 
- val remove_petrol_reservoir #"pump.ads" 23 0 0# 
+ val remove_petrol_reservoir #"pump.ads" 42 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (amount : real) : unit
-  requires { (amount <=. (Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))) }
-  ensures { ( ((Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content })) >=. (0.0E-2)) /\ (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) ) }
+  requires { ((Pump__Tfloat_numberB.round_real ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))))) -. amount)) >=. (0.0E-2)) }
+  ensures { ( ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))))) >=. (0.0E-2)) /\ (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) ) }
   writes {pump_r__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_state" defined at pump.ads:29, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_state" defined at pump.ads:48, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__state_type__axiom
@@ -20064,7 +20043,7 @@ module Pump__get_state__axiom
  use        Pump__pump__axiom
  use        Pump__get_state
 
- val get_state #"pump.ads" 29 0 0# 
+ val get_state #"pump.ads" 48 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_state.get_state pump_r)) /\ (Pump__state_type__axiom.dynamic_invariant result True False True) ) }
@@ -20077,7 +20056,7 @@ module Pump__get_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_current_nozzle_state" defined at pump.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_current_nozzle_state" defined at pump.ads:49, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_current_nozzle_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__nozzle_type__axiom
@@ -20085,7 +20064,7 @@ module Pump__get_current_nozzle_state__axiom
  use        Pump__pump__axiom
  use        Pump__get_current_nozzle_state
 
- val get_current_nozzle_state #"pump.ads" 30 0 0# 
+ val get_current_nozzle_state #"pump.ads" 49 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_current_nozzle_state.get_current_nozzle_state pump_r)) /\ (Pump__nozzle_type__axiom.dynamic_invariant result True False True) ) }
@@ -20098,7 +20077,7 @@ module Pump__get_current_nozzle_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_unit_price" defined at pump.ads:31, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_unit_price" defined at pump.ads:50, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_unit_price__axiom
  use import "_gnatprove_standard".Main
  use        Pump__float_number
@@ -20107,7 +20086,7 @@ module Pump__get_unit_price__axiom
  use        Pump__pump__axiom
  use        Pump__get_unit_price
 
- val get_unit_price #"pump.ads" 31 0 0# 
+ val get_unit_price #"pump.ads" 50 0 0# 
    (pump_r : Pump__pump.pump) : Pump__float_number.float_number
   requires { true }
   ensures { ( (result = (Pump__get_unit_price.get_unit_price pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
@@ -20120,7 +20099,29 @@ module Pump__get_unit_price__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_resevoir_category" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_tanks_size" defined at pump.ads:51, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Pump__get_tanks_size__axiom
+ use import "_gnatprove_standard".Main
+ use        Pump__float_number
+ use        Pump__float_number__axiom
+ use        Pump__pump
+ use        Pump__pump__axiom
+ use        Pump__get_tanks_size
+
+ val get_tanks_size #"pump.ads" 51 0 0# 
+   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
+  requires { true }
+  ensures { ( (result = (Pump__get_tanks_size.get_tanks_size pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
+ 
+ axiom get_tanks_size__post_axiom :
+  (forall pump_r : Pump__pump.pump [(Pump__get_tanks_size.get_tanks_size pump_r)].
+   ( (Pump__pump__axiom.dynamic_invariant pump_r True True True) -> (let result = (Pump__get_tanks_size.get_tanks_size pump_r) in (
+    (Pump__float_number__axiom.dynamic_invariant result True False True)))
+    ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "get_resevoir_category" defined at pump.ads:52, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_resevoir_category__axiom
  use import "_gnatprove_standard".Main
  use        Pump__fuel_types__axiom
@@ -20128,7 +20129,7 @@ module Pump__get_resevoir_category__axiom
  use        Pump__pump__axiom
  use        Pump__get_resevoir_category
 
- val get_resevoir_category #"pump.ads" 33 0 0# 
+ val get_resevoir_category #"pump.ads" 52 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_resevoir_category.get_resevoir_category pump_r)) /\ (Pump__fuel_types__axiom.dynamic_invariant result True False True) ) }
@@ -20141,60 +20142,60 @@ module Pump__get_resevoir_category__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print" defined at sprint.ads:3, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print #"sprint.ads" 3 0 0# 
+ val print #"sprint.ads" 4 0 0# 
    (s : Standard__string.string) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_float_type" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_float_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_float_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_float_type #"sprint.ads" 4 0 0# 
+ val print_float_type #"sprint.ads" 5 0 0# 
    (s1 : Standard__string.string) (s2 : real) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_state_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_state_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_state_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_state_type #"sprint.ads" 5 0 0# 
+ val print_state_type #"sprint.ads" 6 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_nozzle_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_nozzle_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_nozzle_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_nozzle_type #"sprint.ads" 6 0 0# 
+ val print_nozzle_type #"sprint.ads" 7 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_fuel_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_fuel_type" defined at sprint.ads:8, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_fuel_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_fuel_type #"sprint.ads" 7 0 0# 
+ val print_fuel_type #"sprint.ads" 8 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }

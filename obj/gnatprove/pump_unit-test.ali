@@ -13,7 +13,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pump_unit.test%b	pump_unit-test.adb	cebb8b56 OO PK IU
+U pump_unit.test%b	pump_unit-test.adb	e033641c OO PK IU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W aunit%s		aunit.adb		aunit.ali
@@ -22,7 +22,7 @@ W pump_unit%s		pump_unit.adb		pump_unit.ali
 W sprint%s		sprint.adb		sprint.ali
 W system%s		system.ads		system.ali
 
-U pump_unit.test%s	pump_unit-test.ads	188726a8 EE OO PK IU
+U pump_unit.test%s	pump_unit-test.ads	4a7200aa EE OO PK IU
 W aunit%s		aunit.adb		aunit.ali
 W aunit.test_cases%s	aunit-test_cases.adb	aunit-test_cases.ali
 W pump_unit%s		pump_unit.adb		pump_unit.ali
@@ -49,8 +49,8 @@ D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
 D pump.ads		20160814121532 99ea1c67 pump%s
 D pump_unit.ads		20160814125646 e440f765 pump_unit%s
-D pump_unit-test.ads	20160814101518 b5bd538f pump_unit.test%s
-D pump_unit-test.adb	20160814121610 c767704d pump_unit.test%b
+D pump_unit-test.ads	20160814133000 e748758d pump_unit.test%s
+D pump_unit-test.adb	20160814133322 bb1ab905 pump_unit.test%b
 D sprint.ads		20160814103738 33f5b196 sprint%s
 D system.ads		20160516092930 2da59038 system%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
@@ -64,35 +64,34 @@ X 5 a-textio.ads
 166U14*New_Line 24|38s7 56s7
 263U14*Put_Line 24|39s7 57s7 63s7 69s7
 X 8 aunit.ads
-34K9*AUnit 48e10 23|1w6 1r17 2r6 5r18 15r33 24|2r6 2r28 85r42 100r11 108r33
-. 111r14
-36P9*Message_String(string) 23|15r39 24|108r39
-44V13*Format{36P9} 24|111s20
+34K9*AUnit 48e10 23|1w6 2r6 6r18 16r33 24|2r6 2r28 85r42 158r11 194r33 197r14
+36P9*Message_String(string) 23|16r39 24|194r39
+44V13*Format{36P9} 24|197s20
 X 9 aunit-assertions.ads
 44K15*Assertions 155e21 24|2w12 2r34
-48U14*Assert 24|91s7
+48U14*Assert 24|89s7
 101U14*Init_Test
 104U14*Clear_Failures
 107V13*Has_Failures{boolean}
 113V13*First_Failure{110R9}
 X 12 aunit-test_cases.ads
-39K15*Test_Cases 121e21 23|2w12 5r24 24|85r48 100r17
-41H9*Test_Case<11|44R9> 119e14 23|5r35 24|85r59
-63K12*Registration 74e20 24|100r28
-65U17*Register_Routine 24|102s7
+39K15*Test_Cases 121e21 23|2w12 6r24 24|85r48 158r17
+41H9*Test_Case<11|44R9> 119e14 23|6r35 24|85r59
+63K12*Registration 74e20 24|158r28
+65U17*Register_Routine 24|160s7
 91U14*Run<11|67p14>
 98U14*Run_Test<11|53p14>
 101V13*Routine_Name{8|36P9}<11|50p13>
 X 21 pump.ads
-1K9*PUMP 59e9 24|7r15 12r9 40r13 75r33 76r34 77r34
+1K9*PUMP 59e9 24|5r17 7r15 12r9 40r13 75r33 76r34 77r34
 6F9*FLOAT_NUMBER<short_float>
-7E9*FUEL_TYPES 7e45 24|12r14 40r18 75r38
+7E9*FUEL_TYPES 7e45 24|5r22 12r14 40r18 75r38
 10E9*STATE_TYPE 10e54 24|76r39
 11E9*NOZZLE_TYPE 11e68 24|77r39
 20R9*PUMP 30e17 24|7r20
-51V13*GET_TANKS_SIZE{6F9} 24|91s29
+51V13*GET_TANKS_SIZE{6F9} 24|89s29
 X 22 pump_unit.ads
-3K9*PUMP_UNIT 80e14 23|3r9 17r5 24|4r14 114r5
+3K9*PUMP_UNIT 80e14 23|4r9 18r5 24|4r14 200r5
 8A12*UNIT_ID_TYPE{string}<integer>
 14R9*PUMP_UNIT 27e17 24|6r13
 16a10*ID{8A12} 24|70m14
@@ -103,29 +102,29 @@ X 22 pump_unit.ads
 21e10*PUMP_ACTIVE_FUEL{21|7E9} 24|75m14
 22e10*PUMP_ACTIVE_STATE{21|10E9} 24|76m14
 23e10*PUMP_NOZZLE_STATE{21|11E9} 24|77m14
-24r10*PUMP_91{21|20R9} 24|91r51
+24r10*PUMP_91{21|20R9} 24|89r51
 46U14*SET_UNIT_ID 24|43s7
 51U14*ADD_PUMP 24|87s7
 X 23 pump_unit-test.ads
-3K19*Test 22|3k9 23|17l15 17e19 24|4b24 114l15 114t19
-5R8*TC<12|41R9> 9|101p14 104p14 107p13 113p13 12|91P14 98P14 101P13 23|5e61
-. 7P25 7r48 9P25 9r43 10P25 10r46 12P25 12r51 14P14 14r40 15P13 15r22 24|35r37
-. 54r33 61r36 67r41 99r40 108r22
-7U25*Set_Up_Case<12|57p14> 7=38 24|35b14 51l8 51t19
-7r38 T{5R8} 24|35b27 36r28
-9U25*Set_Up<11|57p14> 9=33 24|54b14 59t7
-9r33 T{5R8} 24|54b22
-10U25*Tear_Down<11|60p14> 10=36 24|61b14 65t7
-10r36 T{5R8} 24|61b25
-12U25*Tear_Down_Case<12|60p14> 12=41 24|67b14 78t7
-12r41 T{5R8} 24|67b30
-14U14 Register_Tests<12|54p14> 14=30 24|99b14 106l8 106t22
-14r30 T{5R8} 24|99b30 102m33
-15V13 Name{8|36P9}<11|47p13> 15>19 24|108b13 112l8 112t12
-15r19 T{5R8} 24|108b19 109r28
+4K19*Test 22|3k9 23|18l15 18e19 24|4b24 200l15 200t19
+6R8*TC<12|41R9> 9|101p14 104p14 107p13 113p13 12|91P14 98P14 101P13 23|6e61
+. 8P25 8r48 10P25 10r43 11P25 11r46 13P25 13r51 15P14 15r40 16P13 16r22 24|35r37
+. 54r33 61r36 67r41 157r40 194r22
+8U25*Set_Up_Case<12|57p14> 8=38 24|35b14 51l8 51t19
+8r38 T{6R8} 24|35b27 36r28
+10U25*Set_Up<11|57p14> 10=33 24|54b14 59t7
+10r33 T{6R8} 24|54b22
+11U25*Tear_Down<11|60p14> 11=36 24|61b14 65t7
+11r36 T{6R8} 24|61b25
+13U25*Tear_Down_Case<12|60p14> 13=41 24|67b14 78t7
+13r41 T{6R8} 24|67b30
+15U14 Register_Tests<12|54p14> 15=30 24|157b14 192l8 192t22
+15r30 T{6R8} 24|157b30 160m33
+16V13 Name{8|36P9}<11|47p13> 16>19 24|194b13 198l8 198t12
+16r19 T{6R8} 24|194b19 195r28
 X 24 pump_unit-test.adb
 6r4 UNIT_1{22|14R9} 43m19 43r19 70m7 71m7 72m7 73m7 74m7 75m7 76m7 77m7 87m16
-. 87r16 91r44
+. 87r16 89r44
 7r4 UNIT_1_91{21|20R9} 87m23 87r23
 12e4 U91{21|7E9} 40m7 87r34
 16i4 F_U91{integer} 40r33
@@ -142,7 +141,7 @@ X 24 pump_unit-test.adb
 30i4 Stop{integer}
 31i4 Pay{integer}
 33D9 FLOAT_NUMBER
-85U14 Test_AddPump 93l8 93t20 103r36
+85U14 Test_AddPump 91l8 91t20 161r36
 85c28 CWTC<12|41R9>
 X 25 sprint.ads
 2K10*sPrint 24|3w6 25|13e11
@@ -584,13 +583,13 @@ FS .21 58U14 pump_unit__return_nozzle
 FS .22 67U14 pump_unit__start_pumping
 FS .23 72U14 pump_unit__stop_pumping
 FD 23 pump_unit-test.ads
-FS .1 3K19 pump_unit__test
-FS .2 7U25 pump_unit__test__set_up_case
-FS .3 9U25 pump_unit__test__set_up
-FS .4 10U25 pump_unit__test__tear_down
-FS .5 12U25 pump_unit__test__tear_down_case
-FS .6 14U14 pump_unit__test__register_tests__2
-FS .7 15V13 pump_unit__test__name__2
+FS .1 4K19 pump_unit__test
+FS .2 8U25 pump_unit__test__set_up_case
+FS .3 10U25 pump_unit__test__set_up
+FS .4 11U25 pump_unit__test__tear_down
+FS .5 13U25 pump_unit__test__tear_down_case
+FS .6 15U14 pump_unit__test__register_tests__2
+FS .7 16V13 pump_unit__test__name__2
 FD 24 pump_unit-test.adb
 FS .1 4K24 pump_unit__test -> 23.1
 FS .2 35U14 pump_unit__test__set_up_case -> 23.2
@@ -599,8 +598,8 @@ FS .4 61U14 pump_unit__test__tear_down -> 23.4
 FS .5 67U14 pump_unit__test__tear_down_case -> 23.5
 FS .6 85U14 pump_unit__test__test_addpump
 FS .7 85U14 pump_unit__test__test_addpump -> 24.6
-FS .8 99U14 pump_unit__test__register_tests__2 -> 23.6
-FS .9 108V13 pump_unit__test__name__2 -> 23.7
+FS .8 157U14 pump_unit__test__register_tests__2 -> 23.6
+FS .9 194V13 pump_unit__test__name__2 -> 23.7
 FD 25 sprint.ads
 FS .1 2K10 sprint
 FS .2 3U14 sprint__print
@@ -677,25 +676,25 @@ FX 5 a-textio.ads .1 ada__text_io
 F 166*14 ada__text_io__new_line__2 24|.2:38s7 .3:56s7
 F 263*14 ada__text_io__put_line__2 24|.2:39s7 .3:57s7 .4:63s7 .5:69s7
 FX 8 aunit.ads .1 aunit
-F 44*13 aunit__format 24|.9:111s20
+F 44*13 aunit__format 24|.9:197s20
 FX 9 aunit-assertions.ads .1 aunit__assertions
-F 48*14 aunit__assertions__assert 24|.7:91s7
+F 48*14 aunit__assertions__assert 24|.7:89s7
 FX 12 aunit-test_cases.ads .5 aunit__test_cases__registration
-F 65*17 aunit__test_cases__registration__register_routine 24|.8:102s7
+F 65*17 aunit__test_cases__registration__register_routine 24|.8:160s7
 FX 21 pump.ads .1 pump
-F 51*13 pump__get_tanks_size 24|.7:91s29
+F 51*13 pump__get_tanks_size 24|.7:89s29
 FX 22 pump_unit.ads .1 pump_unit
 F 46*14 pump_unit__set_unit_id 24|.2:43s7
 F 51*14 pump_unit__add_pump 24|.7:87s7
 FX 23 pump_unit-test.ads .2 pump_unit__test__set_up_case
-F 7=38 pump_unit__test__set_up_case__t 24|.2:36r28
+F 8=38 pump_unit__test__set_up_case__t 24|.2:36r28
 FX 23 pump_unit-test.ads .6 pump_unit__test__register_tests__2
-F 14=30 pump_unit__test__register_tests__2__t 24|.8:102m33
+F 15=30 pump_unit__test__register_tests__2__t 24|.8:160m33
 FX 23 pump_unit-test.ads .7 pump_unit__test__name__2
-F 15>19 pump_unit__test__name__2__t 24|.9:109c28
+F 16>19 pump_unit__test__name__2__t 24|.9:195c28
 FX 24 pump_unit-test.adb .1 pump_unit__test
 F 6*4 pump_unit__test__unit_1 .2:43m19 43r19 .5:70m7 71m7 72m7 73m7 74m7
-. 75m7 76m7 77m7 .7:87m16 87r16 91r44
+. 75m7 76m7 77m7 .7:87m16 87r16 89r44
 F 7*4 pump_unit__test__unit_1_91 .7:87m23 87r23
 F 12*4 pump_unit__test__u91 .2:40m7 .7:87r34
 F 16*4 pump_unit__test__f_u91 .2:40r33

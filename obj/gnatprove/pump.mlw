@@ -1435,7 +1435,7 @@ module Pump__float_number
  
  function first #"pump.ads" 6 0 0# 
    : real =
-  (0.0)
+  (-.0.009999999776482582092285156250)
  
  function last #"pump.ads" 6 0 0# 
    : real =
@@ -1486,7 +1486,7 @@ module Pump__fuel_types
  
  function last #"pump.ads" 7 0 0# 
    : int =
-  3
+  2
  
  predicate in_range #"pump.ads" 7 0 0# 
    (x : int)  =
@@ -1515,110 +1515,6 @@ module Pump__fuel_types
  
  val fuel_types__havoc #"pump.ads" 7 0 0# 
    (x : fuel_types__ref) : unit
-  writes {x}
-
-end
-
-(* Module for axiomatizing type "reservoir" defined at pump.ads:37, created in Gnat2Why.Types.Translate_Type *)
-module Pump__reservoir
- use import "_gnatprove_standard".Main
- use import "int".Int
- use        Pump__float_number
- use        Pump__fuel_types
-
- type __split_fields #"pump.ads" 7 0 0# =
-  { rec__total : Pump__float_number.float_number; rec__reservoir_category "model_trace:.3247" : Pump__fuel_types.fuel_types }
- 
- function __split_fields_RESERVOIR_CATEGORY__projection #"pump.ads" 7 0 0# "model_trace:.3247" 
-   (a : __split_fields) : Pump__fuel_types.fuel_types =
-  a.rec__reservoir_category
- 
- meta "model_projection" function __split_fields_RESERVOIR_CATEGORY__projection
- 
- meta "inline : no" function __split_fields_RESERVOIR_CATEGORY__projection
- 
- type __split_fields__ref #"pump.ads" 37 0 0# =
-  { mutable __split_fields__content "model_trace:" : __split_fields }
- 
- function __split_fields__ref___projection #"pump.ads" 37 0 0# 
-   (a : __split_fields__ref) : __split_fields =
-  a.__split_fields__content
- 
- meta "model_projection" function __split_fields__ref___projection
- 
- meta "inline : no" function __split_fields__ref___projection
- 
- val __split_fields__havoc #"pump.ads" 37 0 0# 
-   (x : __split_fields__ref) : unit
-  writes {x}
- 
- type reservoir #"pump.ads" 37 0 0# =
-  { __split_fields "model_trace:" : __split_fields }
- 
- function reservoir___projection #"pump.ads" 37 0 0# 
-   (a : reservoir) : __split_fields =
-  a.__split_fields
- 
- meta "model_projection" function reservoir___projection
- 
- meta "inline : no" function reservoir___projection
- 
- predicate total__pred #"pump.ads" 37 0 0# 
-   (a : reservoir)  =
-  true
- 
- val rec__total_ #"pump.ads" 37 0 0# 
-   (a : reservoir) : Pump__float_number.float_number
-  requires { (total__pred a) }
-  ensures { (result = a.__split_fields.rec__total) }
- 
- predicate reservoir_category__pred #"pump.ads" 37 0 0# 
-   (a : reservoir)  =
-  true
- 
- val rec__reservoir_category_ #"pump.ads" 37 0 0# 
-   (a : reservoir) : Pump__fuel_types.fuel_types
-  requires { (reservoir_category__pred a) }
-  ensures { (result = a.__split_fields.rec__reservoir_category) }
- 
- function bool_eq #"pump.ads" 37 0 0# 
-   (a : reservoir) (b : reservoir) : bool =
-  (if (( ((Pump__float_number.to_real a.__split_fields.rec__total) = (Pump__float_number.to_real b.__split_fields.rec__total)) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__reservoir_category) = (Pump__fuel_types.to_rep b.__split_fields.rec__reservoir_category)) )) then (
-   True) else (
-   False))
- 
- function user_eq #"pump.ads" 37 0 0# 
-   (a : reservoir) (b : reservoir) : bool
- 
- function value__size #"pump.ads" 37 0 0# 
-   : int
- 
- function object__size #"pump.ads" 37 0 0# 
-   (a : reservoir) : int
- 
- axiom value__size_axiom :
-  ((value__size ) >= 0)
- 
- axiom object__size_axiom :
-  (forall a : reservoir.
-   ((object__size a) >= 0))
- 
- function dummy #"pump.ads" 37 0 0# 
-   : reservoir
- 
- type reservoir__ref #"pump.ads" 37 0 0# =
-  { mutable reservoir__content "model_trace:" : reservoir }
- 
- function reservoir__ref___projection #"pump.ads" 37 0 0# 
-   (a : reservoir__ref) : reservoir =
-  a.reservoir__content
- 
- meta "model_projection" function reservoir__ref___projection
- 
- meta "inline : no" function reservoir__ref___projection
- 
- val reservoir__havoc #"pump.ads" 37 0 0# 
-   (x : reservoir__ref) : unit
   writes {x}
 
 end
@@ -1715,20 +1611,124 @@ module Pump__nozzle_type
 
 end
 
-(* Module for axiomatizing type "pump" defined at pump.ads:44, created in Gnat2Why.Types.Translate_Type *)
+(* Module for axiomatizing type "reservoir" defined at pump.ads:13, created in Gnat2Why.Types.Translate_Type *)
+module Pump__reservoir
+ use import "_gnatprove_standard".Main
+ use import "int".Int
+ use        Pump__float_number
+ use        Pump__fuel_types
+
+ type __split_fields #"pump.ads" 11 0 0# =
+  { rec__total : Pump__float_number.float_number; rec__reservoir_category "model_trace:.2925" : Pump__fuel_types.fuel_types }
+ 
+ function __split_fields_RESERVOIR_CATEGORY__projection #"pump.ads" 7 0 0# "model_trace:.2925" 
+   (a : __split_fields) : Pump__fuel_types.fuel_types =
+  a.rec__reservoir_category
+ 
+ meta "model_projection" function __split_fields_RESERVOIR_CATEGORY__projection
+ 
+ meta "inline : no" function __split_fields_RESERVOIR_CATEGORY__projection
+ 
+ type __split_fields__ref #"pump.ads" 13 0 0# =
+  { mutable __split_fields__content "model_trace:" : __split_fields }
+ 
+ function __split_fields__ref___projection #"pump.ads" 13 0 0# 
+   (a : __split_fields__ref) : __split_fields =
+  a.__split_fields__content
+ 
+ meta "model_projection" function __split_fields__ref___projection
+ 
+ meta "inline : no" function __split_fields__ref___projection
+ 
+ val __split_fields__havoc #"pump.ads" 13 0 0# 
+   (x : __split_fields__ref) : unit
+  writes {x}
+ 
+ type reservoir #"pump.ads" 13 0 0# =
+  { __split_fields "model_trace:" : __split_fields }
+ 
+ function reservoir___projection #"pump.ads" 13 0 0# 
+   (a : reservoir) : __split_fields =
+  a.__split_fields
+ 
+ meta "model_projection" function reservoir___projection
+ 
+ meta "inline : no" function reservoir___projection
+ 
+ predicate total__pred #"pump.ads" 13 0 0# 
+   (a : reservoir)  =
+  true
+ 
+ val rec__total_ #"pump.ads" 13 0 0# 
+   (a : reservoir) : Pump__float_number.float_number
+  requires { (total__pred a) }
+  ensures { (result = a.__split_fields.rec__total) }
+ 
+ predicate reservoir_category__pred #"pump.ads" 13 0 0# 
+   (a : reservoir)  =
+  true
+ 
+ val rec__reservoir_category_ #"pump.ads" 13 0 0# 
+   (a : reservoir) : Pump__fuel_types.fuel_types
+  requires { (reservoir_category__pred a) }
+  ensures { (result = a.__split_fields.rec__reservoir_category) }
+ 
+ function bool_eq #"pump.ads" 13 0 0# 
+   (a : reservoir) (b : reservoir) : bool =
+  (if (( ((Pump__float_number.to_real a.__split_fields.rec__total) = (Pump__float_number.to_real b.__split_fields.rec__total)) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__reservoir_category) = (Pump__fuel_types.to_rep b.__split_fields.rec__reservoir_category)) )) then (
+   True) else (
+   False))
+ 
+ function user_eq #"pump.ads" 13 0 0# 
+   (a : reservoir) (b : reservoir) : bool
+ 
+ function value__size #"pump.ads" 13 0 0# 
+   : int
+ 
+ function object__size #"pump.ads" 13 0 0# 
+   (a : reservoir) : int
+ 
+ axiom value__size_axiom :
+  ((value__size ) >= 0)
+ 
+ axiom object__size_axiom :
+  (forall a : reservoir.
+   ((object__size a) >= 0))
+ 
+ function dummy #"pump.ads" 13 0 0# 
+   : reservoir
+ 
+ type reservoir__ref #"pump.ads" 13 0 0# =
+  { mutable reservoir__content "model_trace:" : reservoir }
+ 
+ function reservoir__ref___projection #"pump.ads" 13 0 0# 
+   (a : reservoir__ref) : reservoir =
+  a.reservoir__content
+ 
+ meta "model_projection" function reservoir__ref___projection
+ 
+ meta "inline : no" function reservoir__ref___projection
+ 
+ val reservoir__havoc #"pump.ads" 13 0 0# 
+   (x : reservoir__ref) : unit
+  writes {x}
+
+end
+
+(* Module for axiomatizing type "pump" defined at pump.ads:20, created in Gnat2Why.Types.Translate_Type *)
 module Pump__pump
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Pump__float_number
  use        Pump__fuel_types
- use        Pump__reservoir
  use        Pump__state_type
  use        Pump__nozzle_type
+ use        Pump__reservoir
 
- type __split_fields #"pump.ads" 11 0 0# =
-  { rec__reservoir_info "model_trace:.3269" : Pump__reservoir.reservoir; rec__pump_state "model_trace:.3289" : Pump__state_type.state_type; rec__pumped : Pump__float_number.float_number; rec__nozzle_state "model_trace:.3314" : Pump__nozzle_type.nozzle_type; rec__unit_price : Pump__float_number.float_number; rec__fuel_type "model_trace:.3339" : Pump__fuel_types.fuel_types }
+ type __split_fields #"pump.ads" 13 0 0# =
+  { rec__reservoir_info "model_trace:.2947" : Pump__reservoir.reservoir; rec__pump_state "model_trace:.2967" : Pump__state_type.state_type; rec__pumped : Pump__float_number.float_number; rec__nozzle_state "model_trace:.2992" : Pump__nozzle_type.nozzle_type; rec__unit_price : Pump__float_number.float_number; rec__fuel_type "model_trace:.3017" : Pump__fuel_types.fuel_types }
  
- function __split_fields_RESERVOIR_INFO__projection #"pump.ads" 7 0 0# "model_trace:.3269" 
+ function __split_fields_RESERVOIR_INFO__projection #"pump.ads" 7 0 0# "model_trace:.2947" 
    (a : __split_fields) : Pump__reservoir.reservoir =
   a.rec__reservoir_info
  
@@ -1736,7 +1736,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_RESERVOIR_INFO__projection
  
- function __split_fields_PUMP_STATE__projection #"pump.ads" 44 0 0# "model_trace:.3289" 
+ function __split_fields_PUMP_STATE__projection #"pump.ads" 20 0 0# "model_trace:.2967" 
    (a : __split_fields) : Pump__state_type.state_type =
   a.rec__pump_state
  
@@ -1744,7 +1744,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_PUMP_STATE__projection
  
- function __split_fields_NOZZLE_STATE__projection #"pump.ads" 44 0 0# "model_trace:.3314" 
+ function __split_fields_NOZZLE_STATE__projection #"pump.ads" 20 0 0# "model_trace:.2992" 
    (a : __split_fields) : Pump__nozzle_type.nozzle_type =
   a.rec__nozzle_state
  
@@ -1752,7 +1752,7 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_NOZZLE_STATE__projection
  
- function __split_fields_FUEL_TYPE__projection #"pump.ads" 44 0 0# "model_trace:.3339" 
+ function __split_fields_FUEL_TYPE__projection #"pump.ads" 20 0 0# "model_trace:.3017" 
    (a : __split_fields) : Pump__fuel_types.fuel_types =
   a.rec__fuel_type
  
@@ -1760,10 +1760,10 @@ module Pump__pump
  
  meta "inline : no" function __split_fields_FUEL_TYPE__projection
  
- type __split_fields__ref #"pump.ads" 44 0 0# =
+ type __split_fields__ref #"pump.ads" 20 0 0# =
   { mutable __split_fields__content "model_trace:" : __split_fields }
  
- function __split_fields__ref_2__projection #"pump.ads" 44 0 0# 
+ function __split_fields__ref_2__projection #"pump.ads" 20 0 0# 
    (a : __split_fields__ref) : __split_fields =
   a.__split_fields__content
  
@@ -1771,14 +1771,14 @@ module Pump__pump
  
  meta "inline : no" function __split_fields__ref_2__projection
  
- val __split_fields__havoc #"pump.ads" 44 0 0# 
+ val __split_fields__havoc #"pump.ads" 20 0 0# 
    (x : __split_fields__ref) : unit
   writes {x}
  
- type pump #"pump.ads" 44 0 0# =
+ type pump #"pump.ads" 20 0 0# =
   { __split_fields "model_trace:" : __split_fields }
  
- function pump___projection #"pump.ads" 44 0 0# 
+ function pump___projection #"pump.ads" 20 0 0# 
    (a : pump) : __split_fields =
   a.__split_fields
  
@@ -1786,73 +1786,73 @@ module Pump__pump
  
  meta "inline : no" function pump___projection
  
- predicate reservoir_info__pred #"pump.ads" 44 0 0# 
+ predicate reservoir_info__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__reservoir_info_ #"pump.ads" 44 0 0# 
+ val rec__reservoir_info_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__reservoir.reservoir
   requires { (reservoir_info__pred a) }
   ensures { (result = a.__split_fields.rec__reservoir_info) }
  
- predicate pump_state__pred #"pump.ads" 44 0 0# 
+ predicate pump_state__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__pump_state_ #"pump.ads" 44 0 0# 
+ val rec__pump_state_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__state_type.state_type
   requires { (pump_state__pred a) }
   ensures { (result = a.__split_fields.rec__pump_state) }
  
- predicate pumped__pred #"pump.ads" 44 0 0# 
+ predicate pumped__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__pumped_ #"pump.ads" 44 0 0# 
+ val rec__pumped_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__float_number.float_number
   requires { (pumped__pred a) }
   ensures { (result = a.__split_fields.rec__pumped) }
  
- predicate nozzle_state__pred #"pump.ads" 44 0 0# 
+ predicate nozzle_state__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__nozzle_state_ #"pump.ads" 44 0 0# 
+ val rec__nozzle_state_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__nozzle_type.nozzle_type
   requires { (nozzle_state__pred a) }
   ensures { (result = a.__split_fields.rec__nozzle_state) }
  
- predicate unit_price__pred #"pump.ads" 44 0 0# 
+ predicate unit_price__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__unit_price_ #"pump.ads" 44 0 0# 
+ val rec__unit_price_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__float_number.float_number
   requires { (unit_price__pred a) }
   ensures { (result = a.__split_fields.rec__unit_price) }
  
- predicate fuel_type__pred #"pump.ads" 44 0 0# 
+ predicate fuel_type__pred #"pump.ads" 20 0 0# 
    (a : pump)  =
   true
  
- val rec__fuel_type_ #"pump.ads" 44 0 0# 
+ val rec__fuel_type_ #"pump.ads" 20 0 0# 
    (a : pump) : Pump__fuel_types.fuel_types
   requires { (fuel_type__pred a) }
   ensures { (result = a.__split_fields.rec__fuel_type) }
  
- function bool_eq #"pump.ads" 44 0 0# 
+ function bool_eq #"pump.ads" 20 0 0# 
    (a : pump) (b : pump) : bool =
   (if (( ( ( ( ( ((Pump__reservoir.bool_eq a.__split_fields.rec__reservoir_info b.__split_fields.rec__reservoir_info) = True) /\ ((Pump__state_type.to_rep a.__split_fields.rec__pump_state) = (Pump__state_type.to_rep b.__split_fields.rec__pump_state)) ) /\ ((Pump__float_number.to_real a.__split_fields.rec__pumped) = (Pump__float_number.to_real b.__split_fields.rec__pumped)) ) /\ ((Pump__nozzle_type.to_rep a.__split_fields.rec__nozzle_state) = (Pump__nozzle_type.to_rep b.__split_fields.rec__nozzle_state)) ) /\ ((Pump__float_number.to_real a.__split_fields.rec__unit_price) = (Pump__float_number.to_real b.__split_fields.rec__unit_price)) ) /\ ((Pump__fuel_types.to_rep a.__split_fields.rec__fuel_type) = (Pump__fuel_types.to_rep b.__split_fields.rec__fuel_type)) )) then (
    True) else (
    False))
  
- function user_eq #"pump.ads" 44 0 0# 
+ function user_eq #"pump.ads" 20 0 0# 
    (a : pump) (b : pump) : bool
  
- function value__size #"pump.ads" 44 0 0# 
+ function value__size #"pump.ads" 20 0 0# 
    : int
  
- function object__size #"pump.ads" 44 0 0# 
+ function object__size #"pump.ads" 20 0 0# 
    (a : pump) : int
  
  axiom value__size_axiom :
@@ -1862,13 +1862,13 @@ module Pump__pump
   (forall a : pump.
    ((object__size a) >= 0))
  
- function dummy #"pump.ads" 44 0 0# 
+ function dummy #"pump.ads" 20 0 0# 
    : pump
  
- type pump__ref #"pump.ads" 44 0 0# =
+ type pump__ref #"pump.ads" 20 0 0# =
   { mutable pump__content "model_trace:" : pump }
  
- function pump__ref___projection #"pump.ads" 44 0 0# 
+ function pump__ref___projection #"pump.ads" 20 0 0# 
    (a : pump__ref) : pump =
   a.pump__content
  
@@ -1876,18 +1876,18 @@ module Pump__pump
  
  meta "inline : no" function pump__ref___projection
  
- val pump__havoc #"pump.ads" 44 0 0# 
+ val pump__havoc #"pump.ads" 20 0 0# 
    (x : pump__ref) : unit
   writes {x}
 
 end
 
-(* Module for defining the constant "price" defined at pump.ads:14, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "price" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_fuel_price__price
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function price #"pump.ads" 14 0 0# 
+ function price #"pump.ads" 33 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -1895,18 +1895,18 @@ module Pump__set_fuel_price__price
 
 end
 
-(* Module giving an empty axiom for the entity "price" defined at pump.ads:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "price" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_fuel_price__price__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "statetype" defined at pump.ads:15, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "statetype" defined at pump.ads:34, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pump_state__statetype
  use import "_gnatprove_standard".Main
 
- function statetype #"pump.ads" 15 0 0# "model" "model_trace:2970" 
+ function statetype #"pump.ads" 34 0 0# "model" "model_trace:3076" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
@@ -1914,19 +1914,19 @@ module Pump__set_pump_state__statetype
 
 end
 
-(* Module giving an empty axiom for the entity "statetype" defined at pump.ads:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "statetype" defined at pump.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_state__statetype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "amount" defined at pump.ads:16, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "amount" defined at pump.ads:35, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pumped__amount
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function amount #"pump.ads" 16 0 0# 
+ function amount #"pump.ads" 35 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -1934,18 +1934,18 @@ module Pump__set_pumped__amount
 
 end
 
-(* Module giving an empty axiom for the entity "amount" defined at pump.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "amount" defined at pump.ads:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pumped__amount__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "nozzletype" defined at pump.ads:17, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "nozzletype" defined at pump.ads:36, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_pump_nozzle_state__nozzletype
  use import "_gnatprove_standard".Main
 
- function nozzletype #"pump.ads" 17 0 0# "model" "model_trace:3024" 
+ function nozzletype #"pump.ads" 36 0 0# "model" "model_trace:3130" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
@@ -1953,18 +1953,18 @@ module Pump__set_pump_nozzle_state__nozzletype
 
 end
 
-(* Module giving an empty axiom for the entity "nozzletype" defined at pump.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "nozzletype" defined at pump.ads:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_nozzle_state__nozzletype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "fueltype" defined at pump.ads:19, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "fueltype" defined at pump.ads:38, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__append_reservoir__fueltype
  use import "_gnatprove_standard".Main
 
- function fueltype #"pump.ads" 19 0 0# "model" "model_trace:3051" 
+ function fueltype #"pump.ads" 38 0 0# "model" "model_trace:3157" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 7 0 0# 
@@ -1972,19 +1972,19 @@ module Pump__append_reservoir__fueltype
 
 end
 
-(* Module giving an empty axiom for the entity "fueltype" defined at pump.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "fueltype" defined at pump.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__append_reservoir__fueltype__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "size" defined at pump.ads:21, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "size" defined at pump.ads:40, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__set_reservoir_size__size
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function size #"pump.ads" 21 0 0# 
+ function size #"pump.ads" 40 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -1992,19 +1992,19 @@ module Pump__set_reservoir_size__size
 
 end
 
-(* Module giving an empty axiom for the entity "size" defined at pump.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "size" defined at pump.ads:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_reservoir_size__size__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "amount" defined at pump.ads:23, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "amount" defined at pump.ads:42, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__remove_petrol_reservoir__amount
  use import "_gnatprove_standard".Main
  use        Pump__float_number
 
- function amount #"pump.ads" 23 0 0# 
+ function amount #"pump.ads" 42 0 0# 
    : Pump__float_number.float_number
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
@@ -2012,171 +2012,171 @@ module Pump__remove_petrol_reservoir__amount
 
 end
 
-(* Module giving an empty axiom for the entity "amount" defined at pump.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "amount" defined at pump.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__remove_petrol_reservoir__amount__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:32, created in Gnat2Why.Decls.Translate_Constant *)
-module Pump__get_tanks_size__pump_r
- use import "_gnatprove_standard".Main
- use        Pump__pump
-
- function pump_r #"pump.ads" 32 0 0# 
-   : Pump__pump.pump
- 
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:32, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Pump__get_tanks_size__pump_r__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for possibly declaring a logic function for "get_tanks_size" defined at pump.ads:32, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
-module Pump__get_tanks_size
- use import "_gnatprove_standard".Main
- use        Pump__float_number
- use        Pump__pump
-
- function get_tanks_size #"pump.ads" 32 0 0# 
-   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
-
-end
-
-(* Module for defining the constant "pump_r" defined at pump.ads:29, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:48, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 29 0 0# 
+ function pump_r #"pump.ads" 48 0 0# "model_projected" "model_trace:3251" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:29, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:48, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_state" defined at pump.ads:29, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_state" defined at pump.ads:48, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_state
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_state #"pump.ads" 29 0 0# 
+ function get_state #"pump.ads" 48 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:30, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:49, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_current_nozzle_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 30 0 0# 
+ function pump_r #"pump.ads" 49 0 0# "model_projected" "model_trace:3270" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:30, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:49, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_current_nozzle_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_current_nozzle_state" defined at pump.ads:30, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_current_nozzle_state" defined at pump.ads:49, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_current_nozzle_state
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_current_nozzle_state #"pump.ads" 30 0 0# 
+ function get_current_nozzle_state #"pump.ads" 49 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:31, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "pump_r" defined at pump.ads:50, created in Gnat2Why.Decls.Translate_Constant *)
 module Pump__get_unit_price__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 31 0 0# 
+ function pump_r #"pump.ads" 50 0 0# "model_projected" "model_trace:3289" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:31, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:50, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_unit_price__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_unit_price" defined at pump.ads:31, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_unit_price" defined at pump.ads:50, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_unit_price
  use import "_gnatprove_standard".Main
  use        Pump__float_number
  use        Pump__pump
 
- function get_unit_price #"pump.ads" 31 0 0# 
+ function get_unit_price #"pump.ads" 50 0 0# 
    (pump_r : Pump__pump.pump) : Pump__float_number.float_number
 
 end
 
-(* Module for defining the constant "pump_r" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Constant *)
-module Pump__get_resevoir_category__pump_r
+(* Module for defining the constant "pump_r" defined at pump.ads:51, created in Gnat2Why.Decls.Translate_Constant *)
+module Pump__get_tanks_size__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function pump_r #"pump.ads" 33 0 0# 
+ function pump_r #"pump.ads" 51 0 0# "model_projected" "model_trace:3308" 
    : Pump__pump.pump
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:51, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Pump__get_tanks_size__pump_r__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for possibly declaring a logic function for "get_tanks_size" defined at pump.ads:51, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+module Pump__get_tanks_size
+ use import "_gnatprove_standard".Main
+ use        Pump__float_number
+ use        Pump__pump
+
+ function get_tanks_size #"pump.ads" 51 0 0# 
+   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
+
+end
+
+(* Module for defining the constant "pump_r" defined at pump.ads:52, created in Gnat2Why.Decls.Translate_Constant *)
+module Pump__get_resevoir_category__pump_r
+ use import "_gnatprove_standard".Main
+ use        Pump__pump
+
+ function pump_r #"pump.ads" 52 0 0# "model_projected" "model_trace:3327" 
+   : Pump__pump.pump
+ 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:52, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__get_resevoir_category__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "get_resevoir_category" defined at pump.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "get_resevoir_category" defined at pump.ads:52, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__get_resevoir_category
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- function get_resevoir_category #"pump.ads" 33 0 0# 
+ function get_resevoir_category #"pump.ads" 52 0 0# 
    (pump_r : Pump__pump.pump) : int
 
 end
 
-(* Module for defining the constant "s" defined at sprint.ads:3, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "s" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print__s
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s #"sprint.ads" 3 0 0# "model_projected" "model_trace:3379" 
+ function s #"sprint.ads" 4 0 0# "model_projected" "model_trace:3363" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2184,59 +2184,19 @@ module Sprint__print__s
 
 end
 
-(* Module giving an empty axiom for the entity "s" defined at sprint.ads:3, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "s" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Sprint__print__s__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining the constant "s1" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
+(* Module for defining the constant "s1" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print_float_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 4 0 0# "model_projected" "model_trace:3397" 
-   : Standard__string.string
- 
- function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "s1" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_float_type__s1__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining the constant "s2" defined at sprint.ads:4, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_float_type__s2
- use import "_gnatprove_standard".Main
- use        Pump__float_number
-
- function s2 #"sprint.ads" 4 0 0# 
-   : Pump__float_number.float_number
- 
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
-   : int
-
-end
-
-(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:4, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_float_type__s2__axiom
- use import "_gnatprove_standard".Main
-
-
-end
-
-(* Module for defining the constant "s1" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_state_type__s1
- use import "_gnatprove_standard".Main
- use        Standard__string
-
- function s1 #"sprint.ads" 5 0 0# "model_projected" "model_trace:3426" 
+ function s1 #"sprint.ads" 5 0 0# "model_projected" "model_trace:3381" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2245,37 +2205,38 @@ module Sprint__print_state_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_state_type__s1__axiom
+module Sprint__print_float_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:5, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_state_type__s2
+module Sprint__print_float_type__s2
  use import "_gnatprove_standard".Main
+ use        Pump__float_number
 
- function s2 #"sprint.ads" 5 0 0# "model" "model_trace:3435" 
-   : int
+ function s2 #"sprint.ads" 5 0 0# 
+   : Pump__float_number.float_number
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 6 0 0# 
    : int
 
 end
 
 (* Module giving an empty axiom for the entity "s2" defined at sprint.ads:5, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_state_type__s2__axiom
+module Sprint__print_float_type__s2__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s1" defined at sprint.ads:6, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_nozzle_type__s1
+module Sprint__print_state_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 6 0 0# "model_projected" "model_trace:3455" 
+ function s1 #"sprint.ads" 6 0 0# "model_projected" "model_trace:3410" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2284,37 +2245,37 @@ module Sprint__print_nozzle_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_nozzle_type__s1__axiom
+module Sprint__print_state_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:6, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_nozzle_type__s2
+module Sprint__print_state_type__s2
  use import "_gnatprove_standard".Main
 
- function s2 #"sprint.ads" 6 0 0# "model" "model_trace:3464" 
+ function s2 #"sprint.ads" 6 0 0# "model" "model_trace:3419" 
    : int
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 10 0 0# 
    : int
 
 end
 
 (* Module giving an empty axiom for the entity "s2" defined at sprint.ads:6, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_nozzle_type__s2__axiom
+module Sprint__print_state_type__s2__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s1" defined at sprint.ads:7, created in Gnat2Why.Decls.Translate_Constant *)
-module Sprint__print_fuel_type__s1
+module Sprint__print_nozzle_type__s1
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- function s1 #"sprint.ads" 7 0 0# "model_projected" "model_trace:3484" 
+ function s1 #"sprint.ads" 7 0 0# "model_projected" "model_trace:3439" 
    : Standard__string.string
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2323,17 +2284,56 @@ module Sprint__print_fuel_type__s1
 end
 
 (* Module giving an empty axiom for the entity "s1" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
-module Sprint__print_fuel_type__s1__axiom
+module Sprint__print_nozzle_type__s1__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
 (* Module for defining the constant "s2" defined at sprint.ads:7, created in Gnat2Why.Decls.Translate_Constant *)
+module Sprint__print_nozzle_type__s2
+ use import "_gnatprove_standard".Main
+
+ function s2 #"sprint.ads" 7 0 0# "model" "model_trace:3448" 
+   : int
+ 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 11 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Sprint__print_nozzle_type__s2__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "s1" defined at sprint.ads:8, created in Gnat2Why.Decls.Translate_Constant *)
+module Sprint__print_fuel_type__s1
+ use import "_gnatprove_standard".Main
+ use        Standard__string
+
+ function s1 #"sprint.ads" 8 0 0# "model_projected" "model_trace:3468" 
+   : Standard__string.string
+ 
+ function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
+   : int
+
+end
+
+(* Module giving an empty axiom for the entity "s1" defined at sprint.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+module Sprint__print_fuel_type__s1__axiom
+ use import "_gnatprove_standard".Main
+
+
+end
+
+(* Module for defining the constant "s2" defined at sprint.ads:8, created in Gnat2Why.Decls.Translate_Constant *)
 module Sprint__print_fuel_type__s2
  use import "_gnatprove_standard".Main
 
- function s2 #"sprint.ads" 7 0 0# "model" "model_trace:3493" 
+ function s2 #"sprint.ads" 8 0 0# "model" "model_trace:3477" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"pump.ads" 7 0 0# 
@@ -2341,7 +2341,7 @@ module Sprint__print_fuel_type__s2
 
 end
 
-(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:7, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "s2" defined at sprint.ads:8, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Sprint__print_fuel_type__s2__axiom
  use import "_gnatprove_standard".Main
 
@@ -2398,7 +2398,7 @@ end
 module System__system_name
  use import "_gnatprove_standard".Main
 
- function system_name #"system.ads" 47 0 0# "model" "model_trace:3758" 
+ function system_name #"system.ads" 47 0 0# "model" "model_trace:3752" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 46 0 0# 
@@ -2782,7 +2782,7 @@ end
 module System__default_bit_order
  use import "_gnatprove_standard".Main
 
- function default_bit_order #"system.ads" 92 0 0# "model" "model_trace:4107" 
+ function default_bit_order #"system.ads" 92 0 0# "model" "model_trace:4101" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 91 0 0# 
@@ -2794,7 +2794,7 @@ end
 module System__max_priority
  use import "_gnatprove_standard".Main
 
- function max_priority #"system.ads" 97 0 0# "model" "model_trace:4123" 
+ function max_priority #"system.ads" 97 0 0# "model" "model_trace:4117" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2806,7 +2806,7 @@ end
 module System__max_interrupt_priority
  use import "_gnatprove_standard".Main
 
- function max_interrupt_priority #"system.ads" 98 0 0# "model" "model_trace:4133" 
+ function max_interrupt_priority #"system.ads" 98 0 0# "model" "model_trace:4127" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 1 0 0# 
@@ -2956,7 +2956,7 @@ end
 module System__default_priority
  use import "_gnatprove_standard".Main
 
- function default_priority #"system.ads" 104 0 0# "model" "model_trace:4185" 
+ function default_priority #"system.ads" 104 0 0# "model" "model_trace:4179" 
    : int
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 101 0 0# 
@@ -2968,7 +2968,7 @@ end
 module System__backend_divide_checks
  use import "_gnatprove_standard".Main
 
- function backend_divide_checks #"system.ads" 121 0 0# "model" "model_trace:4215" 
+ function backend_divide_checks #"system.ads" 121 0 0# "model" "model_trace:4209" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 121 0 0# 
@@ -2980,7 +2980,7 @@ end
 module System__backend_overflow_checks
  use import "_gnatprove_standard".Main
 
- function backend_overflow_checks #"system.ads" 122 0 0# "model" "model_trace:4225" 
+ function backend_overflow_checks #"system.ads" 122 0 0# "model" "model_trace:4219" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 122 0 0# 
@@ -2992,7 +2992,7 @@ end
 module System__command_line_args
  use import "_gnatprove_standard".Main
 
- function command_line_args #"system.ads" 123 0 0# "model" "model_trace:4235" 
+ function command_line_args #"system.ads" 123 0 0# "model" "model_trace:4229" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 123 0 0# 
@@ -3004,7 +3004,7 @@ end
 module System__configurable_run_time
  use import "_gnatprove_standard".Main
 
- function configurable_run_time #"system.ads" 124 0 0# "model" "model_trace:4245" 
+ function configurable_run_time #"system.ads" 124 0 0# "model" "model_trace:4239" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 124 0 0# 
@@ -3016,7 +3016,7 @@ end
 module System__denorm
  use import "_gnatprove_standard".Main
 
- function denorm #"system.ads" 125 0 0# "model" "model_trace:4255" 
+ function denorm #"system.ads" 125 0 0# "model" "model_trace:4249" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 125 0 0# 
@@ -3028,7 +3028,7 @@ end
 module System__duration_32_bits
  use import "_gnatprove_standard".Main
 
- function duration_32_bits #"system.ads" 126 0 0# "model" "model_trace:4265" 
+ function duration_32_bits #"system.ads" 126 0 0# "model" "model_trace:4259" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 126 0 0# 
@@ -3040,7 +3040,7 @@ end
 module System__exit_status_supported
  use import "_gnatprove_standard".Main
 
- function exit_status_supported #"system.ads" 127 0 0# "model" "model_trace:4275" 
+ function exit_status_supported #"system.ads" 127 0 0# "model" "model_trace:4269" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 127 0 0# 
@@ -3052,7 +3052,7 @@ end
 module System__fractional_fixed_ops
  use import "_gnatprove_standard".Main
 
- function fractional_fixed_ops #"system.ads" 128 0 0# "model" "model_trace:4285" 
+ function fractional_fixed_ops #"system.ads" 128 0 0# "model" "model_trace:4279" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 128 0 0# 
@@ -3064,7 +3064,7 @@ end
 module System__frontend_layout
  use import "_gnatprove_standard".Main
 
- function frontend_layout #"system.ads" 129 0 0# "model" "model_trace:4295" 
+ function frontend_layout #"system.ads" 129 0 0# "model" "model_trace:4289" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 129 0 0# 
@@ -3076,7 +3076,7 @@ end
 module System__machine_overflows
  use import "_gnatprove_standard".Main
 
- function machine_overflows #"system.ads" 130 0 0# "model" "model_trace:4305" 
+ function machine_overflows #"system.ads" 130 0 0# "model" "model_trace:4299" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 130 0 0# 
@@ -3088,7 +3088,7 @@ end
 module System__machine_rounds
  use import "_gnatprove_standard".Main
 
- function machine_rounds #"system.ads" 131 0 0# "model" "model_trace:4315" 
+ function machine_rounds #"system.ads" 131 0 0# "model" "model_trace:4309" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 131 0 0# 
@@ -3100,7 +3100,7 @@ end
 module System__preallocated_stacks
  use import "_gnatprove_standard".Main
 
- function preallocated_stacks #"system.ads" 132 0 0# "model" "model_trace:4325" 
+ function preallocated_stacks #"system.ads" 132 0 0# "model" "model_trace:4319" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 132 0 0# 
@@ -3112,7 +3112,7 @@ end
 module System__signed_zeros
  use import "_gnatprove_standard".Main
 
- function signed_zeros #"system.ads" 133 0 0# "model" "model_trace:4335" 
+ function signed_zeros #"system.ads" 133 0 0# "model" "model_trace:4329" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 133 0 0# 
@@ -3124,7 +3124,7 @@ end
 module System__stack_check_default
  use import "_gnatprove_standard".Main
 
- function stack_check_default #"system.ads" 134 0 0# "model" "model_trace:4345" 
+ function stack_check_default #"system.ads" 134 0 0# "model" "model_trace:4339" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 134 0 0# 
@@ -3136,7 +3136,7 @@ end
 module System__stack_check_probes
  use import "_gnatprove_standard".Main
 
- function stack_check_probes #"system.ads" 135 0 0# "model" "model_trace:4355" 
+ function stack_check_probes #"system.ads" 135 0 0# "model" "model_trace:4349" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 135 0 0# 
@@ -3148,7 +3148,7 @@ end
 module System__stack_check_limits
  use import "_gnatprove_standard".Main
 
- function stack_check_limits #"system.ads" 136 0 0# "model" "model_trace:4365" 
+ function stack_check_limits #"system.ads" 136 0 0# "model" "model_trace:4359" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 136 0 0# 
@@ -3160,7 +3160,7 @@ end
 module System__support_aggregates
  use import "_gnatprove_standard".Main
 
- function support_aggregates #"system.ads" 137 0 0# "model" "model_trace:4375" 
+ function support_aggregates #"system.ads" 137 0 0# "model" "model_trace:4369" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 137 0 0# 
@@ -3172,7 +3172,7 @@ end
 module System__support_atomic_primitives
  use import "_gnatprove_standard".Main
 
- function support_atomic_primitives #"system.ads" 138 0 0# "model" "model_trace:4385" 
+ function support_atomic_primitives #"system.ads" 138 0 0# "model" "model_trace:4379" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 138 0 0# 
@@ -3184,7 +3184,7 @@ end
 module System__support_composite_assign
  use import "_gnatprove_standard".Main
 
- function support_composite_assign #"system.ads" 139 0 0# "model" "model_trace:4395" 
+ function support_composite_assign #"system.ads" 139 0 0# "model" "model_trace:4389" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 139 0 0# 
@@ -3196,7 +3196,7 @@ end
 module System__support_composite_compare
  use import "_gnatprove_standard".Main
 
- function support_composite_compare #"system.ads" 140 0 0# "model" "model_trace:4405" 
+ function support_composite_compare #"system.ads" 140 0 0# "model" "model_trace:4399" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 140 0 0# 
@@ -3208,7 +3208,7 @@ end
 module System__support_long_shifts
  use import "_gnatprove_standard".Main
 
- function support_long_shifts #"system.ads" 141 0 0# "model" "model_trace:4415" 
+ function support_long_shifts #"system.ads" 141 0 0# "model" "model_trace:4409" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 141 0 0# 
@@ -3220,7 +3220,7 @@ end
 module System__always_compatible_rep
  use import "_gnatprove_standard".Main
 
- function always_compatible_rep #"system.ads" 142 0 0# "model" "model_trace:4425" 
+ function always_compatible_rep #"system.ads" 142 0 0# "model" "model_trace:4419" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 142 0 0# 
@@ -3232,7 +3232,7 @@ end
 module System__suppress_standard_library
  use import "_gnatprove_standard".Main
 
- function suppress_standard_library #"system.ads" 143 0 0# "model" "model_trace:4435" 
+ function suppress_standard_library #"system.ads" 143 0 0# "model" "model_trace:4429" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 143 0 0# 
@@ -3244,7 +3244,7 @@ end
 module System__use_ada_main_program_name
  use import "_gnatprove_standard".Main
 
- function use_ada_main_program_name #"system.ads" 144 0 0# "model" "model_trace:4445" 
+ function use_ada_main_program_name #"system.ads" 144 0 0# "model" "model_trace:4439" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 144 0 0# 
@@ -3256,7 +3256,7 @@ end
 module System__frontend_exceptions
  use import "_gnatprove_standard".Main
 
- function frontend_exceptions #"system.ads" 145 0 0# "model" "model_trace:4455" 
+ function frontend_exceptions #"system.ads" 145 0 0# "model" "model_trace:4449" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 145 0 0# 
@@ -3268,7 +3268,7 @@ end
 module System__zcx_by_default
  use import "_gnatprove_standard".Main
 
- function zcx_by_default #"system.ads" 146 0 0# "model" "model_trace:4465" 
+ function zcx_by_default #"system.ads" 146 0 0# "model" "model_trace:4459" 
    : bool
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 146 0 0# 
@@ -3483,7 +3483,7 @@ module System__underlying_priorities
  use import "_gnatprove_standard".Main
  use        Array__Int__Standard__integer
 
- function underlying_priorities #"system.ads" 165 0 0# "model_projected" "model_trace:4491" 
+ function underlying_priorities #"system.ads" 165 0 0# "model_projected" "model_trace:4485" 
    : Array__Int__Standard__integer.map
  
  function attr__ATTRIBUTE_ADDRESS #"system.ads" 161 0 0# 
@@ -3625,133 +3625,133 @@ module Pump__set_fuel_price__T8b
  type index_rep_type = int
 
 end
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:14, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:33, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_fuel_price__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 14 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 33 0 0# "model_projected" "model_trace:3040"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:14, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:33, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_fuel_price__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:15, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:34, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pump_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 15 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 34 0 0# "model_projected" "model_trace:3067"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:15, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:34, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:16, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:35, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pumped__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 16 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 35 0 0# "model_projected" "model_trace:3094"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:16, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:35, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pumped__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:17, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:36, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_pump_nozzle_state__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 17 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 36 0 0# "model_projected" "model_trace:3121"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:17, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:36, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_pump_nozzle_state__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:19, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:38, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__append_reservoir__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 19 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 38 0 0# "model_projected" "model_trace:3148"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:19, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:38, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__append_reservoir__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:21, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:40, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__set_reservoir_size__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 21 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 40 0 0# "model_projected" "model_trace:3175"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:21, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:40, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__set_reservoir_size__pump_r__axiom
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:23, created in Gnat2Why.Decls.Translate_Variable *)
+(* Module for defining a ref holding the value of variable "pump_r" defined at pump.ads:42, created in Gnat2Why.Decls.Translate_Variable *)
 module Pump__remove_petrol_reservoir__pump_r
  use import "_gnatprove_standard".Main
  use        Pump__pump
 
- val pump_r__split_fields #"pump.ads" 23 0 0#  : Pump__pump.__split_fields__ref 
+ val pump_r__split_fields #"pump.ads" 42 0 0# "model_projected" "model_trace:3202"  : Pump__pump.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 44 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 20 0 0# 
    : int
 
 end
 
-(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:23, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
+(* Module giving an empty axiom for the entity "pump_r" defined at pump.ads:42, created in Gnat2Why.Driver.Translate_Entity.Generate_Empty_Axiom_Theory *)
 module Pump__remove_petrol_reservoir__pump_r__axiom
  use import "_gnatprove_standard".Main
 
@@ -3763,9 +3763,9 @@ module Pump__append_reservoir__r
  use import "_gnatprove_standard".Main
  use        Pump__reservoir
 
- val r__split_fields #"pump.adb" 103 0 0#  : Pump__reservoir.__split_fields__ref 
+ val r__split_fields #"pump.adb" 103 0 0# "model_projected" "model_trace:2619"  : Pump__reservoir.__split_fields__ref 
  
- function attr__ATTRIBUTE_ADDRESS #"pump.ads" 37 0 0# 
+ function attr__ATTRIBUTE_ADDRESS #"pump.ads" 13 0 0# 
    : int
 
 end
@@ -3782,7 +3782,7 @@ module Standard__short_short_integer__axiom
  use import "int".Int
  use        Standard__short_short_integer
 
- predicate dynamic_invariant #"pump.ads" 37 0 0# "inline" 
+ predicate dynamic_invariant #"pump.ads" 13 0 0# "inline" 
    (temp___expr_3 : int) (temp___is_init_0 : bool) (temp___do_constant_1 : bool) (temp___do_toplevel_2 : bool)  =
   (if (( temp___is_init_0 \/ (Standard__short_short_integer.first <= Standard__short_short_integer.last) )) then (
    (Standard__short_short_integer.dynamic_property Standard__short_short_integer.first Standard__short_short_integer.last temp___expr_3)) else true)
@@ -4163,84 +4163,84 @@ module Standard__universal_real__axiom
 
 end
 
-(* Module for possibly declaring a logic function for "set_fuel_price" defined at pump.ads:14, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_fuel_price" defined at pump.ads:33, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_fuel_price
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pump_state" defined at pump.ads:15, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pump_state" defined at pump.ads:34, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pump_state
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pumped" defined at pump.ads:16, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pumped" defined at pump.ads:35, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pumped
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_pump_nozzle_state" defined at pump.ads:17, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_pump_nozzle_state" defined at pump.ads:36, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_pump_nozzle_state
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "append_reservoir" defined at pump.ads:19, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "append_reservoir" defined at pump.ads:38, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__append_reservoir
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "set_reservoir_size" defined at pump.ads:21, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "set_reservoir_size" defined at pump.ads:40, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__set_reservoir_size
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "remove_petrol_reservoir" defined at pump.ads:23, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "remove_petrol_reservoir" defined at pump.ads:42, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Pump__remove_petrol_reservoir
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print" defined at sprint.ads:3, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_float_type" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_float_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_float_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_state_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_state_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_state_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_nozzle_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_nozzle_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_nozzle_type
  use import "_gnatprove_standard".Main
 
 
 end
 
-(* Module for possibly declaring a logic function for "print_fuel_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
+(* Module for possibly declaring a logic function for "print_fuel_type" defined at sprint.ads:8, created in Gnat2Why.Subprograms.Translate_Subprogram_Spec *)
 module Sprint__print_fuel_type
  use import "_gnatprove_standard".Main
 
@@ -4251,7 +4251,7 @@ end
 module System__min_int
  use import "_gnatprove_standard".Main
 
- function min_int #"system.ads" 51 0 0# "model" "model_trace:3768" 
+ function min_int #"system.ads" 51 0 0# "model" "model_trace:3762" 
    : int
 
 end
@@ -4260,7 +4260,7 @@ end
 module System__max_int
  use import "_gnatprove_standard".Main
 
- function max_int #"system.ads" 52 0 0# "model" "model_trace:3779" 
+ function max_int #"system.ads" 52 0 0# "model" "model_trace:3773" 
    : int
 
 end
@@ -4269,7 +4269,7 @@ end
 module System__max_binary_modulus
  use import "_gnatprove_standard".Main
 
- function max_binary_modulus #"system.ads" 54 0 0# "model" "model_trace:3790" 
+ function max_binary_modulus #"system.ads" 54 0 0# "model" "model_trace:3784" 
    : int
 
 end
@@ -4278,7 +4278,7 @@ end
 module System__max_nonbinary_modulus
  use import "_gnatprove_standard".Main
 
- function max_nonbinary_modulus #"system.ads" 55 0 0# "model" "model_trace:3803" 
+ function max_nonbinary_modulus #"system.ads" 55 0 0# "model" "model_trace:3797" 
    : int
 
 end
@@ -4287,7 +4287,7 @@ end
 module System__max_base_digits
  use import "_gnatprove_standard".Main
 
- function max_base_digits #"system.ads" 57 0 0# "model" "model_trace:3818" 
+ function max_base_digits #"system.ads" 57 0 0# "model" "model_trace:3812" 
    : int
 
 end
@@ -4296,7 +4296,7 @@ end
 module System__max_digits
  use import "_gnatprove_standard".Main
 
- function max_digits #"system.ads" 58 0 0# "model" "model_trace:3828" 
+ function max_digits #"system.ads" 58 0 0# "model" "model_trace:3822" 
    : int
 
 end
@@ -4305,7 +4305,7 @@ end
 module System__max_mantissa
  use import "_gnatprove_standard".Main
 
- function max_mantissa #"system.ads" 60 0 0# "model" "model_trace:3838" 
+ function max_mantissa #"system.ads" 60 0 0# "model" "model_trace:3832" 
    : int
 
 end
@@ -4334,7 +4334,7 @@ end
 module System__storage_unit
  use import "_gnatprove_standard".Main
 
- function storage_unit #"system.ads" 71 0 0# "model" "model_trace:3889" 
+ function storage_unit #"system.ads" 71 0 0# "model" "model_trace:3883" 
    : int
 
 end
@@ -4343,7 +4343,7 @@ end
 module System__word_size
  use import "_gnatprove_standard".Main
 
- function word_size #"system.ads" 72 0 0# "model" "model_trace:3898" 
+ function word_size #"system.ads" 72 0 0# "model" "model_trace:3892" 
    : int
 
 end
@@ -4352,7 +4352,7 @@ end
 module System__memory_size
  use import "_gnatprove_standard".Main
 
- function memory_size #"system.ads" 73 0 0# "model" "model_trace:3907" 
+ function memory_size #"system.ads" 73 0 0# "model" "model_trace:3901" 
    : int
 
 end
@@ -4458,34 +4458,19 @@ module Pump__fuel_types__axiom
 
 end
 
-(* Module giving axioms for type "reservoir" defined at pump.ads:37, created in Gnat2Why.Types.Generate_Type_Completion *)
-module Pump__reservoir__axiom
- use import "_gnatprove_standard".Main
- use        Pump__reservoir
-
- predicate dynamic_invariant #"pump.ads" 7 0 0# "inline" 
-   (temp___expr_180 : Pump__reservoir.reservoir) (temp___is_init_177 : bool) (temp___do_constant_178 : bool) (temp___do_toplevel_179 : bool)  =
-  true
- 
- predicate default_initial_assumption #"pump.ads" 37 0 0# "inline" 
-   (temp___181 : Pump__reservoir.reservoir) (temp___182 : bool)  =
-  true
-
-end
-
 (* Module giving axioms for type "state_type" defined at pump.ads:10, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pump__state_type__axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use        Pump__state_type
 
- predicate dynamic_invariant #"pump.ads" 37 0 0# "inline" 
-   (temp___expr_188 : int) (temp___is_init_185 : bool) (temp___do_constant_186 : bool) (temp___do_toplevel_187 : bool)  =
-  (if (( temp___is_init_185 \/ (Pump__state_type.first <= Pump__state_type.last) )) then (
-   (Pump__state_type.dynamic_property Pump__state_type.first Pump__state_type.last temp___expr_188)) else true)
+ predicate dynamic_invariant #"pump.ads" 7 0 0# "inline" 
+   (temp___expr_180 : int) (temp___is_init_177 : bool) (temp___do_constant_178 : bool) (temp___do_toplevel_179 : bool)  =
+  (if (( temp___is_init_177 \/ (Pump__state_type.first <= Pump__state_type.last) )) then (
+   (Pump__state_type.dynamic_property Pump__state_type.first Pump__state_type.last temp___expr_180)) else true)
  
  predicate default_initial_assumption #"pump.ads" 10 0 0# "inline" 
-   (temp___189 : int) (temp___190 : bool)  =
+   (temp___181 : int) (temp___182 : bool)  =
   true
 
 end
@@ -4497,41 +4482,56 @@ module Pump__nozzle_type__axiom
  use        Pump__nozzle_type
 
  predicate dynamic_invariant #"pump.ads" 10 0 0# "inline" 
-   (temp___expr_194 : int) (temp___is_init_191 : bool) (temp___do_constant_192 : bool) (temp___do_toplevel_193 : bool)  =
-  (if (( temp___is_init_191 \/ (Pump__nozzle_type.first <= Pump__nozzle_type.last) )) then (
-   (Pump__nozzle_type.dynamic_property Pump__nozzle_type.first Pump__nozzle_type.last temp___expr_194)) else true)
+   (temp___expr_186 : int) (temp___is_init_183 : bool) (temp___do_constant_184 : bool) (temp___do_toplevel_185 : bool)  =
+  (if (( temp___is_init_183 \/ (Pump__nozzle_type.first <= Pump__nozzle_type.last) )) then (
+   (Pump__nozzle_type.dynamic_property Pump__nozzle_type.first Pump__nozzle_type.last temp___expr_186)) else true)
  
  predicate default_initial_assumption #"pump.ads" 11 0 0# "inline" 
-   (temp___195 : int) (temp___196 : bool)  =
+   (temp___187 : int) (temp___188 : bool)  =
   true
 
 end
 
-(* Module giving axioms for type "pump" defined at pump.ads:44, created in Gnat2Why.Types.Generate_Type_Completion *)
+(* Module giving axioms for type "reservoir" defined at pump.ads:13, created in Gnat2Why.Types.Generate_Type_Completion *)
+module Pump__reservoir__axiom
+ use import "_gnatprove_standard".Main
+ use        Pump__reservoir
+
+ predicate dynamic_invariant #"pump.ads" 11 0 0# "inline" 
+   (temp___expr_192 : Pump__reservoir.reservoir) (temp___is_init_189 : bool) (temp___do_constant_190 : bool) (temp___do_toplevel_191 : bool)  =
+  true
+ 
+ predicate default_initial_assumption #"pump.ads" 13 0 0# "inline" 
+   (temp___193 : Pump__reservoir.reservoir) (temp___194 : bool)  =
+  true
+
+end
+
+(* Module giving axioms for type "pump" defined at pump.ads:20, created in Gnat2Why.Types.Generate_Type_Completion *)
 module Pump__pump__axiom
  use import "_gnatprove_standard".Main
  use import "int".Int
  use import "real".RealInfix
  use        Pump__float_number
  use        Pump__fuel_types
- use        Pump__reservoir
  use        Pump__state_type
  use        Pump__nozzle_type
+ use        Pump__reservoir
  use        Pump__pump
 
- predicate dynamic_invariant #"pump.ads" 11 0 0# "inline" 
+ predicate dynamic_invariant #"pump.ads" 13 0 0# "inline" 
    (temp___expr_200 : Pump__pump.pump) (temp___is_init_197 : bool) (temp___do_constant_198 : bool) (temp___do_toplevel_199 : bool)  =
   true
  
- predicate default_initial_assumption #"pump.ads" 44 0 0# "inline" 
+ predicate default_initial_assumption #"pump.ads" 20 0 0# "inline" 
    (temp___201 : Pump__pump.pump) (temp___202 : bool)  =
   ( ( ( ( ( (if ((Pump__pump.reservoir_info__pred temp___201)) then (
-   ((Pump__pump.rec__reservoir_info (Pump__pump.__split_fields temp___201)) = { Pump__reservoir.__split_fields = { Pump__reservoir.rec__total = (Pump__float_number.of_real (1000.0)); Pump__reservoir.rec__reservoir_category = (Pump__fuel_types.of_rep 0) } })) else true) /\ (if ((Pump__pump.pump_state__pred temp___201)) then (
+   ((Pump__pump.rec__reservoir_info (Pump__pump.__split_fields temp___201)) = { Pump__reservoir.__split_fields = { Pump__reservoir.rec__total = (Pump__float_number.of_real (10.0)); Pump__reservoir.rec__reservoir_category = (Pump__fuel_types.of_rep 0) } })) else true) /\ (if ((Pump__pump.pump_state__pred temp___201)) then (
    ((Pump__state_type.to_rep (Pump__pump.rec__pump_state (Pump__pump.__split_fields temp___201))) = 0)) else true) ) /\ (if ((Pump__pump.pumped__pred temp___201)) then (
    ((Pump__pump.rec__pumped (Pump__pump.__split_fields temp___201)) = (Pump__float_number.of_real (0.0E-2)))) else true) ) /\ (if ((Pump__pump.nozzle_state__pred temp___201)) then (
    ((Pump__nozzle_type.to_rep (Pump__pump.rec__nozzle_state (Pump__pump.__split_fields temp___201))) = 0)) else true) ) /\ (if ((Pump__pump.unit_price__pred temp___201)) then (
    ((Pump__pump.rec__unit_price (Pump__pump.__split_fields temp___201)) = (Pump__float_number.of_real (0.0E-2)))) else true) ) /\ (if ((Pump__pump.fuel_type__pred temp___201)) then (
-   ((Pump__fuel_types.to_rep (Pump__pump.rec__fuel_type (Pump__pump.__split_fields temp___201))) = 3)) else true) )
+   ((Pump__fuel_types.to_rep (Pump__pump.rec__fuel_type (Pump__pump.__split_fields temp___201))) = 0)) else true) )
 
 end
 
@@ -4541,7 +4541,7 @@ module System__name__axiom
  use import "int".Int
  use        System__name
 
- predicate dynamic_invariant #"pump.ads" 44 0 0# "inline" 
+ predicate dynamic_invariant #"pump.ads" 20 0 0# "inline" 
    (temp___expr_206 : int) (temp___is_init_203 : bool) (temp___do_constant_204 : bool) (temp___do_toplevel_205 : bool)  =
   (if (( temp___is_init_203 \/ (System__name.first <= System__name.last) )) then (
    (System__name.dynamic_property System__name.first System__name.last temp___expr_206)) else true)
@@ -5285,13 +5285,13 @@ module System__underlying_priorities__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_fuel_price" defined at pump.ads:14, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_fuel_price" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_fuel_price__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_fuel_price #"pump.ads" 14 0 0# 
+ val set_fuel_price #"pump.ads" 33 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (price : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5299,13 +5299,13 @@ module Pump__set_fuel_price__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pump_state" defined at pump.ads:15, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pump_state" defined at pump.ads:34, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pump_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pump_state #"pump.ads" 15 0 0# 
+ val set_pump_state #"pump.ads" 34 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (statetype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5313,13 +5313,13 @@ module Pump__set_pump_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pumped" defined at pump.ads:16, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pumped" defined at pump.ads:35, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pumped__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pumped #"pump.ads" 16 0 0# 
+ val set_pumped #"pump.ads" 35 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (amount : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5327,13 +5327,13 @@ module Pump__set_pumped__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_pump_nozzle_state" defined at pump.ads:17, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_pump_nozzle_state" defined at pump.ads:36, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_pump_nozzle_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_pump_nozzle_state #"pump.ads" 17 0 0# 
+ val set_pump_nozzle_state #"pump.ads" 36 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (nozzletype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5341,13 +5341,13 @@ module Pump__set_pump_nozzle_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "append_reservoir" defined at pump.ads:19, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "append_reservoir" defined at pump.ads:38, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__append_reservoir__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val append_reservoir #"pump.ads" 19 0 0# 
+ val append_reservoir #"pump.ads" 38 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (fueltype : int) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5355,13 +5355,13 @@ module Pump__append_reservoir__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "set_reservoir_size" defined at pump.ads:21, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "set_reservoir_size" defined at pump.ads:40, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__set_reservoir_size__axiom
  use import "_gnatprove_standard".Main
  use        Pump__pump
  use        Pump__pump__axiom
 
- val set_reservoir_size #"pump.ads" 21 0 0# 
+ val set_reservoir_size #"pump.ads" 40 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (size : real) : unit
   requires { true }
   ensures { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) }
@@ -5369,46 +5369,25 @@ module Pump__set_reservoir_size__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_tanks_size" defined at pump.ads:32, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
-module Pump__get_tanks_size__axiom
- use import "_gnatprove_standard".Main
- use        Pump__float_number
- use        Pump__float_number__axiom
- use        Pump__pump
- use        Pump__pump__axiom
- use        Pump__get_tanks_size
-
- val get_tanks_size #"pump.ads" 32 0 0# 
-   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
-  requires { true }
-  ensures { ( (result = (Pump__get_tanks_size.get_tanks_size pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
- 
- axiom get_tanks_size__post_axiom :
-  (forall pump_r : Pump__pump.pump [(Pump__get_tanks_size.get_tanks_size pump_r)].
-   ( (Pump__pump__axiom.dynamic_invariant pump_r True True True) -> (let result = (Pump__get_tanks_size.get_tanks_size pump_r) in (
-    (Pump__float_number__axiom.dynamic_invariant result True False True)))
-    ))
-
-end
-
-(* Module for declaring a program function (and possibly an axiom) for "remove_petrol_reservoir" defined at pump.ads:23, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "remove_petrol_reservoir" defined at pump.ads:42, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__remove_petrol_reservoir__axiom
  use import "_gnatprove_standard".Main
  use import "real".RealInfix
+ use        Pump__Tfloat_numberB
  use        Pump__float_number
+ use        Pump__reservoir
  use        Pump__pump
  use        Pump__pump__axiom
- use        Pump__get_tanks_size
 
- val remove_petrol_reservoir #"pump.ads" 23 0 0# 
+ val remove_petrol_reservoir #"pump.ads" 42 0 0# 
    (pump_r__split_fields : Pump__pump.__split_fields__ref) (amount : real) : unit
-  requires { (amount <=. (Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))) }
-  ensures { ( ((Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content })) >=. (0.0E-2)) /\ (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) ) }
+  requires { ((Pump__Tfloat_numberB.round_real ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))))) -. amount)) >=. (0.0E-2)) }
+  ensures { ( ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content }))))) >=. (0.0E-2)) /\ (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = pump_r__split_fields.Pump__pump.__split_fields__content } True True True) ) }
   writes {pump_r__split_fields}
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_state" defined at pump.ads:29, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_state" defined at pump.ads:48, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__state_type__axiom
@@ -5416,7 +5395,7 @@ module Pump__get_state__axiom
  use        Pump__pump__axiom
  use        Pump__get_state
 
- val get_state #"pump.ads" 29 0 0# 
+ val get_state #"pump.ads" 48 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_state.get_state pump_r)) /\ (Pump__state_type__axiom.dynamic_invariant result True False True) ) }
@@ -5429,7 +5408,7 @@ module Pump__get_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_current_nozzle_state" defined at pump.ads:30, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_current_nozzle_state" defined at pump.ads:49, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_current_nozzle_state__axiom
  use import "_gnatprove_standard".Main
  use        Pump__nozzle_type__axiom
@@ -5437,7 +5416,7 @@ module Pump__get_current_nozzle_state__axiom
  use        Pump__pump__axiom
  use        Pump__get_current_nozzle_state
 
- val get_current_nozzle_state #"pump.ads" 30 0 0# 
+ val get_current_nozzle_state #"pump.ads" 49 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_current_nozzle_state.get_current_nozzle_state pump_r)) /\ (Pump__nozzle_type__axiom.dynamic_invariant result True False True) ) }
@@ -5450,7 +5429,7 @@ module Pump__get_current_nozzle_state__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_unit_price" defined at pump.ads:31, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_unit_price" defined at pump.ads:50, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_unit_price__axiom
  use import "_gnatprove_standard".Main
  use        Pump__float_number
@@ -5459,7 +5438,7 @@ module Pump__get_unit_price__axiom
  use        Pump__pump__axiom
  use        Pump__get_unit_price
 
- val get_unit_price #"pump.ads" 31 0 0# 
+ val get_unit_price #"pump.ads" 50 0 0# 
    (pump_r : Pump__pump.pump) : Pump__float_number.float_number
   requires { true }
   ensures { ( (result = (Pump__get_unit_price.get_unit_price pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
@@ -5472,7 +5451,29 @@ module Pump__get_unit_price__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "get_resevoir_category" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "get_tanks_size" defined at pump.ads:51, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+module Pump__get_tanks_size__axiom
+ use import "_gnatprove_standard".Main
+ use        Pump__float_number
+ use        Pump__float_number__axiom
+ use        Pump__pump
+ use        Pump__pump__axiom
+ use        Pump__get_tanks_size
+
+ val get_tanks_size #"pump.ads" 51 0 0# 
+   (pump_r : Pump__pump.pump) : Pump__float_number.float_number
+  requires { true }
+  ensures { ( (result = (Pump__get_tanks_size.get_tanks_size pump_r)) /\ (Pump__float_number__axiom.dynamic_invariant result True False True) ) }
+ 
+ axiom get_tanks_size__post_axiom :
+  (forall pump_r : Pump__pump.pump [(Pump__get_tanks_size.get_tanks_size pump_r)].
+   ( (Pump__pump__axiom.dynamic_invariant pump_r True True True) -> (let result = (Pump__get_tanks_size.get_tanks_size pump_r) in (
+    (Pump__float_number__axiom.dynamic_invariant result True False True)))
+    ))
+
+end
+
+(* Module for declaring a program function (and possibly an axiom) for "get_resevoir_category" defined at pump.ads:52, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Pump__get_resevoir_category__axiom
  use import "_gnatprove_standard".Main
  use        Pump__fuel_types__axiom
@@ -5480,7 +5481,7 @@ module Pump__get_resevoir_category__axiom
  use        Pump__pump__axiom
  use        Pump__get_resevoir_category
 
- val get_resevoir_category #"pump.ads" 33 0 0# 
+ val get_resevoir_category #"pump.ads" 52 0 0# 
    (pump_r : Pump__pump.pump) : int
   requires { true }
   ensures { ( (result = (Pump__get_resevoir_category.get_resevoir_category pump_r)) /\ (Pump__fuel_types__axiom.dynamic_invariant result True False True) ) }
@@ -5493,60 +5494,60 @@ module Pump__get_resevoir_category__axiom
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print" defined at sprint.ads:3, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print #"sprint.ads" 3 0 0# 
+ val print #"sprint.ads" 4 0 0# 
    (s : Standard__string.string) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_float_type" defined at sprint.ads:4, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_float_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_float_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_float_type #"sprint.ads" 4 0 0# 
+ val print_float_type #"sprint.ads" 5 0 0# 
    (s1 : Standard__string.string) (s2 : real) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_state_type" defined at sprint.ads:5, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_state_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_state_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_state_type #"sprint.ads" 5 0 0# 
+ val print_state_type #"sprint.ads" 6 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_nozzle_type" defined at sprint.ads:6, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_nozzle_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_nozzle_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_nozzle_type #"sprint.ads" 6 0 0# 
+ val print_nozzle_type #"sprint.ads" 7 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }
 
 end
 
-(* Module for declaring a program function (and possibly an axiom) for "print_fuel_type" defined at sprint.ads:7, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
+(* Module for declaring a program function (and possibly an axiom) for "print_fuel_type" defined at sprint.ads:8, created in Gnat2Why.Subprograms.Generate_Subprogram_Completion *)
 module Sprint__print_fuel_type__axiom
  use import "_gnatprove_standard".Main
  use        Standard__string
 
- val print_fuel_type #"sprint.ads" 7 0 0# 
+ val print_fuel_type #"sprint.ads" 8 0 0# 
    (s1 : Standard__string.string) (s2 : int) : unit
   requires { true }
   ensures { true }
@@ -5630,7 +5631,7 @@ module Pump__package_def
   ( "GP_Sloc:pump.adb:150:1" () )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "set_fuel_price" defined at pump.ads:14, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "set_fuel_price" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__set_fuel_price__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -5651,36 +5652,36 @@ module Pump__set_fuel_price__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__set_fuel_price__pump_r__axiom
- use        Pump__set_fuel_price__price__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__set_fuel_price__pump_r__axiom
+ use        Pump__set_fuel_price__price__axiom
  use        Sprint__print_float_type__axiom
 
- let def #"system.ads" 81 0 0# "W:diverges:N" "GP_Subp:pump.ads:14" 
+ let def #"system.ads" 81 0 0# "W:diverges:N" "GP_Subp:pump.ads:33" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:14 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:33 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_fuel_price__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_fuel_price__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 6 0 0# assume { (Pump__float_number__axiom.dynamic_invariant Pump__set_fuel_price__price.price True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:14 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:33 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:14 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:33 *)
   ;
-  #"pump.ads" 14 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 33 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:14 *)
+  () (* Assume Pre of the subprogram pump.ads:33 *)
   ;
-  #"pump.ads" 14 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:14 *)
+  #"pump.ads" 33 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:33 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:122:25" (let temp___249 = (let temp___248 = { Pump__pump.__split_fields = Pump__set_fuel_price__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__unit_price((Pump__pump.__split_fields(temp___248)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__unit_price((Pump__pump.__split_fields(temp___248)))) in (
      ()))
      end ;
     { ( temp___248 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___248)) ) with Pump__pump.rec__unit_price = Pump__set_fuel_price__price.price } } )))
@@ -5692,14 +5693,14 @@ module Pump__set_fuel_price__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:14 *)
+  () (* checking of pragma postcondition pump.ads:33 *)
   ;
   #"pump.adb" 118 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "set_pump_state" defined at pump.ads:15, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "set_pump_state" defined at pump.ads:34, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__set_pump_state__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -5720,36 +5721,36 @@ module Pump__set_pump_state__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__set_pump_state__pump_r__axiom
- use        Pump__set_pump_state__statetype__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__set_pump_state__pump_r__axiom
+ use        Pump__set_pump_state__statetype__axiom
  use        Sprint__print_state_type__axiom
 
- let def #"pump.adb" 118 0 0# "W:diverges:N" "GP_Subp:pump.ads:15" 
+ let def #"pump.adb" 118 0 0# "W:diverges:N" "GP_Subp:pump.ads:34" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:15 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:34 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pump_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pump_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 10 0 0# assume { (Pump__state_type__axiom.dynamic_invariant Pump__set_pump_state__statetype.statetype True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:15 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:34 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:15 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:34 *)
   ;
-  #"pump.ads" 15 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 34 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:15 *)
+  () (* Assume Pre of the subprogram pump.ads:34 *)
   ;
-  #"pump.ads" 15 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:15 *)
+  #"pump.ads" 34 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:34 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:15:25" (let temp___252 = (let temp___251 = { Pump__pump.__split_fields = Pump__set_pump_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__pump_state((Pump__pump.__split_fields(temp___251)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__pump_state((Pump__pump.__split_fields(temp___251)))) in (
      ()))
      end ;
     { ( temp___251 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___251)) ) with Pump__pump.rec__pump_state = (Pump__state_type.of_rep Pump__set_pump_state__statetype.statetype) } } )))
@@ -5761,14 +5762,14 @@ module Pump__set_pump_state__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:15 *)
+  () (* checking of pragma postcondition pump.ads:34 *)
   ;
   #"pump.adb" 10 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "set_pumped" defined at pump.ads:16, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "set_pumped" defined at pump.ads:35, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__set_pumped__subprogram_def
  use import "_gnatprove_standard".Main
  use        Pump__float_number
@@ -5781,35 +5782,35 @@ module Pump__set_pumped__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__set_pumped__pump_r__axiom
- use        Pump__set_pumped__amount__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__set_pumped__pump_r__axiom
+ use        Pump__set_pumped__amount__axiom
 
- let def #"pump.adb" 10 0 0# "W:diverges:N" "GP_Subp:pump.ads:16" 
+ let def #"pump.adb" 10 0 0# "W:diverges:N" "GP_Subp:pump.ads:35" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:16 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:35 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pumped__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pumped__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 6 0 0# assume { (Pump__float_number__axiom.dynamic_invariant Pump__set_pumped__amount.amount True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:16 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:35 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:16 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:35 *)
   ;
-  #"pump.ads" 16 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 35 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:16 *)
+  () (* Assume Pre of the subprogram pump.ads:35 *)
   ;
-  #"pump.ads" 16 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:16 *)
+  #"pump.ads" 35 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:35 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:95:21" (let temp___255 = (let temp___254 = { Pump__pump.__split_fields = Pump__set_pumped__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__pumped((Pump__pump.__split_fields(temp___254)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__pumped((Pump__pump.__split_fields(temp___254)))) in (
      ()))
      end ;
     { ( temp___254 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___254)) ) with Pump__pump.rec__pumped = Pump__set_pumped__amount.amount } } )))
@@ -5820,14 +5821,14 @@ module Pump__set_pumped__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:16 *)
+  () (* checking of pragma postcondition pump.ads:35 *)
   ;
   #"pump.adb" 90 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "set_pump_nozzle_state" defined at pump.ads:17, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "set_pump_nozzle_state" defined at pump.ads:36, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__set_pump_nozzle_state__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -5848,36 +5849,36 @@ module Pump__set_pump_nozzle_state__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__set_pump_nozzle_state__pump_r__axiom
- use        Pump__set_pump_nozzle_state__nozzletype__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__set_pump_nozzle_state__pump_r__axiom
+ use        Pump__set_pump_nozzle_state__nozzletype__axiom
  use        Sprint__print_nozzle_type__axiom
 
- let def #"pump.adb" 90 0 0# "W:diverges:N" "GP_Subp:pump.ads:17" 
+ let def #"pump.adb" 90 0 0# "W:diverges:N" "GP_Subp:pump.ads:36" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:17 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:36 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pump_nozzle_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_pump_nozzle_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 11 0 0# assume { (Pump__nozzle_type__axiom.dynamic_invariant Pump__set_pump_nozzle_state__nozzletype.nozzletype True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:17 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:36 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:17 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:36 *)
   ;
-  #"pump.ads" 17 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 36 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:17 *)
+  () (* Assume Pre of the subprogram pump.ads:36 *)
   ;
-  #"pump.ads" 17 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:17 *)
+  #"pump.ads" 36 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:36 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:29:27" (let temp___257 = (let temp___256 = { Pump__pump.__split_fields = Pump__set_pump_nozzle_state__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__nozzle_state((Pump__pump.__split_fields(temp___256)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__nozzle_state((Pump__pump.__split_fields(temp___256)))) in (
      ()))
      end ;
     { ( temp___256 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___256)) ) with Pump__pump.rec__nozzle_state = (Pump__nozzle_type.of_rep Pump__set_pump_nozzle_state__nozzletype.nozzletype) } } )))
@@ -5889,14 +5890,14 @@ module Pump__set_pump_nozzle_state__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:17 *)
+  () (* checking of pragma postcondition pump.ads:36 *)
   ;
   #"pump.adb" 24 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "append_reservoir" defined at pump.ads:19, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "append_reservoir" defined at pump.ads:38, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__append_reservoir__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -5923,41 +5924,41 @@ module Pump__append_reservoir__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__append_reservoir__pump_r__axiom
- use        Pump__append_reservoir__fueltype__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__append_reservoir__pump_r__axiom
+ use        Pump__append_reservoir__fueltype__axiom
  use        Sprint__print_fuel_type__axiom
 
- let def #"pump.adb" 24 0 0# "W:diverges:N" "GP_Subp:pump.ads:19" 
+ let def #"pump.adb" 24 0 0# "W:diverges:N" "GP_Subp:pump.ads:38" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:19 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:38 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__append_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__append_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 7 0 0# assume { (Pump__fuel_types__axiom.dynamic_invariant Pump__append_reservoir__fueltype.fueltype True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:19 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:38 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:19 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:38 *)
   ;
-  #"pump.ads" 19 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 38 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:19 *)
+  () (* Assume Pre of the subprogram pump.ads:38 *)
   ;
-  #"pump.ads" 19 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:19 *)
+  #"pump.ads" 38 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:38 *)
   ;
   try
-   ( #"pump.ads" 19 0 0# abstract ensures {true}(let _ = () in (
+   ( #"pump.ads" 38 0 0# abstract ensures {true}(let _ = () in (
     ()))
     end ;
    #"pump.adb" 103 0 0# assume { (Pump__reservoir__axiom.default_initial_assumption { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } False) };
-   #"pump.ads" 9 0 0# assume { (Pump__reservoir__axiom.dynamic_invariant { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } False False True) };
+   #"pump.ads" 13 0 0# assume { (Pump__reservoir__axiom.dynamic_invariant { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } False False True) };
    ( "GP_Sloc:pump.adb:107:28" (let temp___262 = (let temp___261 = { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } in (
-    ( #"pump.ads" 37 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__reservoir_category((Pump__reservoir.__split_fields(temp___261)))) in (
+    ( #"pump.ads" 13 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__reservoir_category((Pump__reservoir.__split_fields(temp___261)))) in (
      ()))
      end ;
     { ( temp___261 ) with Pump__reservoir.__split_fields = { ( (Pump__reservoir.__split_fields(temp___261)) ) with Pump__reservoir.rec__reservoir_category = (Pump__fuel_types.of_rep Pump__append_reservoir__fueltype.fueltype) } } )))
@@ -5965,7 +5966,7 @@ module Pump__append_reservoir__subprogram_def
     #"pump.adb" 107 0 0# Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content <- ( (Pump__reservoir.__split_fields(temp___262)) )))
     );
    ( "GP_Sloc:pump.adb:108:14" (let temp___264 = (let temp___263 = { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } in (
-    ( #"pump.ads" 37 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___263)))) in (
+    ( #"pump.ads" 13 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___263)))) in (
      ()))
      end ;
     { ( temp___263 ) with Pump__reservoir.__split_fields = { ( (Pump__reservoir.__split_fields(temp___263)) ) with Pump__reservoir.rec__total = (Pump__float_number.of_real((1000.0))) } } )))
@@ -5973,7 +5974,7 @@ module Pump__append_reservoir__subprogram_def
     #"pump.adb" 108 0 0# Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content <- ( (Pump__reservoir.__split_fields(temp___264)) )))
     );
    ( "GP_Sloc:pump.adb:109:29" (let temp___266 = (let temp___265 = { Pump__pump.__split_fields = Pump__append_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___265)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___265)))) in (
      ()))
      end ;
     { ( temp___265 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___265)) ) with Pump__pump.rec__reservoir_info = { Pump__reservoir.__split_fields = Pump__append_reservoir__r.r__split_fields.Pump__reservoir.__split_fields__content } } } )))
@@ -5985,14 +5986,14 @@ module Pump__append_reservoir__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:19 *)
+  () (* checking of pragma postcondition pump.ads:38 *)
   ;
   #"pump.adb" 100 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "set_reservoir_size" defined at pump.ads:21, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "set_reservoir_size" defined at pump.ads:40, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__set_reservoir_size__subprogram_def
  use import "_gnatprove_standard".Main
  use import "int".Int
@@ -6014,40 +6015,40 @@ module Pump__set_reservoir_size__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__set_reservoir_size__pump_r__axiom
- use        Pump__set_reservoir_size__size__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__set_reservoir_size__pump_r__axiom
+ use        Pump__set_reservoir_size__size__axiom
  use        Sprint__print_float_type__axiom
 
- let def #"pump.adb" 100 0 0# "W:diverges:N" "GP_Subp:pump.ads:21" 
+ let def #"pump.adb" 100 0 0# "W:diverges:N" "GP_Subp:pump.ads:40" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:21 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:40 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_reservoir_size__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__set_reservoir_size__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 6 0 0# assume { (Pump__float_number__axiom.dynamic_invariant Pump__set_reservoir_size__size.size True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:21 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:40 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:21 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:40 *)
   ;
-  #"pump.ads" 21 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 40 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:21 *)
+  () (* Assume Pre of the subprogram pump.ads:40 *)
   ;
-  #"pump.ads" 21 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:21 *)
+  #"pump.ads" 40 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:40 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:43:35" (let temp___270 = (let temp___269 = { Pump__pump.__split_fields = Pump__set_reservoir_size__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-    ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___269)))) in (
+    ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___269)))) in (
      ()))
      end ;
     { ( temp___269 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___269)) ) with Pump__pump.rec__reservoir_info = (let temp___268 = (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = Pump__set_reservoir_size__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })) in (
-     ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___268)))) in (
+     ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___268)))) in (
       ()))
       end ;
      { ( temp___268 ) with Pump__reservoir.__split_fields = { ( (Pump__reservoir.__split_fields(temp___268)) ) with Pump__reservoir.rec__total = Pump__set_reservoir_size__size.size } } )))
@@ -6060,67 +6061,14 @@ module Pump__set_reservoir_size__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:21 *)
+  () (* checking of pragma postcondition pump.ads:40 *)
   ;
   #"pump.adb" 38 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "get_tanks_size" defined at pump.ads:32, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
-module Pump__get_tanks_size__subprogram_def
- use import "_gnatprove_standard".Main
- use        Pump__float_number
- use        Pump__reservoir
- use        Pump__pump
- use        Pump__pump__axiom
- use        Pump__get_tanks_size__pump_r
- use        Pump__float_number__axiom
- use        Pump__fuel_types__axiom
- use        Pump__state_type__axiom
- use        Pump__nozzle_type__axiom
- use        Pump__get_tanks_size__pump_r__axiom
- use        Pump__reservoir__axiom
- use        Pump__pump__axiom
-
- val pump__get_tanks_size__result #"pump.adb" 38 0 0#  : Pump__float_number.float_number__ref 
- 
- let def #"pump.ads" 6 0 0# "W:diverges:N" "GP_Subp:pump.ads:32" 
-   (__void_param : unit)
-  requires { true }
-  ensures { true }
-   =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:32 *)
-  ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_tanks_size__pump_r.pump_r True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:32 *)
-  ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:32 *)
-  ;
-  #"pump.ads" 32 0 0# abstract ensures {true}(let _ = True in (
-   ()))
-   end ;
-  () (* Assume Pre of the subprogram pump.ads:32 *)
-  ;
-  #"pump.ads" 32 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:32 *)
-  ;
-  try
-   ( ( "GP_Sloc:pump.adb:62:7" ( #"pump.adb" 62 0 0# pump__get_tanks_size__result.Pump__float_number.float_number__content <- ( (Pump__reservoir.rec__total((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(Pump__get_tanks_size__pump_r.pump_r)))))))) );
-   #"pump.adb" 62 0 0# raise Return__exc ) );
-   #"pump.adb" 59 0 0# raise Return__exc )
-  with
-   Return__exc -> ()
-  end;
-  () (* checking of pragma postcondition pump.ads:32 *)
-  ;
-  #"pump.adb" 59 0 0# abstract ensures {true}(let _ = True in (
-   ()))
-   end ;
-  pump__get_tanks_size__result.Pump__float_number.float_number__content )
-end
-
-(* Module for checking contracts and absence of run-time errors in subprogram "remove_petrol_reservoir" defined at pump.ads:23, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "remove_petrol_reservoir" defined at pump.ads:42, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__remove_petrol_reservoir__subprogram_def
  use import "_gnatprove_standard".Main
  use import "real".RealInfix
@@ -6132,49 +6080,46 @@ module Pump__remove_petrol_reservoir__subprogram_def
  use        Pump__pump__axiom
  use        Pump__remove_petrol_reservoir__pump_r
  use        Pump__remove_petrol_reservoir__amount
- use        Pump__get_tanks_size
- use        Pump__get_tanks_size__axiom
  use        Pump__float_number__axiom
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__remove_petrol_reservoir__pump_r__axiom
- use        Pump__remove_petrol_reservoir__amount__axiom
- use        Pump__get_tanks_size__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__remove_petrol_reservoir__pump_r__axiom
+ use        Pump__remove_petrol_reservoir__amount__axiom
  use        Pump__Tfloat_numberB__axiom
 
- let def #"pump.ads" 6 0 0# "W:diverges:N" "GP_Subp:pump.ads:23" 
+ let def #"pump.adb" 38 0 0# "W:diverges:N" "GP_Subp:pump.ads:42" 
    (__void_param : unit)
   requires { true }
-  ensures { ( #"pump.ads" 26 0 0# "model_vc_post" "keep_on_simp" "GP_Sloc:pump.ads:26:12" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     post=>(GET_TANKS_SIZE(pump_r)>=0.00);
-           ^ pump.ads:26:12:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3565" "GP_Sloc:pump.ads:26:12" ((Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })) >=. (0.0E-2)) ) ) }
+  ensures { ( #"pump.ads" 45 0 0# "model_vc_post" "keep_on_simp" "GP_Sloc:pump.ads:45:12" "GP_Reason:VC_POSTCONDITION" "GP_Id:1" "comment:     post=>(pump_r.RESERVOIR_INFO.TOTAL>=0.00);
+           ^ pump.ads:45:12:VC_POSTCONDITION" "GP_Shape:pragargs__cmp" ( "GP_Pretty_Ada:3583" "GP_Sloc:pump.ads:45:12" ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content }))))) >=. (0.0E-2)) ) ) }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:23 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:42 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } True False True) };
   #"pump.ads" 6 0 0# assume { (Pump__float_number__axiom.dynamic_invariant Pump__remove_petrol_reservoir__amount.amount True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:23 *)
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:42 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:23 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:42 *)
   ;
-  #"pump.ads" 23 0 0# abstract ensures {true}(let _ = ((Pump__float_number.to_real(Pump__remove_petrol_reservoir__amount.amount)) <=. (Pump__float_number.to_real((Pump__get_tanks_size__axiom.get_tanks_size({ Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content }))))) in (
+  #"pump.ads" 42 0 0# abstract ensures {true}(let _ = ((Pump__Tfloat_numberB.round_real(((Pump__float_number.to_real((Pump__reservoir.rec__total((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields({ Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })))))))))) -. (Pump__float_number.to_real(Pump__remove_petrol_reservoir__amount.amount))))) >=. (0.0E-2)) in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:23 *)
+  () (* Assume Pre of the subprogram pump.ads:42 *)
   ;
-  #"pump.ads" 44 0 0# assume { ((Pump__float_number.to_real Pump__remove_petrol_reservoir__amount.amount) <=. (Pump__float_number.to_real (Pump__get_tanks_size.get_tanks_size { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content }))) };
-  () (* checking of pragma precondition pump.ads:23 *)
+  #"pump.ads" 44 0 0# assume { ((Pump__Tfloat_numberB.round_real ((Pump__float_number.to_real (Pump__reservoir.rec__total (Pump__reservoir.__split_fields (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content }))))) -. (Pump__float_number.to_real Pump__remove_petrol_reservoir__amount.amount))) >=. (0.0E-2)) };
+  () (* checking of pragma precondition pump.ads:42 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:81:7" (if (((Pump__float_number.to_real((Pump__reservoir.rec__total((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields({ Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })))))))))) >. (Pump__float_number.to_real(Pump__remove_petrol_reservoir__amount.amount)))) then (
     ( "GP_Sloc:pump.adb:82:38" (let temp___274 = (let temp___273 = { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content } in (
-     ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___273)))) in (
+     ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(temp___273)))) in (
       ()))
       end ;
      { ( temp___273 ) with Pump__pump.__split_fields = { ( (Pump__pump.__split_fields(temp___273)) ) with Pump__pump.rec__reservoir_info = (let temp___272 = (Pump__pump.rec__reservoir_info (Pump__pump.__split_fields { Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })) in (
-      ( #"pump.ads" 44 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___272)))) in (
+      ( #"pump.ads" 20 0 0# abstract ensures {true}(let _ = (Pump__reservoir.rec__total((Pump__reservoir.__split_fields(temp___272)))) in (
        ()))
        end ;
       { ( temp___272 ) with Pump__reservoir.__split_fields = { ( (Pump__reservoir.__split_fields(temp___272)) ) with Pump__reservoir.rec__total = (Pump__float_number.of_real(( #"pump.adb" 82 0 0# "model_vc" "keep_on_simp" "GP_Sloc:pump.adb:82:69" "GP_Reason:VC_RANGE_CHECK" "GP_Id:0" "comment:         pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - AMOUNT;
@@ -6188,14 +6133,14 @@ module Pump__remove_petrol_reservoir__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:23 *)
+  () (* checking of pragma postcondition pump.ads:42 *)
   ;
-  #"pump.adb" 76 0 0# abstract ensures {true}(let _ = ((Pump__float_number.to_real((Pump__get_tanks_size__axiom.get_tanks_size({ Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })))) >=. (0.0E-2)) in (
+  #"pump.adb" 76 0 0# abstract ensures {true}(let _ = ((Pump__float_number.to_real((Pump__reservoir.rec__total((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields({ Pump__pump.__split_fields = Pump__remove_petrol_reservoir__pump_r.pump_r__split_fields.Pump__pump.__split_fields__content })))))))))) >=. (0.0E-2)) in (
    ()))
    end  )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "get_state" defined at pump.ads:29, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "get_state" defined at pump.ads:48, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__get_state__subprogram_def
  use import "_gnatprove_standard".Main
  use        Pump__state_type
@@ -6206,31 +6151,31 @@ module Pump__get_state__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__get_state__pump_r__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__get_state__pump_r__axiom
 
- val pump__get_state__result #"pump.ads" 26 0 0# "model" "model_trace:3132@result"  : int__ref 
+ val pump__get_state__result #"pump.ads" 45 0 0# "model" "model_trace:3244@result"  : int__ref 
  
- let def #"pump.ads" 10 0 0# "W:diverges:N" "GP_Subp:pump.ads:29" 
+ let def #"pump.ads" 10 0 0# "W:diverges:N" "GP_Subp:pump.ads:48" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:29 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:48 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_state__pump_r.pump_r True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:29 *)
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_state__pump_r.pump_r True False True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:48 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:29 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:48 *)
   ;
-  #"pump.ads" 29 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 48 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:29 *)
+  () (* Assume Pre of the subprogram pump.ads:48 *)
   ;
-  #"pump.ads" 29 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:29 *)
+  #"pump.ads" 48 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:48 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:146:7" ( #"pump.adb" 146 0 0# pump__get_state__result.int__content <- ( (Pump__state_type.to_rep((Pump__pump.rec__pump_state((Pump__pump.__split_fields(Pump__get_state__pump_r.pump_r)))))) );
@@ -6239,7 +6184,7 @@ module Pump__get_state__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:29 *)
+  () (* checking of pragma postcondition pump.ads:48 *)
   ;
   #"pump.adb" 143 0 0# abstract ensures {true}(let _ = True in (
    ()))
@@ -6247,7 +6192,7 @@ module Pump__get_state__subprogram_def
   pump__get_state__result.int__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "get_current_nozzle_state" defined at pump.ads:30, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "get_current_nozzle_state" defined at pump.ads:49, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__get_current_nozzle_state__subprogram_def
  use import "_gnatprove_standard".Main
  use        Pump__nozzle_type
@@ -6258,31 +6203,31 @@ module Pump__get_current_nozzle_state__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__get_current_nozzle_state__pump_r__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__get_current_nozzle_state__pump_r__axiom
 
- val pump__get_current_nozzle_state__result #"pump.ads" 10 0 0# "model" "model_trace:3151@result"  : int__ref 
+ val pump__get_current_nozzle_state__result #"pump.ads" 10 0 0# "model" "model_trace:3263@result"  : int__ref 
  
- let def #"pump.ads" 11 0 0# "W:diverges:N" "GP_Subp:pump.ads:30" 
+ let def #"pump.ads" 11 0 0# "W:diverges:N" "GP_Subp:pump.ads:49" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:30 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:49 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_current_nozzle_state__pump_r.pump_r True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:30 *)
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_current_nozzle_state__pump_r.pump_r True False True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:49 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:30 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:49 *)
   ;
-  #"pump.ads" 30 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 49 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:30 *)
+  () (* Assume Pre of the subprogram pump.ads:49 *)
   ;
-  #"pump.ads" 30 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:30 *)
+  #"pump.ads" 49 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:49 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:136:8" ( #"pump.adb" 136 0 0# pump__get_current_nozzle_state__result.int__content <- ( (Pump__nozzle_type.to_rep((Pump__pump.rec__nozzle_state((Pump__pump.__split_fields(Pump__get_current_nozzle_state__pump_r.pump_r)))))) );
@@ -6291,7 +6236,7 @@ module Pump__get_current_nozzle_state__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:30 *)
+  () (* checking of pragma postcondition pump.ads:49 *)
   ;
   #"pump.adb" 131 0 0# abstract ensures {true}(let _ = True in (
    ()))
@@ -6299,7 +6244,7 @@ module Pump__get_current_nozzle_state__subprogram_def
   pump__get_current_nozzle_state__result.int__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "get_unit_price" defined at pump.ads:31, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "get_unit_price" defined at pump.ads:50, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__get_unit_price__subprogram_def
  use import "_gnatprove_standard".Main
  use        Pump__float_number
@@ -6310,31 +6255,31 @@ module Pump__get_unit_price__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__get_unit_price__pump_r__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__get_unit_price__pump_r__axiom
 
  val pump__get_unit_price__result #"pump.ads" 11 0 0#  : Pump__float_number.float_number__ref 
  
- let def #"pump.ads" 6 0 0# "W:diverges:N" "GP_Subp:pump.ads:31" 
+ let def #"pump.ads" 6 0 0# "W:diverges:N" "GP_Subp:pump.ads:50" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:31 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:50 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_unit_price__pump_r.pump_r True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:31 *)
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_unit_price__pump_r.pump_r True False True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:50 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:31 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:50 *)
   ;
-  #"pump.ads" 31 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 50 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:31 *)
+  () (* Assume Pre of the subprogram pump.ads:50 *)
   ;
-  #"pump.ads" 31 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:31 *)
+  #"pump.ads" 50 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:50 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:53:7" ( #"pump.adb" 53 0 0# pump__get_unit_price__result.Pump__float_number.float_number__content <- ( (Pump__pump.rec__unit_price((Pump__pump.__split_fields(Pump__get_unit_price__pump_r.pump_r)))) );
@@ -6343,7 +6288,7 @@ module Pump__get_unit_price__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:31 *)
+  () (* checking of pragma postcondition pump.ads:50 *)
   ;
   #"pump.adb" 50 0 0# abstract ensures {true}(let _ = True in (
    ()))
@@ -6351,7 +6296,60 @@ module Pump__get_unit_price__subprogram_def
   pump__get_unit_price__result.Pump__float_number.float_number__content )
 end
 
-(* Module for checking contracts and absence of run-time errors in subprogram "get_resevoir_category" defined at pump.ads:33, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+(* Module for checking contracts and absence of run-time errors in subprogram "get_tanks_size" defined at pump.ads:51, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
+module Pump__get_tanks_size__subprogram_def
+ use import "_gnatprove_standard".Main
+ use        Pump__float_number
+ use        Pump__reservoir
+ use        Pump__pump
+ use        Pump__pump__axiom
+ use        Pump__get_tanks_size__pump_r
+ use        Pump__float_number__axiom
+ use        Pump__fuel_types__axiom
+ use        Pump__state_type__axiom
+ use        Pump__nozzle_type__axiom
+ use        Pump__reservoir__axiom
+ use        Pump__pump__axiom
+ use        Pump__get_tanks_size__pump_r__axiom
+
+ val pump__get_tanks_size__result #"pump.ads" 6 0 0#  : Pump__float_number.float_number__ref 
+ 
+ let def #"pump.ads" 6 0 0# "W:diverges:N" "GP_Subp:pump.ads:51" 
+   (__void_param : unit)
+  requires { true }
+  ensures { true }
+   =
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:51 *)
+  ;
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_tanks_size__pump_r.pump_r True False True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:51 *)
+  ;
+  () (* Check for RTE in the Pre of the subprogram pump.ads:51 *)
+  ;
+  #"pump.ads" 51 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  () (* Assume Pre of the subprogram pump.ads:51 *)
+  ;
+  #"pump.ads" 51 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:51 *)
+  ;
+  try
+   ( ( "GP_Sloc:pump.adb:62:7" ( #"pump.adb" 62 0 0# pump__get_tanks_size__result.Pump__float_number.float_number__content <- ( (Pump__reservoir.rec__total((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(Pump__get_tanks_size__pump_r.pump_r)))))))) );
+   #"pump.adb" 62 0 0# raise Return__exc ) );
+   #"pump.adb" 59 0 0# raise Return__exc )
+  with
+   Return__exc -> ()
+  end;
+  () (* checking of pragma postcondition pump.ads:51 *)
+  ;
+  #"pump.adb" 59 0 0# abstract ensures {true}(let _ = True in (
+   ()))
+   end ;
+  pump__get_tanks_size__result.Pump__float_number.float_number__content )
+end
+
+(* Module for checking contracts and absence of run-time errors in subprogram "get_resevoir_category" defined at pump.ads:52, created in Gnat2Why.Subprograms.Generate_VCs_For_Subprogram *)
 module Pump__get_resevoir_category__subprogram_def
  use import "_gnatprove_standard".Main
  use        Pump__fuel_types
@@ -6363,31 +6361,31 @@ module Pump__get_resevoir_category__subprogram_def
  use        Pump__fuel_types__axiom
  use        Pump__state_type__axiom
  use        Pump__nozzle_type__axiom
- use        Pump__get_resevoir_category__pump_r__axiom
  use        Pump__reservoir__axiom
  use        Pump__pump__axiom
+ use        Pump__get_resevoir_category__pump_r__axiom
 
- val pump__get_resevoir_category__result #"pump.ads" 6 0 0# "model" "model_trace:3208@result"  : int__ref 
+ val pump__get_resevoir_category__result #"pump.ads" 6 0 0# "model" "model_trace:3320@result"  : int__ref 
  
- let def #"pump.ads" 7 0 0# "W:diverges:N" "GP_Subp:pump.ads:33" 
+ let def #"pump.ads" 7 0 0# "W:diverges:N" "GP_Subp:pump.ads:52" 
    (__void_param : unit)
   requires { true }
   ensures { true }
    =
-  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:33 *)
+  ( () (* Assume dynamic invariants of inputs of the subprogram pump.ads:52 *)
   ;
-  #"pump.ads" 8 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_resevoir_category__pump_r.pump_r True False True) };
-  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:33 *)
+  #"pump.ads" 20 0 0# assume { (Pump__pump__axiom.dynamic_invariant Pump__get_resevoir_category__pump_r.pump_r True False True) };
+  () (* Declarations introduced by the compiler at the beginning of the subprogram pump.ads:52 *)
   ;
-  () (* Check for RTE in the Pre of the subprogram pump.ads:33 *)
+  () (* Check for RTE in the Pre of the subprogram pump.ads:52 *)
   ;
-  #"pump.ads" 33 0 0# abstract ensures {true}(let _ = True in (
+  #"pump.ads" 52 0 0# abstract ensures {true}(let _ = True in (
    ()))
    end ;
-  () (* Assume Pre of the subprogram pump.ads:33 *)
+  () (* Assume Pre of the subprogram pump.ads:52 *)
   ;
-  #"pump.ads" 33 0 0# assume { true };
-  () (* checking of pragma precondition pump.ads:33 *)
+  #"pump.ads" 52 0 0# assume { true };
+  () (* checking of pragma precondition pump.ads:52 *)
   ;
   try
    ( ( "GP_Sloc:pump.adb:70:7" ( #"pump.adb" 70 0 0# pump__get_resevoir_category__result.int__content <- ( (Pump__fuel_types.to_rep((Pump__reservoir.rec__reservoir_category((Pump__reservoir.__split_fields((Pump__pump.rec__reservoir_info((Pump__pump.__split_fields(Pump__get_resevoir_category__pump_r.pump_r)))))))))) );
@@ -6396,7 +6394,7 @@ module Pump__get_resevoir_category__subprogram_def
   with
    Return__exc -> ()
   end;
-  () (* checking of pragma postcondition pump.ads:33 *)
+  () (* checking of pragma postcondition pump.ads:52 *)
   ;
   #"pump.adb" 67 0 0# abstract ensures {true}(let _ = True in (
    ()))

@@ -1,5 +1,7 @@
 V "GNAT Lib v2016"
 M P W=b
+A -ftest-coverage
+A -fprofile-arcs
 A -gnatc
 P GP ZX
 
@@ -13,9 +15,10 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U main%b		main.adb		827ebc0d OO SU
+U main%b		main.adb		11b0190c OO SU
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+W cash_register%s	cash_register.adb	cash_register.ali
 W pump%s		pump.adb		pump.ali
 W pump_unit%s		pump_unit.adb		pump_unit.ali
 W sprint%s		sprint.adb		sprint.ali
@@ -25,41 +28,44 @@ D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-ioexce.ads		20160516092926 e4a01f64 ada.io_exceptions%s
 D a-stream.ads		20160516092928 119b8fb3 ada.streams%s
 D a-textio.ads		20160516092932 386df5d4 ada.text_io%s
+D cash_register.ads	20160815102812 39a124ea cash_register%s
 D interfac.ads		20160516092928 5ab55268 interfaces%s
 D i-cstrea.ads		20160516092926 e53d8b8e interfaces.c_streams%s
-D main.adb		20160814100644 2eb29c0a main%b
-D pump.ads		20160814111846 09d71cdb pump%s
-D pump_unit.ads		20160814112602 ae83789e pump_unit%s
-D sprint.ads		20160814103738 33f5b196 sprint%s
+D main.adb		20160814172700 a7559111 main%b
+D pump.ads		20160815103630 b2cc990b pump%s
+D pump_unit.ads		20160815102840 361071be pump_unit%s
+D sprint.ads		20160815083148 33f5b196 sprint%s
 D system.ads		20160516092930 2da59038 system%s
 D s-crtl.ads		20160516092926 0ebbdb71 system.crtl%s
 D s-ficobl.ads		20160516092932 078245e4 system.file_control_block%s
 D s-parame.ads		20160516092932 7e2a0d7f system.parameters%s
 D s-wchcon.ads		20160516092930 1b7d22d2 system.wch_con%s
 X 1 ada.ads
-16K9*Ada 19e8 7|4r6 4r23
+16K9*Ada 19e8 8|5r6 5r23
 X 4 a-textio.ads
-49K13*Text_IO 471e16 7|4w10 4r27
-240U14*Get 7|184s7 188s10 192s13
-242U14*Put 7|183s7 187s10 191s13
-X 7 main.adb
-5U11*Main 5b11 211l5 211t9
-12r4 UNIT_1{9|5R9} 138m26 138r26 139m23 139r23 140m23 140r23 141m23 141r23
-. 143r35 144r35 145r39 158m29 158r29 159m29 159r29 160m31 160r31 161m29 161r29
-. 163m31 163r31 165m31 165r31 167m31 167r31 168m30 168r30 170m40 170r40 172m15
-. 172r15 172r53 173m15 173r15 180r34 185r40 185r76 195m41 195r41 197m41 197r41
-. 199m41 199r41
-13r4 UNIT_1_91{8|8R9} 139m30 139r30 143m4 158m36 158r36 160m39 160r39 165m38
-. 165r38 195m49 195r49
-14r4 UNIT_1_95{8|8R9} 140m30 140r30 144m4 159m36 159r36 161m36 161r36 163m38
-. 163r38 167m38 167r38 168m37 168r37 172m22 172r22 173m22 173r22 197m49 197r49
-15r4 UNIT_1_Diesel{8|8R9} 141m31 141r31 145m4 199m49 199r49
-18e4 U91{8|7E9} 134m4 139r41 143r42 158r46 195r59
-19e4 U95{8|7E9} 135m4 140r41 144r42 159r46 161r46 197r60
-20e4 Diesel{8|7E9} 136m4 141r45 145r46 199r64
-22i4 F_U91{integer} 134r30
-23i4 F_U95{integer} 135r30
-24i4 F_Diesel{integer} 136r33
+49K13*Text_IO 471e16 8|5w10 5r27
+240U14*Get 8|107s7 111s10 115s13
+242U14*Put 8|106s7 110s10 114s13
+X 5 cash_register.ads
+3K9*CASH_REGISTER 35e18 8|3w6 93r7 95r7 96r7
+32U14*payFuel 8|95s21 96s21
+33U14*SET_PUMPED_INFO_TO_CASH_REGISTER 8|93s21
+X 8 main.adb
+6U11*Main 6b11 134l5 134t9
+13r4 UNIT_1{10|14R9} 60m26 60r26 61m23 61r23 62m23 62r23 63m23 63r23 65r35
+. 66r35 67r39 83m29 83r29 85m31 85r31 89m31 89r31 90m31 90r31 93r54 95m29
+. 95r29 95r67 96m29 96r29 103r34 108r40 108r76 118m41 118r41 120m41 120r41
+. 122m41 122r41
+14r4 UNIT_1_91{9|20R9} 61m30 61r30 65m4 118m49 118r49
+15r4 UNIT_1_95{9|20R9} 62m30 62r30 66m4 83m36 83r36 85m38 85r38 89m38 89r38
+. 90m38 90r38 95m36 95r36 96m36 96r36 120m49 120r49
+16r4 UNIT_1_Diesel{9|20R9} 63m31 63r31 67m4 122m49 122r49
+18e4 U91{9|7E9} 56m4 61r41 65r42 118r59
+19e4 U95{9|7E9} 57m4 62r41 66r42 83r46 120r60
+20e4 Diesel{9|7E9} 58m4 63r45 67r46 122r64
+22i4 F_U91{integer} 56r30
+23i4 F_U95{integer} 57r30
+24i4 F_Diesel{integer} 58r33
 27i4 Base{integer}
 28i4 Ready{integer}
 29i4 Pumping{integer}
@@ -71,72 +77,38 @@ X 7 main.adb
 36i4 Stop{integer}
 37i4 Pay{integer}
 39D9 FLOAT_NUMBER
-45R9 PUMP_UNIT_ID 51e17 58r18 111r19
-47a10 ID{9|8A12} 79r48 81r38 114m18
-48f10 TO_PAY{8|6F9} 84m36 115m18
-49f10 PUMPED{8|6F9} 85m36 116m18
-50e10 FUEL{8|7E9} 117m18
-55R9 CASH_REGISTER 59e17 60r18
-58r10 UNIT_1{45R9} 79r41 81r31 84m29 85m29 118m20
-60r4 cashRegister{55R9} 79r28 81r18 84m16 85m16 118m7
-64U14 payFuel 103l8 103t15 172s7 173s7
-64r23 pumpUnit{9|5R9} 71r30 72r36 73r60 74r66 81r67 88m38 89m37 90m37 98r37
-64r61 pump_r{8|8R9} 86m36 87m32
-64f87 AMOUNT{8|6F9} 80r73 82r16 83r45
-65a7 id{9|8A12} 71m7 81r13
-66f7 topay{8|6F9} 72m7 80r34 82r25
-107U14 SET_PUMPED_INFO_TO_CASH_REGISTER 120l8 120t40 170s7
-108r7 pumpUnit{9|5R9} 113r36 114r40 116r49 117r45
-110f7 topay{8|6F9} 113m7 115r28
-111r7 pumpUnitId{45R9} 114m7 115m7 116m7 117m7 118r30
-125f4 CAR_TANK_SPACE{8|6F9} 154m7 163m64 163r64 165m55 165r55 167m55 167r55
-126f4 AMOUNT_TO_FILL{8|6F9} 156m7 163r48
-127b4 isTest{boolean} 148m4 149r7
-128a4 input_unit{string} 184m11 185r10
-129a4 input_fuel_type{string} 188m14 189r55 194r19 196r22 198r22
-130a4 input_action{string} 192m17 193r60
-X 8 pump.ads
-1K9*PUMP 7|1w6 8r17 9r17 13r15 14r15 15r19 18r9 19r9 20r12 48r19 49r18 50r16
-. 64r76 64r99 66r14 67r20 73r10 73r74 73r94 74r13 74r81 74r102 86r16 86r43
-. 87r16 110r14 125r20 126r20 134r10 135r10 136r13 189r13 189r33 193r16 193r37
-. 8|58e9
-6F9*FLOAT_NUMBER<short_float> 7|48r24 49r23 64r104 66r19 67r25 110r19 125r25
-. 126r25
-7E9*FUEL_TYPES 7|9r22 18r14 19r14 20r17 50r21 134r15 135r15 136r18 189r18
-. 189r38 8|7e45
-8R9*PUMP 7|13r20 14r20 15r24 64r81 8|54e17
-10E9*STATE_TYPE 7|8r22 73r15 73r79 73r99 86r48 8|10e54
-11E9*NOZZLE_TYPE 7|74r18 74r86 74r107 193r21 193r42 8|11e68
-15U14*SET_PUMP_STATE 7|86s21
-16U14*SET_PUMPED 7|87s21
-X 9 pump_unit.ads
-3K9*PUMP_UNIT 7|2w6 12r13 47r13 64r40 65r11 71r13 72r15 73r30 74r34 81r46
-. 88r16 89r16 90r16 98r16 108r24 113r15 114r23 116r28 117r26 138r4 139r4
-. 140r4 141r4 143r16 144r16 145r20 158r7 159r7 160r7 161r7 163r7 165r7 167r7
-. 168r7 172r32 180r10 185r23 185r52 195r19 197r19 199r19 9|84e14
-5R9*PUMP_UNIT 7|12r23 64r50 108r34 9|82e17
-8A12*UNIT_ID_TYPE{string}<integer> 7|47r23 65r21
-15V13*GET_PUMP{8|8R9} 7|143s26 144s26 145s30
-17V13*GET_ID{8A12} 7|71s23 114s33 185s33
-18V13*GET_TO_PAY{8|6F9} 7|72s25 81s56 98s26 113s25 172s42
-19V13*GET_PUMPED{8|6F9} 7|116s38
-20V13*GET_FUEL{8|7E9} 7|117s36
-21V13*UNIT_IS_USING{boolean} 7|180s20 185s62
-23V13*GET_PUMP_UNIT_STATE{8|10E9} 7|73s40
-24V13*GET_PUMP_NOZZLE_STATE{8|11E9} 7|74s44
-29U14*SET_IS_PAID 7|88s26
-30U14*SET_TO_PAY 7|90s26
-31U14*SET_UNIT_ID 7|138s14
-32U14*SET_PUMPED 7|89s26
-36U14*ADD_PUMP 7|139s14 140s14 141s14
-42U14*LEFT_NOZZLE 7|158s17 159s17 161s17 195s29 197s29 199s29
-47U14*RETURN_NOZZLE 7|160s17
-57U14*START_PUMPING 7|163s17 165s17 167s17
-62U14*STOP_PUMPING 7|168s17
-X 10 sprint.ads
-2K10*sPrint 7|3w6 3r18 10|13e11
-3U14*print 7|75s10 79s10 80s10 83s16 95s16 99s13 119s7 150s7 151s7 152s7
-. 174s7 175s7 176s7 179s7 181s10 186s10 190s13 202s16
+47f4 CAR_TANK_SPACE{9|6F9} 76m7 85m64 85r64 89m55 89r55
+48f4 AMOUNT_TO_FILL{9|6F9} 78m7 85r48
+49b4 isTest{boolean} 70m4 71r7
+50a4 input_unit{string} 107m11 108r10
+51a4 input_fuel_type{string} 111m14 112r55 117r19 119r22 121r22
+52a4 input_action{string} 115m17 116r60
+X 9 pump.ads
+1K9*PUMP 8|1w6 9r17 10r17 14r15 15r15 16r19 18r9 19r9 20r12 47r20 48r20 56r10
+. 57r10 58r13 112r13 112r33 116r16 116r37 9|59e9
+6F9*FLOAT_NUMBER<short_float> 8|47r25 48r25
+7E9*FUEL_TYPES 8|10r22 18r14 19r14 20r17 56r15 57r15 58r18 112r18 112r38
+. 9|7e41
+10E9*STATE_TYPE 8|9r22 9|10e54
+11E9*NOZZLE_TYPE 8|116r21 116r42 9|11e68
+20R9*PUMP 8|14r20 15r20 16r24 9|30e17
+X 10 pump_unit.ads
+3K9*PUMP_UNIT 8|2w6 13r13 60r4 61r4 62r4 63r4 65r16 66r16 67r20 83r7 85r7
+. 89r7 90r7 95r46 103r10 108r23 108r52 118r19 120r19 122r19 10|83e14
+8A12*UNIT_ID_TYPE{string}<integer>
+14R9*PUMP_UNIT 8|13r23 10|27e17
+30V13*GET_PUMP{9|20R9} 8|65s26 66s26 67s30
+32V13*GET_ID{8A12} 8|108s33
+33V13*GET_TO_PAY{9|6F9} 8|95s56
+36V13*UNIT_IS_USING{boolean} 8|103s20 108s62
+49U14*SET_UNIT_ID 8|60s14
+54U14*ADD_PUMP 8|61s14 62s14 63s14
+56U14*LEFT_NOZZLE 8|83s17 118s29 120s29 122s29
+61U14*RETURN_NOZZLE 8|90s17
+70U14*START_PUMPING 8|85s17 89s17
+X 11 sprint.ads
+2K10*sPrint 8|4w6 4r18 11|14e11
+4U14*print 8|72s7 73s7 74s7 97s7 98s7 99s7 102s7 104s10 109s10 113s13 125s16
 FD 1 ada.ads
 FS .1 16K9 ada
 FD 2 a-ioexce.ads
@@ -237,7 +209,11 @@ FS .84 431U14 ada__text_io__read__2
 FS .85 437U14 ada__text_io__write__2
 FS .86 460V13 ada__text_io__eof_char
 FS .87 466U14 ada__text_io__initialize_standard_files
-FD 5 interfac.ads
+FD 5 cash_register.ads
+FS .1 3K9 cash_register
+FS .2 32U14 cash_register__payfuel
+FS .3 33U14 cash_register__set_pumped_info_to_cash_register
+FD 6 interfac.ads
 FS .1 38K9 interfaces
 FS .2 81V13 interfaces__shift_left
 FS .3 85V13 interfaces__shift_right
@@ -259,7 +235,7 @@ FS .18 145V13 interfaces__shift_right__4
 FS .19 149V13 interfaces__shift_right_arithmetic__4
 FS .20 153V13 interfaces__rotate_left__4
 FS .21 157V13 interfaces__rotate_right__4
-FD 6 i-cstrea.ads
+FD 7 i-cstrea.ads
 FS .1 37K20 interfaces__c_streams
 FS .2 72V13 interfaces__c_streams__stdin
 FS .3 73V13 interfaces__c_streams__stdout
@@ -277,65 +253,61 @@ FS .14 223U14 interfaces__c_streams__set_binary_mode
 FS .15 224U14 interfaces__c_streams__set_text_mode
 FS .16 254U14 interfaces__c_streams__set_mode
 FS .17 262U14 interfaces__c_streams__full_name
-FD 7 main.adb
-FS .1 5U11 main
-FS .2 64U14 main__payfuel
-FS .3 64U14 main__payfuel -> 7.2
-FS .4 107U14 main__set_pumped_info_to_cash_register
-FS .5 107U14 main__set_pumped_info_to_cash_register -> 7.4
-FD 8 pump.ads
+FD 8 main.adb
+FS .1 6U11 main
+FD 9 pump.ads
 FS .1 1K9 pump
-FS .2 14U14 pump__set_fuel_price
-FS .3 15U14 pump__set_pump_state
-FS .4 16U14 pump__set_pumped
-FS .5 17U14 pump__set_pump_nozzle_state
-FS .6 19U14 pump__append_reservoir
-FS .7 21U14 pump__set_reservoir_size
-FS .8 23U14 pump__remove_petrol_reservoir
-FS .9 29V13 pump__get_state
-FS .10 30V13 pump__get_current_nozzle_state
-FS .11 31V13 pump__get_unit_price
-FS .12 32V13 pump__get_tanks_size
-FS .13 33V13 pump__get_resevoir_category
-FD 9 pump_unit.ads
+FS .2 33U14 pump__set_fuel_price
+FS .3 34U14 pump__set_pump_state
+FS .4 35U14 pump__set_pumped
+FS .5 36U14 pump__set_pump_nozzle_state
+FS .6 38U14 pump__append_reservoir
+FS .7 40U14 pump__set_reservoir_size
+FS .8 42U14 pump__remove_petrol_reservoir
+FS .9 48V13 pump__get_state
+FS .10 49V13 pump__get_current_nozzle_state
+FS .11 50V13 pump__get_unit_price
+FS .12 51V13 pump__get_tanks_size
+FS .13 52V13 pump__get_resevoir_category
+FD 10 pump_unit.ads
 FS .1 3K9 pump_unit
-FS .2 15V13 pump_unit__get_pump
-FS .3 16V13 pump_unit__get_tanks_size
-FS .4 17V13 pump_unit__get_id
-FS .5 18V13 pump_unit__get_to_pay
-FS .6 19V13 pump_unit__get_pumped
-FS .7 20V13 pump_unit__get_fuel
-FS .8 21V13 pump_unit__unit_is_using
-FS .9 22V13 pump_unit__unit_is_paid
-FS .10 23V13 pump_unit__get_pump_unit_state
-FS .11 24V13 pump_unit__get_pump_nozzle_state
-FS .12 28U14 pump_unit__set_is_using
-FS .13 29U14 pump_unit__set_is_paid
-FS .14 30U14 pump_unit__set_to_pay
-FS .15 31U14 pump_unit__set_unit_id
-FS .16 32U14 pump_unit__set_pumped
-FS .17 33U14 pump_unit__set_pump_active_state
-FS .18 34U14 pump_unit__set_pump_nozzle_state
-FS .19 36U14 pump_unit__add_pump
-FS .20 42U14 pump_unit__left_nozzle
-FS .21 47U14 pump_unit__return_nozzle
-FS .22 57U14 pump_unit__start_pumping
-FS .23 62U14 pump_unit__stop_pumping
-FD 10 sprint.ads
+FS .2 30V13 pump_unit__get_pump
+FS .3 31V13 pump_unit__get_tanks_size
+FS .4 32V13 pump_unit__get_id
+FS .5 33V13 pump_unit__get_to_pay
+FS .6 34V13 pump_unit__get_pumped
+FS .7 35V13 pump_unit__get_fuel
+FS .8 36V13 pump_unit__unit_is_using
+FS .9 37V13 pump_unit__unit_is_paid
+FS .10 38V13 pump_unit__get_pump_unit_state
+FS .11 39V13 pump_unit__get_pump_nozzle_state
+FS .12 43U14 pump_unit__set_is_using
+FS .13 47U14 pump_unit__set_is_paid
+FS .14 48U14 pump_unit__set_to_pay
+FS .15 49U14 pump_unit__set_unit_id
+FS .16 50U14 pump_unit__set_pumped
+FS .17 51U14 pump_unit__set_pump_active_state
+FS .18 52U14 pump_unit__set_pump_nozzle_state
+FS .19 54U14 pump_unit__add_pump
+FS .20 56U14 pump_unit__left_nozzle
+FS .21 61U14 pump_unit__return_nozzle
+FS .22 70U14 pump_unit__start_pumping
+FS .23 75U14 pump_unit__stop_pumping
+FD 11 sprint.ads
 FS .1 2K10 sprint
-FS .2 3U14 sprint__print
-FS .3 4U14 sprint__print_float_type
-FS .4 5U14 sprint__print_state_type
-FS .5 6U14 sprint__print_nozzle_type
-FS .6 7U14 sprint__print_fuel_type
-FD 11 system.ads
+FS .2 4U14 sprint__print
+FS .3 5U14 sprint__print_float_type
+FS .4 6U14 sprint__print_state_type
+FS .5 7U14 sprint__print_nozzle_type
+FS .6 8U14 sprint__print_fuel_type
+FD 12 system.ads
 FS .1 37K9 system
 FS .2 77V13 system__Olt
 FS .3 78V13 system__Ole
 FS .4 79V13 system__Ogt
 FS .5 80V13 system__Oge
 FS .6 81V13 system__Oeq
-FD 12 s-crtl.ads
+FD 13 s-crtl.ads
 FS .1 38K16 system__crtl
 FS .2 85V13 system__crtl__strlen
 FS .3 88U14 system__crtl__strncpy
@@ -381,89 +353,61 @@ FS .42 229V13 system__crtl__open
 FS .43 232V13 system__crtl__close
 FS .44 235V13 system__crtl__read
 FS .45 238V13 system__crtl__write
-FD 13 s-ficobl.ads
+FD 14 s-ficobl.ads
 FS .1 42K16 system__file_control_block
-FD 14 s-parame.ads
+FD 15 s-parame.ads
 FS .1 51K16 system__parameters
 FS .2 81V13 system__parameters__default_stack_size
 FS .3 84V13 system__parameters__minimum_stack_size
 FS .4 87V13 system__parameters__adjust_storage_size
-FD 15 s-wchcon.ads
+FD 16 s-wchcon.ads
 FS .1 41K16 system__wch_con
 FS .2 203V13 system__wch_con__get_wc_encoding_method
 FS .3 207V13 system__wch_con__get_wc_encoding_method__2
 FS .4 212V13 system__wch_con__is_start_of_encoding
 FX 4 a-textio.ads .1 ada__text_io
-F 240*14 ada__text_io__get__4 7|.1:184s7 188s10 192s13
-F 242*14 ada__text_io__put__4 7|.1:183s7 187s10 191s13
-FX 7 main.adb .1 main
-F 12*4 main__unit_1 138m26 138r26 139m23 139r23 140m23 140r23 141m23 141r23
-. 143r35 144r35 145r39 158m29 158r29 159m29 159r29 160m31 160r31 161m29 161r29
-. 163m31 163r31 165m31 165r31 167m31 167r31 168m30 168r30 170m40 170r40 172m15
-. 172r15 172r53 173m15 173r15 180r34 185r40 185r76 195m41 195r41 197m41 197r41
-. 199m41 199r41
-F 13*4 main__unit_1_91 139m30 139r30 143m4 158m36 158r36 160m39 160r39 165m38
-. 165r38 195m49 195r49
-F 14*4 main__unit_1_95 140m30 140r30 144m4 159m36 159r36 161m36 161r36 163m38
-. 163r38 167m38 167r38 168m37 168r37 172m22 172r22 173m22 173r22 197m49 197r49
-F 15*4 main__unit_1_diesel 141m31 141r31 145m4 199m49 199r49
-F 18*4 main__u91 134m4 139r41 143r42 158r46 195r59
-F 19*4 main__u95 135m4 140r41 144r42 159r46 161r46 197r60
-F 20*4 main__diesel 136m4 141r45 145r46 199r64
-F 22*4 main__f_u91 134r30
-F 23*4 main__f_u95 135r30
-F 24*4 main__f_diesel 136r33
-F 60*4 main__cashregister .3:79r28 81r18 84m16 85m16 .5:118m7
-F 64*14 main__payfuel 172s7 173s7
-F 107*14 main__set_pumped_info_to_cash_register 170s7
-F 125*4 main__car_tank_space 154m7 163m64 163r64 165m55 165r55 167m55 167r55
-F 126*4 main__amount_to_fill 156m7 163r48
-F 127*4 main__istest 148m4 149r7
-F 128*4 main__input_unit 184m11 185r10
-F 129*4 main__input_fuel_type 188m14 189r55 194r19 196r22 198r22
-F 130*4 main__input_action 192m17 193r60
-FX 7 main.adb .2 main__payfuel
-F 64=23 main__payfuel__pumpunit .3:71r30 72r36 73r60 74r66 81r67 88m38 89m37
-. 90m37 98r37
-F 64=61 main__payfuel__pump_r .3:86m36 87m32
-F 64>87 main__payfuel__amount .3:80c73 82c16 83c45
-FX 7 main.adb .3 main__payfuel
-F 65*7 main__payfuel__id 71m7 81r13
-F 66*7 main__payfuel__topay 72m7 80r34 82r25
-FX 7 main.adb .4 main__set_pumped_info_to_cash_register
-F 108=7 main__set_pumped_info_to_cash_register__pumpunit .5:113r36 114r40
-. 116r49 117r45
-FX 7 main.adb .5 main__set_pumped_info_to_cash_register
-F 110*7 main__set_pumped_info_to_cash_register__topay 113m7 115r28
-F 111*7 main__set_pumped_info_to_cash_register__pumpunitid 114m7 115m7 116m7
-. 117m7 118r30
-FX 8 pump.ads .1 pump
-F 15*14 pump__set_pump_state 7|.3:86s21
-F 16*14 pump__set_pumped 7|.3:87s21
-FX 9 pump_unit.ads .1 pump_unit
-F 15*13 pump_unit__get_pump 7|.1:143s26 144s26 145s30
-F 17*13 pump_unit__get_id 7|.1:185s33 .3:71s23 .5:114s33
-F 18*13 pump_unit__get_to_pay 7|.1:172s42 .3:72s25 81s56 98s26 .5:113s25
-F 19*13 pump_unit__get_pumped 7|.5:116s38
-F 20*13 pump_unit__get_fuel 7|.5:117s36
-F 21*13 pump_unit__unit_is_using 7|.1:180s20 185s62
-F 23*13 pump_unit__get_pump_unit_state 7|.3:73s40
-F 24*13 pump_unit__get_pump_nozzle_state 7|.3:74s44
-F 29*14 pump_unit__set_is_paid 7|.3:88s26
-F 30*14 pump_unit__set_to_pay 7|.3:90s26
-F 31*14 pump_unit__set_unit_id 7|.1:138s14
-F 32*14 pump_unit__set_pumped 7|.3:89s26
-F 36*14 pump_unit__add_pump 7|.1:139s14 140s14 141s14
-F 42*14 pump_unit__left_nozzle 7|.1:158s17 159s17 161s17 195s29 197s29 199s29
-F 47*14 pump_unit__return_nozzle 7|.1:160s17
-F 57*14 pump_unit__start_pumping 7|.1:163s17 165s17 167s17
-F 62*14 pump_unit__stop_pumping 7|.1:168s17
-FX 10 sprint.ads .1 sprint
-F 3*14 sprint__print 7|.1:150s7 151s7 152s7 174s7 175s7 176s7 179s7 181s10
-. 186s10 190s13 202s16 .3:75s10 79s10 80s10 83s16 95s16 99s13 .5:119s7
+F 240*14 ada__text_io__get__4 8|.1:107s7 111s10 115s13
+F 242*14 ada__text_io__put__4 8|.1:106s7 110s10 114s13
+FX 5 cash_register.ads .1 cash_register
+F 32*14 cash_register__payfuel 8|.1:95s21 96s21
+F 33*14 cash_register__set_pumped_info_to_cash_register 8|.1:93s21
+FX 8 main.adb .1 main
+F 13*4 main__unit_1 60m26 60r26 61m23 61r23 62m23 62r23 63m23 63r23 65r35
+. 66r35 67r39 83m29 83r29 85m31 85r31 89m31 89r31 90m31 90r31 93r54 95m29
+. 95r29 95r67 96m29 96r29 103r34 108r40 108r76 118m41 118r41 120m41 120r41
+. 122m41 122r41
+F 14*4 main__unit_1_91 61m30 61r30 65m4 118m49 118r49
+F 15*4 main__unit_1_95 62m30 62r30 66m4 83m36 83r36 85m38 85r38 89m38 89r38
+. 90m38 90r38 95m36 95r36 96m36 96r36 120m49 120r49
+F 16*4 main__unit_1_diesel 63m31 63r31 67m4 122m49 122r49
+F 18*4 main__u91 56m4 61r41 65r42 118r59
+F 19*4 main__u95 57m4 62r41 66r42 83r46 120r60
+F 20*4 main__diesel 58m4 63r45 67r46 122r64
+F 22*4 main__f_u91 56r30
+F 23*4 main__f_u95 57r30
+F 24*4 main__f_diesel 58r33
+F 47*4 main__car_tank_space 76m7 85m64 85r64 89m55 89r55
+F 48*4 main__amount_to_fill 78m7 85r48
+F 49*4 main__istest 70m4 71r7
+F 50*4 main__input_unit 107m11 108r10
+F 51*4 main__input_fuel_type 111m14 112r55 117r19 119r22 121r22
+F 52*4 main__input_action 115m17 116r60
+FX 10 pump_unit.ads .1 pump_unit
+F 30*13 pump_unit__get_pump 8|.1:65s26 66s26 67s30
+F 32*13 pump_unit__get_id 8|.1:108s33
+F 33*13 pump_unit__get_to_pay 8|.1:95s56
+F 36*13 pump_unit__unit_is_using 8|.1:103s20 108s62
+F 49*14 pump_unit__set_unit_id 8|.1:60s14
+F 54*14 pump_unit__add_pump 8|.1:61s14 62s14 63s14
+F 56*14 pump_unit__left_nozzle 8|.1:83s17 118s29 120s29 122s29
+F 61*14 pump_unit__return_nozzle 8|.1:90s17
+F 70*14 pump_unit__start_pumping 8|.1:85s17 89s17
+FX 11 sprint.ads .1 sprint
+F 4*14 sprint__print 8|.1:72s7 73s7 74s7 97s7 98s7 99s7 102s7 104s10 109s10
+. 113s13 125s16
 
 GG EK_REMOTE_STATES
-GG EK_GLOBALS main KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ pump_unit__set_unit_id pump_unit__add_pump pump_unit__get_pump sprint__print pump_unit__unit_is_using ada__text_io__put__4 ada__text_io__get__4 pump_unit__get_id pump_unit__left_nozzle pump_unit__return_nozzle pump_unit__start_pumping pump_unit__stop_pumping main__set_pumped_info_to_cash_register pump_unit__get_to_pay main__payfuel ]
+GG EK_GLOBALS main KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ pump_unit__set_unit_id pump_unit__add_pump pump_unit__get_pump sprint__print pump_unit__unit_is_using ada__text_io__put__4 ada__text_io__get__4 pump_unit__get_id pump_unit__left_nozzle pump_unit__start_pumping pump_unit__return_nozzle cash_register__set_pumped_info_to_cash_register pump_unit__get_to_pay cash_register__payfuel ]
 GG EK_VOLATILES
 GG EK_TASKING_NONBLOCKING [ ]
 GG EK_END_MARKER

@@ -1,14 +1,14 @@
         -:    0:Source:C:/Users/JackyChang/Documents/421A1/src/_test/scenarios/pump_unit-test.adb
-        -:    0:Programs:35
+        -:    0:Programs:36
         -:    1:with Ada.Text_IO; use Ada.Text_IO;
         -:    2:with AUnit.Assertions; use AUnit.Assertions;
-        -:    3:with sPrint;
+        -:    3:with sPrint; use sPrint;
         2:    4:package body PUMP_UNIT.Test is
-        -:    5:
+        -:    5:   use all type PUMP.FUEL_TYPES;
         2:    6:   UNIT_1 : PUMP_UNIT;
         2:    7:   UNIT_1_91: PUMP.PUMP;
-        -:    8:--     UNIT_1_95: PUMP.PUMP;
-        -:    9:--     UNIT_1_Diesel: PUMP.PUMP;
+        2:    8:   UNIT_1_95: PUMP.PUMP;
+        2:    9:   UNIT_1_Diesel: PUMP.PUMP;
         -:   10:
         -:   11:
         -:   12:   U91: PUMP.FUEL_TYPES;
@@ -32,85 +32,442 @@
         -:   30:   Stop : Integer := 4;
         -:   31:   Pay: Integer:=5;
         -:   32:
-        -:   33:   type FLOAT_NUMBER is delta 0.01 digits 10;
-        -:   34:
-        2:   35:   procedure Set_Up_Case (T: in out TC) is
-        -:   36:      pragma Unreferenced (T);
-        -:   37:   begin
-        2:   38:      New_Line;
-        2:   39:      Put_Line ("Set up case ..");
-        2:   40:      U91 :=PUMP.FUEL_TYPES'Val(F_U91);
-        2:   41:      U95 :=PUMP.FUEL_TYPES'Val(F_U95);
-        2:   42:      Diesel :=PUMP.FUEL_TYPES'Val(F_Diesel);
-        2:   43:      SET_UNIT_ID(UNIT_1,"UNIT_1");
-        -:   44:--        ADD_PUMP(UNIT_1,UNIT_1_91, U91);
-        -:   45:--        ADD_PUMP(UNIT_1,UNIT_1_95, U95);
-        -:   46:--        ADD_PUMP(UNIT_1, UNIT_1_Diesel,Diesel);
-        -:   47:--        --pumps
-        -:   48:--        UNIT_1_91:= GET_PUMP(UNIT_1,U91);
-        -:   49:--        UNIT_1_95:= GET_PUMP(UNIT_1,U95);
-        -:   50:--        UNIT_1_Diesel:= GET_PUMP(UNIT_1,Diesel);
-        2:   51:   end Set_Up_Case;
-        -:   52:
+        -:   33:   CAR_TANK_SPACE: PUMP.FLOAT_NUMBER;
+        -:   34:   AMOUNT_TO_FILL: PUMP.FLOAT_NUMBER;
+        -:   35:   TANK_SPACE: PUMP.FLOAT_NUMBER;
+        -:   36:
+        -:   37:   type FLOAT_NUMBER is delta 0.01 digits 10;
+        -:   38:
+        2:   39:   procedure Set_Up_Case (T: in out TC) is
+        -:   40:      pragma Unreferenced (T);
+        -:   41:   begin
+        2:   42:      New_Line;
+        2:   43:      Put_Line ("Set up case ..");
+        2:   44:      U91 :=PUMP.FUEL_TYPES'Val(F_U91);
+        2:   45:      U95 :=PUMP.FUEL_TYPES'Val(F_U95);
+        2:   46:      Diesel :=PUMP.FUEL_TYPES'Val(F_Diesel);
+        2:   47:      SET_UNIT_ID(UNIT_1,"UNIT_1");
+        -:   48:      --set initial car condition
+        2:   49:      CAR_TANK_SPACE := 5.00;
+        -:   50:      --set customer input not money
+        2:   51:      AMOUNT_TO_FILL := 10.00;
+        2:   52:      TANK_SPACE:=5.00;
         -:   53:
-        2:   54:   procedure Set_Up (T : in out TC) is
-        -:   55:   begin
-        2:   56:      New_Line;
-        2:   57:      Put_Line("Set Up ..");
-        -:   58:
-        2:   59:   end;
-        -:   60:
-        2:   61:   procedure Tear_Down (T : in out TC) is
-        -:   62:   begin
-        2:   63:      Put_Line("Tear Down ...");
-        -:   64:
-        2:   65:   end;
-        -:   66:
-        2:   67:   procedure Tear_Down_Case (T : in out TC) is
-        -:   68:   begin
-        2:   69:      Put_Line ("Tear Down Case ..");
-        2:   70:      UNIT_1.ID :="      ";
-        2:   71:      UNIT_1.IS_USING:=False;
-        2:   72:      UNIT_1.IS_PAID:=True;
-        2:   73:      UNIT_1.TO_PAY:= 0.00;
-        2:   74:      UNIT_1.PUMPED:=0.00;
-        2:   75:      UNIT_1.PUMP_ACTIVE_FUEL:= PUMP.FUEL_TYPES'Val(0);
-        2:   76:      UNIT_1.PUMP_ACTIVE_STATE:= PUMP.STATE_TYPE'Val(0);
-        2:   77:      UNIT_1.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(0);
-        2:   78:   end;
-        -:   79:
-        -:   80:
-        -:   81:   -- ===========================================================
-        -:   82:   --                 TEST CASES/SCENARIOS
-        -:   83:   -- ===========================================================
-        -:   84:
-        2:   85:   procedure Test_AddPump (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
-        -:   86:   begin
-        2:   87:      ADD_PUMP(UNIT_1,UNIT_1_91, U91);
-        2:   88:      ADD_PUMP(UNIT_1,UNIT_1_91, U95);
-        2:   89:      ADD_PUMP(UNIT_1,UNIT_1_91, Diesel);
-        -:   90:
-        2:   91:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1.PUMP_91) = 1000.00),
-        -:   92:              Message => "Did not add pump to pump unit");
-        2:   93:   end Test_AddPump;
+        2:   54:   end Set_Up_Case;
+        -:   55:
+        -:   56:
+       32:   57:   procedure Set_Up (T : in out TC) is
+        -:   58:   begin
+       32:   59:      New_Line;
+       32:   60:      Put_Line("Set Up ..");
+       32:   61:      U91 :=PUMP.FUEL_TYPES'Val(F_U91);
+       32:   62:      U95 :=PUMP.FUEL_TYPES'Val(F_U95);
+       32:   63:      Diesel :=PUMP.FUEL_TYPES'Val(F_Diesel);
+       32:   64:      SET_UNIT_ID(UNIT_1,"UNIT_1");
+        -:   65:      --set initial car condition
+       32:   66:      CAR_TANK_SPACE := 5.00;
+        -:   67:      --set customer input not money
+       32:   68:      AMOUNT_TO_FILL := 10.00;
+       32:   69:      TANK_SPACE:=5.00;
+       32:   70:   end;
+        -:   71:
+       32:   72:   procedure Tear_Down (T : in out TC) is
+        -:   73:   begin
+       32:   74:      Put_Line("Tear Down ...");
+        -:   75:
+       32:   76:      UNIT_1.IS_USING:=False;
+       32:   77:      UNIT_1.IS_PAID:=True;
+       32:   78:      UNIT_1.TO_PAY:= 0.00;
+       32:   79:      UNIT_1.PUMPED:=0.00;
+       32:   80:      UNIT_1.PUMP_ACTIVE_FUEL:= PUMP.U91;
+       32:   81:      UNIT_1.PUMP_ACTIVE_STATE:= PUMP.Base;
+       32:   82:      UNIT_1.PUMP_NOZZLE_STATE:= PUMP.NozzleBase;
+       32:   83:      UNIT_1_91.NOZZLE_STATE:= PUMP.NozzleBase;
+       32:   84:      UNIT_1_91.PUMP_STATE:=PUMP.Base;
+       32:   85:      UNIT_1_91.FUEL_TYPE:= PUMP.U91;
+       32:   86:      UNIT_1_91.RESERVOIR_INFO.TOTAL:=1000.00;
+       32:   87:      UNIT_1_91.PUMPED:= 0.00;
+       32:   88:      CAR_TANK_SPACE := 5.00;
+        -:   89:      --set customer input not money
+       32:   90:      AMOUNT_TO_FILL := 10.00;
+        -:   91:
+        -:   92:
+       32:   93:   end;
         -:   94:
-        -:   95:--     --==========================================================
-        -:   96:--     --               REGISTRATION/NAMING
-        -:   97:--     --==========================================================
-        -:   98:--
-        2:   99:   procedure Register_Tests (T: in out TC) is
-        -:  100:      use AUnit.Test_Cases.Registration;
-        -:  101:   begin
-        2:  102:      Register_Routine (Test => T,
-        -:  103:                        Routine => Test_AddPump'Access,
-        -:  104:                        Name => "Test_AddPump");
-        -:  105:
-        2:  106:   end Register_Tests;
-        -:  107:
-        2:  108:   function Name (T: TC) return AUnit.Message_String is
-        -:  109:      pragma Unreferenced (T);
-        -:  110:   begin
-        2:  111:      return AUnit.Format ("Tests: Standard Tests");
-        -:  112:   end Name;
-        -:  113:
-        2:  114:end PUMP_UNIT.Test;
+        2:   95:   procedure Tear_Down_Case (T : in out TC) is
+        -:   96:   begin
+        2:   97:      Put_Line ("Tear Down Case ..");
+        2:   98:      UNIT_1.IS_USING:=False;
+        2:   99:      UNIT_1.IS_PAID:=True;
+        2:  100:      UNIT_1.TO_PAY:= 0.00;
+        2:  101:      UNIT_1.PUMPED:=0.00;
+        2:  102:      UNIT_1.PUMP_ACTIVE_FUEL:= PUMP.U91;
+        2:  103:      UNIT_1.PUMP_ACTIVE_STATE:= PUMP.Base;
+        2:  104:      UNIT_1.PUMP_NOZZLE_STATE:= PUMP.NozzleBase;
+        2:  105:      UNIT_1_91.NOZZLE_STATE:= PUMP.NozzleBase;
+        2:  106:      UNIT_1_91.PUMP_STATE:=PUMP.Base;
+        2:  107:      UNIT_1_91.FUEL_TYPE:= PUMP.U91;
+        2:  108:      UNIT_1_91.RESERVOIR_INFO.TOTAL:=1000.00;
+        2:  109:      UNIT_1_91.PUMPED:= 0.00;
+        2:  110:      CAR_TANK_SPACE := 5.00;
+        -:  111:      --set customer input not money
+        2:  112:      AMOUNT_TO_FILL := 10.00;
+        2:  113:   end;
+        -:  114:
+        -:  115:
+        -:  116:   -- ===========================================================
+        -:  117:   --                 TEST CASES/SCENARIOS
+        -:  118:   -- ===========================================================
+        -:  119:
+        -:  120:
+        2:  121:   procedure Test_AddPump (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  122:   begin
+        2:  123:      Put_Line("");
+        2:  124:      Put_Line("Test add pump");
+        2:  125:      ADD_PUMP(UNIT_1,UNIT_1_91, U91);
+        2:  126:      ADD_PUMP(UNIT_1,UNIT_1_95, U95);
+        2:  127:      ADD_PUMP(UNIT_1, UNIT_1_Diesel,Diesel);
+        -:  128:
+        2:  129:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1.PUMP_95) = 1000.00),
+        -:  130:              Message => "Did not add  95 pump to pump unit");
+        2:  131:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1.PUMP_91) = 1000.00),
+        -:  132:              Message => "Did not add 91 pump to pump unit");
+        2:  133:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1.PUMP_Diesel) = 1000.00),
+        -:  134:              Message => "Did not add diesel pump to pump unit");
+        2:  135:   end Test_AddPump;
+        -:  136:
+        2:  137:   procedure Test_LEFT_NOZZLE (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  138:
+        -:  139:   begin
+        2:  140:      Put_Line("");
+        2:  141:      Put_Line("test left nozzle");
+        2:  142:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  143:      Assert (Condition => (UNIT_1.PUMP_NOZZLE_STATE) = PUMP.Lift,
+        -:  144:              Message => "did not left U91 nozzle");
+        2:  145:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  146:              Message => "91 pump sate suppose ready");
+        2:  147:      SET_RESERVOIR_SIZE(UNIT_1_91, 1.00);
+        2:  148:      CAR_TANK_SPACE := 0.20;
+        2:  149:      AMOUNT_TO_FILL := 0.40;
+        2:  150:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        2:  151:      RETURN_NOZZLE(UNIT_1, UNIT_1_91);
+        2:  152:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  153:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  154:              Message => "91 pump sate suppose ready state");
+        -:  155:      --        START_PUMPING(UNIT_1,UNIT_1_91,1.00, CAR_TANK_SPACE);
+        -:  156:      --        LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        -:  157:      --        Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Base,
+        -:  158:      --                 Message => "Assertion test fails - as planned");
+        -:  159:
+        2:  160:   end Test_LEFT_NOZZLE;
+        -:  161:
+        2:  162:   procedure Test_LiftNozzleException (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  163:      procedure Test_Raising_Exception is
+        -:  164:      begin
+        -:  165:
+        2:  166:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  167:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+    #####:  168:      end;
+        -:  169:   begin
+        2:  170:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  171:                        Message =>"An Exception should be raised can not lift nozzle twice");
+        2:  172:   end Test_LiftNozzleException;
+        -:  173:
+        2:  174:   procedure Test_RETURN_NOZZLE (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  175:   begin
+        2:  176:      Put_Line("");
+        2:  177:      Put_Line("test return nozzle");
+        2:  178:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  179:      RETURN_NOZZLE(UNIT_1, UNIT_1_91);
+        2:  180:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Base,
+        -:  181:              Message => "91 pump sate suppose base state");
+        -:  182:      --        RETURN_NOZZLE(UNIT_1,UNIT_1_95);
+        -:  183:      --         Assert (Condition => (UNIT_1_95.PUMP_STATE) = PUMP.Ready,
+        -:  184:      --                 Message => "Assertion test fails - as planned");
+        -:  185:
+        2:  186:   end Test_RETURN_NOZZLE;
+        -:  187:
+        -:  188:
+        2:  189:   procedure Test_ReturnNozzleException (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  190:      procedure Test_Raising_Exception is
+        -:  191:      begin
+        2:  192:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  193:         RETURN_NOZZLE(UNIT_1, UNIT_1_91);
+        2:  194:         RETURN_NOZZLE(UNIT_1, UNIT_1_95);
+        -:  195:
+    #####:  196:      end;
+        -:  197:   begin
+        2:  198:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  199:                        Message =>"you are not supports not to use this nozzle other nozzle currently in use");
+        2:  200:   end Test_ReturnNozzleException;
+        -:  201:
+        2:  202:   procedure Test_START_PUMPING_C1_SENSOR (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  203:   begin
+        2:  204:      Put_Line("");
+        2:  205:      Put_Line("Test_START_PUMPING_C1_SENSOR");
+        2:  206:      SET_RESERVOIR_SIZE(UNIT_1_91, 1.00);
+        2:  207:      CAR_TANK_SPACE := 0.50;
+        2:  208:      AMOUNT_TO_FILL := 0.20;
+        2:  209:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  210:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        2:  211:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  212:              Message => "sensor true add 1.00");
+        2:  213:   end Test_START_PUMPING_C1_SENSOR;
+        -:  214:
+        2:  215:   procedure Test_START_PUMPING_C1_Car_tank_full (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  216:   begin
+        2:  217:      Put_Line("");
+        2:  218:      Put_Line("Test_START_PUMPING_C1_Car_tank_full");
+        2:  219:      SET_RESERVOIR_SIZE(UNIT_1_91, 1.00);
+        2:  220:      CAR_TANK_SPACE := 0.20;
+        2:  221:      AMOUNT_TO_FILL := 0.40;
+        2:  222:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  223:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        2:  224:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  225:              Message => "car tank full");
+        2:  226:   end Test_START_PUMPING_C1_Car_tank_full;
+        2:  227:   procedure Test_START_PUMPING_C1_tank_empty (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  228:   begin
+        2:  229:      Put_Line("");
+        2:  230:      Put_Line("Test_START_PUMPING_C1_tank_empty");
+        2:  231:      SET_RESERVOIR_SIZE(UNIT_1_91, 0.30);
+        2:  232:      CAR_TANK_SPACE := 3.00;
+        2:  233:      AMOUNT_TO_FILL := 2.00;
+        2:  234:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  235:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        2:  236:      Assert (Condition => (GET_TANKS_SIZE(UNIT_1_91))<=1.00E-02,
+        -:  237:              Message => "tank empty");
+        -:  238:
+        2:  239:   end Test_START_PUMPING_C1_tank_empty;
+        2:  240:   procedure Test_StartPumpingException_tanksize_empty (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  241:      procedure Test_Raising_Exception is
+        -:  242:      begin
+        2:  243:         Put_Line("");
+        2:  244:         Put_Line("Test_StartPumpingException_tanksize_empty");
+        2:  245:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  246:         TANK_SPACE:= -0.01;
+        2:  247:         PUMP.SET_RESERVOIR_SIZE(UNIT_1_91, TANK_SPACE);
+        2:  248:         START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+    #####:  249:      end;
+        -:  250:   begin
+        2:  251:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  252:                        Message =>"tank empty");
+        2:  253:   end Test_StartPumpingException_tanksize_empty;
+        -:  254:
+        2:  255:   procedure Test_StartPumpingException_car_tank_full (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  256:      procedure Test_Raising_Exception is
+        -:  257:      begin
+        2:  258:         Put_Line("");
+        2:  259:         Put_Line("Test_StartPumpingException_car_tank_full");
+        2:  260:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  261:         PUMP.SET_RESERVOIR_SIZE(UNIT_1_91, 10.00);
+        2:  262:         CAR_TANK_SPACE:=0.00;
+        2:  263:         START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+    #####:  264:      end;
+        -:  265:   begin
+        2:  266:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  267:                        Message =>"car tank full");
+        2:  268:   end Test_StartPumpingException_car_tank_full;
+        -:  269:
+        2:  270:   procedure Test_StartPumpingException_pump_not_ready (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  271:      procedure Test_Raising_Exception is
+        -:  272:      begin
+        2:  273:         START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+    #####:  274:      end;
+        -:  275:   begin
+        2:  276:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  277:                        Message =>"pump not ready");
+        2:  278:   end Test_StartPumpingException_pump_not_ready;
+        -:  279:
+        2:  280:   procedure Test_START_PUMPING_C2 (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  281:   begin
+        2:  282:      Put_Line("");
+        2:  283:      Put_Line("Test_START_PUMPING_C2");
+        2:  284:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  285:      UNIT_1_91.RESERVOIR_INFO.TOTAL:= 1.00;
+        2:  286:      CAR_TANK_SPACE := 0.50;
+        2:  287:      AMOUNT_TO_FILL := 0.00;
+        2:  288:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        -:  289:
+        2:  290:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  291:              Message => "support car tank full");
+        -:  292:
+        2:  293:   end Test_START_PUMPING_C2;
+        -:  294:
+        2:  295:   procedure Test_START_PUMPING_C2_tank_empty (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  296:   begin
+        2:  297:      Put_Line("");
+        2:  298:      Put_Line("Test_START_PUMPING_C2");
+        2:  299:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  300:      UNIT_1_91.RESERVOIR_INFO.TOTAL:= 0.10;
+        2:  301:      CAR_TANK_SPACE := 0.50;
+        2:  302:      AMOUNT_TO_FILL := 0.00;
+        2:  303:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        -:  304:
+        2:  305:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  306:              Message => "support tank full");
+        -:  307:
+        2:  308:   end Test_START_PUMPING_C2_tank_empty;
+        -:  309:
+        2:  310:   procedure Test_STOP_PUMPING (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  311:   begin
+        2:  312:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  313:      UNIT_1_91.RESERVOIR_INFO.TOTAL:= 10.00;
+        2:  314:      CAR_TANK_SPACE := 3.00;
+        2:  315:      AMOUNT_TO_FILL := 0.00;
+        2:  316:      START_PUMPING(UNIT_1,UNIT_1_91,AMOUNT_TO_FILL, CAR_TANK_SPACE);
+        2:  317:      Assert (Condition => (UNIT_1_91.PUMP_STATE) = PUMP.Ready,
+        -:  318:              Message => "should stop pumping");
+        -:  319:
+        2:  320:   end Test_STOP_PUMPING;
+        2:  321:   procedure Test_StopPumpingException (CWTC: in out AUnit.Test_Cases.Test_Case'Class) is
+        2:  322:      procedure Test_Raising_Exception is
+        -:  323:      begin
+        2:  324:         LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  325:         STOP_PUMPING(UNIT_1,UNIT_1_91);
+    #####:  326:      end;
+        -:  327:   begin
+        2:  328:      Assert_Exception (Proc => Test_Raising_Exception'Unrestricted_Access,
+        -:  329:                        Message =>"only can stop pumping after pumping");
+        2:  330:   end Test_StopPumpingException;
+        2:  331:   procedure Test_SET_GET (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
+        -:  332:      temp: Boolean;
+        -:  333:      temp_State: PUMP.STATE_TYPE;
+        2:  334:      temp_Pump: PUMP.PUMP;
+        -:  335:   begin
+        -:  336:
+        2:  337:      SET_PUMPED(UNIT_1, 100.00);
+        2:  338:      Assert (Condition => (  UNIT_1.PUMPED) = 100.00,
+        -:  339:              Message => "get ");
+        -:  340:
+        2:  341:      SET_TO_PAY(UNIT_1,3.00);
+        2:  342:      Assert (Condition => (  UNIT_1.TO_PAY) = 3.00,
+        -:  343:              Message => "get ");
+        -:  344:
+        2:  345:      UNIT_1_91.RESERVOIR_INFO.TOTAL:=1000.00;
+        2:  346:      UNIT_1_95.RESERVOIR_INFO.TOTAL:=1000.00;
+        2:  347:      UNIT_1_Diesel.RESERVOIR_INFO.TOTAL:=1000.00;
+        -:  348:
+        2:  349:      Assert (Condition => (  GET_TANKS_SIZE(UNIT_1,U91)) = 1000.00,
+        -:  350:              Message => "get ");
+        2:  351:      Assert (Condition => (  GET_TANKS_SIZE(UNIT_1,U95)) = 1000.00,
+        -:  352:              Message => "get ");
+        2:  353:      Assert (Condition => (  GET_TANKS_SIZE(UNIT_1,Diesel)) = 1000.00,
+        -:  354:              Message => "get ");
+        2:  355:      Assert (Condition => ( GET_ID(UNIT_1)) = "UNIT_1",
+        -:  356:              Message => "get ");
+        2:  357:      Assert (Condition => (  GET_TO_PAY(UNIT_1)) = 3.00,
+        -:  358:              Message => "get ");
+        2:  359:      Assert (Condition => (  GET_PUMPED(UNIT_1)) = 100.00,
+        -:  360:              Message => "get ");
+        2:  361:      Assert (Condition => (  GET_FUEL(UNIT_1)) = U91,
+        -:  362:              Message => "get ");
+        2:  363:      Assert (Condition => (  GET_PUMP_NOZZLE_STATE(UNIT_1)) = PUMP.NozzleBase,
+        -:  364:              Message => "get ");
+        -:  365:
+        2:  366:      UNIT_1.IS_PAID := False;
+        2:  367:      SET_IS_PAID(UNIT_1);
+        2:  368:      Assert (Condition => (  UNIT_1.IS_PAID) = True,
+        -:  369:              Message => "get ");
+        2:  370:      UNIT_1.IS_PAID := True;
+        2:  371:      SET_IS_PAID(UNIT_1);
+        2:  372:      Assert (Condition => (  UNIT_1.IS_PAID) = False,
+        -:  373:              Message => "get ");
+        -:  374:
+        -:  375:
+        2:  376:      SET_IS_USING(UNIT_1);
+        2:  377:       Assert (Condition => (  UNIT_1.IS_USING) = False,
+        -:  378:              Message => "get ");
+        2:  379:      LEFT_NOZZLE(UNIT_1,UNIT_1_91,U91);
+        2:  380:      UNIT_1_91.PUMP_STATE:= PUMP.Ready;
+        2:  381:      SET_IS_USING(UNIT_1);
+        -:  382:
+        -:  383:
+        -:  384:
+        -:  385:
+        2:  386:      SET_PUMP_ACTIVE_STATE(UNIT_1,U91,PUMP.Base);
+        2:  387:      SET_PUMP_ACTIVE_STATE(UNIT_1,U95,PUMP.Base);
+        2:  388:      SET_PUMP_ACTIVE_STATE(UNIT_1,Diesel,PUMP.Base);
+        -:  389:
+        2:  390:      SET_PUMP_NOZZLE_STATE(UNIT_1,U91,PUMP.NozzleBase);
+        2:  391:      SET_PUMP_NOZZLE_STATE(UNIT_1,U95,PUMP.NozzleBase);
+        2:  392:      SET_PUMP_NOZZLE_STATE(UNIT_1,Diesel,PUMP.NozzleBase);
+        -:  393:
+        2:  394:      temp := UNIT_IS_USING(UNIT_1);
+        2:  395:      temp := UNIT_IS_PAID(UNIT_1);
+        2:  396:      temp_State := GET_PUMP_UNIT_STATE(UNIT_1);
+        -:  397:
+        2:  398:      temp_Pump:=GET_PUMP(UNIT_1,U91);
+        2:  399:      temp_Pump:=GET_PUMP(UNIT_1,U95);
+        2:  400:      temp_Pump:=GET_PUMP(UNIT_1,Diesel);
+        2:  401:   end Test_SET_GET;
+        -:  402:
+        -:  403:   --     --==========================================================
+        -:  404:   --     --               REGISTRATION/NAMING
+        -:  405:   --     --==========================================================
+        -:  406:   --
+        2:  407:   procedure Register_Tests (T: in out TC) is
+        -:  408:      use AUnit.Test_Cases.Registration;
+        -:  409:   begin
+        2:  410:      Register_Routine (Test => T,
+        -:  411:                        Routine => Test_AddPump'Access,
+        -:  412:                        Name => "Test_AddPump");
+        2:  413:      Register_Routine (Test => T,
+        -:  414:                        Routine => Test_LEFT_NOZZLE'Access,
+        -:  415:                        Name => "Test_LEFT_NOZZLE");
+        2:  416:      Register_Routine (Test => T,
+        -:  417:                        Routine => Test_RETURN_NOZZLE'Access,
+        -:  418:                        Name => "Test_RETURN_NOZZLE");
+        2:  419:      Register_Routine (Test => T,
+        -:  420:                        Routine => Test_START_PUMPING_C1_SENSOR'Access,
+        -:  421:                        Name => "Test_START_PUMPING_C1_SENSOR");
+        2:  422:      Register_Routine (Test => T,
+        -:  423:                        Routine => Test_START_PUMPING_C1_Car_tank_full'Access,
+        -:  424:                        Name => "Test_START_PUMPING_C1_Car_tank_full");
+        2:  425:      Register_Routine (Test => T,
+        -:  426:                        Routine => Test_START_PUMPING_C1_tank_empty'Access,
+        -:  427:                        Name => "Test_START_PUMPING_C1_tank_empty");
+        -:  428:
+        2:  429:      Register_Routine (Test => T,
+        -:  430:                        Routine => Test_START_PUMPING_C2'Access,
+        -:  431:                        Name => "Test_START_PUMPING_C2");
+        2:  432:      Register_Routine (Test => T,
+        -:  433:                        Routine => Test_STOP_PUMPING'Access,
+        -:  434:                        Name => "Test_STOP_PUMPING");
+        2:  435:      Register_Routine (Test => T,
+        -:  436:                        Routine => Test_SET_GET'Access,
+        -:  437:                        Name => "Test_SET_GET");
+        2:  438:      Register_Routine (Test => T,
+        -:  439:                        Routine => Test_LiftNozzleException'Access,
+        -:  440:                        Name => "Test_LiftNozzleException");
+        2:  441:      Register_Routine (Test => T,
+        -:  442:                        Routine => Test_ReturnNozzleException'Access,
+        -:  443:                        Name => "Test_ReturnNozzleException");
+        2:  444:      Register_Routine (Test => T,
+        -:  445:                        Routine => Test_StartPumpingException_car_tank_full'Access,
+        -:  446:                        Name => "Test_StartPumpingException_car_tank_full");
+        -:  447:
+        2:  448:      Register_Routine (Test => T,
+        -:  449:                        Routine => Test_StartPumpingException_tanksize_empty'Access,
+        -:  450:                        Name => "Test_StartPumpingException_tanksize_empty");
+        2:  451:      Register_Routine (Test => T,
+        -:  452:                        Routine => Test_StopPumpingException'Access,
+        -:  453:                        Name => "Test_StopPumpingException");
+        2:  454:      Register_Routine (Test => T,
+        -:  455:                        Routine => Test_StartPumpingException_pump_not_ready'Access,
+        -:  456:                        Name => "Test_StartPumpingException_pump_not_ready");
+        2:  457:      Register_Routine (Test => T,
+        -:  458:                        Routine => Test_START_PUMPING_C2_tank_empty'Access,
+        -:  459:                        Name => "Test_START_PUMPING_C2_tank_empty");
+        -:  460:
+        -:  461:
+        -:  462:
+        2:  463:   end Register_Tests;
+        -:  464:
+       32:  465:   function Name (T: TC) return AUnit.Message_String is
+        -:  466:      pragma Unreferenced (T);
+        -:  467:   begin
+       32:  468:      return AUnit.Format ("Tests: Standard Tests");
+        -:  469:   end Name;
+        -:  470:
+        2:  471:end PUMP_UNIT.Test;

@@ -105,12 +105,6 @@
 </theory>
 <theory name="Pump__remove_petrol_reservoir__amount__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__get_tanks_size__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump__get_tanks_size__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump__get_tanks_size" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__get_state__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_state__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
@@ -128,6 +122,12 @@
 <theory name="Pump__get_unit_price__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_unit_price" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__pump_r__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_resevoir_category__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -723,61 +723,51 @@
 </theory>
 <theory name="Pump_unit__add_pump__T4b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_is_using__T17b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__set_is_using__T15b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_is_paid__T18b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__set_is_paid__T16b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_pump_active_state__T19b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__left_nozzle__T21b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_pump_nozzle_state__T20b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__left_nozzle__T22b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump_unit__left_nozzle__T23b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump_unit__left_nozzle__T24b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__left_nozzle__T25b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__left_nozzle__T26b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T27b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T27b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T28b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T28b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T29b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T29b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T30b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T30b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__return_nozzle__T31b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T32b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T32b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T33b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T33b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T34b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T34b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T35b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_1__T35b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T36b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_1__T36b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T37b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_2__T37b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T38b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T38b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T39b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T39b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T40b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T40b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T41b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__T42b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__L_2__T43b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__L_2__T44b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__T45b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T46b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T47b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T48b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T41b" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__set_fuel_price__pump_r" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -1257,69 +1247,55 @@
 </theory>
 <theory name="Pump_unit__add_pump__T4b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_is_using__T17b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__set_is_using__T15b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_is_paid__T18b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__set_is_paid__T16b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_pump_active_state__T19b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__left_nozzle__T21b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__set_pump_nozzle_state__T20b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__left_nozzle__T22b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump_unit__left_nozzle__T23b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump_unit__left_nozzle__T24b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__left_nozzle__T25b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__left_nozzle__T26b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T27b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T27b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T28b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T28b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T29b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T29b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__left_nozzle__T30b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__return_nozzle__T30b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump_unit__return_nozzle__T31b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T32b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T32b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T33b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T33b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T34b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T34b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__return_nozzle__T35b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_1__T35b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T36b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_1__T36b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T37b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__L_2__T37b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T38b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__start_pumping__T38b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T39b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T39b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__L_1__T40b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T40b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump_unit__start_pumping__T41b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__T42b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__L_2__T43b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__L_2__T44b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__start_pumping__T45b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T46b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T47b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Pump_unit__stop_pumping__T48b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Pump_unit__stop_pumping__T41b__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Temp___342" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___345" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Temp___352" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Temp___365" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___347" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Temp___378" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -1329,53 +1305,47 @@
 </theory>
 <theory name="Temp___423" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___424" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___426" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___431" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Temp___432" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___433" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Temp___434" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___442" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___436" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___443" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___444" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Temp___445" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___450" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___447" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___455" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___454" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___456" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
-<theory name="Temp___458" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___459" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Temp___460" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___461" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Temp___462" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___471" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___464" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___472" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___465" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___473" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___466" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___478" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___467" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___479" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___480" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___484" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___489" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___485" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___506" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___490" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___511" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___491" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___512" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Temp___493" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+<theory name="Temp___514" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="System__system_name__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -1529,8 +1499,6 @@
 </theory>
 <theory name="Pump__set_reservoir_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
-<theory name="Pump__get_tanks_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
-</theory>
 <theory name="Pump__remove_petrol_reservoir__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_state__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
@@ -1538,6 +1506,8 @@
 <theory name="Pump__get_current_nozzle_state__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_unit_price__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
+</theory>
+<theory name="Pump__get_tanks_size__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
 <theory name="Pump__get_resevoir_category__axiom" sum="d41d8cd98f00b204e9800998ecf8427e" expanded="true">
 </theory>
@@ -1679,210 +1649,198 @@
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_pump__subprogram_def" sum="308c464a9f1e9c550d8e87949e9a6c2c" expanded="true">
+<theory name="Pump_unit__get_pump__subprogram_def" sum="50993823dcebe89e159c635d486ce72c" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_tanks_size__subprogram_def" sum="128b165c897d34b8760519f6b0a4f873" expanded="true">
+<theory name="Pump_unit__get_tanks_size__subprogram_def" sum="a209bcfcb919472461ca52865b87549f" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_id__subprogram_def" sum="8f92c768ccf1e65163066af35823aaf0" expanded="true">
+<theory name="Pump_unit__get_id__subprogram_def" sum="ef2fbfce22f2d90d49356f31454a11ff" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_to_pay__subprogram_def" sum="ceb23147dfaf957411c5646dd70e6535" expanded="true">
+<theory name="Pump_unit__get_to_pay__subprogram_def" sum="bc1d2aceeecf50a4527f0927b31b1336" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_pumped__subprogram_def" sum="ceb23147dfaf957411c5646dd70e6535" expanded="true">
+<theory name="Pump_unit__get_pumped__subprogram_def" sum="bc1d2aceeecf50a4527f0927b31b1336" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_fuel__subprogram_def" sum="29eeb20d6a7da83ca762ecaf0d10554f" expanded="true">
+<theory name="Pump_unit__get_fuel__subprogram_def" sum="ed13ab19503db83b932e2c8fac3eaca2" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__unit_is_using__subprogram_def" sum="8f92c768ccf1e65163066af35823aaf0" expanded="true">
+<theory name="Pump_unit__unit_is_using__subprogram_def" sum="ef2fbfce22f2d90d49356f31454a11ff" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__unit_is_paid__subprogram_def" sum="8f92c768ccf1e65163066af35823aaf0" expanded="true">
+<theory name="Pump_unit__unit_is_paid__subprogram_def" sum="ef2fbfce22f2d90d49356f31454a11ff" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_pump_unit_state__subprogram_def" sum="7648df3133e62b7e167584b34a132199" expanded="true">
+<theory name="Pump_unit__get_pump_unit_state__subprogram_def" sum="549deeb35127de3c7c8d3c2f15b7d55c" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__get_pump_nozzle_state__subprogram_def" sum="868fbaa7588c252a999c1309232f35e9" expanded="true">
+<theory name="Pump_unit__get_pump_nozzle_state__subprogram_def" sum="71aa638ad2271ab575d54d529a6e2a3e" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_is_using__subprogram_def" sum="b08ac9fd786657d2f915f29c1c972f91" expanded="true">
+<theory name="Pump_unit__set_is_using__subprogram_def" sum="22bf3a688afb81c436d762ffabc131ce" expanded="true">
+ <goal name="WP_parameter def" expl="VC for def" expanded="true">
+ <transf name="split_goal_wp" expanded="true">
+  <goal name="WP_parameter def.1" expl="1. postcondition">
+  <proof prover="1"><result status="valid" time="0.05" steps="0"/></proof>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+<theory name="Pump_unit__set_is_paid__subprogram_def" sum="5d5b7593a815716614e1980f33f77c33" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_is_paid__subprogram_def" sum="b08ac9fd786657d2f915f29c1c972f91" expanded="true">
+<theory name="Pump_unit__set_to_pay__subprogram_def" sum="20a18945b068ab7577de5464a252d4b3" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_to_pay__subprogram_def" sum="24d43761bb5a2598b6f6f9a7cc91c039" expanded="true">
+<theory name="Pump_unit__set_unit_id__subprogram_def" sum="f172122d812a3daf33d457ed3fd89065" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_unit_id__subprogram_def" sum="d5881e40a774a6710aad7e92dfd5b5b4" expanded="true">
+<theory name="Pump_unit__set_pumped__subprogram_def" sum="20a18945b068ab7577de5464a252d4b3" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_pumped__subprogram_def" sum="24d43761bb5a2598b6f6f9a7cc91c039" expanded="true">
+<theory name="Pump_unit__set_pump_active_state__subprogram_def" sum="6721f17feffdcc4b8f603014688f1eb5" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_pump_active_state__subprogram_def" sum="40c1e0a0c7e8849fac1d1dd4424830b1" expanded="true">
+<theory name="Pump_unit__set_pump_nozzle_state__subprogram_def" sum="4a4b221bffcbde92b044e1e4a3134b7d" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__set_pump_nozzle_state__subprogram_def" sum="e8e0ab5a47e08c73f7b9cbf9321eb427" expanded="true">
+<theory name="Pump_unit__add_pump__subprogram_def" sum="67f930b942b6316443a2fe077b9a0bce" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__add_pump__subprogram_def" sum="74f20dd7819158dcf3842b6225266714" expanded="true">
- <goal name="WP_parameter def" expl="VC for def" expanded="true">
- <transf name="split_goal_wp" expanded="true">
- </transf>
- </goal>
-</theory>
-<theory name="Pump_unit__left_nozzle__subprogram_def" sum="da71442aa98f8fee222c0e3050572215" expanded="true">
+<theory name="Pump_unit__left_nozzle__subprogram_def" sum="0699909b35fbafa961f43ca42c842a3d" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
   <goal name="WP_parameter def.1" expl="1. assertion">
-  <proof prover="0"><result status="unknown" time="0.11" steps="8730"/></proof>
-  <proof prover="1"><result status="unknown" time="0.08" steps="10200"/></proof>
+  <proof prover="0"><result status="unknown" time="0.11" steps="16730"/></proof>
+  <proof prover="1"><result status="unknown" time="0.14" steps="20820"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="2. postcondition">
-  <proof prover="1"><result status="valid" time="0.25" steps="120"/></proof>
+  <proof prover="1"><result status="valid" time="0.27" steps="240"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__return_nozzle__subprogram_def" sum="0f67ce0e500478f90af109575cd4bb1f" expanded="true">
+<theory name="Pump_unit__return_nozzle__subprogram_def" sum="9847d568fd7f587073b6f4221d76a216" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
   <goal name="WP_parameter def.1" expl="1. assertion">
-  <proof prover="0"><result status="unknown" time="0.11" steps="8160"/></proof>
-  <proof prover="1"><result status="unknown" time="0.09" steps="9640"/></proof>
+  <proof prover="0"><result status="unknown" time="0.13" steps="13860"/></proof>
+  <proof prover="1"><result status="unknown" time="0.13" steps="16500"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="2. postcondition">
-  <proof prover="1"><result status="valid" time="0.14" steps="130"/></proof>
+  <proof prover="1"><result status="valid" time="0.16" steps="130"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__start_pumping__subprogram_def" sum="050df552502e7c207e60297ad44f95dc" expanded="true">
+<theory name="Pump_unit__start_pumping__subprogram_def" sum="a5a4e3facf4645d7951bd4cb63bc5036" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
   <goal name="WP_parameter def.1" expl="1. assertion">
-  <proof prover="0"><result status="unknown" time="0.14" steps="16500"/></proof>
-  <proof prover="1"><result status="unknown" time="0.17" steps="17910"/></proof>
+  <proof prover="0"><result status="unknown" time="0.16" steps="18530"/></proof>
+  <proof prover="1"><result status="unknown" time="0.19" steps="26920"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="2. assertion">
-  <proof prover="0"><result status="unknown" time="0.16" steps="16630"/></proof>
-  <proof prover="1"><result status="unknown" time="0.14" steps="18070"/></proof>
+  <proof prover="0"><result status="unknown" time="0.17" steps="18680"/></proof>
+  <proof prover="1"><result status="unknown" time="0.17" steps="27130"/></proof>
   </goal>
   <goal name="WP_parameter def.3" expl="3. precondition">
-  <proof prover="0"><result status="unknown" time="0.69" steps="75050"/></proof>
-  <proof prover="1"><result status="unknown" time="0.89" steps="75130"/></proof>
+  <proof prover="0"><result status="unknown" time="0.94" steps="75050"/></proof>
+  <proof prover="1"><result status="unknown" time="0.89" steps="75040"/></proof>
   </goal>
   <goal name="WP_parameter def.4" expl="4. precondition">
-  <proof prover="0"><result status="unknown" time="0.89" steps="75060"/></proof>
-  <proof prover="1"><result status="unknown" time="0.88" steps="75080"/></proof>
+  <proof prover="0" obsolete="true"><result status="unknown" time="1.00" steps="75060"/></proof>
+  <proof prover="1"><result status="valid" time="0.11" steps="1890"/></proof>
   </goal>
   <goal name="WP_parameter def.5" expl="5. precondition">
-  <proof prover="0"><result status="unknown" time="0.86" steps="75030"/></proof>
-  <proof prover="1"><result status="unknown" time="0.80" steps="75030"/></proof>
+  <proof prover="0"><result status="unknown" time="0.73" steps="75060"/></proof>
+  <proof prover="1"><result status="unknown" time="0.80" steps="75040"/></proof>
   </goal>
   <goal name="WP_parameter def.6" expl="6. precondition">
-  <proof prover="0"><result status="unknown" time="0.77" steps="75040"/></proof>
-  <proof prover="1"><result status="unknown" time="0.78" steps="75030"/></proof>
+  <proof prover="0"><result status="unknown" time="0.91" steps="75070"/></proof>
+  <proof prover="1"><result status="unknown" time="0.94" steps="75030"/></proof>
   </goal>
   <goal name="WP_parameter def.7" expl="7. precondition">
-  <proof prover="0"><result status="unknown" time="0.89" steps="75060"/></proof>
-  <proof prover="1"><result status="unknown" time="0.80" steps="75070"/></proof>
+  <proof prover="0"><result status="unknown" time="1.19" steps="75040"/></proof>
+  <proof prover="1"><result status="unknown" time="1.14" steps="75050"/></proof>
   </goal>
   <goal name="WP_parameter def.8" expl="8. precondition">
-  <proof prover="0"><result status="unknown" time="0.84" steps="75050"/></proof>
-  <proof prover="1"><result status="unknown" time="0.73" steps="75030"/></proof>
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.75" steps="75040"/></proof>
+  <proof prover="1"><result status="valid" time="0.27" steps="2470"/></proof>
   </goal>
-  <goal name="WP_parameter def.9" expl="9. precondition">
-  <proof prover="0"><result status="unknown" time="0.84" steps="75040"/></proof>
-  <proof prover="1"><result status="unknown" time="1.02" steps="75060"/></proof>
+  <goal name="WP_parameter def.9" expl="9. assertion">
+  <proof prover="0"><result status="unknown" time="0.13" steps="19630"/></proof>
+  <proof prover="1"><result status="unknown" time="0.19" steps="27920"/></proof>
   </goal>
-  <goal name="WP_parameter def.10" expl="10. precondition">
-  <proof prover="0"><result status="unknown" time="1.00" steps="75050"/></proof>
-  <proof prover="1"><result status="unknown" time="1.06" steps="75040"/></proof>
-  </goal>
-  <goal name="WP_parameter def.11" expl="11. precondition">
-  <proof prover="0"><result status="unknown" time="0.91" steps="75040"/></proof>
-  <proof prover="1"><result status="unknown" time="0.83" steps="75070"/></proof>
-  </goal>
-  <goal name="WP_parameter def.12" expl="12. precondition">
-  <proof prover="0"><result status="unknown" time="0.92" steps="75050"/></proof>
-  <proof prover="1"><result status="unknown" time="0.98" steps="75040"/></proof>
-  </goal>
-  <goal name="WP_parameter def.13" expl="13. assertion">
-  <proof prover="0"><result status="unknown" time="0.17" steps="14280"/></proof>
-  <proof prover="1"><result status="unknown" time="0.14" steps="20450"/></proof>
-  </goal>
-  <goal name="WP_parameter def.14" expl="14. postcondition">
-  <proof prover="1"><result status="valid" time="0.52" steps="5230"/></proof>
+  <goal name="WP_parameter def.10" expl="10. postcondition">
+  <proof prover="0" obsolete="true"><result status="unknown" time="0.80" steps="75050"/></proof>
+  <proof prover="1"><result status="valid" time="0.41" steps="2890"/></proof>
   </goal>
  </transf>
  </goal>
 </theory>
-<theory name="Pump_unit__stop_pumping__subprogram_def" sum="6079d411987761d05ef8318ca72d9cce" expanded="true">
+<theory name="Pump_unit__stop_pumping__subprogram_def" sum="03bf2c9f2f8d2aff34fcb8a9aa1591d8" expanded="true">
  <goal name="WP_parameter def" expl="VC for def" expanded="true">
  <transf name="split_goal_wp" expanded="true">
   <goal name="WP_parameter def.1" expl="1. assertion">
-  <proof prover="0"><result status="unknown" time="0.13" steps="7710"/></proof>
-  <proof prover="1"><result status="unknown" time="0.11" steps="9040"/></proof>
+  <proof prover="0"><result status="unknown" time="0.09" steps="13060"/></proof>
+  <proof prover="1"><result status="unknown" time="0.14" steps="15500"/></proof>
   </goal>
   <goal name="WP_parameter def.2" expl="2. postcondition">
-  <proof prover="1"><result status="valid" time="0.06" steps="0"/></proof>
+  <proof prover="1"><result status="valid" time="0.08" steps="0"/></proof>
   </goal>
  </transf>
  </goal>

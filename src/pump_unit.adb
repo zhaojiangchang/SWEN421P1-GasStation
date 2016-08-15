@@ -357,22 +357,34 @@ with SPARK_Mode is
                      CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                   else
                      SENSOR := True;
-                     STOP_PUMPING(pumpUnit, pump_r);
+                     pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
+                     pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(4);
+                     PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(1));
+                     PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(4));
                      exit when SENSOR = True;
 
                   end if;
                   --                 print_float_type("pumping: " , pumped);
                   --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
                   --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);
-                  PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
+                  if pump_r.RESERVOIR_INFO.TOTAL - 0.01 >0.01 then
+                     pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - 0.01;
+                  end if;
+
                   tankSize := PUMP.GET_TANKS_SIZE(pump_r);
                   if tankSize <= 1.00E-02 then
-                     STOP_PUMPING(pumpUnit, pump_r);
+                     pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
+                     pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(4);
+                     PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(1));
+                     PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(4));
                      print("tank empty stop pumping");
                      exit when tankSize <= 1.00E-02;
                   elsif pumped>= AMOUNT then
                      print("pumped given amount");
-                     STOP_PUMPING(pumpUnit, pump_r);
+                     pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
+                     pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(4);
+                     PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(1));
+                     PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(4));
                      exit when pumped>= AMOUNT;
                   end if;
                end if;
@@ -389,12 +401,17 @@ with SPARK_Mode is
                if SENSOR = False and tankSize > 0.00 then
                   pumpUnit.PUMPED :=pumpUnit.PUMPED + 0.01 ;
                   pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
-                  PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
+
+                    if pump_r.RESERVOIR_INFO.TOTAL - 0.01 >0.01 then
+                     pump_r.RESERVOIR_INFO.TOTAL := pump_r.RESERVOIR_INFO.TOTAL - 0.01;
+                  end if;
                   if CAR_TANK_SPACE -0.01 >0.00 then
                      CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                   else
-                     SENSOR := True;
-                     STOP_PUMPING(pumpUnit, pump_r);
+                     pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
+                     pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(4);
+                     PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(1));
+                     PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(4));
                      exit when CAR_TANK_SPACE -0.01 <=0.00;
                   end if;
                   --                 print_float_type("pumping: " , pumped);
@@ -402,7 +419,10 @@ with SPARK_Mode is
                   --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                   tankSize := PUMP.GET_TANKS_SIZE(pump_r);
                   if tankSize <= 1.00E-02 then
-                     STOP_PUMPING(pumpUnit, pump_r);
+                     pumpUnit.PUMP_ACTIVE_STATE := PUMP.STATE_TYPE'Val(1);
+                     pumpUnit.PUMP_NOZZLE_STATE:= PUMP.NOZZLE_TYPE'Val(4);
+                     PUMP.SET_PUMP_STATE(pump_r,PUMP.STATE_TYPE'Val(1));
+                     PUMP.SET_PUMP_NOZZLE_STATE(pump_r, PUMP.NOZZLE_TYPE'Val(4));
                      print("tank empty stop pumping");
                      exit when tankSize <= 1.00E-02;
                   end if;

@@ -1,5 +1,5 @@
         -:    0:Source:C:/GNAT/2016/include/aunit/aunit-reporter-text.adb
-        -:    0:Programs:35
+        -:    0:Programs:38
         -:    1:------------------------------------------------------------------------------
         -:    2:--                                                                          --
         -:    3:--                         GNAT COMPILER COMPONENTS                         --
@@ -102,10 +102,10 @@
         -:  100:      --  Note: can't use Iterate because it violates restriction
         -:  101:      --  No_Implicit_Dynamic_Code
         -:  102:
-        8:  103:      while Has_Element (C) loop
-        2:  104:         Report_Test (Element (C), Prefix);
-        2:  105:         Next (C);
-        2:  106:      end loop;
+       18:  103:      while Has_Element (C) loop
+       12:  104:         Report_Test (Element (C), Prefix);
+       12:  105:         Next (C);
+       12:  106:      end loop;
         6:  107:   end Dump_Result_List;
         -:  108:
         -:  109:   ---------
@@ -210,28 +210,28 @@
         -:  208:   -- Report_Test --
         -:  209:   -----------------
         -:  210:
-        2:  211:   procedure Report_Test (Test : Test_Result; Prefix : String) is
+       12:  211:   procedure Report_Test (Test : Test_Result; Prefix : String) is
         -:  212:      T : AUnit_Duration;
         -:  213:   begin
-        2:  214:      Put (Prefix);
-        2:  215:      Put (" ");
-        2:  216:      Put (Test.Test_Name.all);
+       12:  214:      Put (Prefix);
+       12:  215:      Put (" ");
+       12:  216:      Put (Test.Test_Name.all);
         -:  217:
-        2:  218:      if Test.Routine_Name /= null then
-        2:  219:         Put (" : ");
-        2:  220:         Put (Test.Routine_Name.all);
+       12:  218:      if Test.Routine_Name /= null then
+       12:  219:         Put (" : ");
+       12:  220:         Put (Test.Routine_Name.all);
         -:  221:      end if;
         -:  222:
-        2:  223:      if Test.Elapsed /= Time_Measure.Null_Time then
+       12:  223:      if Test.Elapsed /= Time_Measure.Null_Time then
     #####:  224:         Put (" (in ");
     #####:  225:         T := Get_Measure (Test.Elapsed);
     #####:  226:         Put_Measure (T);
     #####:  227:         Put (")");
         -:  228:      end if;
         -:  229:
-        2:  230:      New_Line;
+       12:  230:      New_Line;
         -:  231:
-        2:  232:      if Test.Failure /= null then
+       12:  232:      if Test.Failure /= null then
     #####:  233:         Indent (1);
     #####:  234:         Put_Line (Test.Failure.Message.all);
     #####:  235:         Indent (1);
@@ -241,7 +241,7 @@
     #####:  239:         Put (Test.Failure.Line);
     #####:  240:         New_Line;
         -:  241:
-        2:  242:      elsif Test.Error /= null then
+       12:  242:      elsif Test.Error /= null then
     #####:  243:         Indent (1);
     #####:  244:         Put_Line (Test.Error.Exception_Name.all);
         -:  245:
@@ -275,6 +275,6 @@
         -:  273:
     #####:  274:         New_Line;
         -:  275:      end if;
-        2:  276:   end Report_Test;
+       12:  276:   end Report_Test;
         -:  277:
         -:  278:end AUnit.Reporter.Text;

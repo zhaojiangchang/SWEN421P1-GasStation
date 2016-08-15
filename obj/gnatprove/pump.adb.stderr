@@ -1,0 +1,2 @@
+pump.adb:82:69: medium: range check might fail[#1]
+pump.ads:45:12: medium: postcondition might fail, cannot prove pump_r.RESERVOIR_INFO.TOTAL>=0.0[#0]

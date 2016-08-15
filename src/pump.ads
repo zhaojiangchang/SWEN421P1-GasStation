@@ -41,8 +41,8 @@ with SPARK_Mode is
 
    procedure REMOVE_PETROL_RESERVOIR (pump_r: in out PUMP; AMOUNT: in FLOAT_NUMBER)
      with
-       pre=>(AMOUNT <= GET_TANKS_SIZE(pump_r)),
-     post=>(GET_TANKS_SIZE(pump_r)>=0.00);
+       pre=>(pump_r.RESERVOIR_INFO.TOTAL - AMOUNT >= 0.00),
+     post=>(pump_r.RESERVOIR_INFO.TOTAL>=0.00);
 
    --functions
    function GET_STATE(pump_r: in PUMP) return STATE_TYPE;

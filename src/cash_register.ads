@@ -30,6 +30,6 @@ with SPARK_Mode is
 
    --procedure
    procedure payFuel (pumpUnit: in out PUMP_UNIT.PUMP_UNIT; pump_r: in out PUMP.PUMP; AMOUNT: in  PUMP.FLOAT_NUMBER);
-   procedure SET_PUMPED_INFO_TO_CASH_REGISTER (pumpUnit: in out PUMP_UNIT.PUMP_UNIT);
+   procedure SET_PUMPED_INFO_TO_CASH_REGISTER (pumpUnit: in PUMP_UNIT.PUMP_UNIT);
 
 end CASH_REGISTER;

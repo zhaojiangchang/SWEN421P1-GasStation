@@ -5,7 +5,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 51
+          "line": 54
         }
       ],
       "spark": "all"
@@ -15,7 +15,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 47
+          "line": 50
         }
       ],
       "spark": "all"
@@ -25,7 +25,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 45
+          "line": 48
         }
       ],
       "spark": "all"
@@ -105,7 +105,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 44
+          "line": 47
         }
       ],
       "spark": "all"
@@ -115,7 +115,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 46
+          "line": 49
         }
       ],
       "spark": "all"
@@ -125,7 +125,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 48
+          "line": 51
         }
       ],
       "spark": "all"
@@ -135,7 +135,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 49
+          "line": 52
         }
       ],
       "spark": "all"
@@ -185,7 +185,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 53
+          "line": 56
         }
       ],
       "spark": "all"
@@ -195,7 +195,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 58
+          "line": 61
         }
       ],
       "spark": "all"
@@ -205,7 +205,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 67
+          "line": 70
         }
       ],
       "spark": "all"
@@ -215,7 +215,7 @@
       "sloc": [
         {
           "file": "pump_unit.ads",
-          "line": 72
+          "line": 75
         }
       ],
       "spark": "all"
@@ -234,7 +234,25 @@
   "flow": [
     {
       "file": "pump_unit.adb",
-      "line": 159,
+      "line": 172,
+      "col": 48,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.SET_IS_PAID",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 47
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__432.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 157,
       "col": 45,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -247,48 +265,144 @@
           }
         ]
       },
-      "tracefile": "pump_unit__flow__81.trace",
+      "tracefile": "pump_unit__flow__696.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 301,
-      "col": 31,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
+      "line": 345,
+      "col": 40,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
       "entity": {
-        "name": "PUMP_UNIT.RETURN_NOZZLE",
+        "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 58
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__208.trace",
+      "tracefile": "pump_unit__flow__1050.trace",
+      "msg_id": 0,
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 174,
-      "col": 48,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
+      "line": 346,
+      "col": 39,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
       "entity": {
-        "name": "PUMP_UNIT.SET_IS_PAID",
+        "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 44
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__797.trace",
+      "tracefile": "pump_unit__flow__1051.trace",
+      "msg_id": 1,
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 338,
+      "line": 351,
+      "col": 16,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1060.trace",
+      "msg_id": 2,
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 395,
+      "col": 39,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1113.trace",
+      "msg_id": 3,
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 396,
+      "col": 40,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1114.trace",
+      "msg_id": 4,
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 401,
+      "col": 16,
+      "rule": "INEFFECTIVE",
+      "severity": "warning",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1123.trace",
+      "msg_id": 5,
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 335,
+      "col": 42,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 336,
       "col": 13,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -297,34 +411,16 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 346,
-      "col": 30,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 346,
+      "line": 344,
       "col": 60,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -333,16 +429,16 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 346,
+      "line": 344,
       "col": 49,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -351,17 +447,17 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 352,
-      "col": 25,
+      "line": 344,
+      "col": 30,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
@@ -369,65 +465,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 365,
-      "col": 22,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 368,
-      "col": 22,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 351,
-      "col": 62,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
@@ -441,11 +483,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
@@ -459,11 +501,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
@@ -477,88 +519,70 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 351,
+      "col": 62,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 353,
+      "col": 28,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 364,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
       "line": 375,
-      "col": 30,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 375,
-      "col": 60,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 375,
-      "col": 49,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 380,
-      "col": 16,
-      "rule": "UNINITIALIZED",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "tracefile": "pump_unit__flow__1510.trace",
-      "how_proved": "flow"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 403,
       "col": 22,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -567,17 +591,17 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
-      "line": 388,
-      "col": 19,
+      "line": 381,
+      "col": 32,
       "rule": "UNINITIALIZED",
       "severity": "info",
       "entity": {
@@ -585,16 +609,88 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
       "file": "pump_unit.adb",
       "line": 388,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 394,
+      "col": 63,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 394,
+      "col": 52,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 394,
+      "col": 33,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 401,
       "col": 38,
       "rule": "UNINITIALIZED",
       "severity": "info",
@@ -603,11 +699,65 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "tracefile": "pump_unit__flow__1510.trace",
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 401,
+      "col": 19,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 421,
+      "col": 22,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 427,
+      "col": 32,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1162.trace",
       "how_proved": "flow"
     },
     {
@@ -621,11 +771,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -639,11 +789,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -657,11 +807,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -675,11 +825,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -693,11 +843,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -711,11 +861,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -729,11 +879,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -747,11 +897,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -765,11 +915,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -783,11 +933,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -801,11 +951,11 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
       "how_proved": "flow"
     },
     {
@@ -819,19 +969,37 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 51
+            "line": 54
           }
         ]
       },
-      "tracefile": "pump_unit__flow__2058.trace",
+      "tracefile": "pump_unit__flow__1684.trace",
+      "how_proved": "flow"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 297,
+      "col": 31,
+      "rule": "UNINITIALIZED",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.RETURN_NOZZLE",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 61
+          }
+        ]
+      },
+      "tracefile": "pump_unit__flow__1974.trace",
       "how_proved": "flow"
     }
   ],
   "proof": [
     {
       "file": "pump_unit.adb",
-      "line": 352,
-      "col": 32,
+      "line": 353,
+      "col": 35,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -839,24 +1007,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "interval"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 352,
-      "col": 32,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -865,24 +1016,7 @@
     {
       "file": "pump_unit.adb",
       "line": 353,
-      "col": 50,
-      "rule": "VC_OVERFLOW_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "interval"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 353,
-      "col": 50,
+      "col": 35,
       "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
@@ -890,7 +1024,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -899,7 +1033,7 @@
     {
       "file": "pump_unit.adb",
       "line": 354,
-      "col": 59,
+      "col": 53,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -907,7 +1041,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -916,15 +1050,15 @@
     {
       "file": "pump_unit.adb",
       "line": 354,
-      "col": 51,
-      "rule": "VC_OVERFLOW_CHECK",
+      "col": 53,
+      "rule": "VC_RANGE_CHECK",
       "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -933,7 +1067,7 @@
     {
       "file": "pump_unit.adb",
       "line": 355,
-      "col": 48,
+      "col": 62,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -941,7 +1075,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -949,7 +1083,75 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 391,
+      "line": 355,
+      "col": 54,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 357,
+      "col": 54,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 356,
+      "col": 37,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 371,
+      "col": 81,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 370,
       "col": 50,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
@@ -958,7 +1160,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -966,25 +1168,8 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 391,
-      "col": 50,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "interval"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 392,
-      "col": 59,
+      "line": 402,
+      "col": 53,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -992,7 +1177,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -1000,8 +1185,25 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 392,
-      "col": 51,
+      "line": 402,
+      "col": 53,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 403,
+      "col": 62,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -1009,7 +1211,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -1017,8 +1219,8 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 393,
-      "col": 48,
+      "line": 403,
+      "col": 54,
       "rule": "VC_OVERFLOW_CHECK",
       "severity": "info",
       "entity": {
@@ -1026,7 +1228,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -1034,99 +1236,116 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 393,
-      "col": 48,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "medium",
+      "line": 406,
+      "col": 81,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "msg_id": 0,
-      "how_proved": "prover"
+      "how_proved": "interval"
     },
     {
       "file": "pump_unit.adb",
-      "line": 392,
-      "col": 51,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "medium",
+      "line": 405,
+      "col": 52,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "msg_id": 1,
-      "how_proved": "prover"
+      "how_proved": "interval"
     },
     {
       "file": "pump_unit.adb",
-      "line": 400,
-      "col": 19,
-      "rule": "VC_PRECONDITION",
-      "severity": "medium",
+      "line": 415,
+      "col": 47,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "msg_id": 2,
-      "how_proved": "prover"
+      "how_proved": "interval"
     },
     {
       "file": "pump_unit.adb",
-      "line": 404,
-      "col": 19,
-      "rule": "VC_PRECONDITION",
-      "severity": "medium",
+      "line": 409,
+      "col": 54,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
-      "msg_id": 3,
-      "how_proved": "prover"
+      "how_proved": "interval"
     },
     {
       "file": "pump_unit.adb",
-      "line": 288,
-      "col": 10,
+      "line": 408,
+      "col": 37,
+      "rule": "VC_OVERFLOW_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "interval"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 342,
+      "col": 13,
       "rule": "VC_RAISE",
       "severity": "medium",
       "entity": {
-        "name": "PUMP_UNIT.LEFT_NOZZLE",
+        "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 53
+            "line": 70
           }
         ]
       },
       "cntexmp": {
-        "pump_unit.ads": {
-          "53": [
+        "pump_unit.adb": {
+          "332": [
             {
-              "name": "fuelType",
-              "value": "0",
+              "name": "SENSOR",
+              "value": "False",
               "kind": "variable"
-            },
+            }
+          ]
+        },
+        "pump_unit.ads": {
+          "70": [
             {
               "name": "pumpUnit",
               "value": "(PUMP_ACTIVE_STATE => 1, others => ?)",
@@ -1140,81 +1359,21 @@
           ]
         }
       },
-      "msg_id": 4,
-      "how_proved": "prover"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 370,
-      "col": 19,
-      "rule": "VC_PRECONDITION",
-      "severity": "medium",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "msg_id": 5,
-      "how_proved": "prover"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 366,
-      "col": 19,
-      "rule": "VC_PRECONDITION",
-      "severity": "medium",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
       "msg_id": 6,
       "how_proved": "prover"
     },
     {
       "file": "pump_unit.adb",
-      "line": 382,
-      "col": 16,
-      "rule": "VC_RAISE",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 2.30000004172325E-01
-        }
-      }
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 359,
-      "col": 20,
-      "rule": "VC_PRECONDITION",
+      "line": 403,
+      "col": 54,
+      "rule": "VC_RANGE_CHECK",
       "severity": "medium",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -1223,16 +1382,16 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 363,
-      "col": 19,
-      "rule": "VC_PRECONDITION",
+      "line": 355,
+      "col": 54,
+      "rule": "VC_RANGE_CHECK",
       "severity": "medium",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
       },
@@ -1241,22 +1400,31 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 317,
+      "line": 435,
       "col": 10,
       "rule": "VC_RAISE",
       "severity": "medium",
       "entity": {
-        "name": "PUMP_UNIT.RETURN_NOZZLE",
+        "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 58
+            "line": 70
           }
         ]
       },
       "cntexmp": {
+        "pump_unit.adb": {
+          "332": [
+            {
+              "name": "SENSOR",
+              "value": "False",
+              "kind": "variable"
+            }
+          ]
+        },
         "pump_unit.ads": {
-          "58": [
+          "70": [
             {
               "name": "pumpUnit",
               "value": "(PUMP_ACTIVE_STATE => 0, others => ?)",
@@ -1275,30 +1443,39 @@
     },
     {
       "file": "pump_unit.adb",
-      "line": 429,
-      "col": 10,
+      "line": 338,
+      "col": 13,
       "rule": "VC_RAISE",
       "severity": "medium",
       "entity": {
-        "name": "PUMP_UNIT.STOP_PUMPING",
+        "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 72
+            "line": 70
           }
         ]
       },
       "cntexmp": {
+        "pump_unit.adb": {
+          "332": [
+            {
+              "name": "SENSOR",
+              "value": "False",
+              "kind": "variable"
+            }
+          ]
+        },
         "pump_unit.ads": {
-          "72": [
+          "70": [
             {
               "name": "pumpUnit",
-              "value": "(PUMP_ACTIVE_STATE => 0, others => ?)",
+              "value": "(PUMP_ACTIVE_STATE => 1, others => ?)",
               "kind": "variable"
             },
             {
               "name": "pump_r",
-              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 0, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
+              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
               "kind": "variable"
             }
           ]
@@ -1308,68 +1485,191 @@
       "how_proved": "prover"
     },
     {
-      "file": "pump_unit.adb",
-      "line": 354,
-      "col": 51,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "medium",
+      "file": "pump_unit.ads",
+      "line": 73,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
       "entity": {
         "name": "PUMP_UNIT.START_PUMPING",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 70
           }
         ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 4.39999997615814E-01
+        }
+      }
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 371,
+      "col": 81,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.89999997615814E-01
+        }
+      }
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 357,
+      "col": 54,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 1.29999995231628E-01
+        }
+      }
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 406,
+      "col": 81,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 2.70000010728836E-01
+        }
+      }
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 409,
+      "col": 54,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.START_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 70
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 2.70000010728836E-01
+        }
+      }
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 284,
+      "col": 10,
+      "rule": "VC_RAISE",
+      "severity": "medium",
+      "entity": {
+        "name": "PUMP_UNIT.LEFT_NOZZLE",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 56
+          }
+        ]
+      },
+      "cntexmp": {
+        "pump_unit.adb": {
+          "267": [
+            {
+              "name": "pumpUnit",
+              "value": "(ID => (others => 0), IS_USING => True, IS_PAID => False, PUMP_ACTIVE_FUEL => 0, PUMP_ACTIVE_STATE => 1, PUMP_NOZZLE_STATE => 0, PUMP_91 => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), PUMP_95 => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), PUMP_Diesel => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), others => ?)",
+              "kind": "variable"
+            }
+          ]
+        },
+        "pump_unit.ads": {
+          "56": [
+            {
+              "name": "fuelType",
+              "value": "0",
+              "kind": "variable"
+            },
+            {
+              "name": "pumpUnit",
+              "value": "(ID => (others => 0), IS_USING => False, IS_PAID => False, PUMP_ACTIVE_FUEL => 0, PUMP_ACTIVE_STATE => 1, PUMP_NOZZLE_STATE => 0, PUMP_91 => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), PUMP_95 => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), PUMP_Diesel => (RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?), others => ?)",
+              "kind": "variable"
+            },
+            {
+              "name": "pump_r",
+              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
+              "kind": "variable"
+            }
+          ]
+        }
       },
       "msg_id": 11,
       "how_proved": "prover"
     },
     {
       "file": "pump_unit.adb",
-      "line": 355,
-      "col": 48,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "medium",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "msg_id": 12,
-      "how_proved": "prover"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 412,
+      "line": 314,
       "col": 10,
       "rule": "VC_RAISE",
       "severity": "medium",
       "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
+        "name": "PUMP_UNIT.RETURN_NOZZLE",
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 67
+            "line": 61
           }
         ]
       },
       "cntexmp": {
-        "pump_unit.adb": {
-          "335": [
-            {
-              "name": "SENSOR",
-              "value": "False",
-              "kind": "variable"
-            }
-          ]
-        },
         "pump_unit.ads": {
-          "67": [
+          "61": [
             {
               "name": "pumpUnit",
               "value": "(PUMP_ACTIVE_STATE => 0, others => ?)",
@@ -1383,170 +1683,46 @@
           ]
         }
       },
+      "msg_id": 12,
+      "how_proved": "prover"
+    },
+    {
+      "file": "pump_unit.adb",
+      "line": 452,
+      "col": 10,
+      "rule": "VC_RAISE",
+      "severity": "medium",
+      "entity": {
+        "name": "PUMP_UNIT.STOP_PUMPING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 75
+          }
+        ]
+      },
+      "cntexmp": {
+        "pump_unit.ads": {
+          "75": [
+            {
+              "name": "pumpUnit",
+              "value": "(PUMP_ACTIVE_STATE => 2, others => ?)",
+              "kind": "variable"
+            },
+            {
+              "name": "pump_r",
+              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 2, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
+              "kind": "variable"
+            }
+          ]
+        }
+      },
       "msg_id": 13,
       "how_proved": "prover"
     },
     {
-      "file": "pump_unit.adb",
-      "line": 340,
-      "col": 13,
-      "rule": "VC_RAISE",
-      "severity": "medium",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "cntexmp": {
-        "pump_unit.adb": {
-          "335": [
-            {
-              "name": "SENSOR",
-              "value": "False",
-              "kind": "variable"
-            }
-          ]
-        },
-        "pump_unit.ads": {
-          "67": [
-            {
-              "name": "pumpUnit",
-              "value": "(PUMP_ACTIVE_STATE => 1, others => ?)",
-              "kind": "variable"
-            },
-            {
-              "name": "pump_r",
-              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 14,
-      "how_proved": "prover"
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 386,
-      "col": 16,
-      "rule": "VC_RAISE",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 2.50000000000000E-01
-        }
-      }
-    },
-    {
-      "file": "pump_unit.adb",
-      "line": 344,
-      "col": 13,
-      "rule": "VC_RAISE",
-      "severity": "medium",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "cntexmp": {
-        "pump_unit.adb": {
-          "335": [
-            {
-              "name": "SENSOR",
-              "value": "False",
-              "kind": "variable"
-            }
-          ]
-        },
-        "pump_unit.ads": {
-          "67": [
-            {
-              "name": "pumpUnit",
-              "value": "(PUMP_ACTIVE_STATE => 1, others => ?)",
-              "kind": "variable"
-            },
-            {
-              "name": "pump_r",
-              "value": "(RESERVOIR_INFO => (TOTAL => ?, RESERVOIR_CATEGORY => 0), PUMP_STATE => 1, NOZZLE_STATE => 0, FUEL_TYPE => 0, others => ?)",
-              "kind": "variable"
-            }
-          ]
-        }
-      },
-      "msg_id": 15,
-      "how_proved": "prover"
-    },
-    {
       "file": "pump_unit.ads",
-      "line": 70,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.START_PUMPING",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 67
-          }
-        ]
-      },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 5.29999971389771E-01
-        }
-      }
-    },
-    {
-      "file": "pump_unit.ads",
-      "line": 56,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "PUMP_UNIT.LEFT_NOZZLE",
-        "sloc": [
-          {
-            "file": "pump_unit.ads",
-            "line": 53
-          }
-        ]
-      },
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 2.50000000000000E-01
-        }
-      }
-    },
-    {
-      "file": "pump_unit.ads",
-      "line": 64,
+      "line": 67,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -1555,7 +1731,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 58
+            "line": 61
           }
         ]
       },
@@ -1564,13 +1740,13 @@
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 1.40000000596046E-01
+          "max_time": 1.59999996423721E-01
         }
       }
     },
     {
       "file": "pump_unit.ads",
-      "line": 75,
+      "line": 78,
       "col": 14,
       "rule": "VC_POSTCONDITION",
       "severity": "info",
@@ -1579,7 +1755,7 @@
         "sloc": [
           {
             "file": "pump_unit.ads",
-            "line": 72
+            "line": 75
           }
         ]
       },
@@ -1588,7 +1764,55 @@
         "CVC4": {
           "count": 1,
           "max_steps": 1,
-          "max_time": 5.99999986588955E-02
+          "max_time": 7.99999982118607E-02
+        }
+      }
+    },
+    {
+      "file": "pump_unit.ads",
+      "line": 46,
+      "col": 12,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.SET_IS_USING",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 43
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 5.00000007450581E-02
+        }
+      }
+    },
+    {
+      "file": "pump_unit.ads",
+      "line": 59,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "PUMP_UNIT.LEFT_NOZZLE",
+        "sloc": [
+          {
+            "file": "pump_unit.ads",
+            "line": 56
+          }
+        ]
+      },
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 2.70000010728836E-01
         }
       }
     }
@@ -1614,22 +1838,6 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.SET_PUMPED",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 47
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
           "name": "PUMP_UNIT.GET_PUMP",
@@ -1646,45 +1854,261 @@
       "assumptions": [
       ],
       "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.UNIT_IS_USING",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 36
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_POST",
+        "arg": {
+          "name": "PUMP_UNIT.SET_IS_USING",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 43
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP_UNIT.UNIT_IS_USING",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 36
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.SET_IS_USING",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 43
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP_UNIT.SET_IS_USING",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 43
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.SET_UNIT_ID",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 49
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP_UNIT.SET_UNIT_ID",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 49
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.SET_PUMPED",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 50
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
           "name": "PUMP_UNIT.SET_PUMPED",
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 47
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.UNIT_IS_USING",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 36
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP_UNIT.UNIT_IS_USING",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 36
+              "line": 50
             }
           ]
         }
@@ -1695,11 +2119,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.GET_STATE",
+            "name": "PUMP.SET_PUMP_STATE",
             "sloc": [
               {
                 "file": "pump.ads",
-                "line": 48
+                "line": 34
               }
             ]
           }
@@ -1711,91 +2135,11 @@
             "sloc": [
               {
                 "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.SET_IS_USING",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 43
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
+                "line": 4
               }
             ]
           }
         },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP_UNIT.SET_IS_USING",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 43
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -1811,11 +2155,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.SET_PUMP_STATE",
+            "name": "sPrint.print_float_type",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 34
+                "file": "sprint.ads",
+                "line": 5
               }
             ]
           }
@@ -1835,35 +2179,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
             "name": "PUMP.SET_PUMP_NOZZLE_STATE",
             "sloc": [
               {
                 "file": "pump.ads",
                 "line": 36
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print_float_type",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 4
               }
             ]
           }
@@ -1876,7 +2196,39 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 58
+              "line": 61
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.GET_TO_PAY",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 33
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP_UNIT.GET_TO_PAY",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 33
             }
           ]
         }
@@ -1892,18 +2244,6 @@
               {
                 "file": "pump.ads",
                 "line": 34
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
               }
             ]
           }
@@ -1916,7 +2256,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 48
+              "line": 51
             }
           ]
         }
@@ -1944,30 +2284,6 @@
               {
                 "file": "pump.ads",
                 "line": 34
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
               }
             ]
           }
@@ -1980,7 +2296,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 48
+              "line": 51
             }
           ]
         }
@@ -1988,18 +2304,6 @@
     },
     {
       "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -2020,7 +2324,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 49
+              "line": 52
             }
           ]
         }
@@ -2028,30 +2332,6 @@
     },
     {
       "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -2084,7 +2364,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 49
+              "line": 52
             }
           ]
         }
@@ -2119,11 +2399,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.SET_FUEL_PRICE",
+            "name": "sPrint.print",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 33
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
@@ -2131,11 +2411,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "sPrint.print",
+            "name": "PUMP.SET_FUEL_PRICE",
             "sloc": [
               {
-                "file": "sprint.ads",
-                "line": 3
+                "file": "pump.ads",
+                "line": 33
               }
             ]
           }
@@ -2172,7 +2452,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 51
+              "line": 54
             }
           ]
         }
@@ -2231,11 +2511,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.SET_FUEL_PRICE",
+            "name": "sPrint.print",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 33
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
@@ -2243,11 +2523,11 @@
         {
           "predicate": "CLAIM_AORTE",
           "arg": {
-            "name": "PUMP.SET_FUEL_PRICE",
+            "name": "sPrint.print",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 33
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
@@ -2255,11 +2535,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "sPrint.print",
+            "name": "PUMP.SET_FUEL_PRICE",
             "sloc": [
               {
-                "file": "sprint.ads",
-                "line": 3
+                "file": "pump.ads",
+                "line": 33
               }
             ]
           }
@@ -2267,11 +2547,11 @@
         {
           "predicate": "CLAIM_AORTE",
           "arg": {
-            "name": "sPrint.print",
+            "name": "PUMP.SET_FUEL_PRICE",
             "sloc": [
               {
-                "file": "sprint.ads",
-                "line": 3
+                "file": "pump.ads",
+                "line": 33
               }
             ]
           }
@@ -2332,7 +2612,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 51
+              "line": 54
             }
           ]
         }
@@ -2348,6 +2628,18 @@
               {
                 "file": "pump.ads",
                 "line": 34
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
@@ -2360,18 +2652,6 @@
               {
                 "file": "pump.ads",
                 "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
               }
             ]
           }
@@ -2396,39 +2676,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 53
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.GET_TO_PAY",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 33
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP_UNIT.GET_TO_PAY",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 33
+              "line": 56
             }
           ]
         }
@@ -2457,46 +2705,6 @@
             {
               "file": "pump_unit.ads",
               "line": 31
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.SET_IS_PAID",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 44
             }
           ]
         }
@@ -2537,70 +2745,6 @@
             {
               "file": "pump_unit.ads",
               "line": 31
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_AORTE",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP_UNIT.SET_IS_PAID",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 44
             }
           ]
         }
@@ -2707,15 +2851,107 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
+            "name": "sPrint.print",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 49
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
         },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.SET_IS_PAID",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "sPrint.print",
+            "sloc": [
+              {
+                "file": "sprint.ads",
+                "line": 4
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_EFFECTS",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        },
+        {
+          "predicate": "CLAIM_AORTE",
+          "arg": {
+            "name": "PUMP.GET_STATE",
+            "sloc": [
+              {
+                "file": "pump.ads",
+                "line": 48
+              }
+            ]
+          }
+        }
+      ],
+      "claim": {
+        "predicate": "CLAIM_AORTE",
+        "arg": {
+          "name": "PUMP_UNIT.SET_IS_PAID",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 47
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
@@ -2731,11 +2967,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "PUMP.GET_STATE",
+            "name": "sPrint.print",
             "sloc": [
               {
-                "file": "pump.ads",
-                "line": 48
+                "file": "sprint.ads",
+                "line": 4
               }
             ]
           }
@@ -2743,11 +2979,11 @@
         {
           "predicate": "CLAIM_EFFECTS",
           "arg": {
-            "name": "sPrint.print",
+            "name": "PUMP.GET_STATE",
             "sloc": [
               {
-                "file": "sprint.ads",
-                "line": 3
+                "file": "pump.ads",
+                "line": 48
               }
             ]
           }
@@ -2772,163 +3008,7 @@
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 72
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.SET_TO_PAY",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 45
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP_UNIT.STOP_PUMPING",
-            "sloc": [
-              {
-                "file": "pump_unit.ads",
-                "line": 72
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.REMOVE_PETROL_RESERVOIR",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 42
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_UNIT_PRICE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 50
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_CURRENT_NOZZLE_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 49
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.SET_PUMP_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 34
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 48
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "sPrint.print",
-            "sloc": [
-              {
-                "file": "sprint.ads",
-                "line": 3
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.SET_PUMP_NOZZLE_STATE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 36
-              }
-            ]
-          }
-        },
-        {
-          "predicate": "CLAIM_EFFECTS",
-          "arg": {
-            "name": "PUMP.GET_TANKS_SIZE",
-            "sloc": [
-              {
-                "file": "pump.ads",
-                "line": 51
-              }
-            ]
-          }
-        }
-      ],
-      "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.START_PUMPING",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 67
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
-        "predicate": "CLAIM_AORTE",
-        "arg": {
-          "name": "PUMP_UNIT.SET_TO_PAY",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 45
+              "line": 75
             }
           ]
         }
@@ -3034,6 +3114,22 @@
       "assumptions": [
       ],
       "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "PUMP_UNIT.SET_TO_PAY",
+          "sloc": [
+            {
+              "file": "pump_unit.ads",
+              "line": 48
+            }
+          ]
+        }
+      }
+    },
+    {
+      "assumptions": [
+      ],
+      "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
           "name": "PUMP_UNIT.GET_PUMP_UNIT_STATE",
@@ -3050,29 +3146,13 @@
       "assumptions": [
       ],
       "claim": {
-        "predicate": "CLAIM_EFFECTS",
-        "arg": {
-          "name": "PUMP_UNIT.SET_UNIT_ID",
-          "sloc": [
-            {
-              "file": "pump_unit.ads",
-              "line": 46
-            }
-          ]
-        }
-      }
-    },
-    {
-      "assumptions": [
-      ],
-      "claim": {
         "predicate": "CLAIM_AORTE",
         "arg": {
-          "name": "PUMP_UNIT.SET_UNIT_ID",
+          "name": "PUMP_UNIT.SET_TO_PAY",
           "sloc": [
             {
               "file": "pump_unit.ads",
-              "line": 46
+              "line": 48
             }
           ]
         }

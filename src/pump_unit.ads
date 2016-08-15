@@ -74,7 +74,7 @@ with SPARK_Mode is
 
    procedure STOP_PUMPING (pumpUnit: in out PUMP_UNIT; pump_r : in out PUMP.PUMP)
      with
-       Pre => (PUMP.STATE_TYPE'Pos(PUMP.GET_STATE(pump_r)) = 2 and PUMP.NOZZLE_TYPE'Pos(PUMP.GET_CURRENT_NOZZLE_STATE(pump_r)) =3),
+       Pre => (pumpUnit.PUMP_ACTIVE_STATE = PUMP.Pumping),
      Post => (pumpUnit.PUMP_NOZZLE_STATE = PUMP.Stop and pumpUnit.PUMP_ACTIVE_STATE = PUMP.Ready);
 
 

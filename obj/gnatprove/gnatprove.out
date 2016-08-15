@@ -6,61 +6,217 @@ SPARK Analysis results        Total        Flow    Interval   CodePeer     Prove
 ----------------------------------------------------------------------------------------------------------
 Data Dependencies                 .           .           .          .           .           .           .
 Flow Dependencies                 .           .           .          .           .           .           .
-Initialization                   35          35           .          .           .           .           .
+Initialization                   50          50           .          .           .           .           .
 Non-Aliasing                      .           .           .          .           .           .           .
-Run-time Checks                  20           .          15          .    1 (CVC4)           .           4
+Run-time Checks                  38           .          21          .    5 (CVC4)           .          12
 Assertions                        .           .           .          .           .           .           .
-Functional Contracts             13           .           .          .    1 (CVC4)           .          12
+Functional Contracts              6           .           .          .    5 (CVC4)           .           1
 LSP Verification                  .           .           .          .           .           .           .
 ----------------------------------------------------------------------------------------------------------
-Total                            68    35 (51%)    15 (22%)          .      2 (3%)           .    16 (24%)
+Total                            94    50 (53%)    21 (22%)          .    10 (11%)           .    13 (14%)
 
 
-Analyzed 4 units
+Analyzed 16 units
+in unit aunit, 0 subprograms and packages out of 4 analyzed
+  AUnit at aunit.ads:34 skipped
+  AUnit.Format at aunit.ads:44 skipped
+  AUnit.Message_Alloc at aunit.ads:45 skipped
+  AUnit.Message_Free at aunit.ads:46 skipped
+in unit aunit-memory, 0 subprograms and packages out of 3 analyzed
+  AUnit.Memory at aunit-memory.ads:40 skipped
+  AUnit.Memory.AUnit_Alloc at aunit-memory.ads:44 skipped
+  AUnit.Memory.AUnit_Free at aunit-memory.ads:46 skipped
+in unit aunit-options, 0 subprograms and packages out of 1 analyzed
+  AUnit.Options at aunit-options.ads:34 skipped
+in unit aunit-reporter, 0 subprograms and packages out of 2 analyzed
+  AUnit.Reporter at aunit-reporter.ads:35 skipped
+  AUnit.Reporter.Report at aunit-reporter.ads:39 skipped
+in unit aunit-reporter-text, 0 subprograms and packages out of 11 analyzed
+  AUnit.Reporter.Text at aunit-reporter-text.ads:33 skipped
+  AUnit.Reporter.Text.Dump_Result_List at aunit-reporter-text.adb:41 skipped
+  AUnit.Reporter.Text.Indent at aunit-reporter-text.adb:38 skipped
+  AUnit.Reporter.Text.Report at aunit-reporter-text.ads:44 skipped
+  AUnit.Reporter.Text.Report_Error_Tests at aunit-reporter-text.ads:52 skipped
+  AUnit.Reporter.Text.Report_Fail_Tests at aunit-reporter-text.ads:50 skipped
+  AUnit.Reporter.Text.Report_OK_Tests at aunit-reporter-text.ads:48 skipped
+  AUnit.Reporter.Text.Report_Test at aunit-reporter-text.adb:47 skipped
+  AUnit.Reporter.Text.Set_Use_ANSI_Colors at aunit-reporter-text.ads:37 skipped
+  AUnit.Reporter.Text.put_measureGP2718 at aunit-reporter-text.adb:44 skipped
+  AUnit.Reporter.Text.put_measureGP2718.Put_Measure at aunit-reporter-text.adb:44 skipped
+in unit aunit-run, 0 subprograms and packages out of 2 analyzed
+  AUnit.Run at aunit-run.ads:38 skipped
+  AUnit.Run.Run at aunit-run.adb:37 skipped
+in unit aunit-test_results, 0 subprograms and packages out of 66 analyzed
+  AUnit.Test_Results at aunit-test_results.ads:38 skipped
+  AUnit.Test_Results.Add_Error at aunit-test_results.ads:76 skipped
+  AUnit.Test_Results.Add_Failure at aunit-test_results.ads:84 skipped
+  AUnit.Test_Results.Add_Success at aunit-test_results.ads:92 skipped
+  AUnit.Test_Results.Clear at aunit-test_results.ads:133 skipped
+  AUnit.Test_Results.Elapsed at aunit-test_results.ads:115 skipped
+  AUnit.Test_Results.Error_Count at aunit-test_results.ads:102 skipped
+  AUnit.Test_Results.Errors at aunit-test_results.ads:105 skipped
+  AUnit.Test_Results.Failure_Count at aunit-test_results.ads:109 skipped
+  AUnit.Test_Results.Failures at aunit-test_results.ads:112 skipped
+  AUnit.Test_Results.Is_Error at aunit-test_results.adb:56 skipped
+  AUnit.Test_Results.Is_Failure at aunit-test_results.adb:57 skipped
+  AUnit.Test_Results.Is_Success at aunit-test_results.adb:58 skipped
+  AUnit.Test_Results.Iterate_Error at aunit-test_results.adb:52 skipped
+  AUnit.Test_Results.Iterate_Failure at aunit-test_results.adb:53 skipped
+  AUnit.Test_Results.Iterate_Success at aunit-test_results.adb:54 skipped
+  AUnit.Test_Results.Result_Lists at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Append at ada_containers-aunit_lists.ads:111, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Clear at ada_containers-aunit_lists.ads:65, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Contains at ada_containers-aunit_lists.ads:181, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Delete at ada_containers-aunit_lists.ads:116, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Delete_First at ada_containers-aunit_lists.ads:121, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Delete_Last at ada_containers-aunit_lists.ads:125, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Element at ada_containers-aunit_lists.ads:67, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Find at ada_containers-aunit_lists.ads:171, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.First at ada_containers-aunit_lists.ads:155, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.First_Element at ada_containers-aunit_lists.ads:157, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Has_Element at ada_containers-aunit_lists.ads:185, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Insert at ada_containers-aunit_lists.ads:87, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Insert at ada_containers-aunit_lists.ads:93, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Insert at ada_containers-aunit_lists.ads:100, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Insert_Internal at ada_containers-aunit_lists.adb:53, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Is_Empty at ada_containers-aunit_lists.ads:63, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Iterate at ada_containers-aunit_lists.ads:189, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Last at ada_containers-aunit_lists.ads:159, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Last_Element at ada_containers-aunit_lists.ads:161, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Length at ada_containers-aunit_lists.ads:61, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Move at ada_containers-aunit_lists.ads:83, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.New_Node_Type at ada_containers-aunit_lists.adb:47, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Next at ada_containers-aunit_lists.ads:163, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Next at ada_containers-aunit_lists.ads:165, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Oeq at ada_containers-aunit_lists.ads:59, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Prepend at ada_containers-aunit_lists.ads:106, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Previous at ada_containers-aunit_lists.ads:167, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Previous at ada_containers-aunit_lists.ads:169, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Replace_Element at ada_containers-aunit_lists.ads:69, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Reverse_Elements at ada_containers-aunit_lists.ads:129, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Reverse_Find at ada_containers-aunit_lists.ads:176, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Splice at ada_containers-aunit_lists.ads:139, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Splice at ada_containers-aunit_lists.ads:144, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Splice at ada_containers-aunit_lists.ads:150, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Swap at ada_containers-aunit_lists.ads:131, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Swap_Links at ada_containers-aunit_lists.ads:135, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.Vet at ada_containers-aunit_lists.adb:58, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.new_node_typeGP2581 at ada_containers-aunit_lists.adb:44, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Result_Lists.new_node_typeGP2581.New_Node_Type at ada_containers-aunit_lists.adb:44, instantiated at aunit-test_results.ads:73 skipped
+  AUnit.Test_Results.Set_Elapsed at aunit-test_results.ads:99 skipped
+  AUnit.Test_Results.Start_Test at aunit-test_results.ads:118 skipped
+  AUnit.Test_Results.Success_Count at aunit-test_results.ads:121 skipped
+  AUnit.Test_Results.Successes at aunit-test_results.ads:124 skipped
+  AUnit.Test_Results.Successful at aunit-test_results.ads:127 skipped
+  AUnit.Test_Results.Test_Count at aunit-test_results.ads:130 skipped
+  AUnit.Test_Results.alloc_errorGP2658 at aunit-test_results.adb:45 skipped
+  AUnit.Test_Results.alloc_errorGP2658.Alloc_Error at aunit-test_results.adb:45 skipped
+  AUnit.Test_Results.alloc_failureGP2553 at aunit-test_results.adb:42 skipped
+  AUnit.Test_Results.alloc_failureGP2553.Alloc_Failure at aunit-test_results.adb:42 skipped
+in unit aunit-test_suites, 0 subprograms and packages out of 45 analyzed
+  AUnit.Test_Suites at aunit-test_suites.ads:41 skipped
+  AUnit.Test_Suites.Add_Test at aunit-test_suites.ads:46 skipped
+  AUnit.Test_Suites.Add_Test at aunit-test_suites.ads:48 skipped
+  AUnit.Test_Suites.New_Suite at aunit-test_suites.ads:58 skipped
+  AUnit.Test_Suites.Run at aunit-test_suites.ads:52 skipped
+  AUnit.Test_Suites.Test_Lists at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Append at ada_containers-aunit_lists.ads:111, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Clear at ada_containers-aunit_lists.ads:65, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Contains at ada_containers-aunit_lists.ads:181, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Delete at ada_containers-aunit_lists.ads:116, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Delete_First at ada_containers-aunit_lists.ads:121, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Delete_Last at ada_containers-aunit_lists.ads:125, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Element at ada_containers-aunit_lists.ads:67, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Find at ada_containers-aunit_lists.ads:171, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.First at ada_containers-aunit_lists.ads:155, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.First_Element at ada_containers-aunit_lists.ads:157, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Has_Element at ada_containers-aunit_lists.ads:185, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Insert at ada_containers-aunit_lists.ads:87, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Insert at ada_containers-aunit_lists.ads:93, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Insert at ada_containers-aunit_lists.ads:100, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Insert_Internal at ada_containers-aunit_lists.adb:53, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Is_Empty at ada_containers-aunit_lists.ads:63, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Iterate at ada_containers-aunit_lists.ads:189, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Last at ada_containers-aunit_lists.ads:159, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Last_Element at ada_containers-aunit_lists.ads:161, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Length at ada_containers-aunit_lists.ads:61, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Move at ada_containers-aunit_lists.ads:83, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.New_Node_Type at ada_containers-aunit_lists.adb:47, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Next at ada_containers-aunit_lists.ads:163, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Next at ada_containers-aunit_lists.ads:165, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Oeq at ada_containers-aunit_lists.ads:59, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Prepend at ada_containers-aunit_lists.ads:106, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Previous at ada_containers-aunit_lists.ads:167, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Previous at ada_containers-aunit_lists.ads:169, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Replace_Element at ada_containers-aunit_lists.ads:69, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Reverse_Elements at ada_containers-aunit_lists.ads:129, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Reverse_Find at ada_containers-aunit_lists.ads:176, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Splice at ada_containers-aunit_lists.ads:139, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Splice at ada_containers-aunit_lists.ads:144, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Splice at ada_containers-aunit_lists.ads:150, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Swap at ada_containers-aunit_lists.ads:131, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Swap_Links at ada_containers-aunit_lists.ads:135, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.Vet at ada_containers-aunit_lists.adb:58, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.new_node_typeGP2581 at ada_containers-aunit_lists.adb:44, instantiated at aunit-test_suites.ads:78 skipped
+  AUnit.Test_Suites.Test_Lists.new_node_typeGP2581.New_Node_Type at ada_containers-aunit_lists.adb:44, instantiated at aunit-test_suites.ads:78 skipped
+in unit aunit-time_measure, 0 subprograms and packages out of 4 analyzed
+  AUnit.Time_Measure at aunit-time_measure.ads:34 skipped
+  AUnit.Time_Measure.Get_Measure at aunit-time_measure.ads:52 skipped
+  AUnit.Time_Measure.Start_Measure at aunit-time_measure.ads:46 skipped
+  AUnit.Time_Measure.Stop_Measure at aunit-time_measure.ads:49 skipped
+in unit cash_register, 3 subprograms and packages out of 3 analyzed
+  CASH_REGISTER at cash_register.ads:3 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  CASH_REGISTER.SET_PUMPED_INFO_TO_CASH_REGISTER at cash_register.ads:33 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  CASH_REGISTER.payFuel at cash_register.ads:32 flow analyzed (0 errors and 0 warnings) and not proved, 1 checks out of 4 proved
 in unit main, 0 subprograms and packages out of 1 analyzed
-  Main at main.adb:5 skipped
+  Main at main.adb:6 skipped
 in unit pump, 13 subprograms and packages out of 13 analyzed
   PUMP at pump.ads:1 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.APPEND_RESERVOIR at pump.ads:19 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.GET_CURRENT_NOZZLE_STATE at pump.ads:30 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.GET_RESEVOIR_CATEGORY at pump.ads:33 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.GET_STATE at pump.ads:29 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.GET_TANKS_SIZE at pump.ads:32 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.GET_UNIT_PRICE at pump.ads:31 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.REMOVE_PETROL_RESERVOIR at pump.ads:23 flow analyzed (0 errors and 0 warnings) and proved (3 checks)
-  PUMP.SET_FUEL_PRICE at pump.ads:14 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.SET_PUMPED at pump.ads:16 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.SET_PUMP_NOZZLE_STATE at pump.ads:17 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.SET_PUMP_STATE at pump.ads:15 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP.SET_RESERVOIR_SIZE at pump.ads:21 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.APPEND_RESERVOIR at pump.ads:38 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.GET_CURRENT_NOZZLE_STATE at pump.ads:49 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.GET_RESEVOIR_CATEGORY at pump.ads:52 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.GET_STATE at pump.ads:48 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.GET_TANKS_SIZE at pump.ads:51 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.GET_UNIT_PRICE at pump.ads:50 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.REMOVE_PETROL_RESERVOIR at pump.ads:42 flow analyzed (0 errors and 0 warnings) and not proved, 2 checks out of 4 proved
+  PUMP.SET_FUEL_PRICE at pump.ads:33 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.SET_PUMPED at pump.ads:35 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.SET_PUMP_NOZZLE_STATE at pump.ads:36 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.SET_PUMP_STATE at pump.ads:34 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP.SET_RESERVOIR_SIZE at pump.ads:40 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
 in unit pump_unit, 23 subprograms and packages out of 23 analyzed
   PUMP_UNIT at pump_unit.ads:3 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.ADD_PUMP at pump_unit.ads:36 flow analyzed (0 errors and 0 warnings) and not proved, 0 checks out of 1 proved
-  PUMP_UNIT.GET_FUEL at pump_unit.ads:20 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_ID at pump_unit.ads:17 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_PUMP at pump_unit.ads:15 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_PUMPED at pump_unit.ads:19 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_PUMP_NOZZLE_STATE at pump_unit.ads:24 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_PUMP_UNIT_STATE at pump_unit.ads:23 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_TANKS_SIZE at pump_unit.ads:16 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.GET_TO_PAY at pump_unit.ads:18 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.LEFT_NOZZLE at pump_unit.ads:42 flow analyzed (0 errors and 0 warnings) and not proved, 0 checks out of 1 proved
-  PUMP_UNIT.RETURN_NOZZLE at pump_unit.ads:47 flow analyzed (0 errors and 0 warnings) and not proved, 0 checks out of 1 proved
-  PUMP_UNIT.SET_IS_PAID at pump_unit.ads:29 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_IS_USING at pump_unit.ads:28 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_PUMPED at pump_unit.ads:32 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_PUMP_ACTIVE_STATE at pump_unit.ads:33 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_PUMP_NOZZLE_STATE at pump_unit.ads:34 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_TO_PAY at pump_unit.ads:30 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.SET_UNIT_ID at pump_unit.ads:31 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.START_PUMPING at pump_unit.ads:57 flow analyzed (0 errors and 0 warnings) and not proved, 14 checks out of 26 proved
-  PUMP_UNIT.STOP_PUMPING at pump_unit.ads:62 flow analyzed (0 errors and 0 warnings) and not proved, 0 checks out of 1 proved
-  PUMP_UNIT.UNIT_IS_PAID at pump_unit.ads:22 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
-  PUMP_UNIT.UNIT_IS_USING at pump_unit.ads:21 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.ADD_PUMP at pump_unit.ads:54 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_FUEL at pump_unit.ads:35 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_ID at pump_unit.ads:32 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_PUMP at pump_unit.ads:30 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_PUMPED at pump_unit.ads:34 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_PUMP_NOZZLE_STATE at pump_unit.ads:39 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_PUMP_UNIT_STATE at pump_unit.ads:38 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_TANKS_SIZE at pump_unit.ads:31 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.GET_TO_PAY at pump_unit.ads:33 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.LEFT_NOZZLE at pump_unit.ads:56 flow analyzed (0 errors and 0 warnings) and not proved, 1 checks out of 2 proved
+  PUMP_UNIT.RETURN_NOZZLE at pump_unit.ads:61 flow analyzed (0 errors and 0 warnings) and not proved, 1 checks out of 2 proved
+  PUMP_UNIT.SET_IS_PAID at pump_unit.ads:47 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.SET_IS_USING at pump_unit.ads:43 flow analyzed (0 errors and 0 warnings) and proved (1 checks)
+  PUMP_UNIT.SET_PUMPED at pump_unit.ads:50 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.SET_PUMP_ACTIVE_STATE at pump_unit.ads:51 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.SET_PUMP_NOZZLE_STATE at pump_unit.ads:52 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.SET_TO_PAY at pump_unit.ads:48 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.SET_UNIT_ID at pump_unit.ads:49 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.START_PUMPING at pump_unit.ads:70 flow analyzed (0 errors and 6 warnings) and not proved, 24 checks out of 29 proved
+  PUMP_UNIT.STOP_PUMPING at pump_unit.ads:75 flow analyzed (0 errors and 0 warnings) and not proved, 1 checks out of 2 proved
+  PUMP_UNIT.UNIT_IS_PAID at pump_unit.ads:37 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+  PUMP_UNIT.UNIT_IS_USING at pump_unit.ads:36 flow analyzed (0 errors and 0 warnings) and proved (0 checks)
+in unit pump_unit_harness, 0 subprograms and packages out of 1 analyzed
+  PUMP_UNIT_Harness at pump_unit_harness.adb:5 skipped
+in unit pump_unit_suite, 0 subprograms and packages out of 2 analyzed
+  PUMP_UNIT_Suite at pump_unit_suite.ads:3 skipped
+  PUMP_UNIT_Suite.Suite at pump_unit_suite.ads:5 skipped
 in unit sprint, 0 subprograms and packages out of 6 analyzed
   sPrint at sprint.ads:2 skipped
-  sPrint.print at sprint.ads:3 skipped
-  sPrint.print_float_type at sprint.ads:4 skipped
-  sPrint.print_fuel_type at sprint.ads:7 skipped
-  sPrint.print_nozzle_type at sprint.ads:6 skipped
-  sPrint.print_state_type at sprint.ads:5 skipped
+  sPrint.print at sprint.ads:4 skipped
+  sPrint.print_float_type at sprint.ads:5 skipped
+  sPrint.print_fuel_type at sprint.ads:8 skipped
+  sPrint.print_nozzle_type at sprint.ads:7 skipped
+  sPrint.print_state_type at sprint.ads:6 skipped

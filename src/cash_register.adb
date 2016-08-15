@@ -55,7 +55,7 @@ with SPARK_Mode is
    -- SET_PUMPED_INFO_TO_CASH_REGISTER  --
    ---------------------------------------
    procedure SET_PUMPED_INFO_TO_CASH_REGISTER
-     (pumpUnit: in out PUMP_UNIT.PUMP_UNIT)
+     (pumpUnit: in PUMP_UNIT.PUMP_UNIT)
    is
       topay: PUMP.FLOAT_NUMBER;
       pumpUnitId: PUMP_UNIT_ID;

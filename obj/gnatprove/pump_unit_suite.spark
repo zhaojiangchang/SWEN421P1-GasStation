@@ -1,11 +1,21 @@
 {
   "spark": [
     {
+      "name": "PUMP_UNIT_Suite.Suite",
+      "sloc": [
+        {
+          "file": "pump_unit_suite.ads",
+          "line": 5
+        }
+      ],
+      "spark": "no"
+    },
+    {
       "name": "PUMP_UNIT_Suite",
       "sloc": [
         {
-          "file": "pump_unit_suite.adb",
-          "line": 4
+          "file": "pump_unit_suite.ads",
+          "line": 3
         }
       ],
       "spark": "no"

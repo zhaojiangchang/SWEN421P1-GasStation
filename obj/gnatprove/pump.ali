@@ -15,22 +15,21 @@ W pump%s		pump.adb		pump.ali
 W sprint%s		sprint.adb		sprint.ali
 W system%s		system.ads		system.ali
 
-U pump%s		pump.ads		99ea1c67 EE OO PK IU
+U pump%s		pump.ads		b2cc990b EE OO PK IU
 
-D pump.ads		20160814121532 99ea1c67 pump%s
-D pump.adb		20160814105522 d07204e8 pump%b
-D sprint.ads		20160814103738 33f5b196 sprint%s
+D pump.ads		20160815103630 b2cc990b pump%s
+D pump.adb		20160815083846 d07204e8 pump%b
+D sprint.ads		20160815083148 33f5b196 sprint%s
 D system.ads		20160516092930 2da59038 system%s
 X 1 pump.ads
 1K9*PUMP 59l5 59e9 2|1w6 3b14 150l5 150t9
 5I9*RESERVOIR_NUM<integer>
 6F9*FLOAT_NUMBER<short_float> 15r17 26r18 28r22 33r60 35r57 40r63 42r71 50r52
 . 51r52 2|40r15 50r52 59r52 78r18 92r18 119r38
-7E9*FUEL_TYPES 7e45 16r30 24r58 29r21 29r34 38r65 52r59 2|67r59 101r41
+7E9*FUEL_TYPES 7e41 16r30 24r58 29r21 29r34 38r65 52r59 2|67r59 101r41
 7n24*U91{7E9}
 7n29*U95{7E9}
 7n34*Diesel{7E9}
-7n42*NO{7E9}
 10E9*STATE_TYPE 10e54 25r22 25r34 34r64 48r47 2|12r20 143r47
 10n24*Base{10E9}
 10n30*Ready{10E9}
@@ -44,12 +43,13 @@ X 1 pump.ads
 11n58*Stop{11E9}
 11n64*Pay{11E9}
 13R9*RESERVOIR 17e17 22r26 2|103r11
-15f10*TOTAL{6F9} 23m38 2|43m29 62r36 81r32 82m32 82r63 108m9
+15f10*TOTAL{6F9} 23m38 44r36 45r35 2|43m29 62r36 81r32 82m32 82r63 108m9
 16e10*RESERVOIR_CATEGORY{7E9} 24m38 2|70r36 107m9
 20R9*PUMP 30e17 33r44 34r44 35r40 36r51 38r46 40r48 42r54 48r34 49r49 50r39
 . 51r39 52r46 2|11r21 25r21 39r21 50r39 59r39 67r46 77r22 91r22 101r22 119r22
 . 132r18 143r34
-22r10*RESERVOIR_INFO{13R9} 2|43m14 62r21 70r21 81r17 82m17 82r48 109m14
+22r10*RESERVOIR_INFO{13R9} 44r21 45r20 2|43m14 62r21 70r21 81r17 82m17 82r48
+. 109m14
 25e10*PUMP_STATE{10E9} 2|15m14 146r21
 26f10*PUMPED{6F9} 2|95m14
 27e10*NOZZLE_STATE{11E9} 2|29m14 136r22
@@ -74,26 +74,26 @@ X 1 pump.ads
 40r33 pump_r{20R9} 2|39b6 43m7
 40f54 SIZE{6F9} 2|40b6 43r38 44r44
 42U14*REMOVE_PETROL_RESERVOIR 42=39 42>60 2|76b14 84l8 84t31
-42r39 pump_r{20R9} 44r39 45r28 2|77b7 81r10 82m10 82r41
-42f60 AMOUNT{6F9} 44r14 2|78b7 81r40 82r71
+42r39 pump_r{20R9} 44r14 45r13 2|77b7 81r10 82m10 82r41
+42f60 AMOUNT{6F9} 44r44 2|78b7 81r40 82r71
 48V13*GET_STATE{10E9} 48>23 2|143b13 147l8 147t17
 48r23 pump_r{20R9} 2|143b23 146r14
 49V13*GET_CURRENT_NOZZLE_STATE{11E9} 49>38 2|131b13 137l8 137t32
 49r38 pump_r{20R9} 2|132b7 136r15
 50V13*GET_UNIT_PRICE{6F9} 50>28 2|50b13 54l8 54t22
 50r28 pump_r{20R9} 2|50b28 53r14
-51V13*GET_TANKS_SIZE{6F9} 44s24 45s13 51>28 2|59b13 63l8 63t22
+51V13*GET_TANKS_SIZE{6F9} 51>28 2|59b13 63l8 63t22
 51r28 pump_r{20R9} 2|59b28 62r14
 52V13*GET_RESEVOIR_CATEGORY{7E9} 52>35 2|67b13 71l8 71t29
 52r35 pump_r{20R9} 2|67b35 70r14
 X 2 pump.adb
 103r7 R{1|13R9} 107m7 108m7 109r32
 X 3 sprint.ads
-2K10*sPrint 2|2w6 2r18 3|13e11
-4U14*print_float_type 2|44s7 123s7
-5U14*print_state_type 2|16s7
-6U14*print_nozzle_type 2|30s7
-7U14*print_fuel_type 2|110s7
+2K10*sPrint 2|2w6 2r18 3|14e11
+5U14*print_float_type 2|44s7 123s7
+6U14*print_state_type 2|16s7
+7U14*print_nozzle_type 2|30s7
+8U14*print_fuel_type 2|110s7
 FD 1 pump.ads
 FS .1 1K9 pump
 FS .2 33U14 pump__set_fuel_price
@@ -124,11 +124,11 @@ FS .12 131V13 pump__get_current_nozzle_state -> 1.10
 FS .13 143V13 pump__get_state -> 1.9
 FD 3 sprint.ads
 FS .1 2K10 sprint
-FS .2 3U14 sprint__print
-FS .3 4U14 sprint__print_float_type
-FS .4 5U14 sprint__print_state_type
-FS .5 6U14 sprint__print_nozzle_type
-FS .6 7U14 sprint__print_fuel_type
+FS .2 4U14 sprint__print
+FS .3 5U14 sprint__print_float_type
+FS .4 6U14 sprint__print_state_type
+FS .5 7U14 sprint__print_nozzle_type
+FS .6 8U14 sprint__print_fuel_type
 FD 4 system.ads
 FS .1 37K9 system
 FS .2 77V13 system__Olt
@@ -136,8 +136,6 @@ FS .3 78V13 system__Ole
 FS .4 79V13 system__Ogt
 FS .5 80V13 system__Oge
 FS .6 81V13 system__Oeq
-FX 1 pump.ads .1 pump
-F 51*13 pump__get_tanks_size .8:44s24 45s13
 FX 1 pump.ads .2 pump__set_fuel_price
 F 33=29 pump__set_fuel_price__pump_r 2|.11:122m7 123r45
 F 33>50 pump__set_fuel_price__price 2|.11:122c28
@@ -157,9 +155,9 @@ FX 1 pump.ads .7 pump__set_reservoir_size
 F 40=33 pump__set_reservoir_size__pump_r 2|.4:43m7
 F 40>54 pump__set_reservoir_size__size 2|.4:43c38 44c44
 FX 1 pump.ads .8 pump__remove_petrol_reservoir
-F 42=39 pump__remove_petrol_reservoir__pump_r 44r39 45r28 2|.8:81r10 82m10
+F 42=39 pump__remove_petrol_reservoir__pump_r 44r14 45r13 2|.8:81r10 82m10
 . 82r41
-F 42>60 pump__remove_petrol_reservoir__amount 44c14 2|.8:81c40 82c71
+F 42>60 pump__remove_petrol_reservoir__amount 44c44 2|.8:81c40 82c71
 FX 1 pump.ads .9 pump__get_state
 F 48>23 pump__get_state__pump_r 2|.13:146c14
 FX 1 pump.ads .10 pump__get_current_nozzle_state
@@ -173,19 +171,19 @@ F 52>35 pump__get_resevoir_category__pump_r 2|.7:70c14
 FX 2 pump.adb .10 pump__append_reservoir
 F 103*7 pump__append_reservoir__r 107m7 108m7 109r32
 FX 3 sprint.ads .1 sprint
-F 4*14 sprint__print_float_type 2|.4:44s7 .11:123s7
-F 5*14 sprint__print_state_type 2|.2:16s7
-F 6*14 sprint__print_nozzle_type 2|.3:30s7
-F 7*14 sprint__print_fuel_type 2|.10:110s7
+F 5*14 sprint__print_float_type 2|.4:44s7 .11:123s7
+F 6*14 sprint__print_state_type 2|.2:16s7
+F 7*14 sprint__print_nozzle_type 2|.3:30s7
+F 8*14 sprint__print_fuel_type 2|.10:110s7
 
 GG EK_REMOTE_STATES
-GG EK_GLOBALS pump KIND_PACKAGE_BODY ORIGIN_FLOW c:local_sub [ pump__get_current_nozzle_state pump__get_unit_price pump__get_resevoir_category pump__get_tanks_size pump__set_fuel_price pump__set_pump_state pump__set_pumped pump__set_pump_nozzle_state pump__append_reservoir pump__set_reservoir_size pump__remove_petrol_reservoir pump__get_state ]
+GG EK_GLOBALS pump KIND_PACKAGE_BODY ORIGIN_FLOW c:local_sub [ pump__get_unit_price pump__get_tanks_size pump__get_resevoir_category pump__set_fuel_price pump__set_pump_state pump__set_pumped pump__set_pump_nozzle_state pump__append_reservoir pump__set_reservoir_size pump__remove_petrol_reservoir pump__get_state pump__get_current_nozzle_state ]
 GG EK_GLOBALS pump__get_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_state__pump_r ]
-GG EK_GLOBALS pump__get_tanks_size KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_tanks_size__pump_r ]
 GG EK_GLOBALS pump__set_fuel_price KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print_float_type ] c:local_var [ pump__set_fuel_price__price pump__set_fuel_price__pump_r ]
 GG EK_GLOBALS pump__set_pumped KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__set_pumped__amount pump__set_pumped__pump_r ]
 GG EK_GLOBALS pump__append_reservoir KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print_fuel_type ] c:local_var [ pump__append_reservoir__fueltype pump__append_reservoir__r pump__append_reservoir__pump_r ] c:local_init [ pump__append_reservoir__r ]
-GG EK_GLOBALS pump__remove_petrol_reservoir KIND_SUBPROGRAM ORIGIN_FLOW c:calls_proof [ pump__get_tanks_size ] c:local_var [ pump__remove_petrol_reservoir__pump_r pump__remove_petrol_reservoir__amount ]
+GG EK_GLOBALS pump__get_tanks_size KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_tanks_size__pump_r ]
+GG EK_GLOBALS pump__remove_petrol_reservoir KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__remove_petrol_reservoir__pump_r pump__remove_petrol_reservoir__amount ]
 GG EK_GLOBALS pump__get_current_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_current_nozzle_state__pump_r ]
 GG EK_GLOBALS pump__get_resevoir_category KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_resevoir_category__pump_r ]
 GG EK_GLOBALS pump__set_pump_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print_state_type ] c:local_var [ pump__set_pump_state__statetype pump__set_pump_state__pump_r ]
@@ -193,11 +191,10 @@ GG EK_GLOBALS pump__set_pump_nozzle_state KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ 
 GG EK_GLOBALS pump__set_reservoir_size KIND_SUBPROGRAM ORIGIN_FLOW c:calls [ sprint__print_float_type ] c:local_var [ pump__set_reservoir_size__size pump__set_reservoir_size__pump_r ]
 GG EK_GLOBALS pump__get_unit_price KIND_SUBPROGRAM ORIGIN_FLOW c:local_var [ pump__get_unit_price__pump_r ]
 GG EK_VOLATILES
-GG EK_TASKING_NONBLOCKING [ pump__get_current_nozzle_state pump__get_unit_price pump__get_resevoir_category pump__get_tanks_size pump__set_fuel_price pump__set_pump_state pump__set_pumped pump__set_pump_nozzle_state pump__append_reservoir pump__set_reservoir_size pump__remove_petrol_reservoir pump__get_state ]
-GG EK_TASKING_INFO pump__get_current_nozzle_state
+GG EK_TASKING_NONBLOCKING [ pump__get_unit_price pump__get_tanks_size pump__get_resevoir_category pump__set_fuel_price pump__set_pump_state pump__set_pumped pump__set_pump_nozzle_state pump__append_reservoir pump__set_reservoir_size pump__remove_petrol_reservoir pump__get_state pump__get_current_nozzle_state ]
 GG EK_TASKING_INFO pump__get_unit_price
-GG EK_TASKING_INFO pump__get_resevoir_category
 GG EK_TASKING_INFO pump__get_tanks_size
+GG EK_TASKING_INFO pump__get_resevoir_category
 GG EK_TASKING_INFO pump__set_fuel_price
 GG EK_TASKING_INFO pump__set_pump_state
 GG EK_TASKING_INFO pump__set_pumped
@@ -206,4 +203,5 @@ GG EK_TASKING_INFO pump__append_reservoir
 GG EK_TASKING_INFO pump__set_reservoir_size
 GG EK_TASKING_INFO pump__remove_petrol_reservoir
 GG EK_TASKING_INFO pump__get_state
+GG EK_TASKING_INFO pump__get_current_nozzle_state
 GG EK_END_MARKER

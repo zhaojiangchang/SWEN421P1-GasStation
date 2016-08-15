@@ -9,18 +9,19 @@ RV NO_ACCESS_PARAMETER_ALLOCATORS
 RV NO_ALLOCATORS
 RV NO_ANONYMOUS_ALLOCATORS
 RV NO_LOCAL_ALLOCATORS
-RV NO_STANDARD_ALLOCATORS_AFTER_ELABORATION
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_ELABORATION_CODE
 RV SPARK_05
 
-U pump_unit_suite%b	pump_unit_suite.adb	764f6efc OO SU
-W aunit%s		aunit.adb		aunit.ali
-W aunit.test_suites%s	aunit-test_suites.adb	aunit-test_suites.ali
+U pump_unit_suite%b	pump_unit_suite.adb	54e62885 OO PK
 W pump_unit%s		pump_unit.adb		pump_unit.ali
 W pump_unit.test%s	pump_unit-test.adb	pump_unit-test.ali
 W system%s		system.ads		system.ali
+
+U pump_unit_suite%s	pump_unit_suite.ads	1520a1be EE OO PK
+W aunit%s		aunit.adb		aunit.ali
+W aunit.test_suites%s	aunit-test_suites.adb	aunit-test_suites.ali
 
 D ada.ads		20160516092928 3ffc8e18 ada%s
 D a-calend.ads		20160516092930 2d5f01d4 ada.calendar%s
@@ -40,24 +41,27 @@ D gnat.ads		20160516092932 fd2ad2f1 gnat%s
 D g-souinf.ads		20160516092932 291df751 gnat.source_info%s
 D pump.ads		20160814121532 99ea1c67 pump%s
 D pump_unit.ads		20160814125646 e440f765 pump_unit%s
-D pump_unit-test.ads	20160814101518 b5bd538f pump_unit.test%s
-D pump_unit_suite.adb	20160814070636 abd3e157 pump_unit_suite%b
+D pump_unit-test.ads	20160814133000 e748758d pump_unit.test%s
+D pump_unit_suite.ads	20160814132420 7d017d9a pump_unit_suite%s
+D pump_unit_suite.adb	20160814133026 ceaf2092 pump_unit_suite%b
 D system.ads		20160516092930 2da59038 system%s
 X 5 aunit.ads
-34K9*AUnit 48e10 20|1r6 1r29
+34K9*AUnit 48e10 20|1r6 1r29 5r26 21|5r8 7r26
 X 12 aunit-test_suites.ads
-41K15*Test_Suites 86e22 20|1w12 1r35
-43R9*Test_Suite<13|38R9> 84e14 20|5r49
-44P9*Access_Test_Suite(43R9) 20|4r33 5r24
-48U14*Add_Test 20|9s11
+41K15*Test_Suites 86e22 20|1w12 1r35 5r32 21|5r14 7r32
+43R9*Test_Suite<13|38R9> 84e14 21|9r50
+44P9*Access_Test_Suite(43R9) 20|5r44 21|7r44 9r25
+48U14*Add_Test 21|12s14
 X 18 pump_unit.ads
-3K9*PUMP_UNIT 80e14 20|2r6 9r25
+3K9*PUMP_UNIT 80e14 21|1r6 12r28
 X 19 pump_unit-test.ads
-3K19*Test 17e19 20|2w16 9r35
-5R8*TC<9|41R9> 5e61 20|9r40
-X 20 pump_unit_suite.adb
-4V10*PUMP_UNIT_Suite{12|44P9} 4b10 13l5 13t20
-5p6 TS_Ptr{12|44P9} 9r4 11r11
+4K19*Test 18e19 21|1w16 12r38
+6R8*TC<9|41R9> 6e61 21|12r43
+X 20 pump_unit_suite.ads
+3K9*PUMP_UNIT_Suite 7l5 7e20 21|3b14 18l5 18t20
+5V13*Suite{12|44P9} 21|7b13 16l8 16t13
+X 21 pump_unit_suite.adb
+9p7 TS_Ptr{12|44P9} 12r7 14r14
 FD 1 ada.ads
 FS .1 16K9 ada
 FD 2 a-calend.ads
@@ -399,16 +403,20 @@ FS .21 58U14 pump_unit__return_nozzle
 FS .22 67U14 pump_unit__start_pumping
 FS .23 72U14 pump_unit__stop_pumping
 FD 19 pump_unit-test.ads
-FS .1 3K19 pump_unit__test
-FS .2 7U25 pump_unit__test__set_up_case
-FS .3 9U25 pump_unit__test__set_up
-FS .4 10U25 pump_unit__test__tear_down
-FS .5 12U25 pump_unit__test__tear_down_case
-FS .6 14U14 pump_unit__test__register_tests__2
-FS .7 15V13 pump_unit__test__name__2
-FD 20 pump_unit_suite.adb
-FS .1 4V10 pump_unit_suite
-FD 21 system.ads
+FS .1 4K19 pump_unit__test
+FS .2 8U25 pump_unit__test__set_up_case
+FS .3 10U25 pump_unit__test__set_up
+FS .4 11U25 pump_unit__test__tear_down
+FS .5 13U25 pump_unit__test__tear_down_case
+FS .6 15U14 pump_unit__test__register_tests__2
+FS .7 16V13 pump_unit__test__name__2
+FD 20 pump_unit_suite.ads
+FS .1 3K9 pump_unit_suite
+FS .2 5V13 pump_unit_suite__suite
+FD 21 pump_unit_suite.adb
+FS .1 3K14 standard__pump_unit_suite -> 20.1
+FS .2 7V13 pump_unit_suite__suite -> 20.2
+FD 22 system.ads
 FS .1 37K9 system
 FS .2 77V13 system__Olt
 FS .3 78V13 system__Ole
@@ -416,12 +424,12 @@ FS .4 79V13 system__Ogt
 FS .5 80V13 system__Oge
 FS .6 81V13 system__Oeq
 FX 12 aunit-test_suites.ads .1 aunit__test_suites
-F 48*14 aunit__test_suites__add_test__2 20|.1:9s11
-FX 20 pump_unit_suite.adb .1 pump_unit_suite
-F 5*6 pump_unit_suite__ts_ptr 9r4 11r11
+F 48*14 aunit__test_suites__add_test__2 21|.2:12s14
+FX 21 pump_unit_suite.adb .2 pump_unit_suite__suite
+F 9*7 pump_unit_suite__suite__ts_ptr 12r7 14r14
 
 GG EK_REMOTE_STATES
-GG EK_GLOBALS pump_unit_suite KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__test_suites__add_test__2 ]
+GG EK_GLOBALS pump_unit_suite__suite KIND_SUBPROGRAM ORIGIN_FRONTEND c:calls_conditional [ aunit__test_suites__add_test__2 ]
 GG EK_VOLATILES
 GG EK_TASKING_NONBLOCKING [ ]
 GG EK_END_MARKER

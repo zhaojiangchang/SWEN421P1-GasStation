@@ -83,18 +83,6 @@ package body PUMP.Test is
               Message => "Assert 2: GET_TANKS_SIZE ");
    end Test_RESERVOIR;
 
-   --     procedure Test_LEFT_NOZZLE (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
-   --
-   --     begin
-   --
-   --     end Test_LEFT_NOZZLE;
-   --
-   --      procedure Test_RETURN_NOZZLE (CWTC : in out AUnit.Test_Cases.Test_Case'Class) is
-   --     begin
-   --
-   --     end Test_RETURN_NOZZLE;
-
-
    --     --==========================================================
    --     --               REGISTRATION/NAMING
    --     --==========================================================

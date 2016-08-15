@@ -391,7 +391,6 @@ with SPARK_Mode is
                   pumpUnit.TO_PAY := pumpUnit.TO_PAY + (0.01 * PUMP.GET_UNIT_PRICE(pump_r));
                   PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                   if CAR_TANK_SPACE -0.01 >0.00 then
-                     print_float_type("1:    ",tankSize);
                      CAR_TANK_SPACE:= CAR_TANK_SPACE - 0.01;
                   else
                      SENSOR := True;
@@ -402,7 +401,6 @@ with SPARK_Mode is
                   --                 print_float_type("car tank space left: ",CAR_TANK_SPACE);
                   --                 print_float_type("Amount To Pay: ", pumpUnit.TO_PAY);               PUMP.REMOVE_PETROL_RESERVOIR(pump_r,0.01);
                   tankSize := PUMP.GET_TANKS_SIZE(pump_r);
-                  print_float_type("2:    ",tankSize);
                   if tankSize <= 1.00E-02 then
                      STOP_PUMPING(pumpUnit, pump_r);
                      print("tank empty stop pumping");
